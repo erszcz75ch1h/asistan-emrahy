@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui-win.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/winu-ui.css" />
+		<style type="text/css">
+			.aui-bar-1d9dd5 {
+				background: #1d9dd5;
+			}
+			#add-li {
+				box-flex: none;
+				-webkit-box-flex: none;
+				margin: 0 10px;
+			}
+			.plus {
+				font-size: 30px;
+				background: #EF9300;
+				color: #fff;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5" id='aui-header'>
+			<a class="aui-pull-left" tapmode  onclick="H.$closeCurrentWin();"> <span class="aui-iconfont aui-icon-left"></span>返回 </a>
+			<div class="aui-title">
+				点击 + 更多菜单
+			</div>
+		</header>
+		<footer class="aui-nav" id="aui-footer">
+			<ul class="aui-bar-tab">
+				<li class="active-1d9dd5" data-header="case-header" tapmode >
+					<span class="aui-iconfont iconfont icon-anli"></span>
+					<p>
+						示例大全
+					</p>
+				</li>
+				<li data-header="document-header" tapmode >
+					<span class="aui-iconfont iconfont icon-wendang"></span>
+					<p>
+						文档中心
+					</p>
+				</li>
+				<li id="add-li" class="winu-center-all" tapmode  onclick="H.$openFrame('addMore_body', 'addMore_body.html',null,{x:0,y:0})">
+					<div class="plus">
+						+
+					</div>
+				</li>
+				<li data-header="bbs-header" tapmode >
+					<span class="aui-iconfont iconfont icon-b"></span>
+					<p>
+						讨论社区
+					</p>
+				</li>
+				<li data-header="suggest-header" tapmode >
+					<span class="aui-iconfont iconfont icon-tousujianyi"></span>
+					<p>
+						捐赠建议
+					</p>
+				</li>
+			</ul>
+		</footer>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript">
+		H.ready(function() {
+			// 快速打开窗口
+			H.$openFrameWithNav('aui-header', {
+				url : 'footNavPlus_body.html',
+				name : 'footNavPlus_body'
+			}, 'aui-footer');
+		});
+	</script>
+</html>

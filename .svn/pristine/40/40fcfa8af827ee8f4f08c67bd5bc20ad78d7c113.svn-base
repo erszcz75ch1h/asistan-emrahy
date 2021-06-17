@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/winu-ui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<style type="text/css">
+			html, body {
+				background: rgba(0,0,0,0.2);
+			}
+			.share-maim {
+				background: rgba(255,255,255,0.9);
+				animation: swiper 0.3s;
+				-webkit-animation: swiper 0.3s;
+				height: 160px;
+				overflow: hidden;
+				
+			}
+			@-webkit-keyframes swiper
+			{
+			from {
+				margin-top:-160px;
+			}
+			to {
+				margin-top:0;
+			}
+			}
+			@-webkit-keyframes
+			swiperend {from {
+				margin-top:0;
+			}
+			to {
+				margin-top:-160px;
+			}
+			}
+			.share-maim ul {
+				padding: 0 1em;
+			}
+			.share-maim ul li {
+				text-align: center;
+			}
+			.share-maim ul li span {
+				height: 3.5em;
+				width: 3.5em;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				background: #009944;
+				margin: 3.5em auto 0.625em auto;
+			}
+			.share-maim ul li span i {
+				color: #fff;
+				font-size: 2em;
+			}
+			.share-maim ul li p {
+				color: #000;
+			}
+			.cancel-share {
+				margin: 1.5em auto;
+				background: #e5e5e5;
+				height: 45px;
+				color: #444;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="share-container winu-flex-box-vertical">
+			<div class="share-maim">
+				<ul class="winu-flex-box-horizontal">
+					<li class="winu-flex-item" tapmode >
+						<span class="winu-display-inline-block winu-center-all"><i class="iconfont icon-qq"></i></span>
+						<p>
+							说说
+						</p>
+					</li>
+					<li class="winu-flex-item" tapmode >
+						<span class="winu-display-inline-block winu-center-all" style="background:#7ebf6f;"><i class="iconfont icon-weixin"></i></span>
+						<p>
+							照片
+						</p>
+					</li>
+					<li class="winu-flex-item" tapmode >
+						<span class="winu-display-inline-block winu-center-all" style="background:#ec7d34"><i class="iconfont icon-friends"></i></span>
+						<p>
+							签到
+						</p>
+					</li>
+					<li class="winu-flex-item" tapmode >
+						<span class="winu-display-inline-block winu-center-all" style="background:#437dc7"><i class="iconfont icon-weibo"></i></span>
+						<p>
+							视频
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div class="share-space winu-flex-item"></div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript">
+		function closeShareFrame() {
+			$(".share-maim").css({
+				"animation" : "swiperend 0.3s",
+				"-webkit-animation" : "swiperend 0.3s",
+				"margin-top" : "-160px"
+			});
+			setTimeout(function() {
+				H.$closeCurrentFrame();
+			}, 300);
+		}
+
+		Zepto(function() {
+			$(".share-space").tap(function() {
+				closeShareFrame();
+			});
+			$(".share-maim li").on("tap", function() {
+				H.$toast($.trim($(this).find("p").text()));
+			});
+		});
+	</script>
+</html>

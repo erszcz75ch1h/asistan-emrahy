@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<script type="text/javascript" src="../../script/syntaxhighlighter/shCore.js"></script>
+		<script type="text/javascript" src="../../script/syntaxhighlighter/shBrushJScript.js"></script>
+		<link type="text/css" rel="stylesheet" href="../../css/syntaxhighlighter/shCoreRDark.css"/>
+		<script type="text/javascript">
+			SyntaxHighlighter.all();
+		</script>
+		<style type="text/css">
+			.aui-content {
+				padding: 10px;
+			}
+			.code-des {
+				padding: 5px 0 0 0;
+				font-size: 16px;
+				color: #666;
+				font-weight: bold;
+			}
+			.push-fixed {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				background: rgba(78,129,174,0.8);
+				position: fixed;
+				bottom: 10px;
+				right: 10px;
+				z-index: 10000;
+			}
+			.winu-center-all {
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+			}
+			.push-fixed i.iconfont {
+				color: #fff;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="aui-content" id="codeArea" style="display:none">
+			<p class="code-des">
+				监听设备电池电量低事件
+			</p>
+			<pre class="brush: js;">
+			
+H.$batterylow(function(ret, err) {
+	H.$toast(ret);
+});
+		</pre>
+			<p class="code-des">
+				监听设备电池状态改变事件，如电量变化或正在充电
+			</p>
+			<pre class="brush: js;">
+			
+H.$batterystatus(function(ret, err) {
+	H.$toast(ret);
+});
+		</pre>
+			<p class="code-des">
+				监听设备back键被点击事件，仅Android平台有效，该事件必须在Window中注册才有效，Frame中注册无效。
+			</p>
+			<pre class="brush: js;">
+			
+H.$keyback(function(ret, err) {
+	H.$toast("你点击了返回键");
+});
+		</pre>
+			<p class="code-des">
+				监听设备menu键被点击事件，仅Android平台有效，该事件必须在Window中注册才有效，Frame中注册无效。
+			</p>
+			<pre class="brush: js;">
+			
+H.$keymenu(function(ret, err) {
+	H.$toast("你点击了菜单键");
+});
+		</pre>
+			<p class="code-des">
+				监听设备断开网络的事件
+			</p>
+			<pre class="brush: js;">
+			
+H.$offline(function(ret, err) {
+	H.$toast("你已断开网络");
+});
+		</pre>
+			<p class="code-des">
+				监听设备连接到网络的事件
+			</p>
+			<pre class="brush: js;">
+			
+H.$online(function(ret, err) {
+	H.$toast("你已连接网络，当前网络类型为："+ret.connectionType );
+});
+		</pre>
+			<p class="code-des">
+				监听应用进入后台事件
+			</p>
+			<pre class="brush: js;">
+			
+H.$pause(function(ret, err) {
+	H.$toast("应用进入后台运行");
+});
+		</pre>
+			<p class="code-des">
+				监听应用从后台回到前台事件
+			</p>
+			<pre class="brush: js;">
+			
+H.$resume(function(ret, err) {
+	H.$toast("应用从后台回到前台");
+});
+		</pre>
+			<p class="code-des">
+				监听Window或者Frame页面滑动到底部事件，可用于实现滚动到底部，加载更多功能
+			</p>
+			<pre class="brush: js;">
+			
+H.$scrolltobottom(function(ret, err) {
+	H.$toast("你滚动到距离底部10px");
+},10);
+		</pre>
+			<p class="code-des">
+				监听设备摇动事件，设置该监听后，当前APP将立即开启摇动检测功能。可用于实现摇一摇功能。
+			</p>
+			<pre class="brush: js;">
+			
+H.$shake(function(ret, err) {
+	H.$toast("你摇了摇手机");
+});
+		</pre>
+			<p class="code-des">
+				监听Window或者Frame的页面全局向下轻扫事件
+			</p>
+			<pre class="brush: js;">
+			
+H.$swipedown(function(ret, err) {
+	H.$toast("向下轻扫");
+});
+		</pre>
+			<p class="code-des">
+				监听Window或者Frame的页面全局向左轻扫事件
+			</p>
+			<pre class="brush: js;">
+			
+H.$swipeleft(function(ret, err) {
+	H.$toast("向左轻扫");
+});
+		</pre>
+			<p class="code-des">
+				监听Window或者Frame的页面全局向右轻扫事件，可用于Android向右轻扫返回
+			</p>
+			<pre class="brush: js;">
+			
+H.$swiperight(function(ret, err) {
+	H.$toast("向右轻扫");
+});
+		</pre>
+			<p class="code-des">
+				监听Window或者Frame的页面全局向上轻扫事件
+			</p>
+			<pre class="brush: js;">
+			
+H.$swipeup(function(ret, err) {
+	H.$toast("向上轻扫");
+});
+		</pre>
+			<p class="code-des">
+				监听Window或者Frame的页面全局单击事件，监听该事件后，点击window或者frame的任意位置，都将收到tap回调。
+			</p>
+			<pre class="brush: js;">
+			
+H.$tap(function(ret, err) {
+	H.$toast("你快速点击了");
+});
+		</pre>
+			<p class="code-des">
+				监听Window显示到屏幕的事件。收到viewappear事件回调，即标识当前Window已经动画结束，并且完全显示到屏幕上。该事件的作用对象为Window，Frame的显示不会收到事件
+			</p>
+			<pre class="brush: js;">
+			
+H.$viewappear(function(ret, err) {
+	H.$toast("当前窗口被显示在主视图上层");
+});
+		</pre>
+			<p class="code-des">
+				监听Window离开屏幕的事件，收到viewdisappear事件回调，即标识当前Window已经动画结束，并且完全从屏幕上移除。该事件的作用对象为Window，Frame的隐藏不会收到事件，若是Window被关闭，此事件不会再回调
+			</p>
+			<pre class="brush: js;">
+			
+H.$viewdisappear(function(ret, err) {
+	H.$toast("当前窗口离开在主视图上层");
+});
+		</pre>
+			<p class="code-des">
+				监听状态栏通知被用户点击后的回调
+			</p>
+			<pre class="brush: js;">
+			
+H.$noticeclicked(function(ret, err) {
+	H.$toast(ret);
+});
+		</pre>
+			<p class="code-des">
+				监听本应用被其他应用调起来时（Android平台也可以通过Activity打开），收到相关数据的回调，在任意页面中注册该监听后，如果本应用被其他应用调起，将触发该监听函数，同时将传给该应用的数据回调给网页
+			</p>
+			<pre class="brush: js;">
+			
+H.$appintent(function(ret, err) {
+	H.$toast(ret);
+});
+		</pre>
+			<p class="code-des">
+				监听云修复使用静默修复时，更新完毕事件。可通过监听此事件来通知用户做是否强制重启应用等操作或者提示，以使更新生效，如果是提示修复，则不会触发该事件
+			</p>
+			<pre class="brush: js;">
+			
+H.$smartupdatefinish(function(ret, err) {
+	H.$toast(ret);
+});
+		</pre>
+		</div>
+		<div class="push-fixed winu-center-all" tapmode onclick="document.getElementsByTagName('body')[0].scrollTop = 0;">
+			<i class="iconfont icon-huidaodingbu"></i>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript">
+		H.ready(function() {
+			H.$openFrame('loading', 'widget://res/load9.html', null, {
+				x : 0,
+				y : 0
+			});
+			setTimeout(function() {
+				$("#codeArea").css({
+					"transition" : "display 1s",
+					"-webkit-transition" : "display 1s",
+					"display" : "block"
+				});
+				H.closeFrame("loading");
+			}, 1000);
+		});
+	</script>
+</html>

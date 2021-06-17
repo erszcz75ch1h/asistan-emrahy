@@ -1,0 +1,708 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/winu-ui.css" />
+		<style type="text/css">
+			body {
+				background: #efeff4;
+				padding: 10px 0 0 0;
+			}
+			.aui-user-view-cell:after {
+				left: 0;
+			}
+			.content {
+				font-size: 14px;
+				color: #333333;
+			}
+			.otherinfo p {
+				font-size: 12px;
+				margin-bottom: 5px;
+			}
+			.proinfo {
+				padding: 10px 0;
+			}
+			.proinfo p {
+				border-right: 1px solid #c8c7cc;
+			}
+			.proinfo p:last-child {
+				border: none;
+			}
+			.aui-list-view:active {
+				background: #f4f4f4;
+			}
+			.content {
+				color: #666;
+			}
+		</style>
+		<script id="tpl" type="text/html">
+			[: for (var i=0;i<5;i++) { :]
+			<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="aui-img-body" tapmode >
+							<span>点点例官方<em>16.5KM</em></span>
+							<p class='aui-ellipsis-1'>
+								中山赢友网络科技有限公司
+							</p>
+						</div>
+					</div>
+					<div class="aui-padded-10 content">
+						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+					</div>
+					<ul class="aui-list-view aui-grid-view">
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+					</ul>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
+						<p>
+							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
+						</p>
+						<p>
+							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
+						</p>
+					</div>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 proinfo winu-flex-box-horizontal">
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-shoucangweishoucang"></i> 24</label>
+						</p>
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-pinglun"></i> 3K</label>
+						</p>
+						<p class="winu-flex-item winu-center-all btn-share" tapmode >
+							<label><i class="iconfont icon-fenxiang"></i></label>
+						</p>
+					</div>
+				</li>
+				<li class="aui-list-view">
+					<div class="aui-user-view-cell aui-img">
+						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="aui-img-body" tapmode >
+							<span>点点例官方<em>16.5KM</em></span>
+							<p class='aui-ellipsis-1'>
+								中山赢友网络科技有限公司
+							</p>
+						</div>
+					</div>
+					<div class="aui-padded-10 content">
+						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+					</div>
+					<ul class="aui-list-view aui-grid-view">
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+					</ul>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
+						<p>
+							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
+						</p>
+						<p>
+							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
+						</p>
+					</div>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 proinfo winu-flex-box-horizontal">
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-shoucangweishoucang"></i> 24</label>
+						</p>
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-pinglun"></i> 3K</label>
+						</p>
+						<p class="winu-flex-item winu-center-all btn-share" tapmode >
+							<label><i class="iconfont icon-fenxiang"></i></label>
+						</p>
+					</div>
+				</li>
+			[:}:]
+		</script>
+	</head>
+	<body>
+		<div class="aui-content-padded">
+			<ul id="find-list">
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="aui-img-body" tapmode >
+							<span>点点例官方<em>16.5KM</em></span>
+							<p class='aui-ellipsis-1'>
+								中山赢友网络科技有限公司
+							</p>
+						</div>
+					</div>
+					<div class="aui-padded-10 content">
+						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+					</div>
+					<ul class="aui-list-view aui-grid-view">
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+					</ul>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
+						<p>
+							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
+						</p>
+						<p>
+							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
+						</p>
+					</div>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 proinfo winu-flex-box-horizontal">
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-shoucangweishoucang"></i> 24</label>
+						</p>
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-pinglun"></i> 3K</label>
+						</p>
+						<p class="winu-flex-item winu-center-all btn-share" tapmode >
+							<label><i class="iconfont icon-fenxiang"></i></label>
+						</p>
+					</div>
+				</li>
+				<li class="aui-list-view">
+					<div class="aui-user-view-cell aui-img">
+						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="aui-img-body" tapmode >
+							<span>点点例官方<em>16.5KM</em></span>
+							<p class='aui-ellipsis-1'>
+								中山赢友网络科技有限公司
+							</p>
+						</div>
+					</div>
+					<div class="aui-padded-10 content">
+						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+					</div>
+					<ul class="aui-list-view aui-grid-view">
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+					</ul>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
+						<p>
+							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
+						</p>
+						<p>
+							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
+						</p>
+					</div>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 proinfo winu-flex-box-horizontal">
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-shoucangweishoucang"></i> 24</label>
+						</p>
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-pinglun"></i> 3K</label>
+						</p>
+						<p class="winu-flex-item winu-center-all btn-share" tapmode >
+							<label><i class="iconfont icon-fenxiang"></i></label>
+						</p>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="aui-img-body" tapmode >
+							<span>点点例官方<em>16.5KM</em></span>
+							<p class='aui-ellipsis-1'>
+								中山赢友网络科技有限公司
+							</p>
+						</div>
+					</div>
+					<div class="aui-padded-10 content">
+						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+					</div>
+					<ul class="aui-list-view aui-grid-view">
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+					</ul>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
+						<p>
+							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
+						</p>
+						<p>
+							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
+						</p>
+					</div>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 proinfo winu-flex-box-horizontal">
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-shoucangweishoucang"></i> 24</label>
+						</p>
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-pinglun"></i> 3K</label>
+						</p>
+						<p class="winu-flex-item winu-center-all btn-share" tapmode >
+							<label><i class="iconfont icon-fenxiang"></i></label>
+						</p>
+					</div>
+				</li>
+				<li class="aui-list-view">
+					<div class="aui-user-view-cell aui-img">
+						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="aui-img-body" tapmode >
+							<span>点点例官方<em>16.5KM</em></span>
+							<p class='aui-ellipsis-1'>
+								中山赢友网络科技有限公司
+							</p>
+						</div>
+					</div>
+					<div class="aui-padded-10 content">
+						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+					</div>
+					<ul class="aui-list-view aui-grid-view">
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+					</ul>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
+						<p>
+							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
+						</p>
+						<p>
+							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
+						</p>
+					</div>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 proinfo winu-flex-box-horizontal">
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-shoucangweishoucang"></i> 24</label>
+						</p>
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-pinglun"></i> 3K</label>
+						</p>
+						<p class="winu-flex-item winu-center-all btn-share" tapmode >
+							<label><i class="iconfont icon-fenxiang"></i></label>
+						</p>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="aui-img-body" tapmode >
+							<span>点点例官方<em>16.5KM</em></span>
+							<p class='aui-ellipsis-1'>
+								中山赢友网络科技有限公司
+							</p>
+						</div>
+					</div>
+					<div class="aui-padded-10 content">
+						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+					</div>
+					<ul class="aui-list-view aui-grid-view">
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+					</ul>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
+						<p>
+							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
+						</p>
+						<p>
+							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
+						</p>
+					</div>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 proinfo winu-flex-box-horizontal">
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-shoucangweishoucang"></i> 24</label>
+						</p>
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-pinglun"></i> 3K</label>
+						</p>
+						<p class="winu-flex-item winu-center-all btn-share" tapmode >
+							<label><i class="iconfont icon-fenxiang"></i></label>
+						</p>
+					</div>
+				</li>
+				<li class="aui-list-view">
+					<div class="aui-user-view-cell aui-img">
+						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="aui-img-body" tapmode >
+							<span>点点例官方<em>16.5KM</em></span>
+							<p class='aui-ellipsis-1'>
+								中山赢友网络科技有限公司
+							</p>
+						</div>
+					</div>
+					<div class="aui-padded-10 content">
+						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+					</div>
+					<ul class="aui-list-view aui-grid-view">
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+					</ul>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
+						<p>
+							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
+						</p>
+						<p>
+							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
+						</p>
+					</div>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 proinfo winu-flex-box-horizontal">
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-shoucangweishoucang"></i> 24</label>
+						</p>
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-pinglun"></i> 3K</label>
+						</p>
+						<p class="winu-flex-item winu-center-all btn-share" tapmode >
+							<label><i class="iconfont icon-fenxiang"></i></label>
+						</p>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="aui-img-body" tapmode >
+							<span>点点例官方<em>16.5KM</em></span>
+							<p class='aui-ellipsis-1'>
+								中山赢友网络科技有限公司
+							</p>
+						</div>
+					</div>
+					<div class="aui-padded-10 content">
+						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+					</div>
+					<ul class="aui-list-view aui-grid-view">
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+					</ul>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
+						<p>
+							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
+						</p>
+						<p>
+							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
+						</p>
+					</div>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 proinfo winu-flex-box-horizontal">
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-shoucangweishoucang"></i> 24</label>
+						</p>
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-pinglun"></i> 3K</label>
+						</p>
+						<p class="winu-flex-item winu-center-all btn-share" tapmode >
+							<label><i class="iconfont icon-fenxiang"></i></label>
+						</p>
+					</div>
+				</li>
+				<li class="aui-list-view">
+					<div class="aui-user-view-cell aui-img">
+						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="aui-img-body" tapmode >
+							<span>点点例官方<em>16.5KM</em></span>
+							<p class='aui-ellipsis-1'>
+								中山赢友网络科技有限公司
+							</p>
+						</div>
+					</div>
+					<div class="aui-padded-10 content">
+						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+					</div>
+					<ul class="aui-list-view aui-grid-view">
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+					</ul>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
+						<p>
+							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
+						</p>
+						<p>
+							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
+						</p>
+					</div>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 proinfo winu-flex-box-horizontal">
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-shoucangweishoucang"></i> 24</label>
+						</p>
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-pinglun"></i> 3K</label>
+						</p>
+						<p class="winu-flex-item winu-center-all btn-share" tapmode >
+							<label><i class="iconfont icon-fenxiang"></i></label>
+						</p>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="aui-img-body" tapmode >
+							<span>点点例官方<em>16.5KM</em></span>
+							<p class='aui-ellipsis-1'>
+								中山赢友网络科技有限公司
+							</p>
+						</div>
+					</div>
+					<div class="aui-padded-10 content">
+						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+					</div>
+					<ul class="aui-list-view aui-grid-view">
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+					</ul>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
+						<p>
+							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
+						</p>
+						<p>
+							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
+						</p>
+					</div>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 proinfo winu-flex-box-horizontal">
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-shoucangweishoucang"></i> 24</label>
+						</p>
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-pinglun"></i> 3K</label>
+						</p>
+						<p class="winu-flex-item winu-center-all btn-share" tapmode >
+							<label><i class="iconfont icon-fenxiang"></i></label>
+						</p>
+					</div>
+				</li>
+				<li class="aui-list-view">
+					<div class="aui-user-view-cell aui-img">
+						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="aui-img-body" tapmode >
+							<span>点点例官方<em>16.5KM</em></span>
+							<p class='aui-ellipsis-1'>
+								中山赢友网络科技有限公司
+							</p>
+						</div>
+					</div>
+					<div class="aui-padded-10 content">
+						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+					</div>
+					<ul class="aui-list-view aui-grid-view">
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
+							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
+						</li>
+					</ul>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
+						<p>
+							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
+						</p>
+						<p>
+							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
+						</p>
+					</div>
+					<div class="aui-line-x"></div>
+					<div class="aui-col-xs-12 proinfo winu-flex-box-horizontal">
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-shoucangweishoucang"></i> 24</label>
+						</p>
+						<p class="winu-flex-item winu-center-all" tapmode >
+							<label><i class="iconfont icon-pinglun"></i> 3K</label>
+						</p>
+						<p class="winu-flex-item winu-center-all btn-share" tapmode >
+							<label><i class="iconfont icon-fenxiang"></i></label>
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript" src="../../script/echo.min.js"></script>
+	<script type="text/javascript">
+		echo.init({
+			offset : 100,
+			throttle : 250,
+			unload : false,
+			callback : function(element, op) {
+			}
+		});
+		Zepto(function($) {
+			$("#find-list").on("tap", ".btn-share", function() {
+				// 快速打开窗口
+				H.$openFrame('share_body', 'share_body.html', null, {
+					x : 0,
+					y : 0
+				});
+			});
+		});
+		H.ready(function() {
+			H.$dropdownToRefresh(function(ret, err) {
+				setTimeout(function() {
+					// 加载完毕后，恢复下拉
+					H.$recoverDropdownToNormal();
+				}, 2000);
+			});
+			H.$dropupToAppend(function(ret, err) {
+				H.$openFrame('loading', 'widget://res/load11.html', null, {
+					x : 0,
+					y : 0
+				});
+				setTimeout(function() {
+					H.closeFrame("loading");
+					// 获取模板内容，并加载数据
+					var html = H.$tppl(H.$api.byId('tpl').innerHTML, {});
+					$("#find-list").append(html);
+					echo.init({
+						offset : 100,
+						throttle : 250,
+						unload : false,
+						callback : function(element, op) {
+						}
+					});
+				}, 1000);
+			});
+		});
+	</script>
+</html>

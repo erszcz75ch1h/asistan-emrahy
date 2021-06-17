@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/winu-ui.css" />
+		<style type="text/css">
+			.title-area {
+				padding: 10px 15px 25px 15px;
+				background: #1d9dd5;
+			}
+			.title-area p {
+				font-size: 26px;
+				color: #fff;
+				font-weight: bold;
+			}
+			.title-area span {
+				display: block;
+				font-size: 14px;
+				color: #fff;
+			}
+			.content {
+				padding: 15px;
+				line-height: 30px;
+				font-size: 16px;
+				color: #444;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="title-area">
+			<p>
+				点点例为APICloud开发者提供的示例应用
+			</p>
+			<span>点点例官方&nbsp;&nbsp;&nbsp;5分钟前</span>
+		</div>
+		<div class="content">
+			<p style="text-align: center;"><img src="../../image/pic.jpg" width="180" />
+			</p>
+			点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+			<br />
+			<br />
+			中山赢友网络科技有限公司 是一家提供高品质网络品牌产品推广服务的精英团队，专注于互联网领域解决方案的发展与创新， 我们已为全国多家知名企业提供了相应的技术解决方案，并树立了良好的口碑，积累了丰富的经验和成功案例。
+			<br />
+			<br/ >
+				我们来自于国内知名的4A广告公司， 软件开发公司，网络游戏研发公司，网络品牌营销公司，我们凭借不同的专业技能，及良好的售后服务质量，亦赢得客户的广泛认可，持续帮助企业实现卓越的业务成果。 移动互联网是当下互联网发展的大趋势，创新网站建设和手机应用成为众多企业关注的热点，赢友通过将设计创新、产品研发与已有的传统标准流程相结合的方式， 成功帮助客户部署了网络品牌解决方案并在市场拓展、品牌传播方面取得了巨大成效。
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript"></script>
+</html>

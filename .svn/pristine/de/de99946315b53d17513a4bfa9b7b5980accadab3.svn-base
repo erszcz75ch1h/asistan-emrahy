@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<style type="text/css">
+			.aui-list-view-cell:active {
+				background: #f4f4f4;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="aui-content">
+			<ul class="aui-list-view">
+				<li class="aui-list-view-cell" data-win="list_arrow" data-frameName='load1' tapmode >
+					<div class="aui-arrow-right">
+						加载特效一
+					</div>
+				</li>
+				<li class="aui-list-view-cell" data-win="list_arrow" data-frameName='load2' tapmode >
+					<div class="aui-arrow-right">
+						加载特效二
+					</div>
+				</li>
+				<li class="aui-list-view-cell" data-win="list_arrow" data-frameName='load3' tapmode >
+					<div class="aui-arrow-right">
+						加载特效三
+					</div>
+				</li>
+				<li class="aui-list-view-cell" data-win="list_arrow" data-frameName='load4' tapmode >
+					<div class="aui-arrow-right">
+						加载特效四
+					</div>
+				</li>
+				<li class="aui-list-view-cell" data-win="list_arrow" data-frameName='load5' tapmode >
+					<div class="aui-arrow-right">
+						加载特效五
+					</div>
+				</li>
+				<li class="aui-list-view-cell" data-win="list_arrow" data-frameName='load6' tapmode >
+					<div class="aui-arrow-right">
+						加载特效六
+					</div>
+				</li>
+				<li class="aui-list-view-cell" data-win="list_arrow" data-frameName='load7' tapmode >
+					<div class="aui-arrow-right">
+						加载特效七
+					</div>
+				</li>
+				<li class="aui-list-view-cell" data-win="list_arrow" data-frameName='load8' tapmode >
+					<div class="aui-arrow-right">
+						加载特效八
+					</div>
+				</li>
+				<li class="aui-list-view-cell" data-win="list_arrow" data-frameName='load9' tapmode >
+					<div class="aui-arrow-right">
+						加载特效九
+					</div>
+				</li>
+				<li class="aui-list-view-cell" data-win="list_arrow" data-frameName='load10' tapmode >
+					<div class="aui-arrow-right">
+						加载特效十
+					</div>
+				</li>
+				<li class="aui-list-view-cell" data-win="list_arrow" data-frameName='load11' tapmode >
+					<div class="aui-arrow-right">
+						加载特效十一
+					</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript">
+		Zepto(function($) {
+			$(".aui-list-view").on("tap", "li", function() {
+				var frameName = $(this).attr("data-frameName");
+				// 加载
+				H.$openFrame(frameName, 'widget://res/' + frameName + '.html', null, {
+					x : 0,
+					y : 0
+				});
+				setTimeout(function() {
+					H.closeFrame(frameName);
+				}, 3000);
+			});
+		});
+	</script>
+</html>

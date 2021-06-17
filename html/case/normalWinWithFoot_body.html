@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<script type="text/javascript" src="../../script/syntaxhighlighter/shCore.js"></script>
+		<script type="text/javascript" src="../../script/syntaxhighlighter/shBrushJScript.js"></script>
+		<link type="text/css" rel="stylesheet" href="../../css/syntaxhighlighter/shCoreRDark.css"/>
+		<script type="text/javascript">
+			SyntaxHighlighter.all();
+		</script>
+		<style type="text/css">
+			.aui-content {
+				padding: 10px;
+			}
+			.code-des {
+				padding: 5px 0 0 0;
+				font-size: 16px;
+				color: #666;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="aui-content">
+			<p class="code-des">
+				打开新窗口
+			</p>
+			<pre class="brush: js;">
+		
+H.$openWin('窗口名称','窗口地址');
+		</pre>
+			<p class="code-des">
+				新窗口顶部导航栏
+			</p>
+			<pre class="brush: js;">
+		
+<header class="aui-bar aui-bar-nav aui-bar-1d9dd5" id='aui-header'>
+	<a class="aui-pull-left" onclick="H.$closeCurrentWin();"> <span class="aui-iconfont aui-icon-left"></span>返回 </a>
+	<div class="aui-title">
+		普通窗口
+	</div>
+</header>
+		</pre>
+			<p class="code-des">
+				在新窗口中打开frame
+			</p>
+			<pre class="brush: js;">
+		
+H.ready(function() {
+	// 快速打开窗口
+	H.$openFrameWithNav('aui-header', {
+		url : 'frame地址',
+		name : 'frame名称'
+	});
+});
+		</pre>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript">
+		Zepto(function() {
+			$(".toolbar").hide();
+		});
+	</script>
+</html>
