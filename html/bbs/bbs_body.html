@@ -119,20 +119,20 @@
 			}
 		</style>
 		<script id="tpl" type="text/html">
-			[: for (var i=0;i<10;i++) { :]
-			<li  tapmode >
+			[: for (var i=0;i<list.length;i++) { :]
+			<li  tapmode data-id='[:=list[i].id:]' data-postType='[:=list[i].post_type:]'>
 			<div class="item-title">
-			<strong>点点例为APICloud开发者提供的示例应用</strong><span class="item-review float-right"  tapmode  >评论</span>
+			<strong>[:=list[i].title:]</strong><span class="item-review float-right"  tapmode  >评论</span>
 			</div>
 			<div class="item-info">
-			<span class="float-right">已有12人查阅</span><img src="../../image/gray.jpg" data-echo="../../image/pic.jpg" alt="" title="" /><span>点点例官方</span>
+			<span class="float-right">已有[:=list[i].view_count:]人查阅</span><img src="../../image/gray.jpg" data-echo="[:=(list[i].user_info).avatar_file:]" alt="" title="" /><span>[:=(list[i].user_info).user_name:]</span>
 			</div>
 			<div class="item-des">
-			点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+			[:=list[i].message:]
 			</div>
 			<div class="item-prop">
 			<span class="item-time float-left">5分钟前</span>
-			<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> 24</label> <label tapmode ><i class="iconfont icon-pinglun"></i> 3K</label></span>
+			<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> [:=list[i].agree_count:]</label> <label tapmode ><i class="iconfont icon-pinglun"></i> [:=list[i].answer_count:]</label></span>
 			</div>
 			</li>
 			[:}:]
@@ -140,158 +140,7 @@
 	</head>
 	<body>
 		<div class="aui-content">
-			<ul id="bbs-list">
-				<li  tapmode >
-					<div class="item-title">
-						<strong>点点例为APICloud开发者提供的示例应用</strong><span class="item-review float-right"  tapmode  >评论</span>
-					</div>
-					<div class="item-info">
-						<span class="float-right">已有12人查阅</span><img src="../../image/gray.jpg" data-echo="../../image/pic.jpg" alt="" title="" /><span>点点例官方</span>
-					</div>
-					<div class="item-des">
-						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
-					</div>
-					<div class="item-prop">
-						<span class="item-time float-left">5分钟前</span>
-						<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> 24</label> <label tapmode ><i class="iconfont icon-pinglun"></i> 3K</label></span>
-					</div>
-				</li>
-				<li  tapmode >
-					<div class="item-title">
-						<strong>点点例为APICloud开发者提供的示例应用</strong><span class="item-review float-right"  tapmode  >评论</span>
-					</div>
-					<div class="item-info">
-						<span class="float-right">已有12人查阅</span><img src="../../image/gray.jpg" data-echo="../../image/pic.jpg" alt="" title="" /><span>点点例官方</span>
-					</div>
-					<div class="item-des">
-						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
-					</div>
-					<div class="item-prop">
-						<span class="item-time float-left">5分钟前</span>
-						<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> 24</label> <label tapmode ><i class="iconfont icon-pinglun"></i> 3K</label></span>
-					</div>
-				</li>
-				<li  tapmode >
-					<div class="item-title">
-						<strong>点点例为APICloud开发者提供的示例应用</strong><span class="item-review float-right"  tapmode  >评论</span>
-					</div>
-					<div class="item-info">
-						<span class="float-right">已有12人查阅</span><img src="../../image/gray.jpg" data-echo="../../image/pic.jpg" alt="" title="" /><span>点点例官方</span>
-					</div>
-					<div class="item-des">
-						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
-					</div>
-					<div class="item-prop">
-						<span class="item-time float-left">5分钟前</span>
-						<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> 24</label> <label tapmode ><i class="iconfont icon-pinglun"></i> 3K</label></span>
-					</div>
-				</li>
-				<li  tapmode >
-					<div class="item-title">
-						<strong>点点例为APICloud开发者提供的示例应用</strong><span class="item-review float-right"  tapmode  >评论</span>
-					</div>
-					<div class="item-info">
-						<span class="float-right">已有12人查阅</span><img src="../../image/gray.jpg" data-echo="../../image/pic.jpg" alt="" title="" /><span>点点例官方</span>
-					</div>
-					<div class="item-des">
-						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
-					</div>
-					<div class="item-prop">
-						<span class="item-time float-left">5分钟前</span>
-						<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> 24</label> <label tapmode ><i class="iconfont icon-pinglun"></i> 3K</label></span>
-					</div>
-				</li>
-				<li  tapmode >
-					<div class="item-title">
-						<strong>点点例为APICloud开发者提供的示例应用</strong><span class="item-review float-right"  tapmode  >评论</span>
-					</div>
-					<div class="item-info">
-						<span class="float-right">已有12人查阅</span><img src="../../image/gray.jpg" data-echo="../../image/pic.jpg" alt="" title="" /><span>点点例官方</span>
-					</div>
-					<div class="item-des">
-						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
-					</div>
-					<div class="item-prop">
-						<span class="item-time float-left">5分钟前</span>
-						<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> 24</label> <label tapmode ><i class="iconfont icon-pinglun"></i> 3K</label></span>
-					</div>
-				</li>
-				<li  tapmode >
-					<div class="item-title">
-						<strong>点点例为APICloud开发者提供的示例应用</strong><span class="item-review float-right"  tapmode  >评论</span>
-					</div>
-					<div class="item-info">
-						<span class="float-right">已有12人查阅</span><img src="../../image/gray.jpg" data-echo="../../image/pic.jpg" alt="" title="" /><span>点点例官方</span>
-					</div>
-					<div class="item-des">
-						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
-					</div>
-					<div class="item-prop">
-						<span class="item-time float-left">5分钟前</span>
-						<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> 24</label> <label tapmode ><i class="iconfont icon-pinglun"></i> 3K</label></span>
-					</div>
-				</li>
-				<li  tapmode >
-					<div class="item-title">
-						<strong>点点例为APICloud开发者提供的示例应用</strong><span class="item-review float-right"  tapmode  >评论</span>
-					</div>
-					<div class="item-info">
-						<span class="float-right">已有12人查阅</span><img src="../../image/gray.jpg" data-echo="../../image/pic.jpg" alt="" title="" /><span>点点例官方</span>
-					</div>
-					<div class="item-des">
-						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
-					</div>
-					<div class="item-prop">
-						<span class="item-time float-left">5分钟前</span>
-						<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> 24</label> <label tapmode ><i class="iconfont icon-pinglun"></i> 3K</label></span>
-					</div>
-				</li>
-				<li  tapmode >
-					<div class="item-title">
-						<strong>点点例为APICloud开发者提供的示例应用</strong><span class="item-review float-right"  tapmode  >评论</span>
-					</div>
-					<div class="item-info">
-						<span class="float-right">已有12人查阅</span><img src="../../image/gray.jpg" data-echo="../../image/pic.jpg" alt="" title="" /><span>点点例官方</span>
-					</div>
-					<div class="item-des">
-						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
-					</div>
-					<div class="item-prop">
-						<span class="item-time float-left">5分钟前</span>
-						<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> 24</label> <label tapmode ><i class="iconfont icon-pinglun"></i> 3K</label></span>
-					</div>
-				</li>
-				<li  tapmode >
-					<div class="item-title">
-						<strong>点点例为APICloud开发者提供的示例应用</strong><span class="item-review float-right"  tapmode  >评论</span>
-					</div>
-					<div class="item-info">
-						<span class="float-right">已有12人查阅</span><img src="../../image/gray.jpg" data-echo="../../image/pic.jpg" alt="" title="" /><span>点点例官方</span>
-					</div>
-					<div class="item-des">
-						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
-					</div>
-					<div class="item-prop">
-						<span class="item-time float-left">5分钟前</span>
-						<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> 24</label> <label tapmode ><i class="iconfont icon-pinglun"></i> 3K</label></span>
-					</div>
-				</li>
-				<li  tapmode >
-					<div class="item-title">
-						<strong>点点例为APICloud开发者提供的示例应用</strong><span class="item-review float-right"  tapmode  >评论</span>
-					</div>
-					<div class="item-info">
-						<span class="float-right">已有12人查阅</span><img src="../../image/gray.jpg" data-echo="../../image/pic.jpg" alt="" title="" /><span>点点例官方</span>
-					</div>
-					<div class="item-des">
-						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
-					</div>
-					<div class="item-prop">
-						<span class="item-time float-left">5分钟前</span>
-						<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> 24</label> <label tapmode ><i class="iconfont icon-pinglun"></i> 3K</label></span>
-					</div>
-				</li>
-			</ul>
+			<ul id="bbs-list"></ul>
 		</div>
 		<div class="push-fixed winu-center-all" tapmode onclick="H.$openWin('push_bbs_head', 'push_bbs_head.html');">
 			<i class="iconfont icon-luyinbi"></i>
@@ -304,13 +153,7 @@
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript" src="../../script/echo.min.js"></script>
 	<script type="text/javascript">
-		echo.init({
-			offset : 100,
-			throttle : 250,
-			unload : false,
-			callback : function(element, op) {
-			}
-		});
+		var page = 1;
 		Zepto(function($) {
 			$("#bbs-list").on("tap", "li *", function() {
 				if ($(this).is(".item-review,.item-review *")) {
@@ -323,31 +166,96 @@
 				}
 			});
 		});
+		// 合并问题和文章
+		function createTplData(dataList) {
+			var rows = [];
+			if (dataList && dataList.length > 0) {
+				for (var i = 0; i < dataList.length; i++) {
+					var obj = dataList[i];
+					// 是否是问题
+					if (obj.post_type == "question") {
+						rows.push({
+							id : obj.question_id,
+							title : obj.question_content,
+							message : obj.question_detail,
+							add_time : obj.add_time,
+							post_type : obj.post_type,
+							answer_count : obj.answer_count,
+							view_count : obj.view_count,
+							agree_count : obj.agree_count,
+							user_info : obj.user_info,
+							topics : obj.topics
+						});
+					} else {
+						rows.push({
+							id : obj.id,
+							title : obj.title,
+							message : obj.message,
+							add_time : obj.add_time,
+							post_type : obj.post_type,
+							answer_count : obj.comments,
+							view_count : obj.views,
+							agree_count : obj.votes,
+							user_info : obj.user_info,
+							topics : obj.topics
+						});
+					}
+				}
+			}
+			return rows;
+		}
+
+		// 加载数据
+		function loadLoad(pageIndex, pageSize) {
+			pageIndex = pageIndex ? pageIndex : 1;
+			pageSize = pageSize ? pageSize : 10;
+			H.$ajax(function(ret, err) {
+				// 有数据
+				if (ret.rsm) {
+					var dataList = createTplData((ret.rsm).rows);
+					if (dataList && dataList.length > 0) {
+						if (pageIndex <= 1) {
+							// 获取模板内容，并加载数据
+							var html = H.$tppl(H.$api.byId('tpl').innerHTML, {
+								list : dataList
+							});
+							$("#bbs-list").html(html);
+							// 加载完毕后，恢复下拉
+							H.$recoverDropdownToNormal();
+						} else {
+							// 获取模板内容，并加载数据
+							var html = H.$tppl(H.$api.byId('tpl').innerHTML, {
+								list : dataList
+							});
+							$("#bbs-list").append(html);
+						}
+						echo.init({
+							offset : 100,
+							throttle : 250,
+							unload : false,
+							callback : function(element, op) {
+							}
+						});
+					}
+					H.closeFrame("loading");
+				}
+			}, 'http://bbs.winu.net/?/api/explore/?page=' + pageIndex + '&per_page=' + pageSize);
+		}
+
+
 		H.ready(function() {
+			loadLoad();
 			H.$dropdownToRefresh(function(ret, err) {
-				setTimeout(function() {
-					// 加载完毕后，恢复下拉
-					H.$recoverDropdownToNormal();
-				}, 2000);
+				page = 1;
+				loadLoad();
 			});
 			H.$dropupToAppend(function(ret, err) {
 				H.$openFrame('loading', 'widget://res/load9.html', null, {
 					x : 0,
 					y : 0
 				});
-				setTimeout(function() {
-					H.closeFrame("loading");
-					// 获取模板内容，并加载数据
-					var html = H.$tppl(H.$api.byId('tpl').innerHTML, {});
-					$("#bbs-list").append(html);
-					echo.init({
-						offset : 100,
-						throttle : 250,
-						unload : false,
-						callback : function(element, op) {
-						}
-					});
-				}, 2000);
+				page = page + 1;
+				loadLoad(page);
 			});
 		});
 	</script>
