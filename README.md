@@ -1,7 +1,10 @@
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215145_c8cabc17_526496.png "在这里输入图片标题")
-### 点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
 
-#### 更新记录
+> ### 点点例是由(中山赢友网络科技有限公司)[http://www.winu.net)专门为(APICloud)[http://www.apicloud.com]开发者提供的示例应用，帮助开发者快速学习，快速查阅！
+
+*****
+
+### 更新记录
 
 ```
  **2016年01月15日 1.0.5 Alpha 版本**
@@ -57,13 +60,16 @@
  
  ```
 
- #### 1.0.4 Alpha 版本
+ 
+*****
+
+ ### 1.0.4 Alpha 版本
  - [IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c0516f3ad8f6cc787dd9eb53b165a0e9.ipa)
  - [Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ec718617b626f0fa553a837db3cc0def_d)
 
 *****
 
-#### App截图
+### App截图
 
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215340_a55b3593_526496.png "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215357_69ec2e65_526496.png "在这里输入图片标题")
