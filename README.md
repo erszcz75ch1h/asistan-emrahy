@@ -1,6 +1,6 @@
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215145_c8cabc17_526496.png "在这里输入图片标题")
 
-> # `点点例`是由(中山赢友网络科技有限公司)[http://www.winu.net)专门为(APICloud)[http://www.apicloud.com]开发者提供的示例应用，帮助开发者快速学习，快速查阅！**目前项目属于开发状态**
+> # `点点例`是由(中山赢友网络科技有限公司)[http://www.winu.net]专门为(APICloud)[http://www.apicloud.com]开发者提供的示例应用，帮助开发者快速学习，快速查阅！**目前项目属于开发状态**
 
 * 作者：`新生帝`
 * QQ：`8020292`
