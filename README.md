@@ -1,8 +1,6 @@
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215145_c8cabc17_526496.png "在这里输入图片标题")
 
 > # `点点例`是专门为[APICloud](http://www.apicloud.com)开发者提供的丰富的开发示例应用！
-> 
-> # 目前项目属于开发状态
 
 * 作者：`新生帝`
 * QQ：`8020292`
@@ -10,6 +8,10 @@
 * 技术支持：[中山赢友网络科技有限公司](http://www.winu.net/)
 
 * [APICloud](http://www.apicloud.com/)是一个非常好的一个APP开发平台！[APICloud官网](http://www.apicloud.com/)
+
+## 项目状态
+
+* 目前项目属于开发状态！
 
 ## 更新记录
 
