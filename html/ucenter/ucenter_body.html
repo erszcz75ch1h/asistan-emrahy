@@ -38,8 +38,8 @@
 				<li class="aui-list-view-cell" tapmode >
 					<a class="aui-arrow-right">检查更新</a>
 				</li>
-				<li class="aui-list-view-cell" tapmode >
-					<a class="aui-arrow-right"> 清除缓存 <span class="aui-badge aui-badge-danger">36M</span> </a>
+				<li class="aui-list-view-cell" tapmode id="clear-cache">
+					<a class="aui-arrow-right"> 清除缓存 <span class="aui-badge aui-badge-danger" id="cache-size">0M</span> </a>
 				</li>
 				<li class="aui-list-view-cell" tapmode data-funcName="update_log_head">
 					<a class="aui-arrow-right">更新记录<span class="aui-badge aui-badge-success">新增</span> </a>
@@ -72,8 +72,25 @@
 				if (funcName) {
 					H.$openWin(funcName, funcName + '.html');
 				}
-				else{
-				H.$alert("苦逼程序猿，正在疯狂加班中……");
+			});
+			// 清除缓存
+			$("#clear-cache").on("tap", function() {
+				api.clearCache(function(ret, err) {
+					if (ret) {
+						$("#cache-size").text("0M");
+						H.$toast("清除成功");
+					} else {
+						H.$toast("清除失败");
+					}
+				});
+			});
+		});
+		H.ready(function() {
+			api.getCacheSize(function(ret, err) {
+				if (ret) {
+					$("#cache-size").text((ret.size / 1000 / 1000).toFixed(2) + "M");
+				} else {
+					$("#cache-size").text("0M");
 				}
 			});
 		});

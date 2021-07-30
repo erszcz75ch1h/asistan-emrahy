@@ -29,27 +29,84 @@
 				color: #444;
 			}
 		</style>
-	</head>
-	<body>
-		<div class="title-area">
+		<script id="tpl" type="text/html">
+			<div class="title-area">
 			<p>
-				点点例为APICloud开发者提供的示例应用
+			[:=data.title:]
 			</p>
-			<span>点点例官方&nbsp;&nbsp;&nbsp;5分钟前</span>
-		</div>
-		<div class="content">
-			<p style="text-align: center;"><img src="../../image/pic.jpg" width="180" />
-			</p>
-			点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
-			<br />
-			<br />
-			中山赢友网络科技有限公司 是一家提供高品质网络品牌产品推广服务的精英团队，专注于互联网领域解决方案的发展与创新， 我们已为全国多家知名企业提供了相应的技术解决方案，并树立了良好的口碑，积累了丰富的经验和成功案例。
-			<br />
-			<br/ >
-				我们来自于国内知名的4A广告公司， 软件开发公司，网络游戏研发公司，网络品牌营销公司，我们凭借不同的专业技能，及良好的售后服务质量，亦赢得客户的广泛认可，持续帮助企业实现卓越的业务成果。 移动互联网是当下互联网发展的大趋势，创新网站建设和手机应用成为众多企业关注的热点，赢友通过将设计创新、产品研发与已有的传统标准流程相结合的方式， 成功帮助客户部署了网络品牌解决方案并在市场拓展、品牌传播方面取得了巨大成效。
-		</div>
-	</body>
+			<span>[:=(data.user_info).user_name:]&nbsp;&nbsp;&nbsp;[:=transTime(data.add_time):]</span>
+			</div>
+			<div class="content">
+			[:=data.message:]
+			</div>
+		</script>
+	</head>
+	<body></body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
-	<script type="text/javascript"></script>
+	<script type="text/javascript" src="../../script/date.js"></script>
+	<script type="text/javascript" src="../../script/app.js"></script>
+	<script type="text/javascript">
+		// 合并问题和文章
+		function createTplData(obj, postType) {
+			var newObj = {};
+			if (postType == "question") {
+				newObj.id = obj.question_id;
+				newObj.title = obj.question_content;
+				newObj.message = obj.question_detail;
+				newObj.add_time = obj.add_time;
+				newObj.post_type = obj.post_type;
+				newObj.answer_count = obj.answer_count;
+				newObj.view_count = obj.view_count;
+				newObj.agree_count = obj.agree_count;
+				newObj.user_info = obj.user_info;
+				newObj.topics = obj.topics;
+			} else {
+				newObj.id = obj.id;
+				newObj.title = obj.title;
+				newObj.message = obj.message;
+				newObj.add_time = obj.add_time;
+				newObj.post_type = obj.post_type;
+				newObj.answer_count = obj.comments;
+				newObj.view_count = obj.views;
+				newObj.agree_count = obj.votes;
+				newObj.user_info = obj.user_info;
+				newObj.topics = obj.topics;
+			}
+			return newObj;
+		}
+
+		function loadData(id, postType) {
+			var url = "";
+			if (postType == "question") {
+				url = window.apiUrl + 'question/?id=' + id + '&sort_key=add_time';
+			} else {
+				url = window.apiUrl + 'article/?id=' + id;
+			}
+			H.$ajax(function(ret, err) {
+				// 有数据
+				if (ret.rsm) {
+					var newObj = createTplData((postType == "question" ? ((ret.rsm).question_info) : ((ret.rsm).article_info)), postType);
+					// 获取模板内容，并加载数据
+					var html = H.$tppl(H.$api.byId('tpl').innerHTML, {
+						data : newObj
+					});
+					$("body").html(html);
+					H.$execScript(null, null, 'setNavData(' + newObj.agree_count + ',' + newObj.answer_count + ');');
+				}
+				H.closeFrame("loading");
+			}, url);
+		}
+
+
+		H.ready(function() {
+			// 加载
+			H.$openFrame('loading', 'widget://res/load9.html', null, {
+				x : 0,
+				y : 0
+			});
+			var param = H.$getPageParam();
+			loadData(param.id, param.postType);
+		});
+	</script>
 </html>

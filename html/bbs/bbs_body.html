@@ -84,7 +84,7 @@
 			}
 			.item-prop span label {
 				display: inline-block;
-				padding: 0 8px;
+				padding: 0 10px;
 			}
 			.item-review {
 				display: block;
@@ -122,7 +122,7 @@
 			[: for (var i=0;i<list.length;i++) { :]
 			<li  tapmode data-id='[:=list[i].id:]' data-postType='[:=list[i].post_type:]'>
 			<div class="item-title">
-			<strong>[:=list[i].title:]</strong><span class="item-review float-right"  tapmode  >评论</span>
+			<strong>[:=list[i].title:]</strong><span class="item-review float-right"  tapmode data-id='[:=list[i].id:]' >评论</span>
 			</div>
 			<div class="item-info">
 			<span class="float-right">已有[:=list[i].view_count:]人查阅</span><img src="../../image/gray.jpg" data-echo="[:=(list[i].user_info).avatar_file:]" alt="" title="" /><span>[:=(list[i].user_info).user_name:]</span>
@@ -131,8 +131,8 @@
 			[:=list[i].message:]
 			</div>
 			<div class="item-prop">
-			<span class="item-time float-left">5分钟前</span>
-			<span class="item-icons float-right"> <label  tapmode ><i class="iconfont icon-shoucangweishoucang"></i> [:=list[i].agree_count:]</label> <label tapmode ><i class="iconfont icon-pinglun"></i> [:=list[i].answer_count:]</label></span>
+			<span class="item-time float-left">[:=transTime(list[i].add_time):]</span>
+			<span class="item-icons float-right"> <label tapmode  data-id='[:=list[i].id:]' data-postType='[:=list[i].post_type:]' id="click-nice"><i class="iconfont icon-shoucangweishoucang"></i> [:=list[i].agree_count:]</label> <label tapmode  data-id='[:=list[i].id:]' data-postType='[:=list[i].post_type:]' id="review-list"><i class="iconfont icon-pinglun"></i> [:=list[i].answer_count:]</label></span>
 			</div>
 			</li>
 			[:}:]
@@ -152,20 +152,10 @@
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript" src="../../script/echo.min.js"></script>
+	<script type="text/javascript" src="../../script/date.js"></script>
+	<script type="text/javascript" src="../../script/app.js"></script>
 	<script type="text/javascript">
 		var page = 1;
-		Zepto(function($) {
-			$("#bbs-list").on("tap", "li *", function() {
-				if ($(this).is(".item-review,.item-review *")) {
-					H.$openFrame('bbs_review_body', 'bbs_review_body.html', null, {
-						x : 0,
-						y : 0
-					});
-				} else {
-					H.$openWin('bbs_view_head', 'bbs_view_head.html');
-				}
-			});
-		});
 		// 合并问题和文章
 		function createTplData(dataList) {
 			var rows = [];
@@ -174,10 +164,12 @@
 					var obj = dataList[i];
 					// 是否是问题
 					if (obj.post_type == "question") {
+						var _msg = delHtmlTag(obj.question_detail);
+						_msg = _msg.substr(0, _msg.length > 47 ? 47 : _msg.length) + (_msg.length > 47 ? "..." : "");
 						rows.push({
 							id : obj.question_id,
 							title : obj.question_content,
-							message : obj.question_detail,
+							message : _msg,
 							add_time : obj.add_time,
 							post_type : obj.post_type,
 							answer_count : obj.answer_count,
@@ -187,10 +179,12 @@
 							topics : obj.topics
 						});
 					} else {
+						var _msg = delHtmlTag(obj.message);
+						_msg = _msg.substr(0, _msg.length > 47 ? 47 : _msg.length) + (_msg.length > 47 ? "..." : "");
 						rows.push({
 							id : obj.id,
 							title : obj.title,
-							message : obj.message,
+							message : _msg,
 							add_time : obj.add_time,
 							post_type : obj.post_type,
 							answer_count : obj.comments,
@@ -237,14 +231,43 @@
 							}
 						});
 					}
-					H.closeFrame("loading");
 				}
-			}, 'http://bbs.winu.net/?/api/explore/?page=' + pageIndex + '&per_page=' + pageSize);
+				H.closeFrame("loading");
+			}, window.apiUrl + 'explore/?page=' + pageIndex + '&per_page=' + pageSize);
 		}
 
-
+		Zepto(function($) {
+			$("#bbs-list").on("tap", "*", function() {
+				if ($(this).is(".item-review,.item-review *")) {
+					H.$openFrame('bbs_review_body', 'bbs_review_body.html', null, {
+						x : 0,
+						y : 0
+					});
+				} else if ($(this).is("#click-nice,#click-nice *")) {
+					H.$toast("点赞");
+				} else if ($(this).is("#review-list,#review-list *")) {
+					H.$toast("评论列表");
+				} else {
+					var param = {
+						id : 0,
+						postType : 'question'
+					};
+					var that;
+					if ($(this).is("li")) {
+						that = $(this);
+					} else {
+						that = $(this).parents("#bbs-list li");
+					}
+					var bid = that.attr("data-id");
+					var postType = that.attr("data-postType");
+					param.id = bid;
+					param.postType = postType;
+					// 打开带参数的窗口
+					H.$openWin('bbs_view_head', 'bbs_view_head.html', param);
+				}
+			});
+		});
 		H.ready(function() {
-			loadLoad();
 			H.$dropdownToRefresh(function(ret, err) {
 				page = 1;
 				loadLoad();
@@ -257,6 +280,8 @@
 				page = page + 1;
 				loadLoad(page);
 			});
+			// 设置窗口自动下拉加载
+			H.$setAutoDropdownToRefresh();
 		});
 	</script>
 </html>

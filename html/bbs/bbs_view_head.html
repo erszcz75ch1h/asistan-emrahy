@@ -18,18 +18,25 @@
 			<a class="aui-pull-left" tapmode  onclick="H.$closeCurrentWin();"> <span class="aui-iconfont aui-icon-left"></span>返回 </a>
 			<div class="aui-title"></div>
 			<a class="aui-pull-right" tapmode onclick="H.$openFrame('share_body', 'share_body.html',null,{x:0,y:0})"> <span class="aui-iconfont iconfont icon-fenxiang2"></span></a>
-			<a class="aui-pull-right" tapmode > <span class="aui-iconfont iconfont icon-pinglun"></span> &nbsp;&nbsp;</a>
-			<a class="aui-pull-right" tapmode > <span class="aui-iconfont iconfont icon-shoucangweishoucang"></span> &nbsp;&nbsp;</a>
+			<a class="aui-pull-right" tapmode > <span class="aui-iconfont iconfont icon-pinglun"></span> <label id="answer_count">0</label>&nbsp;&nbsp;</a>
+			<a class="aui-pull-right" tapmode > <span class="aui-iconfont iconfont icon-shoucangweishoucang"></span> <label id="agree_count">0</label>&nbsp;&nbsp;</a>
 		</header>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript">
+		function setNavData(agree_count, answer_count) {
+			$("#agree_count").text(agree_count);
+			$("#answer_count").text(answer_count);
+		}
+
+
 		H.ready(function() {
 			// 快速打开窗口
 			H.$openFrameWithNav('aui-header', {
 				url : 'bbs_view_body.html',
-				name : 'bbs_view_body'
+				name : 'bbs_view_body',
+				pageParam : H.$getPageParam()
 			});
 		});
 	</script>
