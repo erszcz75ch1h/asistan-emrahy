@@ -24,6 +24,7 @@
  * [更新] 讨论社区点赞和查看评论按钮
  * [更新] 讨论社区详细信息为动态数据
  * [更新] 讨论社区列表中内设置为只截取47个字符，点击可以查看详细内容
+ * [更新] 没有网络时提示
  
  **************************
 
@@ -83,9 +84,13 @@
 
 ## 安装包信息
 
- * [1.0.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/f4dfbd28ea54aaeebb0c1477571f3376.ipa)
+ * [1.0.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/f729b50a36b0928c517bf1b5282bfd9.ipa)
 
- * [1.0.6 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2a5a0472ee0b17693dd4e9072b1c0458_d)
+ * [1.0.6 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/713aee3bdba0455c4c633cc584829d4_d)
+
+ *
+
+ *
 
  * [1.0.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c0516f3ad8f6cc787dd9eb53b165a0e9.ipa)
 

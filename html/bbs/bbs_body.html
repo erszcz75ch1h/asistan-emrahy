@@ -269,16 +269,24 @@
 		});
 		H.ready(function() {
 			H.$dropdownToRefresh(function(ret, err) {
-				page = 1;
-				loadLoad();
+				if (api.connectionType != "none") {
+					page = 1;
+					loadLoad();
+				} else {
+					H.$toast("网络未连接");
+				}
 			});
 			H.$dropupToAppend(function(ret, err) {
-				H.$openFrame('loading', 'widget://res/load9.html', null, {
-					x : 0,
-					y : 0
-				});
-				page = page + 1;
-				loadLoad(page);
+				if (api.connectionType != "none") {
+					H.$openFrame('loading', 'widget://res/load9.html', null, {
+						x : 0,
+						y : 0
+					});
+					page = page + 1;
+					loadLoad(page);
+				} else {
+					H.$toast("网络未连接");
+				}
 			});
 			// 设置窗口自动下拉加载
 			H.$setAutoDropdownToRefresh();
