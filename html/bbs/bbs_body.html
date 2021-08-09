@@ -273,6 +273,8 @@
 					page = 1;
 					loadLoad();
 				} else {
+					// 恢复下拉
+					H.$recoverDropdownToNormal();
 					H.$toast("网络未连接");
 				}
 			});
