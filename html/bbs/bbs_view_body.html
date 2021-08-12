@@ -109,6 +109,7 @@
 			if (api.connectionType != "none") {
 				loadData(param.id, param.postType);
 			} else {
+				H.closeFrame("loading");
 				H.$toast("网络未连接");
 			}
 		});
