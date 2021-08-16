@@ -6,119 +6,185 @@
 		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
 		<style type="text/css">
+			.aui-content {
+				background: #ffffff;
+				overflow: hidden;
+				padding: 10px;
+			}
+			.upload-content {
+				color: #888;
+			}
+			.aui-timeline > li > .aui-time-label {
+				width: 70px !important;
+			}
+			.aui-timeline > li > .aui-timeline-item {
+				margin-left: 80px !important;
+			}
 		</style>
 	</head>
 	<body>
-		<p class="aui-padded-10">
-			<b>2016年01月16日 1.0.6 Alpha 版本</b>
-			<br />
-			<br />
-			[新增] 获取App缓存和清空缓存功能
-			<br />
-			[新增] App.js 全局通用文件
-			<br />
-			[更新] 讨论社区点赞和查看评论按钮
-			<br />
-			[更新] 讨论社区详细信息为动态数据
-			<br />
-			[更新] 讨论社区列表中内设置为只截取47个字符，点击可以查看详细内容
-			<br />
-			[更新] 没有网络时提示
-		</p>
-		<p class="aui-padded-10">
-			**************************
-		</p>
-		<p class="aui-padded-10">
-			<b>2016年01月15日 1.0.5 Alpha 版本</b>
-			<br />
-			<br />
-			[新增] 讨论社区列表为动态数据！
-			<br />
-			[新增] 讨论社区分布时间显示，模仿微信！
-		</p>
-		<p class="aui-padded-10">
-			**************************
-		</p>
-		<p class="aui-padded-10">
-			<b>2016年01月14日 1.0.4 Alpha 版本</b>
-			<br />
-			<br />
-			[新增] 所见所闻页添加菜单，模仿QQ控件
-			<br />
-			[更新] 应开发者的要求，全面替换UI为AUI框架。
-			<br />
-			[更新] 布局实例中的【向左滑出隐藏菜单】流畅度，和滑动时其他自动隐藏。
-			<br />
-			[更新] App图标
-			<br />
-			[更新] 大量默认文字描述
-			<br />
-			[更新] 布局实例中的【打开普通窗口（带底部导航）】的设置页面，模仿QQ空间
-		</p>
-		<p class="aui-padded-10">
-			**************************
-		</p>
-		<p class="aui-padded-10">
-			<b>2016年01月13日 1.0.3 Alpha 版本</b>
-			<br />
-			<br />
-			[新增] 常见实例：前端推荐、赢友产品
-			<br />
-			[新增] css3动画：新生帝在努力奔跑
-			<br />
-			[新增] 常见实例：滑动页面头部透明显示、优化页面加载之图片懒加载
-			<br />
-			[更新] 所见所闻栏目所有图片为懒加载
-			<br />
-			[更新] 转场动画修改为新视图将旧视图推开，之前是新视图移到旧视图上面
-			<br />
-			[修复] Zepto在IOS系统出错问题
-		</p>
-		<p class="aui-padded-10">
-			**************************
-		</p>
-		<p class="aui-padded-10">
-			<b>2016年01月12日 1.0.2 Alpha 版本</b>
-			<br />
-			<br />
-			[新增] 常见实例：底部导航 +、向左滑出隐藏菜单、酷炫加载特效
-			<br />
-			[新增] 设备实例：完成APICloud所有端API对象的属性编写
-			<br />
-			[新增] 事件实例：完成APICloud所有端API对象的事件编写
-			<br />
-			[新增] 模块实例：预设模块功能开发功能先事项
-			<br />
-			[更新] 提升App点击响应速度，提高切换流畅度
-		</p>
-		<p class="aui-padded-10">
-			**************************
-		</p>
-		<p class="aui-padded-10">
-			<b>2016年01月11日 1.0.1 Alpha 版本</b>
-			<br />
-			<br />
-			[新增] 常见实例：打开普通窗口、打开普通窗口（带底部导航）、打开窗口组、弹出分享窗口
-			<br />
-			[新增] 讨论社区浮动刷新和发布按钮
-		</p>
-		<p class="aui-padded-10">
-			**************************
-		</p>
-		<p class="aui-padded-10">
-			<b>2016年01月10日 1.0.0 Alpha 版本</b>
-			<br />
-			<br />
-			[新增] 搭建App基本骨架
-			<br />
-			[新增] 常见实例、讨论社区、所见所闻、个人中心菜单
-			<br />
-			[新增] 侧滑菜单
-		</p>
-		<p class="aui-padded-10">
-			**************************
-		</p>
+		<div class="aui-content">
+			<ul class="aui-timeline">
+				<li class="aui-time-label">
+					<span class="aui-bg-info"> Alpha 版本 </span>
+				</li>
+				<li>
+					<div class="aui-time-label aui-bg-info">
+						2016.01.16
+					</div>
+					<div class="aui-timeline-item">
+						<span class="aui-timeline-time"><i class="aui-iconfont iconfont icon-banbengengxin"></i> V1.0.6 Alpha</span>
+						<h3 class="aui-timeline-header"><i class="aui-iconfont iconfont icon-zhuyishixiang"></i> 更新信息</h3>
+						<div class="aui-timeline-body">
+							[新增] <span class="upload-content">获取App缓存和清空缓存功能</span>
+							<br />
+							[新增] <span class="upload-content">App.js 全局通用文件</span>
+							<br />
+							[更新] <span class="upload-content">讨论社区点赞和查看评论按钮</span>
+							<br />
+							[更新] <span class="upload-content">讨论社区详细信息为动态数据</span>
+							<br />
+							[更新] <span class="upload-content">讨论社区列表中内设置为只截取47个字符，点击可以查看详细内容</span>
+							<br />
+							[更新] <span class="upload-content">没有网络时提示</span>
+							<br />
+							[更新] <span class="upload-content">更新记录样式，使用时间轴格式</span>
+						</div>
+						<div class="aui-timeline-footer">
+							<img src="../../image/pic.jpg" width="20" style="vertical-align: middle;margin-right:10px;" /> 点点例
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="aui-time-label aui-bg-info">
+						2016.01.15
+					</div>
+					<div class="aui-timeline-item">
+						<span class="aui-timeline-time"><i class="aui-iconfont iconfont icon-banbengengxin"></i> V1.0.5 Alpha</span>
+						<h3 class="aui-timeline-header"><i class="aui-iconfont iconfont icon-zhuyishixiang"></i> 更新信息</h3>
+						<div class="aui-timeline-body">
+							[新增] <span class="upload-content">讨论社区列表为动态数据！</span>
+							<br />
+							[新增] <span class="upload-content">讨论社区分布时间显示，模仿微信！</span>
+						</div>
+						<div class="aui-timeline-footer">
+							<img src="../../image/pic.jpg" width="20" style="vertical-align: middle;margin-right:10px;" /> 点点例
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="aui-time-label aui-bg-info">
+						2016.01.14
+					</div>
+					<div class="aui-timeline-item">
+						<span class="aui-timeline-time"><i class="aui-iconfont iconfont icon-banbengengxin"></i> V1.0.4 Alpha</span>
+						<h3 class="aui-timeline-header"><i class="aui-iconfont iconfont icon-zhuyishixiang"></i> 更新信息</h3>
+						<div class="aui-timeline-body">
+							[新增] <span class="upload-content">所见所闻页添加菜单，模仿QQ控件</span>
+							<br />
+							[更新] <span class="upload-content">应开发者的要求，全面替换UI为AUI框架。</span>
+							<br />
+							[更新] <span class="upload-content">布局实例中的【向左滑出隐藏菜单】流畅度，和滑动时其他自动隐藏。</span>
+							<br />
+							[更新] <span class="upload-content">App图标</span>
+							<br />
+							[更新] <span class="upload-content">大量默认文字描述</span>
+							<br />
+							[更新] <span class="upload-content">布局实例中的【打开普通窗口（带底部导航）】的设置页面，模仿QQ空间</span>
+						</div>
+						<div class="aui-timeline-footer">
+							<img src="../../image/pic.jpg" width="20" style="vertical-align: middle;margin-right:10px;" /> 点点例
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="aui-time-label aui-bg-info">
+						2016.01.13
+					</div>
+					<div class="aui-timeline-item">
+						<span class="aui-timeline-time"><i class="aui-iconfont iconfont icon-banbengengxin"></i> V1.0.3 Alpha</span>
+						<h3 class="aui-timeline-header"><i class="aui-iconfont iconfont icon-zhuyishixiang"></i> 更新信息</h3>
+						<div class="aui-timeline-body">
+							[新增] <span class="upload-content">常见实例：前端推荐、赢友产品</span>
+							<br />
+							[新增] <span class="upload-content">css3动画：新生帝在努力奔跑</span>
+							<br />
+							[新增] <span class="upload-content">常见实例：滑动页面头部透明显示、优化页面加载之图片懒加载</span>
+							<br />
+							[更新] <span class="upload-content">所见所闻栏目所有图片为懒加载</span>
+							<br />
+							[更新] <span class="upload-content">转场动画修改为新视图将旧视图推开，之前是新视图移到旧视图上面</span>
+							<br />
+							[修复] <span class="upload-content">Zepto在IOS系统出错问题</span>
+						</div>
+						<div class="aui-timeline-footer">
+							<img src="../../image/pic.jpg" width="20" style="vertical-align: middle;margin-right:10px;" /> 点点例
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="aui-time-label aui-bg-info">
+						2016.01.12
+					</div>
+					<div class="aui-timeline-item">
+						<span class="aui-timeline-time"><i class="aui-iconfont iconfont icon-banbengengxin"></i> V1.0.2 Alpha</span>
+						<h3 class="aui-timeline-header"><i class="aui-iconfont iconfont icon-zhuyishixiang"></i> 更新信息</h3>
+						<div class="aui-timeline-body">
+							[新增] <span class="upload-content">常见实例：底部导航 +、向左滑出隐藏菜单、酷炫加载特效</span>
+							<br />
+							[新增] <span class="upload-content">设备实例：完成APICloud所有端API对象的属性编写</span>
+							<br />
+							[新增] <span class="upload-content">事件实例：完成APICloud所有端API对象的事件编写</span>
+							<br />
+							[新增] <span class="upload-content">模块实例：预设模块功能开发功能先事项</span>
+							<br />
+							[更新] <span class="upload-content">提升App点击响应速度，提高切换流畅度</span>
+						</div>
+						<div class="aui-timeline-footer">
+							<img src="../../image/pic.jpg" width="20" style="vertical-align: middle;margin-right:10px;" /> 点点例
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="aui-time-label aui-bg-info">
+						2016.01.11
+					</div>
+					<div class="aui-timeline-item">
+						<span class="aui-timeline-time"><i class="aui-iconfont iconfont icon-banbengengxin"></i> V1.0.1 Alpha</span>
+						<h3 class="aui-timeline-header"><i class="aui-iconfont iconfont icon-zhuyishixiang"></i> 更新信息</h3>
+						<div class="aui-timeline-body">
+							[新增] <span class="upload-content">常见实例：打开普通窗口、打开普通窗口（带底部导航）、打开窗口组、弹出分享窗口</span>
+							<br />
+							[新增] <span class="upload-content">讨论社区浮动刷新和发布按钮</span>
+						</div>
+						<div class="aui-timeline-footer">
+							<img src="../../image/pic.jpg" width="20" style="vertical-align: middle;margin-right:10px;" /> 点点例
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="aui-time-label aui-bg-info">
+						2016.01.10
+					</div>
+					<div class="aui-timeline-item">
+						<span class="aui-timeline-time"><i class="aui-iconfont iconfont icon-banbengengxin"></i> V1.0.0 Alpha</span>
+						<h3 class="aui-timeline-header"><i class="aui-iconfont iconfont icon-zhuyishixiang"></i> 更新信息</h3>
+						<div class="aui-timeline-body">
+							[新增] <span class="upload-content">搭建App基本骨架</span>
+							<br />
+							[新增] <span class="upload-content">常见实例、讨论社区、所见所闻、个人中心菜单</span>
+							<br />
+							[新增] <span class="upload-content">侧滑菜单</span>
+						</div>
+						<div class="aui-timeline-footer">
+							<img src="../../image/pic.jpg" width="20" style="vertical-align: middle;margin-right:10px;" /> 点点例
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
