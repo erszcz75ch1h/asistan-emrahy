@@ -14,6 +14,20 @@
 
 * 目前项目属于开发状态！
 
+## 安装包信息
+
+ * [1.0.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fd5e84e7dd524e966ac0ce039176c1dc.ipa)
+
+ * [1.0.6 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/81397bc505fbac973702348c1c67ff35_d)
+
+ * 
+
+ * [1.0.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c0516f3ad8f6cc787dd9eb53b165a0e9.ipa)
+
+ * [1.0.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ec718617b626f0fa553a837db3cc0def_d)
+
+*****
+
 ## 更新记录
 
 ```
@@ -82,20 +96,6 @@
  **************************
  
  ```
-
-## 安装包信息
-
- * [1.0.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c1a658622503f74106b96b80cf7fafe0.ipa)
-
- * [1.0.6 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/964bb15210c77d665a1493d3aaff2324_d)
-
- * 
-
- * [1.0.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c0516f3ad8f6cc787dd9eb53b165a0e9.ipa)
-
- * [1.0.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ec718617b626f0fa553a837db3cc0def_d)
-
-*****
 
 ## App截图
 
