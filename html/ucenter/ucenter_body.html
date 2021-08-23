@@ -11,54 +11,73 @@
 				background: #efeff4;
 				padding: 10px 0 0 0;
 			}
+			.user-info {
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-align: center;
+			}
+			.user-info img {
+				vertical-align: middle;
+				margin: 0 10px 0 0;
+			}
+			.user-account span {
+				display: block;
+			}
+			.user-account span:last-child {
+				color: #999;
+				margin-top: 5px;
+				font-size: 13px;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="aui-content">
 			<ul class="aui-list-view">
 				<li class="aui-list-view-cell" tapmode >
-					<a class="aui-arrow-right">个人资料 </a>
-				</li>
-				<li class="aui-list-view-cell" tapmode >
-					<a class="aui-arrow-right">账号设置</a>
-				</li>
-				<li class="aui-list-view-cell" tapmode >
-					<a class="aui-arrow-right">我的发帖</a>
-				</li>
-				<li class="aui-list-view-cell" tapmode >
-					<a class="aui-arrow-right">消息列表</a>
+					<a class="aui-arrow-right">
+					<div class="user-info">
+						<img src="../../image/pic.jpg" width="60" height="60" />
+						<div class="user-account">
+							<span>点点例</span>
+							<span>社区号：DotDotDemo</span>
+						</div>
+					</div> </a>
 				</li>
 			</ul>
 		</div>
 		<div class="aui-content">
 			<ul class="aui-list-view">
 				<li class="aui-list-view-cell" tapmode >
-					<a class="aui-arrow-right">系统设置</a>
+					<a class="aui-arrow-right">我的问答</a>
 				</li>
 				<li class="aui-list-view-cell" tapmode >
-					<a class="aui-arrow-right">检查更新</a>
+					<a class="aui-arrow-right">我的见闻</a>
 				</li>
-				<li class="aui-list-view-cell" tapmode id="clear-cache">
-					<a class="aui-arrow-right"> 清除缓存 <span class="aui-badge aui-badge-danger" id="cache-size">0M</span> </a>
+				<li class="aui-list-view-cell" tapmode >
+					<a class="aui-arrow-right">消息总览<span class="aui-badge aui-badge-info">12</span> </a>
 				</li>
+			</ul>
+		</div>
+		<div class="aui-content">
+			<ul class="aui-list-view">
+				<li class="aui-list-view-cell" tapmode >
+					<a>扫一扫</a>
+				</li>
+				<li class="aui-list-view-cell" tapmode >
+					<a class="aui-arrow-right">附近的人</a>
+				</li>
+			</ul>
+		</div>
+		<div class="aui-content">
+			<ul class="aui-list-view">
 				<li class="aui-list-view-cell" tapmode data-funcName="update_log_head">
 					<a class="aui-arrow-right">更新记录<span class="aui-badge aui-badge-success">有更新</span> </a>
 				</li>
-			</ul>
-		</div>
-		<div class="aui-content">
-			<ul class="aui-list-view">
-				<li class="aui-list-view-cell aui-switch-body" tapmode >
-					<div class="aui-switch-title">
-						离线数据
-					</div>
-					<input type="checkbox" class="aui-switch aui-pull-right" checked>
-				</li>
-				<li class="aui-list-view-cell aui-switch-body" tapmode >
-					<div class="aui-switch-title">
-						自动更新
-					</div>
-					<input type="checkbox" class="aui-switch aui-pull-right">
+				<li class="aui-list-view-cell" tapmode data-funcName="ucenter_setting_head">
+					<a class="aui-arrow-right">系统设置</a>
 				</li>
 			</ul>
 		</div>
@@ -73,26 +92,8 @@
 					H.$openWin(funcName, funcName + '.html');
 				}
 			});
-			// 清除缓存
-			$("#clear-cache").on("tap", function() {
-				api.clearCache(function(ret, err) {
-					if (ret) {
-						$("#cache-size").text("0M");
-						H.$toast("清除成功");
-					} else {
-						H.$toast("清除失败");
-					}
-				});
-			});
 		});
 		H.ready(function() {
-			api.getCacheSize(function(ret, err) {
-				if (ret) {
-					$("#cache-size").text((ret.size / 1000 / 1000).toFixed(2) + "M");
-				} else {
-					$("#cache-size").text("0M");
-				}
-			});
 		});
 	</script>
 </html>

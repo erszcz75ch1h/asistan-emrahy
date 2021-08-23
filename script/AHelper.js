@@ -982,7 +982,7 @@
 			delay : 300,
 			showProgress : true,
 			reload : false,
-			allowEdit : false,
+			allowEdit : true,
 			softInputMode : 'auto'
 		},
 		closeWin : {
@@ -1012,7 +1012,7 @@
 			scaleEnabled : false,
 			showProgress : false,
 			reload : false,
-			allowEdit : false,
+			allowEdit : true,
 			softInputMode : 'auto',
 			rect : {
 				x : 0,

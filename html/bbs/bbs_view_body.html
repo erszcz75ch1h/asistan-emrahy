@@ -28,6 +28,9 @@
 				font-size: 16px;
 				color: #444;
 			}
+			.display-none {
+				display: none;
+			}
 		</style>
 		<script id="tpl" type="text/html">
 			<div class="title-area">
@@ -41,7 +44,15 @@
 			</div>
 		</script>
 	</head>
-	<body></body>
+	<body>
+		<div class="aui-tips aui-tips-danger display-none">
+			<div class="aui-tips-content aui-ellipsis-1">
+				<i class="aui-iconfont aui-icon-warnfill"></i>
+				世界上最遥远的距离就是没网。 <i class="aui-iconfont aui-icon-roundclosefill" onclick="$(this).parents('.aui-tips').addClass('display-none');"></i>
+			</div>
+		</div>
+		<div id="bbs-container"></div>
+	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript" src="../../script/date.js"></script>
@@ -77,6 +88,11 @@
 		}
 
 		function loadData(id, postType) {
+			// 加载
+			H.$openFrame('loading', 'widget://res/load9.html', null, {
+				x : 0,
+				y : 0
+			});
 			var url = "";
 			if (postType == "question") {
 				url = window.apiUrl + 'question/?id=' + id + '&sort_key=add_time';
@@ -91,7 +107,7 @@
 					var html = H.$tppl(H.$api.byId('tpl').innerHTML, {
 						data : newObj
 					});
-					$("body").html(html);
+					$("#bbs-container").html(html);
 					H.$execScript(null, null, 'setNavData(' + newObj.agree_count + ',' + newObj.answer_count + ');');
 				}
 				H.closeFrame("loading");
@@ -100,18 +116,21 @@
 
 
 		H.ready(function() {
-			// 加载
-			H.$openFrame('loading', 'widget://res/load9.html', null, {
-				x : 0,
-				y : 0
-			});
 			var param = H.$getPageParam();
 			if (api.connectionType != "none") {
 				loadData(param.id, param.postType);
 			} else {
 				H.closeFrame("loading");
-				H.$toast("网络未连接");
+				$(".aui-tips").removeClass("display-none");
 			}
+			// 监听网络
+			H.$offline(function(ret, err) {
+				$(".aui-tips").removeClass("display-none");
+			});
+			H.$online(function(ret, err) {
+				$(".aui-tips").addClass("display-none");
+				loadData(param.id, param.postType);
+			});
 		});
 	</script>
 </html>

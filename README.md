@@ -8,13 +8,19 @@
 * 技术支持：[中山赢友网络科技有限公司](http://www.winu.net/)
 * 讨论社区：[一起改变中国IT教育](http://bbs.winu.net/)
 
-* [APICloud](http://www.apicloud.com/)是一个非常好的一个APP开发平台！[APICloud官网](http://www.apicloud.com/)
+* [APICloud](http://www.apicloud.com/)是一个非常棒的一个APP开发平台！[APICloud官网](http://www.apicloud.com/)
 
 ## 项目状态
 
-* 目前项目属于开发状态！
+* `目前项目属于开发状态！目前不支持热更新，Beta版本之后才采用热更新！`
 
 ## 安装包信息
+
+ * [1.0.7 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/170a72da8be9a30884ae08d60c38e83b.ipa)
+
+ * [1.0.7 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2312f820241a67027c23a2d202e0ca7d_d)
+
+ * 
 
  * [1.0.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fd5e84e7dd524e966ac0ce039176c1dc.ipa)
 
@@ -31,6 +37,21 @@
 ## 更新记录
 
 ```
+ ### 2016年01月17日 1.0.7 Alpha 版本
+ 
+* [新增] 系统设置页面
+* [新增] 网络连接，未连接时监听
+* [更新] 首页底部菜单名称
+* [更新] 首页底部菜单：方寸之席图标
+* [更新] 前端框架栏目点击选择浏览器打开相应的官网
+* [更新] AUI版本为1.1.7
+* [更新] Hammer.js版本为2.0.6
+* [更新] 个人中心排版和内容
+* [更新] 侧滑菜单流畅度
+* [更新] 讨论社区未联网时提示消息
+ 
+ **************************
+
  ### 2016年01月16日 1.0.6 Alpha 版本
  
  * [新增] 获取App缓存和清空缓存功能

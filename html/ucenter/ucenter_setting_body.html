@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<style type="text/css">
+		</style>
+	</head>
+	<body>
+		<div class="aui-content">
+			<ul class="aui-list-view">
+				<li class="aui-list-view-cell aui-switch-body" tapmode >
+					<div class="aui-switch-title">
+						声音提醒
+					</div>
+					<input type="checkbox" class="aui-switch aui-pull-right" checked>
+				</li>
+				<li class="aui-list-view-cell aui-switch-body" tapmode >
+					<div class="aui-switch-title" >
+						自动更新
+					</div>
+					<input type="checkbox" class="aui-switch aui-pull-right" checked>
+				</li>
+				<li class="aui-list-view-cell" tapmode >
+					<a>检查更新</a>
+				</li>
+				<li class="aui-list-view-cell" tapmode id="clear-cache">
+					<a> 清除缓存 <span class="aui-badge aui-badge-danger" id="cache-size">0M</span> </a>
+				</li>
+			</ul>
+		</div>
+		<div class="aui-content">
+			<ul class="aui-list-view">
+				<li class="aui-list-view-cell" tapmode >
+					<a class="aui-arrow-right">意见反馈</a>
+				</li>
+				<li class="aui-list-view-cell" tapmode >
+					<a class="aui-arrow-right">关于我们</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript">
+		Zepto(function($) {
+			// 清除缓存
+			$("#clear-cache").on("tap", function() {
+				api.clearCache(function(ret, err) {
+					if (ret) {
+						$("#cache-size").text("0M");
+						H.$toast("清除成功");
+					} else {
+						H.$toast("清除失败");
+					}
+				});
+			});
+		});
+		H.ready(function() {
+			api.getCacheSize(function(ret, err) {
+				if (ret) {
+					$("#cache-size").text((ret.size / 1000 / 1000).toFixed(2) + "M");
+				} else {
+					$("#cache-size").text("0M");
+				}
+			});
+		});
+	</script>
+</html>

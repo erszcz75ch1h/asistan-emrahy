@@ -117,6 +117,9 @@
 			#bbs-list li:active {
 				background: #f4f4f4;
 			}
+			.display-none {
+				display: none;
+			}
 		</style>
 		<script id="tpl" type="text/html">
 			[: for (var i=0;i<list.length;i++) { :]
@@ -139,9 +142,13 @@
 		</script>
 	</head>
 	<body>
-		<div class="aui-content">
-			<ul id="bbs-list"></ul>
+		<div class="aui-tips aui-tips-danger display-none">
+			<div class="aui-tips-content aui-ellipsis-1">
+				<i class="aui-iconfont aui-icon-warnfill"></i>
+				世界上最遥远的距离就是没网。 <i class="aui-iconfont aui-icon-roundclosefill" onclick="$(this).parents('.aui-tips').addClass('display-none');"></i>
+			</div>
 		</div>
+		<ul id="bbs-list"></ul>
 		<div class="push-fixed winu-center-all" tapmode onclick="H.$openWin('push_bbs_head', 'push_bbs_head.html');">
 			<i class="iconfont icon-luyinbi"></i>
 		</div>
@@ -275,7 +282,8 @@
 				} else {
 					// 恢复下拉
 					H.$recoverDropdownToNormal();
-					H.$toast("网络未连接");
+					//H.$toast("网络未连接");
+					$(".aui-tips").removeClass("display-none");
 				}
 			});
 			H.$dropupToAppend(function(ret, err) {
@@ -287,11 +295,20 @@
 					page = page + 1;
 					loadLoad(page);
 				} else {
-					H.$toast("网络未连接");
+					//H.$toast("网络未连接");
+					$(".aui-tips").removeClass("display-none");
 				}
 			});
 			// 设置窗口自动下拉加载
 			H.$setAutoDropdownToRefresh();
+			// 监听网络
+			H.$offline(function(ret, err) {
+				$(".aui-tips").removeClass("display-none");
+			});
+			H.$online(function(ret, err) {
+				$(".aui-tips").addClass("display-none");
+				H.$setAutoDropdownToRefresh();
+			});
 		});
 	</script>
 </html>
