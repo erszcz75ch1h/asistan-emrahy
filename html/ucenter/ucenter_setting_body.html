@@ -42,6 +42,13 @@
 				</li>
 			</ul>
 		</div>
+		<div class="aui-content">
+			<p style="padding: 0 10px">
+				<button class="aui-btn aui-btn-danger aui-btn-block">
+					退出登录
+				</button>
+			</p>
+		</div>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
@@ -50,12 +57,8 @@
 			// 清除缓存
 			$("#clear-cache").on("tap", function() {
 				api.clearCache(function(ret, err) {
-					if (ret) {
-						$("#cache-size").text("0M");
-						H.$toast("清除成功");
-					} else {
-						H.$toast("清除失败");
-					}
+					$("#cache-size").text("0M");
+					H.$toast("清除成功");
 				});
 			});
 		});

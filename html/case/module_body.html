@@ -175,7 +175,7 @@
 						视频聊天
 					</div>
 				</li>
-				<li class="aui-list-view-cell" data-win="list_arrow" tapmode>
+				<li class="aui-list-view-cell" data-win="list_arrow" tapmode data-winName="tyRTC" data-winUrl="./module/tyRTC/tyRTC_main_head.html">
 					<div class="aui-arrow-right">
 						实时语音
 					</div>
@@ -188,7 +188,13 @@
 	<script type="text/javascript">
 		Zepto(function($) {
 			$(".aui-list-view").on("click", "li", function() {
-				H.$alert("苦逼程序猿，正在疯狂加班中……");
+				var winUrl = $(this).attr("data-winUrl");
+				var winName = $(this).attr("data-winName");
+				if (winUrl && winName) {
+					H.$openWin(winName, winUrl);
+				} else {
+					H.$alert("苦逼程序猿，正在疯狂加班中……");
+				}
 			});
 		});
 	</script>

@@ -16,9 +16,9 @@
 
 ## 安装包信息
 
- * [1.0.7 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/170a72da8be9a30884ae08d60c38e83b.ipa)
+ * [1.0.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ffc01cc6633cfca39db313b9e6b4b300.ipa)
 
- * [1.0.7 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2312f820241a67027c23a2d202e0ca7d_d)
+ * [1.0.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fd766b29a821f5650ebfb95b7df16205_d)
 
  * 
 
@@ -37,6 +37,15 @@
 ## 更新记录
 
 ```
+ ### 2016年01月18日 1.0.8 Alpha 版本
+ 
+* [新增] 赢友产品列表
+* [新增] 系统设置退出登录按钮
+* [修复] IOS系统清除缓存错误
+* [更新] 更新记录样式，取消时间轴，改为卡片模式
+ 
+ **************************
+
  ### 2016年01月17日 1.0.7 Alpha 版本
  
 * [新增] 系统设置页面
