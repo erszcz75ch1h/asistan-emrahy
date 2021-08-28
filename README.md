@@ -16,9 +16,9 @@
 
 ## 安装包信息
 
- * [1.0.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/23adcf114ca62f75425c6d7b1292d96c.ipa)
+ * [1.0.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c6804cc784808517a1514edf50814a9a.ipa)
 
- * [1.0.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ad4e6b11c8ae933470f8608f489daa57_d)
+ * [1.0.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/23e10ce32977cf5aa88fec28707b3d3_d)
 
  * 
 
@@ -37,12 +37,27 @@
 ## 更新记录
 
 ```
+ ### 下期版本预告
+ 
+* [新增] 常用示例：发布朋友圈页面
+* [新增] 常用示例：选项卡标题更多布局
+* [新增] 常用示例：九宫格、十六宫格
+* [新增] 常用示例：常用示例：多按钮滑动切屏，类似淘宝
+* [新增] 常用示例：常用示例：瀑布流布局
+* [新增] 常用示例：常用示例：高度自定义日历插件
+* [新增] 方寸之席：消息总览列表
+ 
+ **************************
+
  ### 2016年01月18日 1.0.8 Alpha 版本
  
 * [新增] 赢友产品列表
+* [新增] 下期版本预告
 * [新增] 系统设置退出登录按钮
 * [修复] IOS系统清除缓存错误
 * [更新] 更新记录样式，取消时间轴，改为卡片模式
+* [更新] 字体图标
+* [更新] 常用示例：点击 + 按钮 样式
  
  **************************
 
