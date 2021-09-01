@@ -16,6 +16,12 @@
 
 ## 安装包信息
 
+ * [1.0.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/73f58f44eab899a4e5848667da30fe07.ipa)
+
+ * [1.0.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/e5a26b7f9ffcf8bb8513792891e53bad_d)
+
+ * 
+
  * [1.0.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c6804cc784808517a1514edf50814a9a.ipa)
 
  * [1.0.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/23e10ce32977cf5aa88fec28707b3d3_d)
@@ -46,6 +52,18 @@
 * [新增] 常用示例：常用示例：瀑布流布局
 * [新增] 常用示例：常用示例：高度自定义日历插件
 * [新增] 方寸之席：消息总览列表
+ 
+ **************************
+
+  ### 2016年01月19日 1.0.9 Alpha 版本
+ 
+* [新增] 系统设置选项：是否只在WIFI下加载图片，模板是
+* [新增] 布局列表：类似微博布局
+* [新增] 布局列表：资讯列表（无图）
+* [新增] 布局列表：资讯列表（有图）
+* [修复] AHelper.js BUG，版本号为：1.0.8
+* [更新] iconfont 字体图标
+* [更新] 侧滑菜单全部样式
  
  **************************
 

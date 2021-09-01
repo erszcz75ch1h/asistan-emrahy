@@ -13,7 +13,12 @@
 		</style>
 	</head>
 	<body>
-		<header class="aui-bar-1d9dd5" id='aui-header'></header>
+		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5" id='aui-header'>
+			<a class="aui-pull-left" onclick="H.$closeCurrentWin();"> <span class="aui-iconfont aui-icon-left"></span>返回 </a>
+			<div class="aui-title">
+				列表布局（无图）
+			</div>
+		</header>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
@@ -21,11 +26,8 @@
 		H.ready(function() {
 			// 快速打开窗口
 			H.$openFrameWithNav('aui-header', {
-				url : 'slide_body.html',
-				name : 'slide_body',
-				rect : {
-					w : api.winWidth - 80
-				}
+				url : 'list_nopic_body.html',
+				name : 'list_nopic_body'
 			});
 		});
 	</script>

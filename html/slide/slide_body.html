@@ -7,9 +7,28 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/winu-ui.css" />
 		<style type="text/css">
+			.aui-list-view {
+				background: none !important;
+				color: #fff;
+			}
+			.aui-content {
+				background: #444;
+				margin: 0;
+				padding: 10px 0 0 0;
+			}
+			.aui-list-view-cell:after, .aui-list-view:after, .aui-list-view-cell:last-child:after {
+				border: none;
+			}
 			.aui-list-view-cell:active {
-				background: #f4f4f4;
+				background: #333;
+			}
+			.aui-bg-EF9300 {
+				background: #EF9300;
+			}
+			.aui-bar-1d9dd5 {
+				background: #1d9dd5;
 			}
 			.aui-bg-1f518b {
 				background: #1f518b;
@@ -17,10 +36,67 @@
 			.aui-bg-b5292a {
 				background: #b5292a;
 			}
+			.user-info {
+				height: 120px;
+				padding: 15px;
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-align: center;
+			}
+			.user-info img {
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				vertical-align: middle;
+				vertical-align: middle;
+				margin-right: 15px;
+			}
+			.user-account {
+				text-align: left;
+			}
+			.user-account span {
+				display: block;
+				color: #fff;
+			}
+			.user-account span:last-child {
+				color: #D0D0D0;
+				margin-top: 5px;
+				font-size: 13px;
+			}
+			.settings, .loginout {
+				width: 32px;
+				left: 15px;
+				bottom: 15px;
+				z-index: 100;
+				height: 32px;
+			}
+			.loginout {
+				left: auto;
+				right: 15px;
+				bottom: 13px;
+			}
+			.settings span, .loginout span {
+				font-size: 24px;
+				color: #ccc;
+			}
+			.loginout span {
+				font-size: 22px;
+			}
 		</style>
 	</head>
-	<body>
-		<div class="aui-content">
+	<body class="winu-flex-box-vertical">
+		<div class="aui-bar-1d9dd5 user-info">
+			<img src="../../image/pic.jpg" />
+			<div class="user-account">
+				<span>点点例</span>
+				<span>社区号：DotDotDemo</span>
+			</div>
+		</div>
+		<div class="aui-content winu-flex-item">
 			<ul class="aui-list-view aui-in" id="case-function-list">
 				<li class="aui-list-view-cell" data-funcName="layout_head" tapmode >
 					<div class="aui-arrow-right">
@@ -58,6 +134,12 @@
 					</div>
 				</li>
 			</ul>
+		</div>
+		<div class="settings winu-position-fixed">
+			<span class="aui-iconfont iconfont icon-user_set"></span>
+		</div>
+		<div class="loginout winu-position-fixed">
+			<span class="aui-iconfont iconfont icon-tuichudenglu"></span>
 		</div>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>

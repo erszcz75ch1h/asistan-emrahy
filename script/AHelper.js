@@ -1069,8 +1069,9 @@
 		},
 		openSlidLayout : {
 			type : 'left',
+			leftEdge : 80,
 			slidPaneStyle : {
-				leftEdge : 100,
+				leftEdge : 80,
 				leftScale : 0.8
 			},
 			fixedPane : {}, // 左边菜单frame
@@ -1453,6 +1454,18 @@
 
 			api.openWin(o);
 		},
+		// 快速创建并打开Window（默认全屏）
+		// @winName：window名称
+		// @winUrl：window地址
+		// @pageParam：参数
+		$openWin : function(winName, winUrl, pageParam) {
+			pageParam = pageParam ? pageParam : api.pageParam;
+			$$apicloud.openWin({
+				name : winName,
+				url : winUrl,
+				pageParam : pageParam
+			});
+		},
 		// 关闭window窗口
 		// @callback：回调函数
 		// @options：配置对象
@@ -1538,9 +1551,43 @@
 			}
 			var o = options || {};
 			o = $$com.extend(defaultsOption.openFrame, o);
-			o.rect.w = (o.rect.w || o.rect.w <= 0) ? api.winWidth : o.rect.w;
+			o.rect = $$com.extend(o.rect, options.rect || {});
 
 			api.openFrame(o);
+		},
+		// 快速创建并打开Frame对象(不带导航，默认和window一样大小)
+		// @frameName：frame名称
+		// @frameUrl：frame地址
+		// @pageParam：参数
+		// @rect：区域
+		$openFrame : function(frameName, frameUrl, pageParam, rect) {
+			pageParam = pageParam ? pageParam : api.pageParam;
+
+			$$apicloud.openFrame({
+				name : frameName,
+				url : frameUrl,
+				pageParam : pageParam,
+				rect : rect
+			});
+		},
+		// 快速创建并打开Frame对象(带导航)
+		// @headerId：导航选择器ID
+		// @options：配置对象
+		// @footerId：底部选择器ID
+		$openFrameWithNav : function(headerId, options, footerId) {
+			$$apicloud.$fixStatusBar(function(offset) {
+				var o = options || {};
+				o = $$com.extend(defaultsOption.openFrame, o);
+
+				var footerOffset = $$apicloud.offset(footerId);
+				if (!options.rect) {
+					o.rect.x = offset.l;
+					o.rect.h = api.winHeight - offset.h - footerOffset.h;
+					o.rect.w = api.winWidth;
+				}
+				o.rect.y = offset.h;
+				$$apicloud.openFrame(o, true);
+			}, headerId);
 		},
 		// 关闭Frame
 		// @frameName：窗体名称
@@ -1590,8 +1637,7 @@
 
 			var o = options || {};
 			o = $$com.extend(defaultsOption.openFrameGroup, o);
-
-			o.rect.w = (o.rect.w || o.rect.w <= 0) ? api.winWidth : o.rect.w;
+			o.rect = $$com.extend(o.rect, options.rect || {});
 
 			if (o && o.frames && o.frames.length > 0) {
 				// 设置默认参数
@@ -1613,6 +1659,54 @@
 					}
 				});
 			}
+		},
+		// 快速创建并打开frameGroup（不带导航）
+		// @callback：回调函数
+		// @groupName：窗口组名称
+		// @frames：窗口组frame集合
+		// @index：默认索引
+		$openFrameGroup : function(callback, groupName, frames, index) {
+			frames = frames ? frames : [];
+
+			index = typeof index == "number" ? index : 0;
+			if (index > frames.length - 1)
+				index = frames.length - 1;
+
+			$$apicloud.openFrameGroup(function(ret, err) {
+				if ($$com.isFunction(callback)) {
+					callback(ret, err);
+				}
+			}, {
+				name : groupName,
+				frames : frames,
+				index : index
+			});
+		},
+		// 快速创建并打开FrameGroup对象(带导航)
+		// @callback：回调函数
+		// @headerId：导航选择器ID
+		// @options：配置对象
+		// @footerId：底部选择器ID
+		$openFrameGroupWithNav : function(callback, headerId, options, footerId) {
+			// 拓展对象
+			var o = options || {};
+			o = $$com.extend(defaultsOption.openFrameGroup, o);
+
+			$$apicloud.$fixStatusBar(function(offset) {
+				var footerOffset = $$apicloud.offset(footerId);
+				if (!options.rect) {
+					o.rect.x = offset.l;
+					o.rect.h = api.winHeight - offset.h - footerOffset.h;
+					o.rect.w = api.winWidth;
+				}
+				o.rect.y = offset.h;
+
+				$$apicloud.openFrameGroup(function(ret, err) {
+					if ($$com.isFunction(callback)) {
+						callback(ret, err);
+					}
+				}, o, true);
+			}, headerId);
 		},
 		// 关闭窗口组
 		// @frameGroupName：窗口组名称
@@ -1696,6 +1790,24 @@
 			});
 
 		},
+		// 快速创建并打开侧滑菜单
+		// @callback：回调函数
+		// @fixedPane：左边菜单frame
+		// @slidPane：主要内容frame
+		$openSlidLayout : function(callback, fixedPane, slidPane) {
+			fixedPane = fixedPane ? fixedPane : {};
+			slidPane = slidPane ? slidPane : {};
+
+			$$apicloud.openSlidLayout(function(ret, err) {
+				if ($$com.isFunction(callback)) {
+					callback(ret, err);
+				}
+			}, {
+				fixedPane : fixedPane,
+				slidPane : slidPane
+			});
+		},
+		// 调整frame到前面
 		// 打开侧滑
 		// @type：侧滑类型
 		openSlidPane : function(type) {
@@ -1716,113 +1828,6 @@
 		unlockSlidPane : function() {
 			api.unlockSlidPane();
 		},
-		// 快速创建并打开Window（默认全屏）
-		// @winName：window名称
-		// @winUrl：window地址
-		// @pageParam：参数
-		$openWin : function(winName, winUrl, pageParam) {
-			pageParam = pageParam ? pageParam : api.pageParam;
-			$$apicloud.openWin({
-				name : winName,
-				url : winUrl,
-				pageParam : pageParam
-			});
-		},
-		// 快速创建并打开Frame对象(不带导航，默认和window一样大小)
-		// @frameName：frame名称
-		// @frameUrl：frame地址
-		// @pageParam：参数
-		// @rect：区域
-		$openFrame : function(frameName, frameUrl, pageParam, rect) {
-			pageParam = pageParam ? pageParam : api.pageParam;
-			rect = rect ? rect : defaultsOption.openFrame.rect;
-
-			$$apicloud.openFrame({
-				name : frameName,
-				url : frameUrl,
-				pageParam : pageParam,
-				rect : rect
-			});
-		},
-		// 快速创建并打开Frame对象(带导航)
-		// @headerId：导航选择器ID
-		// @options：配置对象
-		// @footerId：底部选择器ID
-		$openFrameWithNav : function(headerId, options, footerId) {
-			// 拓展对象
-			var o = options || {};
-			o = $$com.extend(defaultsOption.openFrame, o);
-
-			$$apicloud.$fixStatusBar(function(offset) {
-				var footerOffset = $$apicloud.offset(footerId);
-				o.rect.y = offset.h;
-				o.rect.h = api.winHeight - offset.h - footerOffset.h;
-
-				$$apicloud.openFrame(o, true);
-			}, headerId);
-		},
-		// 快速创建并打开frameGroup（不带导航）
-		// @callback：回调函数
-		// @groupName：窗口组名称
-		// @frames：窗口组frame集合
-		// @index：默认索引
-		$openFrameGroup : function(callback, groupName, frames, index) {
-			frames = frames ? frames : [];
-
-			index = typeof index == "number" ? index : 0;
-			if (index > frames.length - 1)
-				index = frames.length - 1;
-
-			$$apicloud.openFrameGroup(function(ret, err) {
-				if ($$com.isFunction(callback)) {
-					callback(ret, err);
-				}
-			}, {
-				name : groupName,
-				frames : frames,
-				index : index
-			});
-		},
-		// 快速创建并打开FrameGroup对象(带导航)
-		// @callback：回调函数
-		// @headerId：导航选择器ID
-		// @options：配置对象
-		// @footerId：底部选择器ID
-		$openFrameGroupWithNav : function(callback, headerId, options, footerId) {
-			// 拓展对象
-			var o = options || {};
-			o = $$com.extend(defaultsOption.openFrameGroup, o);
-
-			$$apicloud.$fixStatusBar(function(offset) {
-				var footerOffset = $$apicloud.offset(footerId);
-				o.rect.y = offset.h;
-				o.rect.h = api.winHeight - offset.h - footerOffset.h;
-
-				$$apicloud.openFrameGroup(function(ret, err) {
-					if ($$com.isFunction(callback)) {
-						callback(ret, err);
-					}
-				}, o, true);
-			}, headerId);
-		},
-		// 快速创建并打开侧滑菜单
-		// @callback：回调函数
-		// @fixedPane：左边菜单frame
-		// @slidPane：主要内容frame
-		$openSlidLayout : function(callback, fixedPane, slidPane) {
-			fixedPane = fixedPane ? fixedPane : {};
-			slidPane = slidPane ? slidPane : {};
-
-			$$apicloud.openSlidLayout(function(ret, err) {
-				if ($$com.isFunction(callback)) {
-					callback(ret, err);
-				}
-			}, {
-				fixedPane : fixedPane,
-				slidPane : slidPane
-			});
-		},
-		// 调整frame到前面
 		// @from：当前的frame名称
 		// @to：目标frame名称
 		bringFrameToFront : function(from, to) {
@@ -3532,7 +3537,7 @@
 	win.H.$com = $$com;
 	win.H.$api = $$api;
 	win.H.$tppl = $$tppl;
-	win.H.$v = '1.0.7';
+	win.H.$v = '1.0.8';
 	win.H.$validate = $$validate;
 	win.H.$module = modules;
 
