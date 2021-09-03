@@ -1,42 +1,42 @@
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215145_c8cabc17_526496.png "在这里输入图片标题")
 
-> # `点点例`是专门为[APICloud](http://www.apicloud.com)开发者提供的丰富的开发示例应用！
+> # `点点例`是基于[APICloud](http://www.apicloud.com/)平台开发的集工具及社交类的移动应用！
 
-* 作者：`新生帝`
-* QQ：`8020292`
-* QQ交流群：`18863883`  一起改变中国IT教育
+* 开发作者：`新生帝`
+* 作者QQ ：`8020292`
+* 交流Q群 ：`18863883`  一起改变中国IT教育
+* 开发理念：一切从简，只为了更懒！
 * 技术支持：[中山赢友网络科技有限公司](http://www.winu.net/)
 * 讨论社区：[一起改变中国IT教育](http://bbs.winu.net/)
-
-* [APICloud](http://www.apicloud.com/)是一个非常棒的一个APP开发平台！[APICloud官网](http://www.apicloud.com/)
+* 平台描述：[APICloud](http://www.apicloud.com/)是一个非常棒的一个APP开发平台！传送门：[APICloud官网](http://www.apicloud.com/)
 
 ## 项目状态
 
-* `目前项目属于开发状态！目前不支持热更新，Beta版本之后才采用热更新！`
+* `目前项目处于Alpha版本，不支持热更新，Beta版本之后才采用热更新！请知悉！`
 
 ## 安装包信息
 
- * [1.0.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/73f58f44eab899a4e5848667da30fe07.ipa)
+ * [0.0.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c0a49f448cff3ab11bed4938963bb35c.ipa)
 
- * [1.0.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/e5a26b7f9ffcf8bb8513792891e53bad_d)
-
- * 
-
- * [1.0.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c6804cc784808517a1514edf50814a9a.ipa)
-
- * [1.0.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/23e10ce32977cf5aa88fec28707b3d3_d)
+ * [0.0.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/31fa6416e122fa6fbe78c925a736225c_d)
 
  * 
 
- * [1.0.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fd5e84e7dd524e966ac0ce039176c1dc.ipa)
+ * [0.0.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c6804cc784808517a1514edf50814a9a.ipa)
 
- * [1.0.6 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/81397bc505fbac973702348c1c67ff35_d)
+ * [0.0.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/23e10ce32977cf5aa88fec28707b3d3_d)
 
  * 
 
- * [1.0.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c0516f3ad8f6cc787dd9eb53b165a0e9.ipa)
+ * [0.0.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fd5e84e7dd524e966ac0ce039176c1dc.ipa)
 
- * [1.0.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ec718617b626f0fa553a837db3cc0def_d)
+ * [0.0.6 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/81397bc505fbac973702348c1c67ff35_d)
+
+ * 
+
+ * [0.0.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c0516f3ad8f6cc787dd9eb53b165a0e9.ipa)
+
+ * [0.0.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ec718617b626f0fa553a837db3cc0def_d)
 
 *****
 
@@ -55,19 +55,21 @@
  
  **************************
 
-  ### 2016年01月19日 1.0.9 Alpha 版本
+  ### 2016年01月19日 0.0.9 Alpha 版本
  
-* [新增] 系统设置选项：是否只在WIFI下加载图片，模板是
+* [新增] 系统设置选项：是否只在WIFI下加载图片，默认是
 * [新增] 布局列表：类似微博布局
 * [新增] 布局列表：资讯列表（无图）
 * [新增] 布局列表：资讯列表（有图）
 * [修复] AHelper.js BUG，版本号为：1.0.8
 * [更新] iconfont 字体图标
 * [更新] 侧滑菜单全部样式
+* [更新] 版本号数字
+* [更新] 取消IOS系统侧滑缩放特效，保持和Android一样的体验
  
  **************************
 
- ### 2016年01月18日 1.0.8 Alpha 版本
+ ### 2016年01月18日 0.0.8 Alpha 版本
  
 * [新增] 赢友产品列表
 * [新增] 下期版本预告
@@ -79,7 +81,7 @@
  
  **************************
 
- ### 2016年01月17日 1.0.7 Alpha 版本
+ ### 2016年01月17日 0.0.7 Alpha 版本
  
 * [新增] 系统设置页面
 * [新增] 网络连接，未连接时监听
@@ -94,7 +96,7 @@
  
  **************************
 
- ### 2016年01月16日 1.0.6 Alpha 版本
+ ### 2016年01月16日 0.0.6 Alpha 版本
  
  * [新增] 获取App缓存和清空缓存功能
  * [新增] App.js 全局通用文件
@@ -106,14 +108,14 @@
  
  **************************
 
- ### 2016年01月15日 1.0.5 Alpha 版本
+ ### 2016年01月15日 0.0.5 Alpha 版本
  
  * [新增] 更新讨论社区为动态数据！调用 http://bbs.winu.net 接口
  * [新增] 讨论社区分布时间显示，模仿微信！
  
  **************************
  
- ### 2016年01月14日 1.0.4 Alpha 版本
+ ### 2016年01月14日 0.0.4 Alpha 版本
  
 * [新增] 所见所闻页添加菜单，模仿QQ控件
 * [更新] 应开发者的要求，全面替换UI为AUI框架。
@@ -124,7 +126,7 @@
  
  **************************
  
-### 2016年01月13日 1.0.3 Alpha 版本
+### 2016年01月13日 0.0.3 Alpha 版本
 * [新增] 常见实例：前端推荐、赢友产品
 * [新增] css3动画：新生帝在努力奔跑
 * [新增] 常见实例：滑动页面头部透明显示、优化页面加载之图片懒加载
@@ -134,7 +136,7 @@
  
  **************************
  
- ### 2016年01月12日 1.0.2 Alpha 版本
+ ### 2016年01月12日 0.0.2 Alpha 版本
  
  * [新增] 常见实例：底部导航 +、向左滑出隐藏菜单、酷炫加载特效
  * [新增] 设备实例：完成APICloud所有端API对象的属性编写
@@ -144,14 +146,14 @@
  
  **************************
  
- ### 2016年01月11日 1.0.1 Alpha 版本
+ ### 2016年01月11日 0.0.1 Alpha 版本
  
  * [新增] 常见实例：打开普通窗口、打开普通窗口（带底部导航）、打开窗口组、弹出分享窗口
  * [新增] 讨论社区浮动刷新和发布按钮
  
  **************************
  
- ### 2016年01月10日 1.0.0 Alpha 版本
+ ### 2016年01月10日 0.0.0 Alpha 版本
  * [新增] 搭建App基本骨架
  * [新增] 常见实例、讨论社区、所见所闻、个人中心菜单
  * [新增] 侧滑菜单
@@ -160,7 +162,7 @@
  
  ```
 
-## App截图
+## App截图（0.0.4 Alpha版本 ）
 
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215340_a55b3593_526496.png "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215357_69ec2e65_526496.png "在这里输入图片标题")

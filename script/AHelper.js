@@ -1072,7 +1072,7 @@
 			leftEdge : 80,
 			slidPaneStyle : {
 				leftEdge : 80,
-				leftScale : 0.8
+				leftScale : 1.0
 			},
 			fixedPane : {}, // 左边菜单frame
 			slidPane : {}	// 主要内容frame
