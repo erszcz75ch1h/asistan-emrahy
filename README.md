@@ -16,9 +16,9 @@
 
 ## 安装包信息
 
- * [0.0.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c0a49f448cff3ab11bed4938963bb35c.ipa)
+ * [0.0.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/72fcdae57452661d9255552ec0a4e284.ipa)
 
- * [0.0.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/31fa6416e122fa6fbe78c925a736225c_d)
+ * [0.0.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/328cba1bb347346d027fa2332472a126_d)
 
  * 
 
@@ -45,6 +45,9 @@
 ```
  ### 下期版本预告
  
+* [新增] 发布帖子采用Markdown编辑器
+* [新增] 支持热更新，无需每个版本下载替换
+* [新增] 登录、注册页面
 * [新增] 常用示例：发布朋友圈页面
 * [新增] 常用示例：选项卡标题更多布局
 * [新增] 常用示例：九宫格、十六宫格
@@ -52,6 +55,8 @@
 * [新增] 常用示例：常用示例：瀑布流布局
 * [新增] 常用示例：常用示例：高度自定义日历插件
 * [新增] 方寸之席：消息总览列表
+* [新增] 方寸之席：用户等级列表
+* [新增] 重新设计调整指点迷津
  
  **************************
 
