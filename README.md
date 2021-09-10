@@ -1,192 +1,195 @@
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215145_c8cabc17_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215145_c8cabc17_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
 
-> # `µãµãÀý`ÊÇ»ùÓÚ[APICloud](http://www.apicloud.com/)Æ½Ì¨¿ª·¢µÄ¼¯¹¤¾ß¼°Éç½»ÀàµÄÒÆ¶¯Ó¦ÓÃ£¡
+> # `ç‚¹ç‚¹ä¾‹`æ˜¯åŸºäºŽ[APICloud](http://www.apicloud.com/)å¹³å°å¼€å‘çš„é›†å·¥å…·åŠç¤¾äº¤ç±»çš„ç§»åŠ¨åº”ç”¨ï¼
 
-* ¿ª·¢×÷Õß£º`ÐÂÉúµÛ`
-* ×÷ÕßQQ £º`8020292`
-* ½»Á÷QÈº £º`18863883`  Ò»Æð¸Ä±äÖÐ¹úIT½ÌÓý
-* ¿ª·¢ÀíÄî£ºÒ»ÇÐ´Ó¼ò£¬Ö»ÎªÁË¸üÀÁ£¡
-* ¼¼ÊõÖ§³Ö£º[ÖÐÉ½Ó®ÓÑÍøÂç¿Æ¼¼ÓÐÏÞ¹«Ë¾](http://www.winu.net/)
-* ÌÖÂÛÉçÇø£º[Ò»Æð¸Ä±äÖÐ¹úIT½ÌÓý](http://bbs.winu.net/)
-* Æ½Ì¨ÃèÊö£º[APICloud](http://www.apicloud.com/)ÊÇÒ»¸ö·Ç³£°ôµÄÒ»¸öHybrid App¿ª·¢Æ½Ì¨£¡
+* å¼€å‘ä½œè€…ï¼š`æ–°ç”Ÿå¸`
+* ä½œè€…QQ ï¼š`8020292`
+* äº¤æµQç¾¤ ï¼š`18863883`  ä¸€èµ·æ”¹å˜ä¸­å›½ITæ•™è‚²
+* å¼€å‘ç†å¿µï¼šä¸€åˆ‡ä»Žç®€ï¼Œåªä¸ºäº†æ›´æ‡’ï¼
+* æŠ€æœ¯æ”¯æŒï¼š[ä¸­å±±èµ¢å‹ç½‘ç»œç§‘æŠ€æœ‰é™å…¬å¸](http://www.winu.net/)
+* è®¨è®ºç¤¾åŒºï¼š[ä¸€èµ·æ”¹å˜ä¸­å›½ITæ•™è‚²](http://bbs.winu.net/)
+* å¹³å°æè¿°ï¼š[APICloud](http://www.apicloud.com/)æ˜¯ä¸€ä¸ªéžå¸¸æ£’çš„ä¸€ä¸ªHybrid Appå¼€å‘å¹³å°ï¼
 
-## ÏîÄ¿×´Ì¬
+## é¡¹ç›®çŠ¶æ€
 
-* `Ä¿Ç°ÏîÄ¿´¦ÓÚAlpha°æ±¾£¬²»Ö§³ÖÈÈ¸üÐÂ£¬Beta°æ±¾Ö®ºó²Å²ÉÓÃÈÈ¸üÐÂ£¡ÇëÖªÏ¤£¡`
+* `ç›®å‰é¡¹ç›®å¤„äºŽAlphaç‰ˆæœ¬ï¼Œä¸æ”¯æŒçƒ­æ›´æ–°ï¼ŒBetaç‰ˆæœ¬ä¹‹åŽæ‰é‡‡ç”¨çƒ­æ›´æ–°ï¼è¯·çŸ¥æ‚‰ï¼`
 
-## °²×°°üÐÅÏ¢
+## å®‰è£…åŒ…ä¿¡æ¯
 
- * [0.0.9 Alpha IOS°æ±¾ÏÂÔØ](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/5b1b8e041760da77f4a85e0f3779760a.ipa)
+ * [0.0.9 Alpha IOSç‰ˆæœ¬ä¸‹è½½](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/5b1b8e041760da77f4a85e0f3779760a.ipa)
 
- * [0.0.9 Alpha Android°æ±¾ÏÂÔØ](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/26c8d6d2ee740c779e960c615993a930_d)
-
- * 
-
- * [0.0.8 Alpha IOS°æ±¾ÏÂÔØ](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c6804cc784808517a1514edf50814a9a.ipa)
-
- * [0.0.8 Alpha Android°æ±¾ÏÂÔØ](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/23e10ce32977cf5aa88fec28707b3d3_d)
+ * [0.0.9 Alpha Androidç‰ˆæœ¬ä¸‹è½½](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/26c8d6d2ee740c779e960c615993a930_d)
 
  * 
 
- * [0.0.6 Alpha IOS°æ±¾ÏÂÔØ](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fd5e84e7dd524e966ac0ce039176c1dc.ipa)
+ * [0.0.8 Alpha IOSç‰ˆæœ¬ä¸‹è½½](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c6804cc784808517a1514edf50814a9a.ipa)
 
- * [0.0.6 Alpha Android°æ±¾ÏÂÔØ](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/81397bc505fbac973702348c1c67ff35_d)
+ * [0.0.8 Alpha Androidç‰ˆæœ¬ä¸‹è½½](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/23e10ce32977cf5aa88fec28707b3d3_d)
 
  * 
 
- * [0.0.4 Alpha IOS°æ±¾ÏÂÔØ](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c0516f3ad8f6cc787dd9eb53b165a0e9.ipa)
+ * [0.0.6 Alpha IOSç‰ˆæœ¬ä¸‹è½½](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fd5e84e7dd524e966ac0ce039176c1dc.ipa)
 
- * [0.0.4 Alpha Android°æ±¾ÏÂÔØ](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ec718617b626f0fa553a837db3cc0def_d)
+ * [0.0.6 Alpha Androidç‰ˆæœ¬ä¸‹è½½](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/81397bc505fbac973702348c1c67ff35_d)
+
+ * 
+
+ * [0.0.4 Alpha IOSç‰ˆæœ¬ä¸‹è½½](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c0516f3ad8f6cc787dd9eb53b165a0e9.ipa)
+
+ * [0.0.4 Alpha Androidç‰ˆæœ¬ä¸‹è½½](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ec718617b626f0fa553a837db3cc0def_d)
 
 *****
 
-## ¸üÐÂ¼ÇÂ¼
+## æ›´æ–°è®°å½•
 
 ```
- ### ÏÂÆÚ°æ±¾Ô¤¸æ
+ ### ä¸‹æœŸç‰ˆæœ¬é¢„å‘Š
  
-* [ÐÂÔö] ·¢²¼Ìû×Ó²ÉÓÃMarkdown±à¼­Æ÷
-* [ÐÂÔö] Ö§³ÖÈÈ¸üÐÂ£¬ÎÞÐèÃ¿¸ö°æ±¾ÏÂÔØÌæ»»
-* [ÐÂÔö] µÇÂ¼¡¢×¢²áÒ³Ãæ
-* [ÐÂÔö] ³£ÓÃÊ¾Àý£º·¢²¼ÅóÓÑÈ¦Ò³Ãæ
-* [ÐÂÔö] ³£ÓÃÊ¾Àý£ºÑ¡Ïî¿¨±êÌâ¸ü¶à²¼¾Ö
-* [ÐÂÔö] ³£ÓÃÊ¾Àý£º¾Å¹¬¸ñ¡¢Ê®Áù¹¬¸ñ
-* [ÐÂÔö] ³£ÓÃÊ¾Àý£º³£ÓÃÊ¾Àý£º¶à°´Å¥»¬¶¯ÇÐÆÁ£¬ÀàËÆÌÔ±¦
-* [ÐÂÔö] ³£ÓÃÊ¾Àý£º³£ÓÃÊ¾Àý£ºÆÙ²¼Á÷²¼¾Ö
-* [ÐÂÔö] ³£ÓÃÊ¾Àý£º³£ÓÃÊ¾Àý£º¸ß¶È×Ô¶¨ÒåÈÕÀú²å¼þ
-* [ÐÂÔö] ·½´çÖ®Ï¯£ºÏûÏ¢×ÜÀÀÁÐ±í
-* [ÐÂÔö] ·½´çÖ®Ï¯£ºÓÃ»§µÈ¼¶ÁÐ±í
-* [ÐÂÔö] ÖØÐÂÉè¼Æµ÷ÕûÖ¸µãÃÔ½ò
- 
- **************************
-
-  ### 2016Äê01ÔÂ19ÈÕ 0.0.9 Alpha °æ±¾
- 
-* [ÐÂÔö] ÏµÍ³ÉèÖÃÑ¡Ïî£ºÊÇ·ñÖ»ÔÚWIFIÏÂ¼ÓÔØÍ¼Æ¬£¬Ä¬ÈÏÊÇ
-* [ÐÂÔö] ²¼¾ÖÁÐ±í£ºÀàËÆÎ¢²©²¼¾Ö
-* [ÐÂÔö] ²¼¾ÖÁÐ±í£º×ÊÑ¶ÁÐ±í£¨ÎÞÍ¼£©
-* [ÐÂÔö] ²¼¾ÖÁÐ±í£º×ÊÑ¶ÁÐ±í£¨ÓÐÍ¼£©
-* [ÐÞ¸´] AHelper.js BUG£¬°æ±¾ºÅÎª£º1.0.8
-* [¸üÐÂ] iconfont ×ÖÌåÍ¼±ê
-* [¸üÐÂ] ²à»¬²Ëµ¥È«²¿ÑùÊ½
-* [¸üÐÂ] °æ±¾ºÅÊý×Ö
-* [¸üÐÂ] È¡ÏûIOSÏµÍ³²à»¬Ëõ·ÅÌØÐ§£¬±£³ÖºÍAndroidÒ»ÑùµÄÌåÑé
+* [æ–°å¢ž] å‘å¸ƒå¸–å­é‡‡ç”¨Markdownç¼–è¾‘å™¨
+* [æ–°å¢ž] æ”¯æŒçƒ­æ›´æ–°ï¼Œæ— éœ€æ¯ä¸ªç‰ˆæœ¬ä¸‹è½½æ›¿æ¢
+* [æ–°å¢ž] ç™»å½•ã€æ³¨å†Œé¡µé¢
+* [æ–°å¢ž] å¸¸ç”¨ç¤ºä¾‹ï¼šå‘å¸ƒæœ‹å‹åœˆé¡µé¢
+* [æ–°å¢ž] å¸¸ç”¨ç¤ºä¾‹ï¼šé€‰é¡¹å¡æ ‡é¢˜æ›´å¤šå¸ƒå±€
+* [æ–°å¢ž] å¸¸ç”¨ç¤ºä¾‹ï¼šä¹å®«æ ¼ã€åå…­å®«æ ¼
+* [æ–°å¢ž] å¸¸ç”¨ç¤ºä¾‹ï¼šå¸¸ç”¨ç¤ºä¾‹ï¼šå¤šæŒ‰é’®æ»‘åŠ¨åˆ‡å±ï¼Œç±»ä¼¼æ·˜å®
+* [æ–°å¢ž] å¸¸ç”¨ç¤ºä¾‹ï¼šå¸¸ç”¨ç¤ºä¾‹ï¼šç€‘å¸ƒæµå¸ƒå±€
+* [æ–°å¢ž] å¸¸ç”¨ç¤ºä¾‹ï¼šå¸¸ç”¨ç¤ºä¾‹ï¼šé«˜åº¦è‡ªå®šä¹‰æ—¥åŽ†æ’ä»¶
+* [æ–°å¢ž] æ–¹å¯¸ä¹‹å¸­ï¼šæ¶ˆæ¯æ€»è§ˆåˆ—è¡¨
+* [æ–°å¢ž] æ–¹å¯¸ä¹‹å¸­ï¼šç”¨æˆ·ç­‰çº§åˆ—è¡¨
+* [æ–°å¢ž] é‡æ–°è®¾è®¡è°ƒæ•´æŒ‡ç‚¹è¿·æ´¥
  
  **************************
 
- ### 2016Äê01ÔÂ18ÈÕ 0.0.8 Alpha °æ±¾
+  ### 2016å¹´01æœˆ19æ—¥ 0.0.9 Alpha ç‰ˆæœ¬
  
-* [ÐÂÔö] Ó®ÓÑ²úÆ·ÁÐ±í
-* [ÐÂÔö] ÏÂÆÚ°æ±¾Ô¤¸æ
-* [ÐÂÔö] ÏµÍ³ÉèÖÃÍË³öµÇÂ¼°´Å¥
-* [ÐÞ¸´] IOSÏµÍ³Çå³ý»º´æ´íÎó
-* [¸üÐÂ] ¸üÐÂ¼ÇÂ¼ÑùÊ½£¬È¡ÏûÊ±¼äÖá£¬¸ÄÎª¿¨Æ¬Ä£Ê½
-* [¸üÐÂ] ×ÖÌåÍ¼±ê
-* [¸üÐÂ] ³£ÓÃÊ¾Àý£ºµã»÷ + °´Å¥ ÑùÊ½
- 
- **************************
-
- ### 2016Äê01ÔÂ17ÈÕ 0.0.7 Alpha °æ±¾
- 
-* [ÐÂÔö] ÏµÍ³ÉèÖÃÒ³Ãæ
-* [ÐÂÔö] ÍøÂçÁ¬½Ó£¬Î´Á¬½ÓÊ±¼àÌý
-* [¸üÐÂ] Ê×Ò³µ×²¿²Ëµ¥Ãû³Æ
-* [¸üÐÂ] Ê×Ò³µ×²¿²Ëµ¥£º·½´çÖ®Ï¯Í¼±ê
-* [¸üÐÂ] Ç°¶Ë¿ò¼ÜÀ¸Ä¿µã»÷Ñ¡Ôñä¯ÀÀÆ÷´ò¿ªÏàÓ¦µÄ¹ÙÍø
-* [¸üÐÂ] AUI°æ±¾Îª1.1.7
-* [¸üÐÂ] Hammer.js°æ±¾Îª2.0.6
-* [¸üÐÂ] ¸öÈËÖÐÐÄÅÅ°æºÍÄÚÈÝ
-* [¸üÐÂ] ²à»¬²Ëµ¥Á÷³©¶È
-* [¸üÐÂ] ÌÖÂÛÉçÇøÎ´ÁªÍøÊ±ÌáÊ¾ÏûÏ¢
+* [æ–°å¢ž] ç³»ç»Ÿè®¾ç½®é€‰é¡¹ï¼šæ˜¯å¦åªåœ¨WIFIä¸‹åŠ è½½å›¾ç‰‡ï¼Œé»˜è®¤æ˜¯
+* [æ–°å¢ž] å¸ƒå±€åˆ—è¡¨ï¼šç±»ä¼¼å¾®åšå¸ƒå±€
+* [æ–°å¢ž] å¸ƒå±€åˆ—è¡¨ï¼šèµ„è®¯åˆ—è¡¨ï¼ˆæ— å›¾ï¼‰
+* [æ–°å¢ž] å¸ƒå±€åˆ—è¡¨ï¼šèµ„è®¯åˆ—è¡¨ï¼ˆæœ‰å›¾ï¼‰
+* [ä¿®å¤] AHelper.js BUGï¼Œç‰ˆæœ¬å·ä¸ºï¼š1.0.8
+* [æ›´æ–°] iconfont å­—ä½“å›¾æ ‡
+* [æ›´æ–°] ä¾§æ»‘èœå•å…¨éƒ¨æ ·å¼
+* [æ›´æ–°] ç‰ˆæœ¬å·æ•°å­—
+* [æ›´æ–°] å–æ¶ˆIOSç³»ç»Ÿä¾§æ»‘ç¼©æ”¾ç‰¹æ•ˆï¼Œä¿æŒå’ŒAndroidä¸€æ ·çš„ä½“éªŒ
  
  **************************
 
- ### 2016Äê01ÔÂ16ÈÕ 0.0.6 Alpha °æ±¾
+ ### 2016å¹´01æœˆ18æ—¥ 0.0.8 Alpha ç‰ˆæœ¬
  
- * [ÐÂÔö] »ñÈ¡App»º´æºÍÇå¿Õ»º´æ¹¦ÄÜ
- * [ÐÂÔö] App.js È«¾ÖÍ¨ÓÃÎÄ¼þ
- * [¸üÐÂ] ÌÖÂÛÉçÇøµãÔÞºÍ²é¿´ÆÀÂÛ°´Å¥
- * [¸üÐÂ] ÌÖÂÛÉçÇøÏêÏ¸ÐÅÏ¢Îª¶¯Ì¬Êý¾Ý
- * [¸üÐÂ] ÌÖÂÛÉçÇøÁÐ±íÖÐÄÚÉèÖÃÎªÖ»½ØÈ¡47¸ö×Ö·û£¬µã»÷¿ÉÒÔ²é¿´ÏêÏ¸ÄÚÈÝ
- * [¸üÐÂ] Ã»ÓÐÍøÂçÊ±ÌáÊ¾
- * [¸üÐÂ] ¸üÐÂ¼ÇÂ¼ÑùÊ½£¬Ê¹ÓÃÊ±¼äÖá¸ñÊ½
+* [æ–°å¢ž] èµ¢å‹äº§å“åˆ—è¡¨
+* [æ–°å¢ž] ä¸‹æœŸç‰ˆæœ¬é¢„å‘Š
+* [æ–°å¢ž] ç³»ç»Ÿè®¾ç½®é€€å‡ºç™»å½•æŒ‰é’®
+* [ä¿®å¤] IOSç³»ç»Ÿæ¸…é™¤ç¼“å­˜é”™è¯¯
+* [æ›´æ–°] æ›´æ–°è®°å½•æ ·å¼ï¼Œå–æ¶ˆæ—¶é—´è½´ï¼Œæ”¹ä¸ºå¡ç‰‡æ¨¡å¼
+* [æ›´æ–°] å­—ä½“å›¾æ ‡
+* [æ›´æ–°] å¸¸ç”¨ç¤ºä¾‹ï¼šç‚¹å‡» + æŒ‰é’® æ ·å¼
  
  **************************
 
- ### 2016Äê01ÔÂ15ÈÕ 0.0.5 Alpha °æ±¾
+ ### 2016å¹´01æœˆ17æ—¥ 0.0.7 Alpha ç‰ˆæœ¬
  
- * [ÐÂÔö] ¸üÐÂÌÖÂÛÉçÇøÎª¶¯Ì¬Êý¾Ý£¡µ÷ÓÃ http://bbs.winu.net ½Ó¿Ú
- * [ÐÂÔö] ÌÖÂÛÉçÇø·Ö²¼Ê±¼äÏÔÊ¾£¬Ä£·ÂÎ¢ÐÅ£¡
+* [æ–°å¢ž] ç³»ç»Ÿè®¾ç½®é¡µé¢
+* [æ–°å¢ž] ç½‘ç»œè¿žæŽ¥ï¼Œæœªè¿žæŽ¥æ—¶ç›‘å¬
+* [æ›´æ–°] é¦–é¡µåº•éƒ¨èœå•åç§°
+* [æ›´æ–°] é¦–é¡µåº•éƒ¨èœå•ï¼šæ–¹å¯¸ä¹‹å¸­å›¾æ ‡
+* [æ›´æ–°] å‰ç«¯æ¡†æž¶æ ç›®ç‚¹å‡»é€‰æ‹©æµè§ˆå™¨æ‰“å¼€ç›¸åº”çš„å®˜ç½‘
+* [æ›´æ–°] AUIç‰ˆæœ¬ä¸º1.1.7
+* [æ›´æ–°] Hammer.jsç‰ˆæœ¬ä¸º2.0.6
+* [æ›´æ–°] ä¸ªäººä¸­å¿ƒæŽ’ç‰ˆå’Œå†…å®¹
+* [æ›´æ–°] ä¾§æ»‘èœå•æµç•…åº¦
+* [æ›´æ–°] è®¨è®ºç¤¾åŒºæœªè”ç½‘æ—¶æç¤ºæ¶ˆæ¯
+ 
+ **************************
+
+ ### 2016å¹´01æœˆ16æ—¥ 0.0.6 Alpha ç‰ˆæœ¬
+ 
+ * [æ–°å¢ž] èŽ·å–Appç¼“å­˜å’Œæ¸…ç©ºç¼“å­˜åŠŸèƒ½
+ * [æ–°å¢ž] App.js å…¨å±€é€šç”¨æ–‡ä»¶
+ * [æ›´æ–°] è®¨è®ºç¤¾åŒºç‚¹èµžå’ŒæŸ¥çœ‹è¯„è®ºæŒ‰é’®
+ * [æ›´æ–°] è®¨è®ºç¤¾åŒºè¯¦ç»†ä¿¡æ¯ä¸ºåŠ¨æ€æ•°æ®
+ * [æ›´æ–°] è®¨è®ºç¤¾åŒºåˆ—è¡¨ä¸­å†…è®¾ç½®ä¸ºåªæˆªå–47ä¸ªå­—ç¬¦ï¼Œç‚¹å‡»å¯ä»¥æŸ¥çœ‹è¯¦ç»†å†…å®¹
+ * [æ›´æ–°] æ²¡æœ‰ç½‘ç»œæ—¶æç¤º
+ * [æ›´æ–°] æ›´æ–°è®°å½•æ ·å¼ï¼Œä½¿ç”¨æ—¶é—´è½´æ ¼å¼
+ 
+ **************************
+
+ ### 2016å¹´01æœˆ15æ—¥ 0.0.5 Alpha ç‰ˆæœ¬
+ 
+ * [æ–°å¢ž] æ›´æ–°è®¨è®ºç¤¾åŒºä¸ºåŠ¨æ€æ•°æ®ï¼è°ƒç”¨ http://bbs.winu.net æŽ¥å£
+ * [æ–°å¢ž] è®¨è®ºç¤¾åŒºåˆ†å¸ƒæ—¶é—´æ˜¾ç¤ºï¼Œæ¨¡ä»¿å¾®ä¿¡ï¼
  
  **************************
  
- ### 2016Äê01ÔÂ14ÈÕ 0.0.4 Alpha °æ±¾
+ ### 2016å¹´01æœˆ14æ—¥ 0.0.4 Alpha ç‰ˆæœ¬
  
-* [ÐÂÔö] Ëù¼ûËùÎÅÒ³Ìí¼Ó²Ëµ¥£¬Ä£·ÂQQ¿Ø¼þ
-* [¸üÐÂ] Ó¦¿ª·¢ÕßµÄÒªÇó£¬È«ÃæÌæ»»UIÎªAUI¿ò¼Ü¡£
-* [¸üÐÂ] ²¼¾ÖÊµÀýÖÐµÄ¡¾Ïò×ó»¬³öÒþ²Ø²Ëµ¥¡¿Á÷³©¶È£¬ºÍ»¬¶¯Ê±ÆäËû×Ô¶¯Òþ²Ø¡£
-* [¸üÐÂ] AppÍ¼±ê
-* [¸üÐÂ] ´óÁ¿Ä¬ÈÏÎÄ×ÖÃèÊö
-* [¸üÐÂ] ²¼¾ÖÊµÀýÖÐµÄ¡¾´ò¿ªÆÕÍ¨´°¿Ú£¨´øµ×²¿µ¼º½£©¡¿µÄÉèÖÃÒ³Ãæ£¬Ä£·ÂQQ¿Õ¼ä
- 
- **************************
- 
-### 2016Äê01ÔÂ13ÈÕ 0.0.3 Alpha °æ±¾
-* [ÐÂÔö] ³£¼ûÊµÀý£ºÇ°¶ËÍÆ¼ö¡¢Ó®ÓÑ²úÆ·
-* [ÐÂÔö] css3¶¯»­£ºÐÂÉúµÛÔÚÅ¬Á¦±¼ÅÜ
-* [ÐÂÔö] ³£¼ûÊµÀý£º»¬¶¯Ò³ÃæÍ·²¿Í¸Ã÷ÏÔÊ¾¡¢ÓÅ»¯Ò³Ãæ¼ÓÔØÖ®Í¼Æ¬ÀÁ¼ÓÔØ
-* [¸üÐÂ] Ëù¼ûËùÎÅÀ¸Ä¿ËùÓÐÍ¼Æ¬ÎªÀÁ¼ÓÔØ
-* [¸üÐÂ] ×ª³¡¶¯»­ÐÞ¸ÄÎªÐÂÊÓÍ¼½«¾ÉÊÓÍ¼ÍÆ¿ª£¬Ö®Ç°ÊÇÐÂÊÓÍ¼ÒÆµ½¾ÉÊÓÍ¼ÉÏÃæ
-* [ÐÞ¸´] ZeptoÔÚIOSÏµÍ³³ö´íÎÊÌâ
+* [æ–°å¢ž] æ‰€è§æ‰€é—»é¡µæ·»åŠ èœå•ï¼Œæ¨¡ä»¿QQæŽ§ä»¶
+* [æ›´æ–°] åº”å¼€å‘è€…çš„è¦æ±‚ï¼Œå…¨é¢æ›¿æ¢UIä¸ºAUIæ¡†æž¶ã€‚
+* [æ›´æ–°] å¸ƒå±€å®žä¾‹ä¸­çš„ã€å‘å·¦æ»‘å‡ºéšè—èœå•ã€‘æµç•…åº¦ï¼Œå’Œæ»‘åŠ¨æ—¶å…¶ä»–è‡ªåŠ¨éšè—ã€‚
+* [æ›´æ–°] Appå›¾æ ‡
+* [æ›´æ–°] å¤§é‡é»˜è®¤æ–‡å­—æè¿°
+* [æ›´æ–°] å¸ƒå±€å®žä¾‹ä¸­çš„ã€æ‰“å¼€æ™®é€šçª—å£ï¼ˆå¸¦åº•éƒ¨å¯¼èˆªï¼‰ã€‘çš„è®¾ç½®é¡µé¢ï¼Œæ¨¡ä»¿QQç©ºé—´
  
  **************************
  
- ### 2016Äê01ÔÂ12ÈÕ 0.0.2 Alpha °æ±¾
- 
- * [ÐÂÔö] ³£¼ûÊµÀý£ºµ×²¿µ¼º½ +¡¢Ïò×ó»¬³öÒþ²Ø²Ëµ¥¡¢¿áìÅ¼ÓÔØÌØÐ§
- * [ÐÂÔö] Éè±¸ÊµÀý£ºÍê³ÉAPICloudËùÓÐ¶ËAPI¶ÔÏóµÄÊôÐÔ±àÐ´
- * [ÐÂÔö] ÊÂ¼þÊµÀý£ºÍê³ÉAPICloudËùÓÐ¶ËAPI¶ÔÏóµÄÊÂ¼þ±àÐ´
- * [ÐÂÔö] Ä£¿éÊµÀý£ºÔ¤ÉèÄ£¿é¹¦ÄÜ¿ª·¢¹¦ÄÜÏÈÊÂÏî
- * [¸üÐÂ] ÌáÉýAppµã»÷ÏìÓ¦ËÙ¶È£¬Ìá¸ßÇÐ»»Á÷³©¶È
- 
- **************************
- 
- ### 2016Äê01ÔÂ11ÈÕ 0.0.1 Alpha °æ±¾
- 
- * [ÐÂÔö] ³£¼ûÊµÀý£º´ò¿ªÆÕÍ¨´°¿Ú¡¢´ò¿ªÆÕÍ¨´°¿Ú£¨´øµ×²¿µ¼º½£©¡¢´ò¿ª´°¿Ú×é¡¢µ¯³ö·ÖÏí´°¿Ú
- * [ÐÂÔö] ÌÖÂÛÉçÇø¸¡¶¯Ë¢ÐÂºÍ·¢²¼°´Å¥
+### 2016å¹´01æœˆ13æ—¥ 0.0.3 Alpha ç‰ˆæœ¬
+* [æ–°å¢ž] å¸¸è§å®žä¾‹ï¼šå‰ç«¯æŽ¨èã€èµ¢å‹äº§å“
+* [æ–°å¢ž] css3åŠ¨ç”»ï¼šæ–°ç”Ÿå¸åœ¨åŠªåŠ›å¥”è·‘
+* [æ–°å¢ž] å¸¸è§å®žä¾‹ï¼šæ»‘åŠ¨é¡µé¢å¤´éƒ¨é€æ˜Žæ˜¾ç¤ºã€ä¼˜åŒ–é¡µé¢åŠ è½½ä¹‹å›¾ç‰‡æ‡’åŠ è½½
+* [æ›´æ–°] æ‰€è§æ‰€é—»æ ç›®æ‰€æœ‰å›¾ç‰‡ä¸ºæ‡’åŠ è½½
+* [æ›´æ–°] è½¬åœºåŠ¨ç”»ä¿®æ”¹ä¸ºæ–°è§†å›¾å°†æ—§è§†å›¾æŽ¨å¼€ï¼Œä¹‹å‰æ˜¯æ–°è§†å›¾ç§»åˆ°æ—§è§†å›¾ä¸Šé¢
+* [ä¿®å¤] Zeptoåœ¨IOSç³»ç»Ÿå‡ºé”™é—®é¢˜
  
  **************************
  
- ### 2016Äê01ÔÂ10ÈÕ 0.0.0 Alpha °æ±¾
- * [ÐÂÔö] ´î½¨App»ù±¾¹Ç¼Ü
- * [ÐÂÔö] ³£¼ûÊµÀý¡¢ÌÖÂÛÉçÇø¡¢Ëù¼ûËùÎÅ¡¢¸öÈËÖÐÐÄ²Ëµ¥
- * [ÐÂÔö] ²à»¬²Ëµ¥
+ ### 2016å¹´01æœˆ12æ—¥ 0.0.2 Alpha ç‰ˆæœ¬
+ 
+ * [æ–°å¢ž] å¸¸è§å®žä¾‹ï¼šåº•éƒ¨å¯¼èˆª +ã€å‘å·¦æ»‘å‡ºéšè—èœå•ã€é…·ç‚«åŠ è½½ç‰¹æ•ˆ
+ * [æ–°å¢ž] è®¾å¤‡å®žä¾‹ï¼šå®ŒæˆAPICloudæ‰€æœ‰ç«¯APIå¯¹è±¡çš„å±žæ€§ç¼–å†™
+ * [æ–°å¢ž] äº‹ä»¶å®žä¾‹ï¼šå®ŒæˆAPICloudæ‰€æœ‰ç«¯APIå¯¹è±¡çš„äº‹ä»¶ç¼–å†™
+ * [æ–°å¢ž] æ¨¡å—å®žä¾‹ï¼šé¢„è®¾æ¨¡å—åŠŸèƒ½å¼€å‘åŠŸèƒ½å…ˆäº‹é¡¹
+ * [æ›´æ–°] æå‡Appç‚¹å‡»å“åº”é€Ÿåº¦ï¼Œæé«˜åˆ‡æ¢æµç•…åº¦
+ 
+ **************************
+ 
+ ### 2016å¹´01æœˆ11æ—¥ 0.0.1 Alpha ç‰ˆæœ¬
+ 
+ * [æ–°å¢ž] å¸¸è§å®žä¾‹ï¼šæ‰“å¼€æ™®é€šçª—å£ã€æ‰“å¼€æ™®é€šçª—å£ï¼ˆå¸¦åº•éƒ¨å¯¼èˆªï¼‰ã€æ‰“å¼€çª—å£ç»„ã€å¼¹å‡ºåˆ†äº«çª—å£
+ * [æ–°å¢ž] è®¨è®ºç¤¾åŒºæµ®åŠ¨åˆ·æ–°å’Œå‘å¸ƒæŒ‰é’®
+ 
+ **************************
+ 
+ ### 2016å¹´01æœˆ10æ—¥ 0.0.0 Alpha ç‰ˆæœ¬
+ * [æ–°å¢ž] æ­å»ºAppåŸºæœ¬éª¨æž¶
+ * [æ–°å¢ž] å¸¸è§å®žä¾‹ã€è®¨è®ºç¤¾åŒºã€æ‰€è§æ‰€é—»ã€ä¸ªäººä¸­å¿ƒèœå•
+ * [æ–°å¢ž] ä¾§æ»‘èœå•
  
  **************************
  
  ```
 
-## App½ØÍ¼£¨0.0.4 Alpha°æ±¾ £©
+## Appæˆªå›¾ï¼ˆ0.0.4 Alphaç‰ˆæœ¬ ï¼‰
 
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215340_a55b3593_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215357_69ec2e65_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215409_607bc830_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215419_387035c5_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215429_3802585e_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215440_fe50c016_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215451_23325a6c_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215501_7a9ccd01_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215510_f9d17dd3_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215522_44602faf_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215530_f2c3cb48_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215538_07594a94_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215550_bc183794_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215559_483829b6_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215618_beb8563c_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215630_a09d8380_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215639_d0da354b_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215646_5449c87c_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215655_7a7b73f6_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215704_f0f17358_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
-![ÊäÈëÍ¼Æ¬ËµÃ÷](http://git.oschina.net/uploads/images/2016/0114/215754_95a18672_526496.png "ÔÚÕâÀïÊäÈëÍ¼Æ¬±êÌâ")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0119/172429_176d7a96_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0119/172441_f71ae423_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0119/172449_b827f395_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215340_a55b3593_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215357_69ec2e65_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215409_607bc830_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215419_387035c5_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215429_3802585e_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215440_fe50c016_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215451_23325a6c_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215501_7a9ccd01_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215510_f9d17dd3_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215522_44602faf_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215530_f2c3cb48_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215538_07594a94_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215550_bc183794_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215559_483829b6_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215618_beb8563c_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215630_a09d8380_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215639_d0da354b_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215646_5449c87c_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215655_7a7b73f6_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215704_f0f17358_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
+![è¾“å…¥å›¾ç‰‡è¯´æ˜Ž](http://git.oschina.net/uploads/images/2016/0114/215754_95a18672_526496.png "åœ¨è¿™é‡Œè¾“å…¥å›¾ç‰‡æ ‡é¢˜")
