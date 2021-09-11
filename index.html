@@ -14,14 +14,20 @@
 	<script type="text/javascript" src="./script/zepto.min.js"></script>
 	<script type="text/javascript">
 		H.ready(function() {
-			H.$openSlidLayout(function(ret, err) {
-			}, {
-				name : 'silde',
-				url : './html/slide/slide_head.html'
-			}, {
-				name : 'index',
-				url : './html/index_head.html'
-			});
+			H.$getPrefs(function(ret, err) {
+				if (ret && ret.value) {
+					H.$openSlidLayout(function(ret, err) {
+					}, {
+						name : 'silde',
+						url : './html/slide/slide_head.html'
+					}, {
+						name : 'index',
+						url : './html/index_head.html'
+					});
+				} else {
+					H.$openFrame('launch', './html/launch.html', {})
+				}
+			}, 'launch');
 		});
 	</script>
 </html>

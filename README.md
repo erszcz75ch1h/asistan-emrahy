@@ -16,9 +16,9 @@
 
 ## 安装包信息
 
- * [0.0.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/5b1b8e041760da77f4a85e0f3779760a.ipa)
+ * [0.0.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fbf2b3c34348970e98f8e652c5ce43d1.ipa)
 
- * [0.0.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/26c8d6d2ee740c779e960c615993a930_d)
+ * [0.0.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/6983046b832731d67b03fee5baed54b2_d)
 
  * 
 
@@ -62,6 +62,8 @@
 
   ### 2016年01月19日 0.0.9 Alpha 版本
  
+* [新增] App启动画
+* [新增] 清除缓存可再次打开App查看启动画 
 * [新增] 系统设置选项：是否只在WIFI下加载图片，默认是
 * [新增] 布局列表：类似微博布局
 * [新增] 布局列表：资讯列表（无图）

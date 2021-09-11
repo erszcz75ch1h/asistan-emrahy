@@ -63,6 +63,7 @@
 			// 清除缓存
 			$("#clear-cache").on("tap", function() {
 				api.clearCache(function(ret, err) {
+					H.$removePrefs(null, 'launch');
 					$("#cache-size").text("0M");
 					H.$toast("清除成功");
 				});
