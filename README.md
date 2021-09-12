@@ -16,9 +16,9 @@
 
 ## 安装包信息
 
- * [0.0.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fbf2b3c34348970e98f8e652c5ce43d1.ipa)
+ * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/f53dda120e30e97ebbca1170173ffb59.ipa)
 
- * [0.0.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/6983046b832731d67b03fee5baed54b2_d)
+ * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/5a4234e213ac1c60e2f67cffc0e772e5_d)
 
  * 
 
@@ -57,6 +57,15 @@
 * [新增] 方寸之席：消息总览列表
 * [新增] 方寸之席：用户等级列表
 * [新增] 重新设计调整指点迷津
+ 
+ **************************
+
+  ### 2016年01月20日 0.1.0 Alpha 版本
+ 
+* [更新] 葵花宝典全部样式，新增推荐列表文章 
+* [更新] 侧滑菜单点击用户设置自动切换到指定页面
+* [更新] iconfont 字体图标
+* [更新] 葵花宝典文案
  
  **************************
 
