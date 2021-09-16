@@ -16,9 +16,9 @@
 
 ## 安装包信息
 
- * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/4117965aadbe0f2ea77e040df139ce53.ipa)
+ * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/215e2c23d41243bceb0a1612e57be592.ipa)
 
- * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/9fd591d5cf5c701f6966f6106939db59_d)
+ * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/1638b39e216d3a34194d8bf17db9f2ed_d)
 
  * 
 
@@ -62,6 +62,9 @@
 
   ### 2016年01月20日 0.1.0 Alpha 版本
  
+* [新增] 首页 活动 栏目
+* [更新] 首页 图片懒加载
+* [更新] 侧滑菜单背景
 * [更新] 葵花宝典全部样式，新增推荐列表文章 
 * [更新] 侧滑菜单点击用户设置自动切换到指定页面
 * [更新] iconfont 字体图标
