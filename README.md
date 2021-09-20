@@ -183,6 +183,8 @@
 
 ## App截图（0.0.4 Alpha版本 ）
 
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0120/015308_fed94bcb_526496.jpeg "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0120/015256_5c3c084d_526496.jpeg "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0119/172429_176d7a96_526496.png "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0119/172441_f71ae423_526496.png "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0119/172449_b827f395_526496.png "在这里输入图片标题")
