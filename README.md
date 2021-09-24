@@ -4,7 +4,8 @@
 
 * 开发作者：`新生帝`
 * 作者QQ ：`8020292`
-* 交流Q群 ：`18863883`  一起改变中国IT教育（这是一个IT交流群，里面全部都是App开发，软件开发，游戏开发，前端开发，网页设计，UI设计，软件测试，需求分析，算法分析，人工智能等，和一群喜欢IT的朋友们。欢迎喜欢IT，喜欢编程，喜欢设计等互联网的朋友！）
+* 交流Q群 ：`18863883`  一起改变中国IT教育
+* Q群描述 ：这是一个IT交流群，里面全部都是App开发，软件开发，游戏开发，前端开发，网页设计，UI设计，软件测试，需求分析，算法分析，人工智能等，和一群喜欢IT的朋友们。欢迎喜欢IT，喜欢编程，喜欢设计等互联网的朋友！
 * 开发理念：一切从简，只为了更懒！
 * 技术支持：[中山赢友网络科技有限公司](http://www.winu.net/)
 * 讨论社区：[一起改变中国IT教育](http://bbs.winu.net/)
@@ -14,11 +15,15 @@
 
 * `目前项目处于Alpha版本，不支持热更新，Beta版本之后才采用热更新！请知悉！`
 
+## App测试平台
+
+* 本人使用iPhone系列手机，小米Note，小米4等主流手机测试，均可流畅运行！如有闪退、卡顿问题，请留言并注明页面和手机型号，还有配置。
+
 ## 安装包信息
 
- * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/215e2c23d41243bceb0a1612e57be592.ipa)
+ * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/864923a1744fb623fce057caf677ca20.ipa)
 
- * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/1638b39e216d3a34194d8bf17db9f2ed_d)
+ * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/72feb54b9b439ab53fdaf354d6932abf_d)
 
  * 
 
