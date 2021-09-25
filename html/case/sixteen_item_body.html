@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<style type="text/css">
+			/*重新定义*/
+			.aui-list-view {
+				border: 1px solid #eeeeee;
+				border-radius: 3px;
+			}
+			.aui-list-view:after {
+				border-top: 0;
+			}
+			.aui-list-view:before {
+				border-top: 0;
+			}
+			.aui-grid-sixteen li .aui-iconfont {
+				background: #ff9900;
+				color: #ffffff;
+				width: 38px;
+				height: 38px;
+				line-height: 38px;
+				border-radius: 4px;
+				font-size: 20px;
+			}
+			/*自定义*/
+			.image img {
+				width: 100%
+			}
+			p {
+				font-size: 12px;
+				margin-bottom: 5px;
+			}
+			.content {
+				font-size: 12px;
+			}
+			.aui-grid-sixteen li .aui-iconfont {
+				color: #fff !important;
+			}
+			.padding-zero {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+			.margin-zero .aui-list-view {
+				margin-bottom: 0;
+			}
+			/*自定义*/
+			.content {
+				font-size: 14px;
+				color: #333333;
+			}
+			.otherinfo p {
+				font-size: 12px;
+				margin-bottom: 5px;
+			}
+			.section {
+				padding: 0.625em 0.625em 0 0.625em;
+			}
+			.section span {
+				display: inline-block;
+				padding: 0 0.2em 0 0;
+			}
+			.section span i {
+				font-size: 1.2em;
+				color: #c14b56;
+			}
+			.aui-badge {
+				top: 4px;
+				right: 4px;
+			}
+			.position-absolute {
+				position: absolute;
+			}
+			.position-relative {
+				position: relative;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="padding-zero">
+			<ul class="aui-grid-sixteen" id="winu-action">
+				<li class="aui-col-xs-3 aui-text-center" data-winName="onwork" data-url="../onwork/main.html">
+					<span class="aui-iconfont iconfont icon-shangbannv" style="background:#1f518b"></span>
+					<p style="color:#1f518b">
+						打卡上班
+					</p>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="outwork" data-url="../outwork/main.html">
+					<span class="aui-iconfont iconfont icon-hualiushishangxiaban" style="background:#1488c8"></span>
+					<p style="color:#1488c8">
+						打卡下班
+					</p>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="worklog" data-url="../worklog/main.html">
+					<span class="aui-iconfont iconfont icon-gongzuo" style="background:#0b5743"></span>
+					<p style="color:#0b5743">
+						工作汇报
+					</p>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="nowork" data-url="../nowork/main.html">
+					<span class="aui-iconfont iconfont icon-iconfontqingjiaguanli" style="background:#00ac65"></span>
+					<p style="color:#00ac65">
+						表单申请
+					</p>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="news" data-url="../news/main.html">
+					<span class="aui-iconfont iconfont icon-gonggao" style="background:#050825"></span>
+					<p style="color:#050825">
+						公告资讯
+					</p>
+					<span class="aui-badge aui-badge-warning position-absolute">3</span>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="renwu" data-url="../renwu/main.html">
+					<span class="aui-iconfont iconfont icon-renwu" style="background:#1f518b"></span>
+					<p style="color:#1f518b">
+						任务事项
+					</p>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="everyday" data-url="../everyday/main.html">
+					<span class="aui-iconfont iconfont icon-richangshiwu" style="background:#00ac65"></span>
+					<p style="color:#00ac65">
+						日常安排
+					</p>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="email" data-url="../email/main.html">
+					<span class="aui-iconfont iconfont icon-youxiang" style="background:#2c5871"></span>
+					<p style="color:#2c5871">
+						互信箱
+					</p>
+					<span class="aui-badge aui-badge-warning position-absolute">15</span>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="share" data-url="../share/main.html">
+					<span class="aui-iconfont iconfont icon-fenxiang" style="background:#b5292a"></span>
+					<p style="color:#b5292a">
+						心得分享
+					</p>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="word" data-url="../word/main.html">
+					<span class="aui-iconfont iconfont icon-dataMg" style="background:#919adf"></span>
+					<p style="color:#919adf">
+						资料管理
+					</p>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="jixiao" data-url="../jixiao/main.html">
+					<span class="aui-iconfont iconfont icon-jixiao" style="background:#0b5743"></span>
+					<p style="color:#0b5743">
+						绩效管理
+					</p>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="data" data-url="../data/main.html">
+					<span class="aui-iconfont iconfont icon-baobiao" style="background:#00ac65"></span>
+					<p style="color:#00ac65">
+						数据报表
+					</p>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="contact" data-url="../contact/main.html">
+					<span class="aui-iconfont iconfont icon-tongxunlu" style="background:#919adf"></span>
+					<p style="color:#919adf">
+						通讯录
+					</p>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="quanquan" data-url="../quanquan/main.html">
+					<span class="aui-iconfont iconfont icon-pengyouquanyin" style="background:#00ac65"></span>
+					<p style="color:#00ac65">
+						同事圈
+					</p>
+					<span class="aui-badge aui-badge-warning position-absolute">99</span>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="wangpan" data-url="../wangpan/main.html">
+					<span class="aui-iconfont iconfont icon-wangpan" style="background:#1488c8"></span>
+					<p style="color:#1488c8">
+						我的网盘
+					</p>
+				</li>
+				<li class="aui-col-xs-3 aui-text-center" data-winName="advice" data-url="../advice/main.html">
+					<span class="aui-iconfont iconfont icon-xianghover" style="background:#f7e041"></span>
+					<p style="color:#f7e041">
+						意见箱
+					</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript"></script>
+</html>
