@@ -1,6 +1,6 @@
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215145_c8cabc17_526496.png "在这里输入图片标题")
 
-> # `点点例`是基于[APICloud](http://www.apicloud.com/)平台开发的集工具及社交类的移动应用！
+> # `点点例`是基于[APICloud](http://www.apicloud.com/)平台开发集工具及社交类的移动应用！
 
 * 开发作者：`新生帝`
 * 作者QQ ：`8020292`
