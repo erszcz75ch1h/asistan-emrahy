@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/cb51da4182039f157654eaaddd3d3888.ipa)
+ * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/6fe68c5ac4e2ac8a9af74d635222c802.ipa)
 
- * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/46741a4b2ed50ad9cbe0a860cf549ed3_d)
+ * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/59f4fecec2658c50363498121d8fafb8_d)
 
  * 
 
@@ -68,6 +68,7 @@
 
 * [新增] 常用示例：九宫格、十六宫格
 * [新增] 首页 活动 栏目
+* [新增] Swiper.js 3.2.7版本
 * [新增] 侧滑菜单背景
 * [更新] 首页 图片懒加载
 * [更新] 葵花宝典全部样式，新增推荐列表文章 
@@ -81,7 +82,7 @@
  
 * [新增] App启动画
 * [新增] 清除缓存可再次打开App查看启动画 
-* [新增] 系统设置选项：是否只在WIFI下加载图片，默认是
+* [新增] 系统设置选项：移动网络加载图片，默认是
 * [新增] 布局列表：类似微博布局
 * [新增] 布局列表：资讯列表（无图）
 * [新增] 布局列表：资讯列表（有图）
