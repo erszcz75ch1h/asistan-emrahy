@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/6fe68c5ac4e2ac8a9af74d635222c802.ipa)
+ * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ccb5eb06bca3b0130b8061694cd7e20.ipa)
 
- * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/59f4fecec2658c50363498121d8fafb8_d)
+ * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/84057bf12f50260c74a2afcc2f80a903_d)
 
  * 
 
@@ -60,7 +60,6 @@
 * [新增] 常用示例：常用示例：高度自定义日历插件
 * [新增] 方寸之席：消息总览列表
 * [新增] 方寸之席：用户等级列表
-* [新增] 重新设计调整指点迷津
  
  **************************
 
@@ -71,7 +70,9 @@
 * [新增] Swiper.js 3.2.7版本
 * [新增] 侧滑菜单背景
 * [更新] 首页 图片懒加载
+* [更新] 禁止frameGroup滑动
 * [更新] 葵花宝典全部样式，新增推荐列表文章 
+* [更新] 指点迷津全部样式，新增推荐列表文章
 * [更新] 侧滑菜单点击用户设置自动切换到指定页面
 * [更新] iconfont 字体图标
 * [更新] 葵花宝典文案

@@ -1,0 +1,314 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<style type="text/css">
+			html, body {
+				background: #f4f5f9;
+			}
+			.push-fixed, .refresh-fixed {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				background: rgba(78,129,174,0.8);
+				position: fixed;
+				bottom: 10px;
+				right: 10px;
+				z-index: 10000;
+			}
+			.refresh-fixed {
+				bottom: 60px;
+			}
+			.winu-center-all {
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+			}
+			.push-fixed i.iconfont, .refresh-fixed i.iconfont {
+				color: #fff;
+				font-size: 20px;
+			}
+			#bbs-list li {
+				clear: both;
+				min-height: 0;
+				height: auto;
+				overflow: hidden;
+				padding: 10px;
+				margin: 10px 0 0 0;
+				background: #fff;
+				border-bottom: 1px solid #d7d7d7;
+			}
+			.item-des {
+				padding: 10px 0;
+				font-size: 14px;
+				line-height: 24px;
+				color: #666;
+			}
+			.float-left {
+				float: left;
+			}
+			.float-right {
+				float: right;
+			}
+			.item-title {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-flex-flow: row;
+				flex-flow: row;
+				width: 100%;
+			}
+			.item-title strong {
+				color: #444;
+				font-size: 16px;
+				font-weight: normal;
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+			}
+			.item-prop {
+				font-size: 13px;
+				color: #666666;
+			}
+			.item-prop span label {
+				display: inline-block;
+				padding: 0 10px;
+			}
+			.item-review {
+				display: block;
+				width: 40px;
+				height: 20px;
+				font-size: 13px;
+				border: 1px solid #c0bebf;
+				line-height: 20px;
+				text-align: center;
+				color: #ef9300;
+				border-radius: 2px;
+				-webkit-border-radius: 2px;
+			}
+			.item-info {
+				margin: 10px 0 0 0;
+				color: #666666;
+				font-size: 13px;
+				height: 32px;
+				line-height: 32px;
+			}
+			.item-info img {
+				width: 32px;
+				height: 32px;
+				line-height: normal;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				margin-right: 10px;
+				vertical-align: middle;
+			}
+			#bbs-list li:active {
+				background: #f4f4f4;
+			}
+			.display-none {
+				display: none;
+			}
+		</style>
+		<script id="tpl" type="text/html">
+			[: for (var i=0;i<list.length;i++) { :]
+			<li  tapmode data-id='[:=list[i].id:]' data-postType='[:=list[i].post_type:]'>
+			<div class="item-title">
+			<strong>[:=list[i].title:]</strong><span class="item-review float-right"  tapmode data-id='[:=list[i].id:]' >评论</span>
+			</div>
+			<div class="item-info">
+			<span class="float-right">已有[:=list[i].view_count:]人查阅</span><img src="../../image/gray.jpg" data-echo="[:=(list[i].user_info).avatar_file:]" alt="" title="" /><span>[:=(list[i].user_info).user_name:]</span>
+			</div>
+			<div class="item-des">
+			[:=list[i].message:]
+			</div>
+			<div class="item-prop">
+			<span class="item-time float-left">[:=transTime(list[i].add_time):]</span>
+			<span class="item-icons float-right"> <label tapmode  data-id='[:=list[i].id:]' data-postType='[:=list[i].post_type:]' id="click-nice"><i class="iconfont icon-shoucangweishoucang"></i> [:=list[i].agree_count:]</label> <label tapmode  data-id='[:=list[i].id:]' data-postType='[:=list[i].post_type:]' id="review-list"><i class="iconfont icon-pinglun"></i> [:=list[i].answer_count:]</label></span>
+			</div>
+			</li>
+			[:}:]
+		</script>
+	</head>
+	<body>
+		<div class="aui-tips aui-tips-danger display-none">
+			<div class="aui-tips-content aui-ellipsis-1">
+				<i class="aui-iconfont aui-icon-warnfill"></i>
+				世界上最遥远的距离就是没网。 <i class="aui-iconfont aui-icon-roundclosefill" onclick="$(this).parents('.aui-tips').addClass('display-none');"></i>
+			</div>
+		</div>
+		<ul id="bbs-list"></ul>
+		<div class="push-fixed winu-center-all" tapmode onclick="H.$openWin('push_bbs_head', 'push_bbs_head.html');">
+			<i class="iconfont icon-luyinbi"></i>
+		</div>
+		<div class="refresh-fixed winu-center-all"  tapmode  onclick="H.$setAutoDropdownToRefresh();">
+			<i class="iconfont icon-shuaxin"></i>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript" src="../../script/echo.min.js"></script>
+	<script type="text/javascript" src="../../script/date.js"></script>
+	<script type="text/javascript" src="../../script/app.js"></script>
+	<script type="text/javascript">
+		var page = 1;
+		// 合并问题和文章
+		function createTplData(dataList) {
+			var rows = [];
+			if (dataList && dataList.length > 0) {
+				for (var i = 0; i < dataList.length; i++) {
+					var obj = dataList[i];
+					// 是否是问题
+					if (obj.post_type == "question") {
+						var _msg = delHtmlTag(obj.question_detail);
+						_msg = _msg.substr(0, _msg.length > 47 ? 47 : _msg.length) + (_msg.length > 47 ? "..." : "");
+						rows.push({
+							id : obj.question_id,
+							title : obj.question_content,
+							message : _msg,
+							add_time : obj.add_time,
+							post_type : obj.post_type,
+							answer_count : obj.answer_count,
+							view_count : obj.view_count,
+							agree_count : obj.agree_count,
+							user_info : obj.user_info,
+							topics : obj.topics
+						});
+					} else {
+						var _msg = delHtmlTag(obj.message);
+						_msg = _msg.substr(0, _msg.length > 47 ? 47 : _msg.length) + (_msg.length > 47 ? "..." : "");
+						rows.push({
+							id : obj.id,
+							title : obj.title,
+							message : _msg,
+							add_time : obj.add_time,
+							post_type : obj.post_type,
+							answer_count : obj.comments,
+							view_count : obj.views,
+							agree_count : obj.votes,
+							user_info : obj.user_info,
+							topics : obj.topics
+						});
+					}
+				}
+			}
+			return rows;
+		}
+
+		// 加载数据
+		function loadLoad(pageIndex, pageSize) {
+			pageIndex = pageIndex ? pageIndex : 1;
+			pageSize = pageSize ? pageSize : 10;
+			H.$ajax(function(ret, err) {
+				// 有数据
+				if (ret.rsm) {
+					var dataList = createTplData((ret.rsm).rows);
+					if (dataList && dataList.length > 0) {
+						if (pageIndex <= 1) {
+							// 获取模板内容，并加载数据
+							var html = H.$tppl(H.$api.byId('tpl').innerHTML, {
+								list : dataList
+							});
+							$("#bbs-list").html(html);
+							// 加载完毕后，恢复下拉
+							H.$recoverDropdownToNormal();
+						} else {
+							// 获取模板内容，并加载数据
+							var html = H.$tppl(H.$api.byId('tpl').innerHTML, {
+								list : dataList
+							});
+							$("#bbs-list").append(html);
+						}
+						echo.init({
+							offset : 100,
+							throttle : 250,
+							unload : false,
+							callback : function(element, op) {
+							}
+						});
+					}
+				}
+				H.closeFrame("loading");
+			}, window.apiUrl + 'explore/?page=' + pageIndex + '&per_page=' + pageSize);
+		}
+
+		Zepto(function($) {
+			$("#bbs-list").on("tap", "*", function() {
+				if ($(this).is(".item-review,.item-review *")) {
+					H.$openFrame('bbs_review_body', 'bbs_review_body.html', null, {
+						x : 0,
+						y : 0
+					});
+				} else if ($(this).is("#click-nice,#click-nice *")) {
+					H.$toast("点赞");
+				} else if ($(this).is("#review-list,#review-list *")) {
+					H.$toast("评论列表");
+				} else {
+					var param = {
+						id : 0,
+						postType : 'question'
+					};
+					var that;
+					if ($(this).is("li")) {
+						that = $(this);
+					} else {
+						that = $(this).parents("#bbs-list li");
+					}
+					var bid = that.attr("data-id");
+					var postType = that.attr("data-postType");
+					param.id = bid;
+					param.postType = postType;
+					// 打开带参数的窗口
+					H.$openWin('bbs_view_head', 'bbs_view_head.html', param);
+				}
+			});
+		});
+		H.ready(function() {
+			H.$dropdownToRefresh(function(ret, err) {
+				if (api.connectionType != "none") {
+					page = 1;
+					loadLoad();
+				} else {
+					// 恢复下拉
+					H.$recoverDropdownToNormal();
+					//H.$toast("网络未连接");
+					$(".aui-tips").removeClass("display-none");
+				}
+			});
+			H.$dropupToAppend(function(ret, err) {
+				if (api.connectionType != "none") {
+					H.$openFrame('loading', 'widget://res/load9.html', null, {
+						x : 0,
+						y : 0
+					});
+					page = page + 1;
+					loadLoad(page);
+				} else {
+					//H.$toast("网络未连接");
+					$(".aui-tips").removeClass("display-none");
+				}
+			});
+			// 设置窗口自动下拉加载
+			H.$setAutoDropdownToRefresh();
+			// 监听网络
+			H.$offline(function(ret, err) {
+				$(".aui-tips").removeClass("display-none");
+			});
+			H.$online(function(ret, err) {
+				$(".aui-tips").addClass("display-none");
+				H.$setAutoDropdownToRefresh();
+			});
+		});
+	</script>
+</html>

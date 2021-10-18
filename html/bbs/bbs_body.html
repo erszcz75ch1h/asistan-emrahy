@@ -39,29 +39,10 @@
 				color: #fff;
 				font-size: 20px;
 			}
-			#bbs-list li {
-				clear: both;
-				min-height: 0;
-				height: auto;
-				overflow: hidden;
-				padding: 10px;
-				margin: 10px 0 0 0;
+			#bbs-channel {
+				height: 50px;
 				background: #fff;
-				border-bottom: 1px solid #d7d7d7;
-			}
-			.item-des {
-				padding: 10px 0;
-				font-size: 14px;
-				line-height: 24px;
-				color: #666;
-			}
-			.float-left {
-				float: left;
-			}
-			.float-right {
-				float: right;
-			}
-			.item-title {
+				margin-bottom: 10px;
 				display: -webkit-box;
 				display: -webkit-flex;
 				display: flex;
@@ -70,85 +51,321 @@
 				flex-flow: row;
 				width: 100%;
 			}
-			.item-title strong {
-				color: #444;
-				font-size: 16px;
-				font-weight: normal;
+			#bbs-channel p {
 				-webkit-box-flex: 1;
 				-webkit-flex: 1;
 				flex: 1;
-			}
-			.item-prop {
+				color: #999999;
 				font-size: 13px;
-				color: #666666;
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
 			}
-			.item-prop span label {
+			#bbs-channel p span {
 				display: inline-block;
-				padding: 0 10px;
+				padding: 5px 5px;
+				background: #fff;
+				border-radius: 3px;
+				-webkit-border-radius: 3px;
 			}
-			.item-review {
-				display: block;
+			#bbs-channel p.active span {
+				background: #1d9dd5;
+				color: #fff;
+			}
+			#bbs-channel div {
+				width: 30px;
+				font-size: 14px;
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+			}
+			#bbs-channel div i {
+				color: #1d9dd5;
+				font-size:20px;
+			}
+			#bbs-list ul li {
+				clear: both;
+				position: relative;
+				border-bottom: 1px solid #d7d7d7;
+				background: #fff;
+				padding: 10px 8px 10px 8px;
+				min-height: 0;
+				height: auto;
+				overflow: hidden;
+				margin-bottom: 10px;
+			}
+			.user-area img {
+				height: 40px;
 				width: 40px;
-				height: 20px;
-				font-size: 13px;
-				border: 1px solid #c0bebf;
-				line-height: 20px;
-				text-align: center;
-				color: #ef9300;
-				border-radius: 2px;
-				-webkit-border-radius: 2px;
-			}
-			.item-info {
-				margin: 10px 0 0 0;
-				color: #666666;
-				font-size: 13px;
-				height: 32px;
-				line-height: 32px;
-			}
-			.item-info img {
-				width: 32px;
-				height: 32px;
-				line-height: normal;
 				border-radius: 50%;
 				-webkit-border-radius: 50%;
-				margin-right: 10px;
+			}
+			.left-img {
+				display: inline-block;
+				height: 40px;
+				width: 40px;
+				position: relative;
 				vertical-align: middle;
 			}
-			#bbs-list li:active {
-				background: #f4f4f4;
+			.left-img .gender {
+				display: block;
+				height: 15px;
+				width: 15px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				color: #fff;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				text-align: center;
 			}
-			.display-none {
-				display: none;
+			.left-img .gender i {
+				font-size: 10px;
+				position: relative;
+				top: -6px;
+			}
+			.left-img .gender.man {
+				background: #1d9dd5;
+			}
+			.left-img .gender.max {
+				background: #f54171;
+			}
+			.diplay-inline-block {
+				display: inline-block;
+				height: 40px;
+				vertical-align: middle;
+				line-height: 40px;
+				margin-left: 8px;
+			}
+			.user-name {
+				font-size: 15px;
+			}
+			.bbs-time {
+				height: 40px;
+				vertical-align: middle;
+			}
+			.bbs-time span {
+				color: #999999;
+				line-height: 50px;
+				font-size: 12px;
+			}
+			.level {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 9px;
+				color: #fff;
+				background: #1D9DD5;
+				height: 15px;
+				line-height: 16px;
+				padding: 0 4px;
+				border-radius: 2px;
+				-webkit-border-radius: 2px;
+				margin-left: 10px;
+			}
+			.article-area {
+				margin-top: 10px;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-flex-flow: row;
+				flex-flow: row;
+				width: 100%;
+			}
+			.article-info {
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+				position: relative;
+			}
+			.article-info p {
+				color: #333;
+				font-size: 15px;
+			}
+			.article-info  span {
+				padding-top: 7px;
+				display: block;
+				font-size: 9px;
+				color: #999;
+			}
+			.ims-img {
+				width: 100px;
+				height: 100px;
+				margin-left: 8px;
+				position: relative;
+			}
+			.ims-img span {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				background: rgba(0,0,0,0.5);
+				color: #fff;
+				display: block;
+				width: 30px;
+				font-size: 10px;
+				text-align: center;
+				height: 15px;
+				line-height: 15px;
+			}
+			.article-img {
+				width: 100px;
+				height: 100px;
+			}
+			.ico-zhan {
+				display: inline-block;
+				font-size: 10px;
+				color: #fff;
+				background: #999;
+				padding: 1px 3px;
+				vertical-align: middle;
+				margin-right: 8px;
+			}
+			.ico-zhan.hot {
+				background: #fdba7d;
+			}
+			.aui-ellipsis-1, .aui-ellipsis-2 {
+				padding-right: 0 !important;
+			}
+			.bbs-title {
+				font-size: 16px;
+			}
+			.bbs-des {
+				padding-top: 10px;
+				font-size: 12px;
+				color: #999999;
+				height: 51px;
+				line-height: 22px;
+			}
+			.ico-s {
+				width: 100%;
+			}
+			.ico-s label {
+				margin-right: 8px;
+			}
+			.ico-s label i {
+				vertical-align: bottom;
+			}
+			.ico-s  font {
+				float: right;
+				display: inline-block;
+				padding: 2px 3px 2px 3px;
+				border: 1px solid #ccc;
+				border-radius: 2px;
+				-webkit-border-radius: 2px;
+				line-height: normal;
+				margin-top: 2px;
 			}
 		</style>
-		<script id="tpl" type="text/html">
-			[: for (var i=0;i<list.length;i++) { :]
-			<li  tapmode data-id='[:=list[i].id:]' data-postType='[:=list[i].post_type:]'>
-			<div class="item-title">
-			<strong>[:=list[i].title:]</strong><span class="item-review float-right"  tapmode data-id='[:=list[i].id:]' >评论</span>
-			</div>
-			<div class="item-info">
-			<span class="float-right">已有[:=list[i].view_count:]人查阅</span><img src="../../image/gray.jpg" data-echo="[:=(list[i].user_info).avatar_file:]" alt="" title="" /><span>[:=(list[i].user_info).user_name:]</span>
-			</div>
-			<div class="item-des">
-			[:=list[i].message:]
-			</div>
-			<div class="item-prop">
-			<span class="item-time float-left">[:=transTime(list[i].add_time):]</span>
-			<span class="item-icons float-right"> <label tapmode  data-id='[:=list[i].id:]' data-postType='[:=list[i].post_type:]' id="click-nice"><i class="iconfont icon-shoucangweishoucang"></i> [:=list[i].agree_count:]</label> <label tapmode  data-id='[:=list[i].id:]' data-postType='[:=list[i].post_type:]' id="review-list"><i class="iconfont icon-pinglun"></i> [:=list[i].answer_count:]</label></span>
-			</div>
-			</li>
-			[:}:]
-		</script>
 	</head>
 	<body>
-		<div class="aui-tips aui-tips-danger display-none">
-			<div class="aui-tips-content aui-ellipsis-1">
-				<i class="aui-iconfont aui-icon-warnfill"></i>
-				世界上最遥远的距离就是没网。 <i class="aui-iconfont aui-icon-roundclosefill" onclick="$(this).parents('.aui-tips').addClass('display-none');"></i>
+		<nav id="bbs-channel">
+			<p class="active">
+				<span>全部帖子</span>
+			</p>
+			<p>
+				<span>技术交流</span>
+			</p>
+			<p>
+				<span>前端领域</span>
+			</p>
+			<p>
+				<span>后端开发</span>
+			</p>
+			<div>
+				<i class="iconfont icon-gengduo"></i>
 			</div>
+		</nav>
+		<div id="bbs-list">
+			<ul>
+				<li>
+					<div class="user-area">
+						<div class="left-img"><img src="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block">
+							点点例<label class="level" style="background: #d48edc">官方人员</label>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>技术分享</font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<div class="left-img"><img src="../../image/pic.jpg" /><span class="gender max"><i class="iconfont icon-nan "></i></span>
+						</div>
+						<div class="user-name diplay-inline-block">
+							点点例<label class="level" style="background: #90c57f">官方人员</label>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan hot">热门</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端</font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<div class="left-img"><img src="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block">
+							点点例<label class="level" style="background: #d48edc">官方人员</label>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端</font></span>
+						</div>
+					</div>
+				</li>
+			</ul>
 		</div>
-		<ul id="bbs-list"></ul>
 		<div class="push-fixed winu-center-all" tapmode onclick="H.$openWin('push_bbs_head', 'push_bbs_head.html');">
 			<i class="iconfont icon-luyinbi"></i>
 		</div>
@@ -161,154 +378,5 @@
 	<script type="text/javascript" src="../../script/echo.min.js"></script>
 	<script type="text/javascript" src="../../script/date.js"></script>
 	<script type="text/javascript" src="../../script/app.js"></script>
-	<script type="text/javascript">
-		var page = 1;
-		// 合并问题和文章
-		function createTplData(dataList) {
-			var rows = [];
-			if (dataList && dataList.length > 0) {
-				for (var i = 0; i < dataList.length; i++) {
-					var obj = dataList[i];
-					// 是否是问题
-					if (obj.post_type == "question") {
-						var _msg = delHtmlTag(obj.question_detail);
-						_msg = _msg.substr(0, _msg.length > 47 ? 47 : _msg.length) + (_msg.length > 47 ? "..." : "");
-						rows.push({
-							id : obj.question_id,
-							title : obj.question_content,
-							message : _msg,
-							add_time : obj.add_time,
-							post_type : obj.post_type,
-							answer_count : obj.answer_count,
-							view_count : obj.view_count,
-							agree_count : obj.agree_count,
-							user_info : obj.user_info,
-							topics : obj.topics
-						});
-					} else {
-						var _msg = delHtmlTag(obj.message);
-						_msg = _msg.substr(0, _msg.length > 47 ? 47 : _msg.length) + (_msg.length > 47 ? "..." : "");
-						rows.push({
-							id : obj.id,
-							title : obj.title,
-							message : _msg,
-							add_time : obj.add_time,
-							post_type : obj.post_type,
-							answer_count : obj.comments,
-							view_count : obj.views,
-							agree_count : obj.votes,
-							user_info : obj.user_info,
-							topics : obj.topics
-						});
-					}
-				}
-			}
-			return rows;
-		}
-
-		// 加载数据
-		function loadLoad(pageIndex, pageSize) {
-			pageIndex = pageIndex ? pageIndex : 1;
-			pageSize = pageSize ? pageSize : 10;
-			H.$ajax(function(ret, err) {
-				// 有数据
-				if (ret.rsm) {
-					var dataList = createTplData((ret.rsm).rows);
-					if (dataList && dataList.length > 0) {
-						if (pageIndex <= 1) {
-							// 获取模板内容，并加载数据
-							var html = H.$tppl(H.$api.byId('tpl').innerHTML, {
-								list : dataList
-							});
-							$("#bbs-list").html(html);
-							// 加载完毕后，恢复下拉
-							H.$recoverDropdownToNormal();
-						} else {
-							// 获取模板内容，并加载数据
-							var html = H.$tppl(H.$api.byId('tpl').innerHTML, {
-								list : dataList
-							});
-							$("#bbs-list").append(html);
-						}
-						echo.init({
-							offset : 100,
-							throttle : 250,
-							unload : false,
-							callback : function(element, op) {
-							}
-						});
-					}
-				}
-				H.closeFrame("loading");
-			}, window.apiUrl + 'explore/?page=' + pageIndex + '&per_page=' + pageSize);
-		}
-
-		Zepto(function($) {
-			$("#bbs-list").on("tap", "*", function() {
-				if ($(this).is(".item-review,.item-review *")) {
-					H.$openFrame('bbs_review_body', 'bbs_review_body.html', null, {
-						x : 0,
-						y : 0
-					});
-				} else if ($(this).is("#click-nice,#click-nice *")) {
-					H.$toast("点赞");
-				} else if ($(this).is("#review-list,#review-list *")) {
-					H.$toast("评论列表");
-				} else {
-					var param = {
-						id : 0,
-						postType : 'question'
-					};
-					var that;
-					if ($(this).is("li")) {
-						that = $(this);
-					} else {
-						that = $(this).parents("#bbs-list li");
-					}
-					var bid = that.attr("data-id");
-					var postType = that.attr("data-postType");
-					param.id = bid;
-					param.postType = postType;
-					// 打开带参数的窗口
-					H.$openWin('bbs_view_head', 'bbs_view_head.html', param);
-				}
-			});
-		});
-		H.ready(function() {
-			H.$dropdownToRefresh(function(ret, err) {
-				if (api.connectionType != "none") {
-					page = 1;
-					loadLoad();
-				} else {
-					// 恢复下拉
-					H.$recoverDropdownToNormal();
-					//H.$toast("网络未连接");
-					$(".aui-tips").removeClass("display-none");
-				}
-			});
-			H.$dropupToAppend(function(ret, err) {
-				if (api.connectionType != "none") {
-					H.$openFrame('loading', 'widget://res/load9.html', null, {
-						x : 0,
-						y : 0
-					});
-					page = page + 1;
-					loadLoad(page);
-				} else {
-					//H.$toast("网络未连接");
-					$(".aui-tips").removeClass("display-none");
-				}
-			});
-			// 设置窗口自动下拉加载
-			H.$setAutoDropdownToRefresh();
-			// 监听网络
-			H.$offline(function(ret, err) {
-				$(".aui-tips").removeClass("display-none");
-			});
-			H.$online(function(ret, err) {
-				$(".aui-tips").addClass("display-none");
-				H.$setAutoDropdownToRefresh();
-			});
-		});
-	</script>
+	<script type="text/javascript"></script>
 </html>

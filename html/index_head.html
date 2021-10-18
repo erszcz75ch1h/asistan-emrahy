@@ -92,7 +92,9 @@
 			that.addClass("active-1d9dd5").siblings("#aui-footer li").removeClass("active-1d9dd5");
 			$("#" + headerId).removeClass("display-none").siblings(".header").addClass("display-none");
 			// 设置沉浸式状态栏
-			H.$fixStatusBar(null, headerId);
+			H.$fixStatusBar(function(offset) {
+				$("#" + headerId).attr("data-height", offset.h);
+			}, headerId);
 		}
 
 		Zepto(function($) {
@@ -132,7 +134,8 @@
 					name : 'ucenter_body',
 					bounces : true
 				}],
-				preload : 3
+				preload : 3,
+				scrollEnabled : false
 			}, 'aui-footer');
 			// 双击退出应用，并清除缓存
 			H.$dblclickToCloseApp();

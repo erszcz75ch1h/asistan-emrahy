@@ -23,6 +23,7 @@
 .icon-qq:before { content: "\e612"; }
 .icon-b:before { content: "\e601"; }
 .icon-shezhi:before { content: "\e60e"; }
+.icon-gengduo:before { content: "\e63a"; }
 .icon-gonggao:before { content: "\e628"; }
 .icon-shebeiguanli:before { content: "\e604"; }
 .icon-renwu:before { content: "\e629"; }
@@ -55,6 +56,8 @@
 .icon-9zhongdianguanzhu:before { content: "\e625"; }
 .icon-weixin:before { content: "\e615"; }
 .icon-jixiao:before { content: "\e633"; }
+.icon-nv:before { content: "\e638"; }
+.icon-nan:before { content: "\e639"; }
 .icon-baobiao:before { content: "\e634"; }
 .icon-fenxiang1:before { content: "\e635"; }
 .icon-tongxunlu:before { content: "\e636"; }
