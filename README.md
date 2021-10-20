@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ccb5eb06bca3b0130b8061694cd7e20.ipa)
+ * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d0e02e054203d21fcf59b2f92499a9b7.ipa)
 
- * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/84057bf12f50260c74a2afcc2f80a903_d)
+ * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/49788702ba9bd8c2b7006de3652848ec_d)
 
  * 
 
@@ -70,6 +70,7 @@
 * [新增] Swiper.js 3.2.7版本
 * [新增] 侧滑菜单背景
 * [更新] 首页 图片懒加载
+* [更新] 点击侧滑菜单高亮透明
 * [更新] 禁止frameGroup滑动
 * [更新] 葵花宝典全部样式，新增推荐列表文章 
 * [更新] 指点迷津全部样式，新增推荐列表文章
