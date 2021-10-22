@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d0e02e054203d21fcf59b2f92499a9b7.ipa)
+ * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/64ecb961f4a840a6e8fbc467d50a5a18.ipa)
 
- * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/49788702ba9bd8c2b7006de3652848ec_d)
+ * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/74732d783792c054a272af5b74e06d25_d)
 
  * 
 
@@ -76,8 +76,11 @@
 * [更新] 指点迷津全部样式，新增推荐列表文章
 * [更新] 侧滑菜单点击用户设置自动切换到指定页面
 * [更新] iconfont 字体图标
+* [更新] 启动页为手动移除，默认是3秒 
 * [更新] 葵花宝典文案
- 
+* [修复] 指点迷津拖动页面版本也跟着下拉
+* [修复] Android低版本手机 首页时间错位问题 
+
  **************************
 
   ### 2016年01月19日 0.0.9 Alpha 版本

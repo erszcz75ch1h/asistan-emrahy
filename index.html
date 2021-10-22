@@ -14,6 +14,15 @@
 	<script type="text/javascript" src="./script/zepto.min.js"></script>
 	<script type="text/javascript">
 		H.ready(function() {
+			// 移除启动页
+			setTimeout(function() {
+				api.removeLaunchView({
+					animation : {
+						type : 'fade',
+						duration : 500
+					}
+				});
+			}, 3000);
 			H.$getPrefs(function(ret, err) {
 				if (ret && ret.value) {
 					H.$openSlidLayout(function(ret, err) {

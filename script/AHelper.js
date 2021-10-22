@@ -1560,14 +1560,16 @@
 		// @frameUrl：frame地址
 		// @pageParam：参数
 		// @rect：区域
-		$openFrame : function(frameName, frameUrl, pageParam, rect) {
+		$openFrame : function(frameName, frameUrl, pageParam, rect, bounces) {
+			bounces = typeof bounces == "boolean" ? bounces : false;
 			pageParam = pageParam ? pageParam : api.pageParam;
 
 			$$apicloud.openFrame({
 				name : frameName,
 				url : frameUrl,
 				pageParam : pageParam,
-				rect : rect
+				rect : rect,
+				bounces : bounces
 			});
 		},
 		// 快速创建并打开Frame对象(带导航)
@@ -3537,7 +3539,7 @@
 	win.H.$com = $$com;
 	win.H.$api = $$api;
 	win.H.$tppl = $$tppl;
-	win.H.$v = '1.0.8';
+	win.H.$v = '1.0.9';
 	win.H.$validate = $$validate;
 	win.H.$module = modules;
 

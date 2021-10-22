@@ -93,7 +93,11 @@
 			$("#" + headerId).removeClass("display-none").siblings(".header").addClass("display-none");
 			// 设置沉浸式状态栏
 			H.$fixStatusBar(function(offset) {
-				$("#" + headerId).attr("data-height", offset.h);
+				if (headerId == "bbs-header") {
+					H.$setFrameStatus('bbs_data_body', false);
+				} else {
+					H.$setFrameStatus('bbs_data_body', true);
+				}
 			}, headerId);
 		}
 
