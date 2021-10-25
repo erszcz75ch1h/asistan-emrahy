@@ -21,6 +21,12 @@
 
 ## 安装包信息
 
+ * [0.1.1 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/49be56a1d494ab40dbde7f62ce1f833b.ipa)
+
+ * [0.1.1 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/52e8f0e15a5116d1bfee653b0508f12b_d)
+
+ * 
+
  * [0.1.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/64ecb961f4a840a6e8fbc467d50a5a18.ipa)
 
  * [0.1.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/74732d783792c054a272af5b74e06d25_d)
@@ -56,10 +62,16 @@
 * [新增] 常用示例：发布朋友圈页面
 * [新增] 常用示例：选项卡标题更多布局
 * [新增] 常用示例：常用示例：多按钮滑动切屏，类似淘宝
-* [新增] 常用示例：常用示例：瀑布流布局
 * [新增] 常用示例：常用示例：高度自定义日历插件
 * [新增] 方寸之席：消息总览列表
 * [新增] 方寸之席：用户等级列表
+ 
+ **************************
+
+   ### 2016年01月21日 0.1.1 Alpha 版本
+ 
+* [新增] 常用示例：瀑布流布局，可以放大，缩小，追加，也可以配合懒加载 ，不依赖任何框架
+* [修复] 指点迷津页面分类下拉弹动问题
  
  **************************
 
