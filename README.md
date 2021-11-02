@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.1 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/49be56a1d494ab40dbde7f62ce1f833b.ipa)
+ * [0.1.1 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/8547dd2f3ec20c1f97d66397f1543333.ipa)
 
- * [0.1.1 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/52e8f0e15a5116d1bfee653b0508f12b_d)
+ * [0.1.1 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/950886a92289fcf5c07ff25c8ddfcd5_d)
 
  * 
 
@@ -68,9 +68,14 @@
  
  **************************
 
-   ### 2016年01月21日 0.1.1 Alpha 版本
+ ### 2016年01月21日 0.1.1 Alpha 版本
  
 * [新增] 常用示例：瀑布流布局，可以放大，缩小，追加，也可以配合懒加载 ，不依赖任何框架
+* [新增] 文章详情页面
+* [新增] 指点迷津页面分类阴影效果
+* [更新] 方寸之席 用户名处添加等级
+* [更新] 流连忘返页布局，以内容为主
+* [更新] 指点迷津页面跳动情况
 * [修复] 指点迷津页面分类下拉弹动问题
  
  **************************

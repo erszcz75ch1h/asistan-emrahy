@@ -40,7 +40,7 @@
 				font-size: 20px;
 			}
 			#bbs-list {
-				padding-top: 10px;
+				padding-top: 8px;
 			}
 			#bbs-list ul li {
 				clear: both;
@@ -268,7 +268,7 @@
 							<div class="bbs-des aui-ellipsis-2">
 								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端</font></span>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端领域</font></span>
 						</div>
 						<div class="ims-img">
 							<span>9 图</span>
@@ -295,7 +295,7 @@
 							<div class="bbs-des aui-ellipsis-2">
 								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端</font></span>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>后端开发</font></span>
 						</div>
 					</div>
 				</li>
@@ -397,6 +397,16 @@
 			unload : false,
 			callback : function(element, op) {
 			}
+		});
+		Zepto(function($) {
+			$("#bbs-list").on("tap", "*", function() {
+				if ($(this).is("font,font *")) {
+					H.$alert("苦逼程序猿，正在疯狂加班中……");
+				} else {
+					// 打开带参数的窗口
+					H.$openWin('bbs_view_head', 'bbs_view_head.html');
+				}
+			});
 		});
 		H.ready(function() {
 			H.$dropdownToRefresh(function(ret, err) {

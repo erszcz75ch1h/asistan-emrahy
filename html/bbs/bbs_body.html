@@ -21,6 +21,9 @@
 				-webkit-flex-flow: row;
 				flex-flow: row;
 				width: 100%;
+				box-shadow: 0 3px 1px 1px #ededed;
+				-webkit-box-shadow: 0 3px 1px 1px #ededed;
+				border-bottom: 1px solid #d9d9d9;
 			}
 			#bbs-channel p {
 				-webkit-box-flex: 1;
@@ -70,10 +73,10 @@
 		<div id="fixs">
 			<nav id="bbs-channel">
 				<p class="active">
-					<span>全部帖子</span>
+					<span>最新回复</span>
 				</p>
 				<p>
-					<span>技术交流</span>
+					<span>技术分享</span>
 				</p>
 				<p>
 					<span>前端领域</span>
@@ -86,22 +89,22 @@
 				</div>
 			</nav>
 		</div>
+		<div id="offset"></div>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript">
 		H.ready(function() {
 			H.$fixStatusBar(function(offset) {
-				$("#fixs").css("padding-top", "0");
-				var areaHeight = api.winHeight - (46 + offset.h + 56);
+				var areaHeight = api.winHeight - (46 + offset.h + 56 + 52);
 				H.$openFrame('bbs_data_body', 'bbs_data_body.html', {}, {
 					x : 0,
-					y : (46 + offset.h),
+					y : (46 + offset.h + 52),
 					h : areaHeight,
 					w : api.winWidth
 				});
 				H.$setFrameStatus('bbs_data_body', true);
-			}, 'fixs');
+			}, 'offset');
 		});
 	</script>
 </html>

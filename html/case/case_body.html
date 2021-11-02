@@ -145,6 +145,9 @@
 			.aui-ellipsis-2 {
 				padding-right: 5px !important;
 			}
+			#nice-articles li:active, li.aui-list-view:active {
+				background: #f4f4f4;
+			}
 		</style>
 	</head>
 	<body>
@@ -216,7 +219,7 @@
 		</div>
 		<div class="aui-content active-area">
 			<ul>
-				<li class="aui-list-view">
+				<li class="aui-list-view" tapmode onclick="H.$openWin('case_view_head', 'case_view_head.html');">
 					<div class="aui-col-xs-12 aui-padded-5" style="padding: 8px 5px;">
 						<label class="active-ars">活动</label>小米5发布时间曝光：2月底
 					</div>
@@ -353,6 +356,9 @@
 				} else {
 					H.$alert("苦逼程序猿，正在疯狂加班中……");
 				}
+			});
+			$("#nice-articles").on("tap", "li", function() {
+				H.$openWin('case_view_head', 'case_view_head.html');
 			});
 		});
 		H.ready(function() {
