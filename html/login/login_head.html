@@ -23,12 +23,11 @@
 		H.ready(function() {
 			// 快速打开窗口
 			H.$openFrameWithNav('aui-header', {
-				url : 'slide_body.html',
-				name : 'slide_body',
-				rect : {
-					w : api.winWidth - 80
-				}
+				url : 'login_body.html',
+				name : 'login_body'
 			});
+			// 双击退出应用，并清除缓存
+			H.$dblclickToCloseApp();
 		});
 	</script>
 </html>

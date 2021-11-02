@@ -44,6 +44,7 @@
 .icon-zhaopian:before { content: "\e61d"; }
 .icon-shuaxin:before { content: "\e60a"; }
 .icon-youxiang:before { content: "\e630"; }
+.icon-phone:before { content: "\e63b"; }
 .icon-wendang:before { content: "\e602"; }
 .icon-friends:before { content: "\e614"; }
 .icon-hualiushishangxiaban:before { content: "\e631"; }
@@ -63,6 +64,7 @@
 .icon-tongxunlu:before { content: "\e636"; }
 .icon-login:before { content: "\e626"; }
 .icon-chanpinzhuanqu:before { content: "\e61b"; }
+.icon-password:before { content: "\e63c"; }
 .icon-mingriyugao:before { content: "\e623"; }
 .icon-iconfontqingjiaguanli:before { content: "\e637"; }
 .icon-shoucangweishoucang:before { content: "\e60c"; }

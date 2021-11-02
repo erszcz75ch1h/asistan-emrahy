@@ -116,11 +116,14 @@
 						name : 'index',
 						url : './index_head.html'
 					});
-					H.closeFrame("launch");
+					H.$closeCurrentFrame();
 				}, 'launch', 'yes');
 			});
 		});
 		H.ready(function() {
+			// 快速调整当前frame到最前面
+			H.$bringFrameToFront();
+			// 双击关闭App
 			H.$dblclickToCloseApp(function() {
 			});
 		});
