@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.1 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/43a3a6589e666bfa277314fdcec576e7.ipa)
+ * [0.1.1 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/e57326042bf49c726cd0c9b8a08f8032.ipa)
 
- * [0.1.1 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/28528f56a809d2da1188dfdd0c2cda69_d)
+ * [0.1.1 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/1a3a33056888a8cfb369ede8a2a7a9e2_d)
 
  * 
 
@@ -78,7 +78,9 @@
 * [更新] 侧滑背景
 * [更新] 流连忘返页布局，以内容为主
 * [更新] 指点迷津页面跳动情况
+* [更新] 启动画为Window页
 * [修复] 指点迷津页面分类下拉弹动问题
+* [修复] 登录BUG，键盘弹出图片上浮BUG
  
  **************************
 

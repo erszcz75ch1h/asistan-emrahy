@@ -12,18 +12,8 @@
 				background: rgba(0,0,0,0);
 			}
 			body {
-				display: -webkit-box;
-				display: -webkit-flex;
-				display: flex;
-				-webkit-box-orient: vertical;
-				-webkit-flex-flow: column;
-				flex-flow: column;
-				height: 100%;
 			}
 			.top-area {
-				-webkit-box-flex: 1;
-				-webkit-flex: 1;
-				flex: 1;
 			}
 			.logo {
 				height: 170px;
@@ -111,7 +101,7 @@
 			.form-otherlogin {
 				clear: both;
 				padding: 0 30px;
-				height: 160px;
+				height: 150px;
 			}
 			.sdk-list {
 				display: -webkit-box;
@@ -224,7 +214,12 @@
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript">
 		Zepto(function($) {
+			var bodyH = $("body").height();
+			$(".top-area").css("height", (bodyH - 150) + "px");
 			$("#login-btn").on("click", function() {
+				H.closeWin({
+					name : "launch"
+				});
 				H.$setPrefs(function(ret, err) {
 					H.$openSlidLayout(function(ret, err) {
 					}, {
@@ -234,7 +229,6 @@
 						name : 'index',
 						url : '../index_head.html'
 					});
-					H.$closeCurrentFrame();
 				}, 'user_info', {
 					name : '点点多',
 					id : 1

@@ -68,10 +68,12 @@
 					H.$toast("清除成功");
 				});
 			});
-			$("#login-out").on("click", function() {
-				H.$removePrefs(function(ret, err) {
+			$("#login-out").on("tap", function() {
+				H.$removePrefs(null, 'user_info');
+				H.$toast("退出成功");
+				setTimeout(function() {
 					H.$openWin('login_head', '../login/login_head.html');
-				}, 'user_info');
+				}, 1000);
 			});
 		});
 		H.ready(function() {
