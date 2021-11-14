@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.1 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/43a3a6589e666bfa277314fdcec576e7.ipa)
+ * [0.1.1 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/58f7447c18ddbe21482d7804bfe7c27e.ipa)
 
- * [0.1.1 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/28528f56a809d2da1188dfdd0c2cda69_d)
+ * [0.1.1 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/74d5c9bde46d0cd10bdddbbdb217cd87_d)
 
  * 
 
@@ -216,6 +216,12 @@
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0120/015308_fed94bcb_526496.jpeg "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0120/015256_5c3c084d_526496.jpeg "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0120/183731_69eca232_526496.jpeg "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0121/174108_1f90108f_526496.jpeg "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0121/174116_11c77255_526496.png "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0121/174123_b1015463_526496.png "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0121/174131_e4eb12de_526496.png "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0121/174140_c90ace27_526496.jpeg "在这里输入图片标题")
+![输入图片说明](http://git.oschina.net/uploads/images/2016/0121/174148_2f0c4d4f_526496.jpeg "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0119/172429_176d7a96_526496.png "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0119/172441_f71ae423_526496.png "在这里输入图片标题")
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0119/172449_b827f395_526496.png "在这里输入图片标题")
