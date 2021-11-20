@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<style type="text/css">
+			body {
+				padding: 15px 0 0 0;
+			}
+		</style>
+	</head>
+	<body>
+		<xmp theme="spacelab" style="display:none;"></xmp>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript">
+		H.ready(function() {
+			H.$getPrefs(function(ret, err) {
+				$("xmp").text(ret.value);
+				// 载入js
+				var oHead = document.getElementsByTagName('head').item(0);
+				var oScript = document.createElement("script");
+				oScript.type = "text/javascript";
+				oScript.src = "../../script/strapdown/strapdown.js";
+				oHead.appendChild(oScript);
+			}, 'markdown');
+		});
+	</script>
+</html>

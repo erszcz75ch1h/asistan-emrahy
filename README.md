@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.1 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c97513e5c3bf60cf792f96351189c63b.ipa)
+ * [0.1.2 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/8dc284d6a418e163a4bc1eea3ac08503.ipa)
 
- * [0.1.1 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ea525d920c98ab675a4ffe382e89ebc3_d)
+ * [0.1.2 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2de167f9cee1d1f32122e8a37137ee32_d)
 
  * 
 
@@ -65,6 +65,14 @@
 * [新增] 常用示例：常用示例：高度自定义日历插件
 * [新增] 方寸之席：消息总览列表
 * [新增] 方寸之席：用户等级列表
+ 
+ **************************
+
+ ### 2016年01月22日 0.1.2 Alpha 版本
+
+* [新增] Markdow语法解析插件：strapdown.js
+* [新增] 常用示例：Markdown语法预览
+* [新增] 常用示例：Markdown编辑器
  
  **************************
 
