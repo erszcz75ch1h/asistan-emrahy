@@ -6,21 +6,187 @@
 		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
 		<style type="text/css">
+			body {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-flex-flow: column;
+				flex-flow: column;
+				height: 100%;
+			}
 			#textarea {
 				margin: 0;
-				height: 90%;
 				-webkit-box-sizing: border-box;
 				box-sizing: border-box;
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+			}
+			.markdown-bar {
+				min-height: 0;
+				height: auto;
+				overflow: hidden;
+				border: 1px solid #DFDFDF;
+				background: #F4F4F4;
+				padding: 0 0 3px 0;
+				border-bottom: 0;
+			}
+			.markdown-bar li {
+				float: left;
+				margin: 3px 0 0 3px;
+				width: 32px;
+				height: 32px;
+				line-height: 32px;
+				border: 1px solid #dedede;
+				text-align: center;
+				color: #009E94;
 			}
 		</style>
 	</head>
 	<body>
-		<textarea id="textarea" placeholder="请编写Markdown语法后预览"></textarea>
+		<div id="table-code" style="display:none">|   |   |   |
+| ------------ | ------------ | ------------ |
+|   |   |   |
+|   |   |   |</div>
+		<ul class="markdown-bar">
+			<li data-code="# 标题" data-curpo="0">
+				H1
+			</li>
+			<li data-code="## 标题" data-curpo="0">
+				H2
+			</li>
+			<li data-code="### 标题" data-curpo="0">
+				H3
+			</li>
+			<li data-code="#### 标题" data-curpo="0">
+				H4
+			</li>
+			<li data-code="##### 标题" data-curpo="0">
+				H5
+			</li>
+			<li data-code="###### 标题" data-curpo="0">
+				H6
+			</li>
+			<li data-code="**文本**" data-curpo="-2">
+				<strong>B</strong>
+			</li>
+			<li data-code="*文本*" data-curpo="-1">
+				<strong><i>I</i></strong>
+			</li>
+			<li data-code="~~文本~~" data-curpo="-2">
+				<strong><s>S</s></strong>
+			</li>
+			<li data-code="> 文本" data-curpo="0">
+				<i class="iconfont icon-yinyong1disc"></i>
+			</li>
+			<li data-code="* 文本" data-curpo="0">
+				<i class="iconfont icon-liebiao"></i>
+			</li>
+			<li data-code="`代码`" data-curpo="-1">
+				<i class="iconfont icon-daima"></i>
+			</li>
+			<li data-code="```代码```" data-curpo="-3">
+				<i class="iconfont icon-daima2"></i>
+			</li>
+			<li data-code="***" data-curpo="0">
+				<strong>—</strong>
+			</li>
+			<li data-code="[文本](http://)" data-curpo="-1">
+				<i class="iconfont icon-lianjie"></i>
+			</li>
+			<li data-code="![文本](http://)" data-curpo="-1">
+				<i class="iconfont icon-19"></i>
+			</li>
+			<li data-code="table" data-curpo="0">
+				<i class="iconfont icon-iconbiaoge"></i>
+			</li>
+			<li data-code="time" data-curpo="0">
+				<i class="iconfont icon-shijian2"></i>
+			</li>
+		</ul>
+		<textarea id="textarea"  placeholder="请编写Markdown语法后预览"></textarea>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript">
+		// 获取光标的位置
+		function getCursortPosition(ctrl) {
+			var CaretPos = 0;
+			// IE Support
+			if (document.selection) {
+				ctrl.focus();
+				var Sel = document.selection.createRange();
+				Sel.moveStart('character', -ctrl.value.length);
+				CaretPos = Sel.text.length;
+			}
+			// Firefox support
+			else if (ctrl.selectionStart || ctrl.selectionStart == '0') {
+				CaretPos = ctrl.selectionStart;
+			}
+			return (CaretPos);
+		}
+
+		// 设置光标位置
+		function setCaretPosition(ctrl, pos) {
+			if (ctrl.setSelectionRange) {
+				ctrl.focus();
+				ctrl.setSelectionRange(pos, pos);
+			} else if (ctrl.createTextRange) {
+				var range = ctrl.createTextRange();
+				range.collapse(true);
+				range.moveEnd('character', pos);
+				range.moveStart('character', pos);
+				range.select();
+			}
+		}
+
+		// 在光标处插入内容
+		function insertAtCursor(myField, myValue) {
+			if (document.selection) {
+				myField.focus();
+				sel = document.selection.createRange();
+				sel.text = myValue;
+				sel.select();
+			} else if (myField.selectionStart || myField.selectionStart == '0') {
+				var startPos = myField.selectionStart;
+				var endPos = myField.selectionEnd;
+				var restoreTop = myField.scrollTop;
+				myField.value = myField.value.substring(0, startPos) + myValue + myField.value.substring(endPos, myField.value.length);
+				if (restoreTop > 0) {
+					myField.scrollTop = restoreTop;
+				}
+				myField.focus();
+				myField.selectionStart = startPos + myValue.length;
+				myField.selectionEnd = startPos + myValue.length;
+			} else {
+				myField.value += myValue;
+				myField.focus();
+			}
+		}
+
+		// 获取当前时间
+		function getNowTime() {
+			var now = new Date();
+			var year = now.getFullYear();
+			var month = now.getMonth() + 1;
+			var date = now.getDate();
+			var hours = now.getHours();
+			var minutes = now.getMinutes();
+			var seconds = now.getSeconds();
+			if (month >= 1 && month <= 9) {
+				month = "0" + month;
+			}
+			if (date >= 0 && date <= 9) {
+				date = "0" + date;
+			}
+			var _date = year + "-" + month + "-" + date;
+			var _time = hours + ":" + minutes + ":" + seconds;
+			return _date + " " + _time;
+		}
+
 		function openView() {
 			var markdown = $("#textarea").val();
 			H.$setStorage('markdown', markdown);
@@ -28,5 +194,29 @@
 				H.$openWin('markdown_view_head', 'markdown_view_head.html');
 			}, 'markdown', markdown);
 		}
+
+		Zepto(function($) {
+			$(".markdown-bar").on("click", "li", function() {
+				var textarea = document.getElementById('textarea');
+				// 获取自定义属性代码片段
+				var code = $(this).attr("data-code");
+				// 获取需要调整光标的位置
+				var curpo = $(this).attr("data-curpo");
+				var txt = code;
+				if (code == "table") {
+					txt = document.getElementById('table-code').innerText
+					txt = txt.replace(/(^\s*)|(\s*$)/g, '');
+				} else if (code == "time") {
+					txt = getNowTime();
+				} else {
+					txt = code;
+				}
+				insertAtCursor(textarea, txt);
+				// 当前光标位置
+				var currentPos = getCursortPosition(textarea);
+				// 设置对应的光标
+				setCaretPosition(textarea, currentPos + parseInt(curpo));
+			});
+		});
 	</script>
 </html>

@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.2 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/8dc284d6a418e163a4bc1eea3ac08503.ipa)
+ * [0.1.2 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/44ecbb30baca57c90b9234c8d9a043d6.ipa)
 
- * [0.1.2 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2de167f9cee1d1f32122e8a37137ee32_d)
+ * [0.1.2 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fec5d0c0b8a9e0ad3cb9c786dbbed6cb_d)
 
  * 
 
@@ -73,6 +73,8 @@
 * [新增] Markdow语法解析插件：strapdown.js
 * [新增] 常用示例：Markdown语法预览
 * [新增] 常用示例：Markdown编辑器
+* [新增] Markdown工具栏,方便快速插入
+* [更新] Markdown编辑器默认字体大小和边距
  
  **************************
 
