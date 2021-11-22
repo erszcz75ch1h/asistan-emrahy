@@ -47,27 +47,23 @@
 		</style>
 	</head>
 	<body>
-		<div id="table-code" style="display:none">|   |   |   |
-| ------------ | ------------ | ------------ |
-|   |   |   |
-|   |   |   |</div>
 		<ul class="markdown-bar">
-			<li data-code="# 标题" data-curpo="0">
+			<li data-code="\n# 标题\n" data-curpo="-1">
 				H1
 			</li>
-			<li data-code="## 标题" data-curpo="0">
+			<li data-code="\n## 标题\n" data-curpo="-1">
 				H2
 			</li>
-			<li data-code="### 标题" data-curpo="0">
+			<li data-code="\n### 标题\n" data-curpo="-1">
 				H3
 			</li>
-			<li data-code="#### 标题" data-curpo="0">
+			<li data-code="\n#### 标题\n" data-curpo="-1">
 				H4
 			</li>
-			<li data-code="##### 标题" data-curpo="0">
+			<li data-code="\n##### 标题\n" data-curpo="-1">
 				H5
 			</li>
-			<li data-code="###### 标题" data-curpo="0">
+			<li data-code="\n###### 标题\n" data-curpo="-1">
 				H6
 			</li>
 			<li data-code="**文本**" data-curpo="-2">
@@ -88,10 +84,10 @@
 			<li data-code="`代码`" data-curpo="-1">
 				<i class="iconfont icon-daima"></i>
 			</li>
-			<li data-code="```代码```" data-curpo="-3">
+			<li data-code="\n```\n代码\n```\n" data-curpo="-5">
 				<i class="iconfont icon-daima2"></i>
 			</li>
-			<li data-code="***" data-curpo="0">
+			<li data-code="\n***\n" data-curpo="0">
 				<strong>—</strong>
 			</li>
 			<li data-code="[文本](http://)" data-curpo="-1">
@@ -100,7 +96,7 @@
 			<li data-code="![文本](http://)" data-curpo="-1">
 				<i class="iconfont icon-19"></i>
 			</li>
-			<li data-code="table" data-curpo="0">
+			<li data-code="table" data-curpo="-87">
 				<i class="iconfont icon-iconbiaoge"></i>
 			</li>
 			<li data-code="time" data-curpo="0">
@@ -189,7 +185,6 @@
 
 		function openView() {
 			var markdown = $("#textarea").val();
-			H.$setStorage('markdown', markdown);
 			H.$setPrefs(function(ret, err) {
 				H.$openWin('markdown_view_head', 'markdown_view_head.html');
 			}, 'markdown', markdown);
@@ -199,13 +194,13 @@
 			$(".markdown-bar").on("click", "li", function() {
 				var textarea = document.getElementById('textarea');
 				// 获取自定义属性代码片段
-				var code = $(this).attr("data-code");
+				var code = eval("'" + $(this).attr("data-code") + "'");
 				// 获取需要调整光标的位置
 				var curpo = $(this).attr("data-curpo");
 				var txt = code;
+				var tablecode = "\n|   |   |   |\n| ------------ | ------------ | ------------ |\n|   |   |   |\n|   |   |   |\n";
 				if (code == "table") {
-					txt = document.getElementById('table-code').innerText
-					txt = txt.replace(/(^\s*)|(\s*$)/g, '');
+					txt = tablecode;
 				} else if (code == "time") {
 					txt = getNowTime();
 				} else {

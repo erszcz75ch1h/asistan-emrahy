@@ -1902,14 +1902,8 @@
 				key : key,
 				value : value
 			}, function(ret, err) {
-				if (ret) {
-					if ($$com.isFunction(callback)) {
-						callback(ret, err);
-					}
-				} else {
-					$$apicloud.alert(null, {
-						msg : err
-					});
+				if ($$com.isFunction(callback)) {
+					callback(ret, err);
 				}
 			});
 		},
@@ -1931,16 +1925,9 @@
 			api.getPrefs({
 				key : key
 			}, function(ret, err) {
-				if (ret) {
-					if ($$com.isFunction(callback)) {
-						callback(ret, err);
-					}
-				} else {
-					$$apicloud.alert(null, {
-						msg : err
-					});
+				if ($$com.isFunction(callback)) {
+					callback(ret, err);
 				}
-
 			});
 		},
 		// 快速获取偏好设置
@@ -1960,14 +1947,8 @@
 			api.removePrefs({
 				key : key
 			}, function(ret, err) {
-				if (ret) {
-					if ($$com.isFunction(callback)) {
-						callback(ret, err);
-					}
-				} else {
-					$$apicloud.alert(null, {
-						msg : err
-					});
+				if ($$com.isFunction(callback)) {
+					callback(ret, err);
 				}
 			});
 		},
@@ -1985,14 +1966,8 @@
 		// @callback：回调函数
 		clearCache : function(callback) {
 			api.clearCache(function(ret, err) {
-				if (ret) {
-					if ($$com.isFunction(callback)) {
-						callback(ret, err);
-					}
-				} else {
-					$$apicloud.alert(null, {
-						msg : err
-					});
+				if ($$com.isFunction(callback)) {
+					callback(ret, err);
 				}
 			});
 		},
@@ -3539,7 +3514,7 @@
 	win.H.$com = $$com;
 	win.H.$api = $$api;
 	win.H.$tppl = $$tppl;
-	win.H.$v = '1.0.9';
+	win.H.$v = '1.1.0';
 	win.H.$validate = $$validate;
 	win.H.$module = modules;
 

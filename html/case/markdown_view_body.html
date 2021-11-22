@@ -8,21 +8,23 @@
 		</style>
 	</head>
 	<body style="padding-top:10px; font-size:16px;">
-		<xmp theme="spacelab" style="display:none;"></xmp>
+		<xmp theme="spacelab" style="display:none;" id="xmp"></xmp>
 	</body>
-	<script type="text/javascript" src="../../script/AHelper.js"></script>
-	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript">
-		H.ready(function() {
-			H.$getPrefs(function(ret, err) {
-				$("xmp").text(ret.value);
-				// 载入js
-				var oHead = document.getElementsByTagName('head').item(0);
-				var oScript = document.createElement("script");
-				oScript.type = "text/javascript";
-				oScript.src = "../../script/strapdown/strapdown.js";
-				oHead.appendChild(oScript);
-			}, 'markdown');
-		});
+		apiready = function() {
+			api.getPrefs({
+				key : 'markdown'
+			}, function(ret, err) {
+				document.getElementById("xmp").innerHTML=ret.value;
+				setTimeout(function() {
+					// 载入js
+					var oHead = document.getElementsByTagName('head').item(0);
+					var oScript = document.createElement("script");
+					oScript.type = "text/javascript";
+					oScript.src = "../../script/strapdown/strapdown.js";
+					oHead.appendChild(oScript);
+				}, 500);
+			});
+		};
 	</script>
 </html>

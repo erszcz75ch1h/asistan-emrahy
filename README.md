@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.2 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/44ecbb30baca57c90b9234c8d9a043d6.ipa)
+ * [0.1.2 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/7f9b8a5cbc404eb10f3fe229fff29de4.ipa)
 
- * [0.1.2 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fec5d0c0b8a9e0ad3cb9c786dbbed6cb_d)
+ * [0.1.2 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/1b44665d15a522c87ba90616d49275f7_d)
 
  * 
 
@@ -75,6 +75,8 @@
 * [新增] 常用示例：Markdown编辑器
 * [新增] Markdown工具栏,方便快速插入
 * [更新] Markdown编辑器默认字体大小和边距
+* [优化] Markdown编辑器渲染速度，优化了代码，更加清晰明了
+* [优化] Markdown编辑器自动光标
  
  **************************
 
