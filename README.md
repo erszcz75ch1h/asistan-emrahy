@@ -21,6 +21,12 @@
 
 ## 安装包信息
 
+ * [0.1.3 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/99cfdec6bd2836d12fcb65548df78eaa.ipa)
+
+ * [0.1.3 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ec2aa70d553c3e8d82daad7213e1f95c_d)
+
+ * 
+
  * [0.1.2 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/b11ebbe9591d84148aab02a5900cc81d.ipa)
 
  * [0.1.2 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/6f3372ed8d34e75aa79ba01ec6d4e9c0_d)
@@ -65,6 +71,18 @@
 * [新增] 常用示例：常用示例：高度自定义日历插件
 * [新增] 方寸之席：消息总览列表
 * [新增] 方寸之席：用户等级列表
+ 
+ **************************
+
+  ### 2016年01月23日 0.1.3 Alpha 版本
+
+* [新增] Markdown工具栏 缩进功能，回到顶部功能，回到底部功能 ,向上调整光标位置，向下调整光标位置，预览功能
+* [更新] iconfont 字体图标
+* [更新] AHelper.js BUG，版本号为：1.1.0
+* [更新] 去掉代码高亮插件，采用markdown语法渲染，更加清晰明了。 
+* [更新] 重新排版 事件监听 页面
+* [更新] 侧滑在iPhone4上的BUG
+* [更新] 删除syntaxhighlighter代码高亮，替换成Markdown编辑器
  
  **************************
 

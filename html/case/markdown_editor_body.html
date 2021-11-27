@@ -96,14 +96,32 @@
 			<li data-code="![文本](http://)" data-curpo="-1">
 				<i class="iconfont icon-19"></i>
 			</li>
-			<li data-code="table" data-curpo="-87">
+			<li data-code="\n|   |   |   |\n| ------------ | ------------ | ------------ |\n|   |   |   |\n|   |   |   |\n" data-curpo="-87">
 				<i class="iconfont icon-iconbiaoge"></i>
 			</li>
-			<li data-code="time" data-curpo="0">
+			<li data-code="'+getNowTime()+'" data-curpo="0">
 				<i class="iconfont icon-shijian2"></i>
 			</li>
 			<li data-code="\n" data-curpo="0">
 				<i class="iconfont icon-line"></i>
+			</li>
+			<li data-code="　　" data-curpo="0">
+				<i class="iconfont icon-yousuojin"></i>
+			</li>
+			<li data-code="'+setCaretPosition(textarea, 0)+'" data-curpo="0">
+				<i class="iconfont icon-fanhuidingbu"></i>
+			</li>
+			<li data-code="'+setCaretPosition(textarea, textarea.value.length)+'" data-curpo="0">
+				<i class="iconfont icon-zuoqianfang"></i>
+			</li>
+			<li data-code="'+setCaretPosition(textarea, getCursortPosition(textarea) - 10);+'" data-curpo="0">
+				<i class="iconfont icon-mianxingtubiao1guangbiaozuizuo"></i>
+			</li>
+			<li data-code="'+setCaretPosition(textarea, getCursortPosition(textarea) + 10);+'" data-curpo="0">
+				<i class="iconfont icon-mianxingtubiao1guangbiaozuiyou"></i>
+			</li>
+			<li data-code="'+openView()+'" data-curpo="0">
+				<i class="iconfont icon-yulan"></i>
 			</li>
 		</ul>
 		<textarea id="textarea"  placeholder="请编写Markdown语法后预览"></textarea>
@@ -198,22 +216,15 @@
 				var textarea = document.getElementById('textarea');
 				// 获取自定义属性代码片段
 				var code = eval("'" + $(this).attr("data-code") + "'");
-				// 获取需要调整光标的位置
-				var curpo = $(this).attr("data-curpo");
-				var txt = code;
-				var tablecode = "\n|   |   |   |\n| ------------ | ------------ | ------------ |\n|   |   |   |\n|   |   |   |\n";
-				if (code == "table") {
-					txt = tablecode;
-				} else if (code == "time") {
-					txt = getNowTime();
-				} else {
-					txt = code;
+				if (code&&code!="undefined") {
+					// 获取需要调整光标的位置
+					var curpo = $(this).attr("data-curpo");
+					insertAtCursor(textarea, code);
+					// 当前光标位置
+					var currentPos = getCursortPosition(textarea);
+					// 设置对应的光标
+					setCaretPosition(textarea, currentPos + parseInt(curpo));
 				}
-				insertAtCursor(textarea, txt);
-				// 当前光标位置
-				var currentPos = getCursortPosition(textarea);
-				// 设置对应的光标
-				setCaretPosition(textarea, currentPos + parseInt(curpo));
 			});
 		});
 	</script>
