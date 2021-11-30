@@ -1,4 +1,12 @@
-@import url('http://fonts.googleapis.com/css?family=Muli');
+/*@import url('http://fonts.googleapis.com/css?family=Muli');*/
+/*@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  src: url(http://fonts.gstatic.com/s/muli/v7/BkuZCUxEYxRfSu-XBj9_CA.eot);
+}
+*/
+
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block;}
 audio,canvas,video{display:inline-block;*display:inline;*zoom:1;}
 audio:not([controls]){display:none;}
@@ -148,7 +156,7 @@ q:before,q:after,blockquote:before,blockquote:after{content:"";}
 address{display:block;margin-bottom:21px;font-style:normal;line-height:21px;}
 code,pre{padding:0 3px 2px;font-family:Menlo,Monaco,Consolas,"Courier New",monospace;font-size:12px;color:#333333;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;}
 code{padding:2px 4px;color:#d14;background-color:#f7f7f9;border:1px solid #e1e1e8;}
-pre{display:block;padding:10px;margin:0 0 10.5px;font-size:13px;line-height:21px;word-break:break-all;word-wrap:break-word;white-space:pre;white-space:pre-wrap;background-color:#f5f5f5;border:1px solid #ccc;border:1px solid rgba(0, 0, 0, 0.15);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}pre.prettyprint{margin-bottom:21px;}
+pre{overflow:auto;display:block;padding:10px;margin:0 0 10.5px;font-size:13px;line-height:21px;/*word-break:break-all;word-wrap:break-word;white-space:pre;white-space:pre-wrap;*/background-color:#f5f5f5;border:1px solid #ccc;border:1px solid rgba(0, 0, 0, 0.15);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;}pre.prettyprint{margin-bottom:21px;}
 pre code{padding:0;color:inherit;background-color:transparent;border:0;}
 .pre-scrollable{max-height:340px;overflow-y:scroll;}
 form{margin:0 0 21px;}

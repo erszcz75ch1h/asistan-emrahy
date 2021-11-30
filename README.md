@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.3 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/99cfdec6bd2836d12fcb65548df78eaa.ipa)
+ * [0.1.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2fc09a40acf195b0d2825cb5fd002ec4.ipa)
 
- * [0.1.3 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ec2aa70d553c3e8d82daad7213e1f95c_d)
+ * [0.1.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/b0c1cf6d315be57b1c0d2c4fbc583d73_d)
 
  * 
 
@@ -71,6 +71,16 @@
 * [新增] 常用示例：常用示例：高度自定义日历插件
 * [新增] 方寸之席：消息总览列表
 * [新增] 方寸之席：用户等级列表
+ 
+ **************************
+
+   ### 2016年01月23日 0.1.4 Alpha 版本
+
+* [新增] App目录文件说明
+* [新增] Markdown工具栏 强制滚动到光标区域，避免键盘盖住问题，目录工具栏
+* [更新] iconfont 字体图标
+* [更新] 重构Markdown编辑器，代码更少，渲染更快，更加强大 
+* [更新] 侧滑在iPhone4上被盖住
  
  **************************
 

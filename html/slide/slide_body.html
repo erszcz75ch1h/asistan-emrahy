@@ -18,6 +18,7 @@
 			}
 			.aui-content {
 				margin: 0;
+				overflow-x: auto;
 			}
 			.aui-list-view-cell:after, .aui-list-view:after, .aui-list-view-cell:last-child:after {
 				border: none;
@@ -72,14 +73,14 @@
 			.settings, .loginout {
 				width: 32px;
 				left: 15px;
-				bottom: 15px;
+				bottom: 10px;
 				z-index: 100;
 				height: 32px;
 			}
 			.loginout {
 				left: auto;
 				right: 15px;
-				bottom: 13px;
+				bottom: 8px;
 			}
 			.settings span, .loginout span {
 				font-size: 24px;
@@ -100,6 +101,9 @@
 				border-radius: 2px;
 				-webkit-border-radius: 2px;
 				margin-left: 10px;
+			}
+			.btn-bar {
+				height: 40px;
 			}
 		</style>
 	</head>
@@ -150,6 +154,7 @@
 				</li>
 			</ul>
 		</div>
+		<div class="btn-bar"></div>
 		<div class="settings winu-position-fixed" onclick="H.$execScript('index',null, 'H.closeSlidPane();setHeaderFootInfo(3);H.$setFrameGroupIndex(\'indexGroup\', 3);');">
 			<span class="aui-iconfont iconfont icon-user_set"></span>
 		</div>
