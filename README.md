@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2fc09a40acf195b0d2825cb5fd002ec4.ipa)
+ * [0.1.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d5ef15776d9953e83f401f0d69e0978c.ipa)
 
- * [0.1.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/b0c1cf6d315be57b1c0d2c4fbc583d73_d)
+ * [0.1.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/67541a42dcf2b48c8f93e929600edbe8_d)
 
  * 
 
@@ -74,10 +74,10 @@
  
  **************************
 
-   ### 2016年01月24日 0.1.4 Alpha 版本
+ ### 2016年01月24日 0.1.4 Alpha 版本
 
 * [新增] App目录文件说明
-* [新增] Markdown工具栏 强制滚动到光标区域，避免键盘盖住问题，目录工具栏
+* [新增] Markdown工具栏 强制滚动到光标区域，避免键盘盖住问题，目录工具栏，清空工具栏
 * [更新] iconfont 字体图标
 * [更新] 重构Markdown编辑器，代码更少，渲染更快，更加强大 
 * [更新] 侧滑在iPhone4上被盖住

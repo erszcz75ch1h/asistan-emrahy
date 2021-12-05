@@ -129,6 +129,9 @@
 			<li data-code="'+setCaretPosition(textarea, getCursortPosition(textarea) + 10);+'" data-curpo="0">
 				<i class="iconfont icon-mianxingtubiao1guangbiaozuiyou"></i>
 			</li>
+			<li class="color444" data-code="'+clearData();+'" data-curpo="0">
+				<i class="iconfont icon-qingkong"></i>
+			</li>
 			<li class="color444" data-code="'+setCaretPosition(textarea, getCursortPosition(textarea));+'" data-curpo="0">
 				<i class="iconfont icon-jianpan"></i>
 			</li>
@@ -214,6 +217,11 @@
 			var _date = year + "-" + month + "-" + date;
 			var _time = hours + ":" + minutes + ":" + seconds;
 			return _date + " " + _time;
+		}
+
+		// 清空数据
+		function clearData() {
+			document.getElementById('textarea').value = "";
 		}
 
 		function openView() {
