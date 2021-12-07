@@ -111,6 +111,9 @@
 			<li data-code="'+getNowTime()+'" data-curpo="0">
 				<i class="iconfont icon-shijian2"></i>
 			</li>
+			<li data-code="'+getWeek()+'" data-curpo="0">
+				<i class="iconfont icon-week"></i>
+			</li>
 			<li data-code="\n" data-curpo="0">
 				<i class="iconfont icon-line"></i>
 			</li>
@@ -217,6 +220,20 @@
 			var _date = year + "-" + month + "-" + date;
 			var _time = hours + ":" + minutes + ":" + seconds;
 			return _date + " " + _time;
+		}
+
+		// 获取星期
+		function getWeek() {
+			var d = new Date()
+			var day = new Array(7)
+			day[0] = "星期日"
+			day[1] = "星期一"
+			day[2] = "星期二"
+			day[3] = "星期三"
+			day[4] = "星期四"
+			day[5] = "星期五"
+			day[6] = "星期六"
+			return day[d.getDay()];
 		}
 
 		// 清空数据
