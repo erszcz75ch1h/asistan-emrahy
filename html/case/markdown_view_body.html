@@ -4,24 +4,168 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
 		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/winu-ui.css" />
 		<link rel="stylesheet" type="text/css" href="../../script/strapdown/themes/spacelab.min.css" />
 		<link rel="stylesheet" type="text/css" href="../../script/strapdown/strapdown.css" />
 		<link rel="stylesheet" type="text/css" href="../../script/strapdown/themes/bootstrap-responsive.min.css" />
 		<style type="text/css">
+			body {
+				padding: 0 !important;
+			}
+			.title-area {
+				padding: 10px 15px 25px 15px;
+				background: #1d9dd5;
+			}
+			.title-area p {
+				font-size: 26px;
+				color: #fff;
+				font-weight: bold;
+			}
+			.title-area span {
+				display: block;
+				font-size: 14px;
+				color: #fff;
+				padding-top: 10px;
+			}
+			.content {
+				padding: 15px;
+			}
+			.display-none {
+				display: none;
+			}
+			.title-area font {
+				display: inline-block;
+				padding: 2px 3px 2px 3px;
+				border: 1px solid #ccc;
+				border-radius: 2px;
+				-webkit-border-radius: 2px;
+				line-height: normal;
+				margin-top: 2px;
+			}
 		</style>
+		<script id="tpl" type="text/html">
+			<div class="title-area">
+			<p>
+			[:=data.title:]
+			</p>
+			<span><font>记事本</font>&nbsp;&nbsp;&nbsp;[:=data.writetime:]</span>
+			</div>
+			<div class="content">
+			<xmp style="display:none;">[:=data.content:]</xmp>
+			</div>
+		</script>
 	</head>
-	<body style="padding-top:10px; font-size:16px;">
-		<xmp style="display:none;" id="xmp"></xmp>
+	<body>
+		<div id="bbs-container"></div>
 	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript" src="../../script/strapdown/strapdown.js"></script>
 	<script type="text/javascript">
-		apiready = function() {
-			api.getPrefs({
-				key : 'markdown'
+		var db = null;
+		var dbname = "markdownDB";
+		var tbname = "md_dataList";
+		var param = {};
+		// 创建并连接数据库
+		function db_openDatabase(dbname, callback) {
+			// 创建本地数据库,如果存在，直接打开
+			db.openDatabase({
+				name : dbname
 			}, function(ret, err) {
-				document.getElementById("xmp").innerHTML = ret.value;
-				createMD();
+				if (ret.status && ( typeof callback == "function")) {
+					callback();
+				} else {
+					H.$toast(err);
+				}
 			});
-		};
+		}
+
+		// 执行sql语句(一般用于执行增删改）
+		function db_executeSql(dbname, sql, callback) {
+			db_openDatabase(dbname, function() {
+				db.executeSql({
+					name : dbname,
+					sql : sql
+				}, function(ret, err) {
+					if (ret.status && ( typeof callback == "function")) {
+						callback();
+					} else {
+						H.$toast(err);
+					}
+				});
+			});
+		}
+
+		// 执行查询操作
+		function db_selectSql(dbname, sql, callback) {
+			db_openDatabase(dbname, function() {
+				db.selectSql({
+					name : dbname,
+					sql : sql
+				}, function(ret, err) {
+					if (ret.status && ( typeof callback == "function")) {
+						var data = ret.data;
+						callback(data);
+					} else {
+						H.$toast(err);
+					}
+				});
+			});
+		}
+
+		function loadData(guid) {
+			var selectSql = "select * from " + tbname + " where guid='" + guid + "'";
+			db_selectSql(dbname, selectSql, function(data) {
+				// 获取模板内容，并加载数据
+				var html = H.$tppl(H.$api.byId('tpl').innerHTML, {
+					data : data[0]
+				});
+				$("#bbs-container").html(html);
+				createMD($(".content")[0]);
+			});
+		}
+
+		function getMore() {
+			H.actionSheet(function(ret, err) {
+				var index = ret.buttonIndex;
+				// 编辑
+				if (index == 1) {
+					H.$openWin('markdown_editor_modify_head', 'markdown_editor_modify_head.html', param);
+				}
+				// 删除
+				else if (index == 2) {
+					H.$confirm(function() {
+						var deleteSql = "delete from " + tbname + " where guid='" + param.guid + "'";
+						db_executeSql(dbname, deleteSql, function() {
+							H.$toast("删除成功");
+							H.$execScript("markdown_list_head", 'markdown_list_body', 'loadData();');
+							setTimeout(function() {
+								H.$closeCurrentWin();
+							}, 1200);
+						});
+					}, function() {
+					}, "您确定要删除吗？");
+				}
+			}, {
+				buttons : ["编辑", "删除"]
+			});
+		}
+
+		Zepto(function($) {
+			$("#md-list").on("tap", "li", function() {
+				var guid = $(this).attr("data-guid");
+				H.$openWin('markdown_view_head', 'markdown_view_head.html', {
+					guid : guid
+				});
+			});
+		});
+		H.ready(function() {
+			// 引入数据模块
+			H.$require("db");
+			db = H.$module.db;
+			param = H.$getPageParam()
+			loadData(param.guid);
+		});
 	</script>
 </html>

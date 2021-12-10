@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/8e098a3e1bf495240eb27600cd0044ef.ipa)
+ * [0.1.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/f79cab2da0f953812f27e0e05f70e337.ipa)
 
- * [0.1.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c983bbab214cabab09dd3a0ba088e6ba_d)
+ * [0.1.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d1001653751692f8286af6251ff7a655_d)
 
  * 
 
@@ -76,6 +76,7 @@
 
  ### 2016年01月24日 0.1.4 Alpha 版本
 
+* [新增] db模块，完成一个简单的记事本功能！可以查看列表，编辑，删除，新增等功能。
 * [新增] App目录文件说明
 * [新增] Markdown工具栏 强制滚动到光标区域，避免键盘盖住问题，目录工具栏，清空工具栏，星期工具栏
 * [更新] iconfont 字体图标

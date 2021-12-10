@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<style type="text/css">
+			.aui-content, .aui-content > .aui-list-view:last-child {
+				margin-bottom: 0;
+			}
+		</style>
+		<script id="tpl" type="text/html">
+			[: for (var i=0;i<list.length;i++) { :]
+			<li class="aui-list-view-cell" data-win="list-image" data-guid="[:=list[i].guid:]">
+			<div class="aui-arrow-right aui-ellipsis-1">
+			[:=list[i].title:]
+			</div>
+			</li>
+			[:}:]
+		</script>
+	</head>
+	<body>
+		<div class="aui-content">
+			<ul class="aui-list-view" id="md-list"></ul>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript">
+		var db = null;
+		var dbname = "markdownDB";
+		var tbname = "md_dataList";
+		// 创建并连接数据库
+		function db_openDatabase(dbname, callback) {
+			// 创建本地数据库,如果存在，直接打开
+			db.openDatabase({
+				name : dbname
+			}, function(ret, err) {
+				if (ret.status && ( typeof callback == "function")) {
+					callback();
+				} else {
+					H.$toast(err);
+				}
+			});
+		}
+
+		// 执行sql语句(一般用于执行增删改）
+		function db_executeSql(dbname, sql, callback) {
+			db_openDatabase(dbname, function() {
+				db.executeSql({
+					name : dbname,
+					sql : sql
+				}, function(ret, err) {
+					if (ret.status && ( typeof callback == "function")) {
+						callback();
+					} else {
+						H.$toast(err);
+					}
+				});
+			});
+		}
+
+		// 执行查询操作
+		function db_selectSql(dbname, sql, callback) {
+			db_openDatabase(dbname, function() {
+				db.selectSql({
+					name : dbname,
+					sql : sql
+				}, function(ret, err) {
+					if (ret.status && ( typeof callback == "function")) {
+						var data = ret.data;
+						callback(data);
+					} else {
+						H.$toast(err);
+					}
+				});
+			});
+		}
+
+		function loadData() {
+			var selectSql = "select * from " + tbname + " order by writetime desc";
+			db_selectSql(dbname, selectSql, function(data) {
+				// 获取模板内容，并加载数据
+				var html = H.$tppl(H.$api.byId('tpl').innerHTML, {
+					list : data
+				});
+				$("#md-list").html(html);
+			});
+		}
+
+		Zepto(function($) {
+			$("#md-list").on("tap", "li", function() {
+				var guid = $(this).attr("data-guid");
+				H.$openWin('markdown_view_head', 'markdown_view_head.html', {
+					guid:guid
+				});
+			});
+		});
+		H.ready(function() {
+			// 引入数据模块
+			H.$require("db");
+			db = H.$module.db;
+			// 创建表（先判断是否存在）
+			var createTableSql = 'create table if not exists ' + tbname + '(guid nvarchar(100), title varchar(200),content text, writetime datetime);';
+			db_executeSql(dbname, createTableSql, function() {
+			});
+			loadData();
+		});
+	</script>
+</html>

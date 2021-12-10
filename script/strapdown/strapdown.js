@@ -308,8 +308,7 @@ doWork();}
 var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':registerLangHandler,'sourceDecorator':sourceDecorator,'PR_ATTRIB_NAME':PR_ATTRIB_NAME,'PR_ATTRIB_VALUE':PR_ATTRIB_VALUE,'PR_COMMENT':PR_COMMENT,'PR_DECLARATION':PR_DECLARATION,'PR_KEYWORD':PR_KEYWORD,'PR_LITERAL':PR_LITERAL,'PR_NOCODE':PR_NOCODE,'PR_PLAIN':PR_PLAIN,'PR_PUNCTUATION':PR_PUNCTUATION,'PR_SOURCE':PR_SOURCE,'PR_STRING':PR_STRING,'PR_TAG':PR_TAG,'PR_TYPE':PR_TYPE,'prettyPrintOne':win['prettyPrintOne']=prettyPrintOne,'prettyPrint':win['prettyPrint']=prettyPrint};if(typeof define==="function"&&define['amd']){define("google-code-prettify",[],function(){return PR;});}})();
 ;(function(window, document) {
 
-  // Hide body until we're done fiddling with the DOM
-  document.body.style.display = 'none';
+  
 
   //////////////////////////////////////////////////////////////////////
   //
@@ -333,15 +332,27 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
   }
 
   //////////////////////////////////////////////////////////////////////
- window.createMD=function(){
+ window.createMD=function(parentNode){
+	  // Hide body until we're done fiddling with the DOM
+	  	if(parentNode==null||parentNode==undefined){
+	    	document.body.style.display = 'none';
+	    }
+	    else{
+	    	parentNode.style.display = 'none';
+	    }
  		var markdownEl = document.getElementsByTagName('xmp')[0] || document.getElementsByTagName('textarea')[0];
 		var markdown = markdownEl.textContent || markdownEl.innerText;
 		var newNode = document.createElement('div');
-		newNode.className = 'container';
-		newNode.id = 'content';
-		document.body.replaceChild(newNode, markdownEl);
+		newNode.className = 'md__container';
+		newNode.id = 'md__content';
+		if(parentNode==null||parentNode==undefined){
+			document.body.replaceChild(newNode, markdownEl);
+		}
+		else{
+			parentNode.replaceChild(newNode, markdownEl);
+		}
 		var html = marked(markdown);
-		document.getElementById('content').innerHTML = html;
+		document.getElementById('md__content').innerHTML = html;
 		// Prettify
 		var codeEls = document.getElementsByTagName('code');
 		for (var i = 0, ii = codeEls.length; i < ii; i++) {
@@ -357,7 +368,13 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
 			tableEl.className = 'table table-striped table-bordered';
 		}
 		// All done - show body
-		document.body.style.display = '';
+		if(parentNode==null||parentNode==undefined){
+	    	document.body.style.display = '';
+	    }
+	    else{
+	    	parentNode.style.display = '';
+	    }
+		
  };
   //////////////////////////////////////////////////////////////////////
 })(window, document);

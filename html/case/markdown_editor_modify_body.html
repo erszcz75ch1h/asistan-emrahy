@@ -17,6 +17,18 @@
 				flex-flow: column;
 				height: 100%;
 			}
+			.aui-form {
+				height: 55px;
+			}
+			.aui-form, .aui-input-row {
+				width: 100%;
+			}
+			.aui-input-row {
+				padding: 3px 0;
+			}
+			.aui-input-row .aui-input {
+				font-size: 16px;
+			}
 			#textarea {
 				margin: 0;
 				-webkit-box-sizing: border-box;
@@ -47,9 +59,17 @@
 			.markdown-bar li.color444 {
 				color: #444;
 			}
+			.markdown-bar li.view {
+				color: #1d9dd5;
+			}
 		</style>
 	</head>
 	<body>
+		<div class="aui-form">
+			<div class="aui-input-row">
+				<input type="text" class="aui-input" id="title" placeholder="请输入标题"/>
+			</div>
+		</div>
 		<ul class="markdown-bar">
 			<li data-code="\n# 标题\n" data-curpo="-1">
 				H1
@@ -132,13 +152,13 @@
 			<li data-code="'+setCaretPosition(textarea, getCursortPosition(textarea) + 10);+'" data-curpo="0">
 				<i class="iconfont icon-mianxingtubiao1guangbiaozuiyou"></i>
 			</li>
-			<li class="color444" data-code="'+clearData();+'" data-curpo="0">
+			<li data-code="'+clearData();+'" data-curpo="0">
 				<i class="iconfont icon-qingkong"></i>
 			</li>
-			<li class="color444" data-code="'+setCaretPosition(textarea, getCursortPosition(textarea));+'" data-curpo="0">
+			<li data-code="'+setCaretPosition(textarea, getCursortPosition(textarea));+'" data-curpo="0">
 				<i class="iconfont icon-jianpan"></i>
 			</li>
-			<li  class="color444" data-code="'+openView()+'" data-curpo="0">
+			<li  class="view" data-code="'+openView()+'" data-curpo="0">
 				<i class="iconfont icon-yulan"></i>
 			</li>
 		</ul>
@@ -147,6 +167,58 @@
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript">
+		var db = null;
+		var dbname = "markdownDB";
+		var tbname = "md_dataList";
+		var param = {};
+		// 创建并连接数据库
+		function db_openDatabase(dbname, callback) {
+			// 创建本地数据库,如果存在，直接打开
+			db.openDatabase({
+				name : dbname
+			}, function(ret, err) {
+				if (ret.status && ( typeof callback == "function")) {
+					callback();
+				} else {
+					H.$toast(err);
+				}
+			});
+		}
+
+		// 执行sql语句(一般用于执行增删改）
+		function db_executeSql(dbname, sql, callback) {
+			db_openDatabase(dbname, function() {
+				db.executeSql({
+					name : dbname,
+					sql : sql
+				}, function(ret, err) {
+					if (ret.status && ( typeof callback == "function")) {
+						callback();
+					} else {
+						H.$toast(err);
+					}
+				});
+			});
+		}
+
+		// 执行查询操作
+		function db_selectSql(dbname, sql, callback) {
+			db_openDatabase(dbname, function() {
+				db.selectSql({
+					name : dbname,
+					sql : sql
+				}, function(ret, err) {
+					if (ret.status && ( typeof callback == "function")) {
+						var data = ret.data;
+						callback(data);
+					} else {
+						H.$toast(err);
+					}
+				});
+			});
+		}
+
+		// ##########################################################################
 		// 获取光标的位置
 		function getCursortPosition(ctrl) {
 			var CaretPos = 0;
@@ -241,11 +313,45 @@
 			document.getElementById('textarea').value = "";
 		}
 
+		// 预览
 		function openView() {
 			var markdown = $("#textarea").val();
 			H.$setPrefs(function(ret, err) {
-				H.$openWin('markdown_view_head', 'markdown_view_head.html');
+				H.$openWin('markdown_preview_head', 'markdown_preview_head.html');
 			}, 'markdown', markdown);
+		}
+
+		// 保存
+		function saveMD() {
+			var textarea = document.getElementById('textarea');
+			var title = document.getElementById('title');
+			if (H.$com.trim(title.value) == "") {
+				H.$toast("请输入标题");
+				title.focus();
+				return;
+			} else if (H.$com.trim(textarea.value) == "") {
+				H.$toast("请输入内容！");
+				title.focus();
+				return;
+			} else {
+				var updateSql = "update " + tbname + " set title='" + H.$com.trim(title.value) + "',content='" + H.$com.trim(textarea.value) + "' where guid='" + param.guid + "'";
+				db_executeSql(dbname, updateSql, function() {
+					H.$toast("更新成功");
+					H.$execScript("markdown_view_head", 'markdown_view_body', 'loadData("' + param.guid + '");');
+					setTimeout(function() {
+						H.$closeCurrentWin();
+					}, 1200);
+				});
+			}
+		}
+
+		function loadData(guid) {
+			var selectSql = "select * from " + tbname + " where guid='" + guid + "'";
+			db_selectSql(dbname, selectSql, function(data) {
+				var obj = data[0];
+				document.getElementById('textarea').value = obj.content;
+				document.getElementById('title').value = obj.title;
+			});
 		}
 
 		Zepto(function($) {
@@ -266,6 +372,14 @@
 					}
 				}
 			});
+		});
+		// ##########################################################################
+		H.ready(function() {
+			// 引入数据模块
+			H.$require("db");
+			db = H.$module.db;
+			param = H.$getPageParam()
+			loadData(param.guid);
 		});
 	</script>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<link rel="stylesheet" type="text/css" href="../../script/strapdown/themes/spacelab.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../script/strapdown/strapdown.css" />
+		<link rel="stylesheet" type="text/css" href="../../script/strapdown/themes/bootstrap-responsive.min.css" />
+		<style type="text/css">
+		</style>
+	</head>
+	<body style="padding-top:10px; font-size:16px;">
+		<xmp style="display:none;" id="xmp"></xmp>
+	</body>
+	<script type="text/javascript" src="../../script/strapdown/strapdown.js"></script>
+	<script type="text/javascript">
+		apiready = function() {
+			api.getPrefs({
+				key : 'markdown'
+			}, function(ret, err) {
+				document.getElementById("xmp").innerHTML = ret.value;
+				createMD();
+			});
+		};
+	</script>
+</html>

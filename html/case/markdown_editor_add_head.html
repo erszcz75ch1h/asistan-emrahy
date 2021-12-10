@@ -6,7 +6,6 @@
 		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui-win.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
 		<style type="text/css">
 			.aui-bar-1d9dd5 {
 				background: #1d9dd5;
@@ -16,8 +15,10 @@
 	<body>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5" id='aui-header'>
 			<a class="aui-pull-left" onclick="H.$closeCurrentWin();"> <span class="aui-iconfont aui-icon-left"></span>返回 </a>
-			<div class="aui-title"></div>
-			<a class="aui-pull-right" onclick="H.$execScript('markdown_view_head','markdown_view_body','getMore();');"> <span class="aui-iconfont iconfont icon-icon28"></span></a>
+			<div class="aui-title">
+				新增数据
+			</div>
+			<a class="aui-pull-right" onclick="H.$execScript(null,'markdown_editor_add_body','saveMD();');"> 保存 </a>
 		</header>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
@@ -26,9 +27,8 @@
 		H.ready(function() {
 			// 快速打开窗口
 			H.$openFrameWithNav('aui-header', {
-				url : 'markdown_view_body.html',
-				name : 'markdown_view_body',
-				pageParam : H.$getPageParam()
+				url : 'markdown_editor_add_body.html',
+				name : 'markdown_editor_add_body'
 			});
 		});
 	</script>
