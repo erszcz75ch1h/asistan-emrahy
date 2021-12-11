@@ -338,6 +338,7 @@
 				db_executeSql(dbname, updateSql, function() {
 					H.$toast("更新成功");
 					H.$execScript("markdown_view_head", 'markdown_view_body', 'loadData("' + param.guid + '");');
+					H.$execScript("markdown_list_head",'markdown_list_body','loadData();');
 					setTimeout(function() {
 						H.$closeCurrentWin();
 					}, 1200);
