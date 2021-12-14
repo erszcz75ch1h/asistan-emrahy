@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/swiper/swiper.min.css" />
+		<style type="text/css">
+			.swiper-container {
+				width: 100%;
+				padding-top: 20px;
+				padding-bottom: 50px;
+			}
+			.swiper-slide {
+				background-position: center;
+				background-size: cover;
+				width: 220px;
+				height: 350px;
+			}
+			.swiper-slide img {
+				width: 220px;
+				height: 281px;
+			}
+			.swiper-slide p {
+				font-size: 30px;
+				text-align: center;
+				padding: 10px;
+			}
+			.form-btn {
+				padding: 30px 30px 15px 30px;
+			}
+			.aui-btn-4385f6 {
+				background: #4385f6 !important;
+				color: #f9f9f9 !important;
+				border: none;
+				outline: none;
+			}
+			.form-btn button:active {
+				background: rgba(67,133,246,0.8) !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" style="background-image:url()">
+					<p>
+						设计师
+					</p>
+					<img src="../../image/ui.png" />
+				</div>
+				<div class="swiper-slide" style="background-image:url()">
+					<p>
+						程序猿
+					</p>
+					<img src="../../image/program.png" />
+				</div>
+				<div class="swiper-slide" style="background-image:url()">
+					<p>
+						攻城狮
+					</p>
+					<img src="../../image/front.png" />
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<div class="form-btn">
+			<button class="aui-btn aui-btn-4385f6 aui-btn-block" id="login-btn" tapmode>
+				完成注册
+			</button>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript" src="../../script/swiper/swiper.min.js"></script>
+	<script type="text/javascript">
+		var swiper = new Swiper('.swiper-container', {
+			initialSlide : 1,
+			pagination : '.swiper-pagination',
+			effect : 'coverflow',
+			grabCursor : true,
+			centeredSlides : true,
+			slidesPerView : 'auto',
+			coverflow : {
+				rotate : 50,
+				stretch : 0,
+				depth : 100,
+				modifier : 1,
+				slideShadows : false
+			}
+		});
+		Zepto(function($) {
+			$("#login-btn").on("click", function() {
+				H.closeWin({
+					name : "launch"
+				});
+				H.$setPrefs(function(ret, err) {
+					H.$openSlidLayout(function(ret, err) {
+					}, {
+						name : 'silde',
+						url : '../slide/slide_head.html'
+					}, {
+						name : 'index',
+						url : '../index_head.html'
+					});
+				}, 'user_info', {
+					name : '点点多',
+					id : 1
+				});
+			});
+		});
+	</script>
+</html>

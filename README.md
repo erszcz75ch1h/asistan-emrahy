@@ -21,6 +21,12 @@
 
 ## 安装包信息
 
+ * [0.1.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/b0ad22ab5de356b4c962d2597b6ba572.ipa)
+
+ * [0.1.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/355730b2704d2ac0fb7679d0bfca015_d)
+
+ * 
+
  * [0.1.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/46fcc365a77e2d4dae492d217df8c37e.ipa)
 
  * [0.1.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/1e34cb949c75b82c955e12fa3af6406e_d)
@@ -62,15 +68,24 @@
 ```
  ### 下期版本预告
  
-* [新增] 发布帖子采用Markdown编辑器
 * [新增] 支持热更新，无需每个版本下载替换
-* [新增] 登录、注册页面
 * [新增] 常用示例：发布朋友圈页面
 * [新增] 常用示例：选项卡标题更多布局
 * [新增] 常用示例：常用示例：多按钮滑动切屏，类似淘宝
 * [新增] 常用示例：常用示例：高度自定义日历插件
 * [新增] 方寸之席：消息总览列表
 * [新增] 方寸之席：用户等级列表
+ 
+ **************************
+
+  ### 2016年01月25日 0.1.5 Alpha 版本
+
+* [新增] 新增db.js文件，封装db模块所有操作方法 
+* [新增] 注册页面
+* [新增] 注册-基本信息页面
+* [新增] 注册-身份选择页面
+* [更新] iconfont 字体图标
+* [更新] 其他小调整
  
  **************************
 

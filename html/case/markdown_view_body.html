@@ -61,58 +61,13 @@
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript" src="../../script/module_db/db.js"></script>
 	<script type="text/javascript" src="../../script/strapdown/strapdown.js"></script>
 	<script type="text/javascript">
-		var db = null;
 		var dbname = "markdownDB";
 		var tbname = "md_dataList";
 		var param = {};
-		// 创建并连接数据库
-		function db_openDatabase(dbname, callback) {
-			// 创建本地数据库,如果存在，直接打开
-			db.openDatabase({
-				name : dbname
-			}, function(ret, err) {
-				if (ret.status && ( typeof callback == "function")) {
-					callback();
-				} else {
-					H.$toast(err);
-				}
-			});
-		}
-
-		// 执行sql语句(一般用于执行增删改）
-		function db_executeSql(dbname, sql, callback) {
-			db_openDatabase(dbname, function() {
-				db.executeSql({
-					name : dbname,
-					sql : sql
-				}, function(ret, err) {
-					if (ret.status && ( typeof callback == "function")) {
-						callback();
-					} else {
-						H.$toast(err);
-					}
-				});
-			});
-		}
-
-		// 执行查询操作
-		function db_selectSql(dbname, sql, callback) {
-			db_openDatabase(dbname, function() {
-				db.selectSql({
-					name : dbname,
-					sql : sql
-				}, function(ret, err) {
-					if (ret.status && ( typeof callback == "function")) {
-						var data = ret.data;
-						callback(data);
-					} else {
-						H.$toast(err);
-					}
-				});
-			});
-		}
+		
 
 		function loadData(guid) {
 			var selectSql = "select * from " + tbname + " where guid='" + guid + "'";
@@ -163,8 +118,8 @@
 		H.ready(function() {
 			// 引入数据模块
 			H.$require("db");
-			db = H.$module.db;
-			param = H.$getPageParam()
+			$$db = H.$module.db;
+			param = H.$getPageParam();
 			loadData(param.guid);
 		});
 	</script>
