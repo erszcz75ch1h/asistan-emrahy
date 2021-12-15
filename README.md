@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.5 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/b0ad22ab5de356b4c962d2597b6ba572.ipa)
+ * [0.1.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/114680eb707ee8dc886f337b7213ef4c.ipa)
 
- * [0.1.5 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/355730b2704d2ac0fb7679d0bfca015_d)
+ * [0.1.6 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/753afe29314a5e381128549b42b47811_d)
 
  * 
 
@@ -75,6 +75,14 @@
 * [新增] 常用示例：常用示例：高度自定义日历插件
 * [新增] 方寸之席：消息总览列表
 * [新增] 方寸之席：用户等级列表
+ 
+ **************************
+
+ ### 2016年01月26日 0.1.6 Alpha 版本
+
+* [新增] 项目实战：Echart3.0柱状图十一个使用实例
+* [新增] 项目实战：Echart3.0折线图十二个使用实例
+* [新增] 项目实战：Echart3.0饼图五个使用实例 
  
  **************************
 

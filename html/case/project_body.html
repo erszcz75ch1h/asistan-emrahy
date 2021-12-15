@@ -7,15 +7,31 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
 		<style type="text/css">
+			.aui-list-view-cell:active {
+				background: #f4f4f4;
+			}
 		</style>
 	</head>
 	<body>
-		<p class="aui-padded-10">
-			苦逼程序猿，正在疯狂加班中……
-		</p>
-		<div class="aui-content"></div>
+		<div class="aui-content">
+			<ul class="aui-list-view">
+				<li class="aui-list-view-cell" data-win="list_arrow" data-funcName="echarts_head" data-funcUrl="./echarts/echarts_head.html" tapmode >
+					<div class="aui-arrow-right">
+						ECharts 项目实战
+					</div>
+				</li>
+			</ul>
+		</div>
 	</body>
-<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
-	<script type="text/javascript"></script>
+	<script type="text/javascript">
+		Zepto(function() {
+			$(".aui-list-view").on("tap", "li", function() {
+				var funcName = $(this).attr("data-funcName");
+				var funcUrl = $(this).attr("data-funcUrl");
+				H.$openWin(funcName, funcUrl);
+			});
+		});
+	</script>
 </html>
