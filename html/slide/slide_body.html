@@ -14,7 +14,7 @@
 			}
 			.aui-list-view {
 				background: rgba(0,0,0,0);
-				color: #fff;
+				color: #909193;
 			}
 			.aui-content {
 				margin: 0;
@@ -26,21 +26,16 @@
 			.aui-list-view-cell:active {
 				background: rgba(0,0,0,0.1);
 			}
-			.aui-bg-EF9300 {
-				background: #EF9300;
+			.aui-arrow-right:after {
+				color: #b9b9ba;
 			}
-			.aui-bar-1d9dd5 {
-				background: #1d9dd5;
-			}
-			.aui-bg-1f518b {
-				background: #1f518b;
-			}
-			.aui-bg-b5292a {
-				background: #b5292a;
+			.aui-list-view i.aui-iconfont {
+				color: #b9b9ba;
+				font-size: 19px;
 			}
 			.user-info {
 				height: 100px;
-				padding: 10px;
+				margin: 0 10px 20px 10px;
 				display: -webkit-box;
 				-webkit-box-orient: horizontal;
 				-webkit-box-align: center;
@@ -48,6 +43,7 @@
 				box-orient: horizontal;
 				box-align: center;
 				background: rgba(0,0,0,0);
+				border-bottom: 1px solid #e7e2e2;
 			}
 			.user-info img {
 				width: 50px;
@@ -63,38 +59,35 @@
 			}
 			.user-account span {
 				display: block;
-				color: #fff;
+				color: #444;
 			}
 			.user-account span:last-child {
-				color: #D0D0D0;
+				color: #b9b9ba;
 				margin-top: 5px;
 				font-size: 13px;
 			}
-			.settings, .loginout {
-				width: 32px;
+			.settings,.themb {
 				left: 15px;
 				bottom: 10px;
 				z-index: 100;
 				height: 32px;
+				color: #b9b9ba;
 			}
-			.loginout {
-				left: auto;
-				right: 15px;
-				bottom: 8px;
+			.themb{
+				left:auto;
+				right:15px;
 			}
-			.settings span, .loginout span {
-				font-size: 24px;
+			.settings span,.themb span {
+				font-size: 19px;
 				color: #ccc;
-			}
-			.loginout span {
-				font-size: 22px;
+				margin-right: 8px;
 			}
 			.level {
 				display: inline-block;
 				vertical-align: middle;
 				font-size: 9px;
 				color: #fff;
-				background: #1D9DD5;
+				background: #96d2f7;
 				height: 15px;
 				line-height: 16px;
 				padding: 0 4px;
@@ -109,7 +102,7 @@
 	</head>
 	<body class="winu-flex-box-vertical">
 		<div class="user-info">
-			<img src="../../image/pic.jpg" />
+			<img src="../../image/pic.png" />
 			<div class="user-account">
 				<span>点点例<label class="level">官方人员</label></span>
 				<span>社区号：DotDotDemo</span>
@@ -119,47 +112,47 @@
 			<ul class="aui-list-view aui-in" id="case-function-list">
 				<li class="aui-list-view-cell" data-funcName="layout_head" tapmode >
 					<div class="aui-arrow-right">
-						<i class="aui-iconfont iconfont icon-buju aui-bg-info"></i>常用布局
+						<i class="aui-iconfont iconfont icon-buju"></i>常用布局
 					</div>
 				</li>
 				<li class="aui-list-view-cell" data-funcName="device_head" tapmode >
 					<div class="aui-arrow-right">
-						<i class="aui-iconfont iconfont icon-shebeiguanli aui-bg-success"></i>设备获取
+						<i class="aui-iconfont iconfont icon-shebeiguanli"></i>设备获取
 					</div>
 				</li>
 				<li class="aui-list-view-cell" data-funcName="event_head" tapmode >
 					<div class="aui-arrow-right">
-						<i class="aui-iconfont iconfont icon-shijian aui-bg-danger"></i>事件监听
+						<i class="aui-iconfont iconfont icon-shijian"></i>事件监听
 					</div>
 				</li>
 				<li class="aui-list-view-cell" data-funcName="module_head" tapmode >
 					<div class="aui-arrow-right">
-						<i class="aui-iconfont iconfont icon-mokuai aui-bg-warning"></i>模块使用
+						<i class="aui-iconfont iconfont icon-mokuai"></i>模块使用
 					</div>
 				</li>
 				<li class="aui-list-view-cell" data-funcName="project_head" tapmode >
 					<div class="aui-arrow-right">
-						<i class="aui-iconfont iconfont icon-txiangmu aui-bg-success"></i>项目实战
+						<i class="aui-iconfont iconfont icon-txiangmu"></i>项目实战
 					</div>
 				</li>
 				<li class="aui-list-view-cell" data-funcName="front_nice_head" tapmode >
 					<div class="aui-arrow-right">
-						<i class="aui-iconfont iconfont icon-html5 aui-bg-1f518b"></i>前端推荐
+						<i class="aui-iconfont iconfont icon-html5"></i>前端推荐
 					</div>
 				</li>
 				<li class="aui-list-view-cell" data-funcName="winu_product_head" tapmode >
 					<div class="aui-arrow-right">
-						<i class="aui-iconfont iconfont icon-chanpinzhuanqu aui-bg-b5292a"></i>赢友产品
+						<i class="aui-iconfont iconfont icon-chanpinzhuanqu"></i>赢友产品
 					</div>
 				</li>
 			</ul>
 		</div>
 		<div class="btn-bar"></div>
-		<div class="settings winu-position-fixed" onclick="H.$execScript('index',null, 'H.closeSlidPane();setHeaderFootInfo(3);H.$setFrameGroupIndex(\'indexGroup\', 3);');">
-			<span class="aui-iconfont iconfont icon-user_set"></span>
+		<div class="settings winu-position-fixed" >
+			<span class="aui-iconfont iconfont icon-exit-door"></span> 退出
 		</div>
-		<div class="loginout winu-position-fixed">
-			<span class="aui-iconfont iconfont icon-tuichudenglu"></span>
+		<div class="themb winu-position-fixed" onclick="H.$toast('预计下一版本可以自由切换主体！');">
+			<span class="aui-iconfont iconfont icon-zhutisolid"></span> 主题
 		</div>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
@@ -169,6 +162,13 @@
 			$("#case-function-list").on("tap", "li", function() {
 				var funcName = $(this).attr("data-funcName");
 				H.$openWin(funcName, '../case/' + funcName + '.html');
+			});
+			$(".settings").on("tap", function() {
+				H.$removePrefs(null, 'user_info');
+				H.$toast("退出成功");
+				setTimeout(function() {
+					H.$openWin('login_head', '../login/login_head.html');
+				}, 1000);
 			});
 		});
 	</script>

@@ -19,35 +19,35 @@
 				border-top: 1px solid #e2e2e2;
 			}
 			.aui-bar-1d9dd5 {
-				background: #1d9dd5;
+				background: #4385f6;
 			}
 			#aui-footer li.active-1d9dd5, #aui-footer li.active-1d9dd5 span.iconfont {
-				color: #1d9dd5 !important;
+				color: #4385f6 !important;
 			}
 		</style>
 	</head>
 	<body>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header" id='case-header'>
-			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-caidan"></span> </a>
+			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
 			<div class="aui-title">
 				葵花宝典
 			</div>
 		</header>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='bbs-header'>
-			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-caidan"></span> </a>
+			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
 			<div class="aui-title">
 				指点迷津
 			</div>
 		</header>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='shareFind-header'>
-			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-caidan"></span> </a>
+			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
 			<div class="aui-title">
 				流连忘返
 			</div>
-			<a class="aui-pull-right" tapmode id="push-findShare"> <span class="aui-iconfont iconfont icon-tianjia"></span> </a>
+			<a class="aui-pull-right" tapmode id="push-findShare" data-isopen="false"> <span class="aui-iconfont iconfont icon-tianjia"></span> </a>
 		</header>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='ucenter-header'>
-			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-caidan"></span> </a>
+			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
 			<div class="aui-title">
 				分寸之席
 			</div>
@@ -109,14 +109,27 @@
 			});
 			// 发布所见所闻
 			$("#push-findShare").on("tap", function() {
-				// 快速打开窗口
-				H.$openFrame('push_findShare', './case/push_findShare.html', null, {
-					x : 0,
-					y : 0
-				});
+				var isopen = $(this).attr("data-isopen");
+				if (isopen == "false") {
+					$(this).children("span").attr("class", "aui-iconfont iconfont icon-guanbi");
+					$(this).attr("data-isopen", "true")
+					// 快速打开窗口
+					H.$fixStatusBar(function(offset) {
+						H.$openFrame('push_findShare', './shareFind/push_findShare.html', null, {
+							x : 0,
+							y : offset.h
+						});
+					}, 'shareFind-header');
+				} else {
+					$(this).children("span").attr("class", "aui-iconfont iconfont icon-tianjia");
+					$(this).attr("data-isopen", "false")
+					H.$execScript(null, 'push_findShare', 'closeShareFrame();');
+				}
 			});
 		});
 		H.ready(function() {
+			// 锁住侧滑，避免与滑动冲突
+			H.lockSlidPane();
 			H.$openFrameGroupWithNav(function(ret, err) {
 				setHeaderFootInfo(ret.index);
 			}, 'case-header', {

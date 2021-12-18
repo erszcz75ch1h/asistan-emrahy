@@ -19,6 +19,7 @@
 .icon-fenxiang2:before { content: "\e617"; }
 .icon-tousujianyi:before { content: "\e600"; }
 .icon-daima2:before { content: "\e63d"; }
+.icon-exit-door:before { content: "\e655"; }
 .icon-shipin:before { content: "\e61a"; }
 .icon-pinglun:before { content: "\e60b"; }
 .icon-qq:before { content: "\e612"; }
@@ -42,6 +43,7 @@
 .icon-luyinbi:before { content: "\e60d"; }
 .icon-liebiao:before { content: "\e640"; }
 .icon-fenxiang:before { content: "\e611"; }
+.icon-guanbi:before { content: "\e656"; }
 .icon-pengyouquanyin:before { content: "\e62f"; }
 .icon-banbengengxin:before { content: "\e621"; }
 .icon-jianpan:before { content: "\e64c"; }
@@ -57,6 +59,7 @@
 .icon-wendang:before { content: "\e602"; }
 .icon-wenjian:before { content: "\e64d"; }
 .icon-friends:before { content: "\e614"; }
+.icon-zhutisolid:before { content: "\e657"; }
 .icon-hualiushishangxiaban:before { content: "\e631"; }
 .icon-shangbannv:before { content: "\e632"; }
 .icon-tuichudenglu:before { content: "\e624"; }
@@ -74,6 +77,7 @@
 .icon-fenxiang1:before { content: "\e635"; }
 .icon-tongxunlu:before { content: "\e636"; }
 .icon-yinyong1disc:before { content: "\e642"; }
+.icon-more-menu:before { content: "\e658"; }
 .icon-mianxingtubiao1guangbiaozuizuo:before { content: "\e64a"; }
 .icon-login:before { content: "\e626"; }
 .icon-chanpinzhuanqu:before { content: "\e61b"; }

@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/114680eb707ee8dc886f337b7213ef4c.ipa)
+ * [0.1.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/e02dde4ee38bb7be1fa35cc5dede8a5e.ipa)
 
- * [0.1.6 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/753afe29314a5e381128549b42b47811_d)
+ * [0.1.6 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2bf63fdda5b115d9e130024b45af4fdc_d)
 
  * 
 
@@ -80,9 +80,20 @@
 
  ### 2016年01月26日 0.1.6 Alpha 版本
 
+* [新增] 多套侧滑主题，可以自由切换主题，下一版本更新
 * [新增] 项目实战：Echart3.0柱状图十一个使用实例
 * [新增] 项目实战：Echart3.0折线图十二个使用实例
 * [新增] 项目实战：Echart3.0饼图五个使用实例 
+* [更新] 禁止手势侧滑显示侧滑菜单，解决冲突问题
+* [更新] iconfont 字体图标
+* [更新] 整个侧滑设计，新增多套主题切换
+* [更新] 重新调整默认导航颜色
+* [更新] 流连忘返发布弹出窗
+* [更新] 分享页面
+* [更新] 注册身份选择页面在小屏幕的问题
+* [更新] 可以直接点击侧滑菜单退出按钮退出登录
+* [更新] Markdown编辑器标题样式
+* [更新] 其他小更新
  
  **************************
 
