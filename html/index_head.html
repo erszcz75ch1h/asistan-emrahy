@@ -128,8 +128,6 @@
 			});
 		});
 		H.ready(function() {
-			// 锁住侧滑，避免与滑动冲突
-			H.lockSlidPane();
 			H.$openFrameGroupWithNav(function(ret, err) {
 				setHeaderFootInfo(ret.index);
 			}, 'case-header', {
