@@ -48,10 +48,8 @@
 		</header>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='ucenter-header'>
 			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
-			<div class="aui-title">
-				分寸之席
-			</div>
-			<a class="aui-pull-right" tapmode > 签到 </a>
+			<div class="aui-title"></div>
+			<a class="aui-pull-right" tapmode onclick="H.$openWin('ucenter_setting_head','./ucenter/ucenter_setting_head.html');"> <span class="aui-iconfont iconfont icon-shezhi"></span> </a>
 		</header>
 		<footer class="aui-nav" id="aui-footer">
 			<ul class="aui-bar-tab">
@@ -105,7 +103,7 @@
 			$("#aui-footer li").on("tap", function() {
 				var index = $(this).index();
 				setHeaderFootInfo(index);
-				H.$setFrameGroupIndex(groupName, index);
+				H.$setFrameGroupIndex(groupName, index, true);
 			});
 			// 发布所见所闻
 			$("#push-findShare").on("tap", function() {
@@ -147,7 +145,7 @@
 				}, {
 					url : 'ucenter/ucenter_body.html',
 					name : 'ucenter_body',
-					bounces : true
+					bounces : false
 				}],
 				preload : 3,
 				scrollEnabled : false

@@ -9,7 +9,6 @@
 		<style type="text/css">
 			body {
 				background: #efeff4;
-				padding: 10px 0 0 0;
 			}
 			.user-info {
 				display: -webkit-box;
@@ -44,25 +43,67 @@
 				-webkit-border-radius: 2px;
 				margin-left: 10px;
 			}
+			.user-allinfo {
+				height: 175px;
+				background: #4385f6;
+				position: relative;
+				overflow: visible;
+				text-align: center;
+			}
+			.user-allinfo img {
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border: 2px solid rgba(255,255,255,0.3);
+				margin: 0 auto 0 auto;
+			}
+			.user-allinfo p {
+				color: #fff;
+				font-size: 12px;
+				color: #fff;
+			}
+			.user-allinfo p.unames {
+				font-size: 18px;
+			}
+			.user-allinfo p span {
+				display: inline-block;
+				padding: 0 10px 0 0;
+			}
+			.user-allinfo p.udes {
+				padding: 10px 0;
+				color:#e8d2ff;
+			}
+			.level {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 9px;
+				color: #fff;
+				background: #96d2f7;
+				height: 15px;
+				line-height: 16px;
+				padding: 0 4px;
+				border-radius: 2px;
+				-webkit-border-radius: 2px;
+				margin-left: 10px;
+			}
 		</style>
 	</head>
 	<body>
-		<div class="aui-content">
-			<ul class="aui-list-view">
-				<li class="aui-list-view-cell" tapmode >
-					<a class="aui-arrow-right">
-					<div class="user-info">
-						<img src="../../image/pic.jpg" width="60" height="60" />
-						<div class="user-account">
-							<span>点点例<label class="level">官方人员</label></span></span>
-							<span>社区号：DotDotDemo</span>
-						</div>
-					</div> </a>
-				</li>
-			</ul>
+		<div class="user-allinfo">
+			<img src="../../image/pic.jpg" />
+			<p class="unames">
+				点点多<label class="level">官方人员</label>
+			</p>
+			<p class="udes">
+				修技之道，皆为点点起，积少便成多！
+			</p>
 		</div>
 		<div class="aui-content">
 			<ul class="aui-list-view">
+				<li class="aui-list-view-cell" tapmode >
+					<a class="aui-arrow-right">个人资料</a>
+				</li>
 				<li class="aui-list-view-cell" tapmode >
 					<a class="aui-arrow-right">我的问答</a>
 				</li>
@@ -77,20 +118,7 @@
 		<div class="aui-content">
 			<ul class="aui-list-view">
 				<li class="aui-list-view-cell" tapmode >
-					<a>扫一扫</a>
-				</li>
-				<li class="aui-list-view-cell" tapmode >
 					<a class="aui-arrow-right">附近的人</a>
-				</li>
-			</ul>
-		</div>
-		<div class="aui-content">
-			<ul class="aui-list-view">
-				<li class="aui-list-view-cell" tapmode data-funcName="update_log_head">
-					<a class="aui-arrow-right">版本历程<span class="aui-badge aui-badge-success">有更新</span> </a>
-				</li>
-				<li class="aui-list-view-cell" tapmode data-funcName="ucenter_setting_head">
-					<a class="aui-arrow-right">系统设置</a>
 				</li>
 			</ul>
 		</div>

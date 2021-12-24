@@ -21,6 +21,12 @@
 
 ## 安装包信息
 
+ * [0.1.7 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d2759b4dbae61a2e1fccf646cbcbc6e1.ipa)
+
+ * [0.1.7 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/a82f9d965bfb8e8fefc384aaa7a028f9_d)
+
+ * 
+
  * [0.1.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/90466b6b3090403ed43150cb69e9dc05.ipa)
 
  * [0.1.6 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/b6ce310411244e79460010582f617a7b_d)
@@ -74,7 +80,18 @@
 * [新增] 常用示例：常用示例：多按钮滑动切屏，类似淘宝
 * [新增] 常用示例：常用示例：高度自定义日历插件
 * [新增] 方寸之席：消息总览列表
-* [新增] 方寸之席：用户等级列表
+ 
+ **************************
+
+ ### 2016年01月27日 0.1.7 Alpha 版本
+
+* [更新] Echarts3.0脚本，默认只集折线图，柱状图，饼图，减少体积，提高性能
+* [更新] 取消社区号，改为个人简介
+* [更新] 重新调整分寸之席界面
+* [更新] iconfont 字体图标
+* [更新] 葵花宝典，流连忘返字体颜色及大小
+* [修复] 流连忘返发布按钮不能自动调整问题
+* [修复] iconfont 其他脚本错误问题
  
  **************************
 

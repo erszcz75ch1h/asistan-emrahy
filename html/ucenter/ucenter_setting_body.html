@@ -7,7 +7,7 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
 		<style type="text/css">
-		.aui-switch:checked {
+			.aui-switch:checked {
 				background: #4385f6 !important;
 				border-color: #4385f6 !important;
 				box-shadow: #4385f6 0 0 0 26px inset !important;
@@ -25,18 +25,15 @@
 				</li>
 				<li class="aui-list-view-cell aui-switch-body" tapmode >
 					<div class="aui-switch-title" >
-						自动更新
-					</div>
-					<input type="checkbox" class="aui-switch aui-pull-right" checked>
-				</li>
-				<li class="aui-list-view-cell aui-switch-body" tapmode >
-					<div class="aui-switch-title" >
 						移动网络加载图片
 					</div>
 					<input type="checkbox" class="aui-switch aui-pull-right">
 				</li>
-				<li class="aui-list-view-cell" tapmode >
+				<li class="aui-list-view-cell" tapmode>
 					<a>检查更新</a>
+				</li>
+				<li class="aui-list-view-cell" tapmode  onclick="H.$openWin('update_log_head','update_log_head.html');">
+					<a class="aui-arrow-right">版本历程<span class="aui-badge aui-badge-success">有更新</span> </a>
 				</li>
 				<li class="aui-list-view-cell" tapmode id="clear-cache">
 					<a> 清除缓存 <span class="aui-badge aui-badge-danger" id="cache-size">0M</span> </a>
