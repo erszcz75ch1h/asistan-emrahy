@@ -27,6 +27,7 @@
 .icon-shezhi:before { content: "\e60e"; }
 .icon-gengduo:before { content: "\e63a"; }
 .icon-gonggao:before { content: "\e628"; }
+.icon-gerenxinxi:before { content: "\e659"; }
 .icon-shebeiguanli:before { content: "\e604"; }
 .icon-renwu:before { content: "\e629"; }
 .icon-weibo:before { content: "\e613"; }
@@ -37,6 +38,7 @@
 .icon-zhuyishixiang:before { content: "\e620"; }
 .icon-wangpan:before { content: "\e62b"; }
 .icon-richangshiwu:before { content: "\e62c"; }
+.icon-wendaji:before { content: "\e65a"; }
 .icon-week:before { content: "\e64f"; }
 .icon-gongzuo:before { content: "\e62d"; }
 .icon-xianghover:before { content: "\e62e"; }
@@ -45,6 +47,7 @@
 .icon-fenxiang:before { content: "\e611"; }
 .icon-guanbi:before { content: "\e656"; }
 .icon-pengyouquanyin:before { content: "\e62f"; }
+.icon-fujin:before { content: "\e65b"; }
 .icon-banbengengxin:before { content: "\e621"; }
 .icon-jianpan:before { content: "\e64c"; }
 .icon-shijian:before { content: "\e605"; }
@@ -90,9 +93,12 @@
 .icon-jingqingqidai:before { content: "\e627"; }
 .icon-qingkong:before { content: "\e64e"; }
 .icon-mokuai:before { content: "\e607"; }
+.icon-xiaoxi:before { content: "\e65c"; }
 .icon-zuoqianfang:before { content: "\e648"; }
+.icon-faxian2:before { content: "\e65d"; }
 .icon-faxian:before { content: "\e616"; }
 .icon-anli:before { content: "\e603"; }
+.icon-xiangji:before { content: "\e65e"; }
 .icon-xingbie:before { content: "\e653"; }
 .icon-liunicheng:before { content: "\e654"; }
 .icon-caidan:before { content: "\e609"; }

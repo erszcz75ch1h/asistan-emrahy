@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.7 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d2759b4dbae61a2e1fccf646cbcbc6e1.ipa)
+ * [0.1.7 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ec14354f84b9f052ccb55f5e028ea18b.ipa)
 
- * [0.1.7 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/a82f9d965bfb8e8fefc384aaa7a028f9_d)
+ * [0.1.7 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/1784720c57d9cd6f576cd17f7b63005e_d)
 
  * 
 
@@ -87,9 +87,11 @@
 
 * [更新] Echarts3.0脚本，默认只集折线图，柱状图，饼图，减少体积，提高性能
 * [更新] 取消社区号，改为个人简介
+* [更新] Markdown编辑器皮肤
 * [更新] 重新调整分寸之席界面
 * [更新] iconfont 字体图标
 * [更新] 葵花宝典，流连忘返字体颜色及大小
+* [更新] 微调首页边距，图片，设计
 * [修复] 流连忘返发布按钮不能自动调整问题
 * [修复] iconfont 其他脚本错误问题
  
