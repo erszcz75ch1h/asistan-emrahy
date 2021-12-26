@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.7 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ec14354f84b9f052ccb55f5e028ea18b.ipa)
+ * [0.1.7 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/8aea1690b86ddee1aec4f8ca4006e74a.ipa)
 
- * [0.1.7 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/1784720c57d9cd6f576cd17f7b63005e_d)
+ * [0.1.7 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/a5df34098cb876df3f725bf0b2555181_d)
 
  * 
 
