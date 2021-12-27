@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.7 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/8aea1690b86ddee1aec4f8ca4006e74a.ipa)
+ * [0.1.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/534d22dfe9fa27dee949c018ec54aee9.ipa)
 
- * [0.1.7 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/a5df34098cb876df3f725bf0b2555181_d)
+ * [0.1.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/e95c5d88bac3b37fde0c0ccba3c63b94_d)
 
  * 
 
@@ -80,6 +80,14 @@
 * [新增] 常用示例：常用示例：多按钮滑动切屏，类似淘宝
 * [新增] 常用示例：常用示例：高度自定义日历插件
 * [新增] 方寸之席：消息总览列表
+ 
+ **************************
+
+  ### 2016年01月28日 0.1.8 Alpha 版本
+
+* [更新] 重写首页代码，优化动画，提高流畅度
+* [更新] 优化发布说说UI，重写分享提示框
+* [修复] 部分4.4以下版本手机出现闪退问题
  
  **************************
 

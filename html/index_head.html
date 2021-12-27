@@ -24,6 +24,61 @@
 			#aui-footer li.active-1d9dd5, #aui-footer li.active-1d9dd5 span.iconfont {
 				color: #4385f6 !important;
 			}
+			#bbs-channel {
+				line-height: normal;
+				height: 50px;
+				background: #fff;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-flex-flow: row;
+				flex-flow: row;
+				width: 100%;
+				border-bottom: 1px solid #d9d9d9;
+			}
+			#bbs-channel p {
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+				color: #999999;
+				font-size: 13px;
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+			}
+			#bbs-channel p span {
+				display: inline-block;
+				padding: 5px 5px;
+				background: #fff;
+				border-radius: 3px;
+				-webkit-border-radius: 3px;
+			}
+			#bbs-channel p.active span {
+				background: #4385f6;
+				color: #fff;
+			}
+			#bbs-channel div {
+				width: 30px;
+				font-size: 14px;
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+			}
+			#bbs-channel div i {
+				color: #4385f6;
+				font-size: 20px;
+			}
 		</style>
 	</head>
 	<body>
@@ -38,6 +93,23 @@
 			<div class="aui-title">
 				指点迷津
 			</div>
+			<nav id="bbs-channel">
+				<p class="active">
+					<span>最新回复</span>
+				</p>
+				<p>
+					<span>技术分享</span>
+				</p>
+				<p>
+					<span>前端领域</span>
+				</p>
+				<p>
+					<span>后端开发</span>
+				</p>
+				<div>
+					<i class="iconfont icon-gengduo"></i>
+				</div>
+			</nav>
 		</header>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='shareFind-header'>
 			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
@@ -53,25 +125,25 @@
 		</header>
 		<footer class="aui-nav" id="aui-footer">
 			<ul class="aui-bar-tab">
-				<li class="active-1d9dd5" data-header="case-header" tapmode>
+				<li class="active-1d9dd5" data-header="case" tapmode>
 					<span class="aui-iconfont iconfont icon-anli"></span>
 					<p>
 						葵花宝典
 					</p>
 				</li>
-				<li data-header="bbs-header" tapmode >
+				<li data-header="bbs" tapmode >
 					<span class="aui-iconfont iconfont icon-b"></span>
 					<p>
 						指点迷津
 					</p>
 				</li>
-				<li data-header="shareFind-header" tapmode >
+				<li data-header="shareFind" tapmode >
 					<span class="aui-iconfont iconfont icon-faxian"></span>
 					<p>
 						流连忘返
 					</p>
 				</li>
-				<li data-header="ucenter-header" tapmode >
+				<li data-header="ucenter" tapmode >
 					<span class="aui-iconfont iconfont icon-user_set"></span>
 					<p>
 						分寸之席
@@ -83,27 +155,48 @@
 	<script type="text/javascript" src="../script/AHelper.js"></script>
 	<script type="text/javascript" src="../script/zepto.min.js"></script>
 	<script type="text/javascript">
-		var groupName = "indexGroup";
-		function setHeaderFootInfo(index) {
-			var that = $("#aui-footer li").eq(index);
-			var headerId = that.attr("data-header");
-			that.addClass("active-1d9dd5").siblings("#aui-footer li").removeClass("active-1d9dd5");
-			$("#" + headerId).removeClass("display-none").siblings(".header").addClass("display-none");
-			// 设置沉浸式状态栏
-			H.$fixStatusBar(function(offset) {
-				if (headerId == "bbs-header") {
-					H.$setFrameStatus('bbs_data_body', false);
+		// 首页frame组
+		var indexFrames = [];
+		// 隐藏所有的frame
+		function hideAllFrame(frameName) {
+			$("#aui-footer li").each(function() {
+				var headerId = $(this).attr("data-header");
+				if (frameName != headerId) {
+					// 设置所有的frame先隐藏起来
+					H.$setFrameStatus(headerId, true);
 				} else {
-					H.$setFrameStatus('bbs_data_body', true);
+					// 直接显示出来
+					H.$setFrameStatus(headerId, false);
 				}
-			}, headerId);
+			});
+		}
+
+		// 显示对应frame
+		function showActiveFrame(index) {
+			var that = $("#aui-footer li").eq(index);
+			// 获取data-header存储的值
+			var headerId = that.attr("data-header");
+			// 对应的dom头部
+			var headerDOM = headerId + "-header";
+			that.addClass("active-1d9dd5").siblings().removeClass("active-1d9dd5");
+			$("#" + headerDOM).removeClass("display-none").siblings(".header").addClass("display-none");
+			if (indexFrames.indexOf(headerId) == -1) {
+				// 打开新的frame
+				H.$openFrameWithNav(headerDOM, {
+					url : "./" + headerId + "/" + headerId + "_body.html",
+					name : headerId
+				}, 'aui-footer');
+				// 添加到数组中，标识这个frame已经打开，下次直接显示出来，无需在打开
+				indexFrames.push(headerId);
+			}
+			// 隐藏所有
+			hideAllFrame(headerId);
 		}
 
 		Zepto(function($) {
 			$("#aui-footer li").on("tap", function() {
-				var index = $(this).index();
-				setHeaderFootInfo(index);
-				H.$setFrameGroupIndex(groupName, index, true);
+				// 调用
+				showActiveFrame($(this).index());
 			});
 			// 发布所见所闻
 			$("#push-findShare").on("tap", function() {
@@ -126,30 +219,7 @@
 			});
 		});
 		H.ready(function() {
-			H.$openFrameGroupWithNav(function(ret, err) {
-				setHeaderFootInfo(ret.index);
-			}, 'case-header', {
-				name : groupName,
-				frames : [{
-					url : 'case/case_body.html',
-					name : 'case_body',
-					bounces : true
-				}, {
-					url : 'bbs/bbs_body.html',
-					name : 'bbs_body',
-					bounces : false
-				}, {
-					url : 'shareFind/shareFind_body.html',
-					name : 'shareFind_body',
-					bounces : true
-				}, {
-					url : 'ucenter/ucenter_body.html',
-					name : 'ucenter_body',
-					bounces : false
-				}],
-				preload : 3,
-				scrollEnabled : false
-			}, 'aui-footer');
+			showActiveFrame(0);
 			// 双击退出应用，并清除缓存
 			H.$dblclickToCloseApp();
 		});

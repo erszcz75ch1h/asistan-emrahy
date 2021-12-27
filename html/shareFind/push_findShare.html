@@ -14,8 +14,8 @@
 			}
 			.share-maim {
 				background: rgba(255,255,255,255);
-				animation: swiper 0.3s;
-				-webkit-animation: swiper 0.3s;
+				animation: swiper 0.2s;
+				-webkit-animation: swiper 0.2s;
 				height: 107px;
 				overflow: hidden;
 				position: relative;
@@ -38,7 +38,6 @@
 			}
 			}
 			.share-maim ul {
-				padding: 0 1em;
 			}
 			.share-maim ul li {
 				text-align: center;
@@ -104,8 +103,8 @@
 	<script type="text/javascript">
 		function closeShareFrame() {
 			$(".share-maim").css({
-				"animation" : "swiperend 0.3s",
-				"-webkit-animation" : "swiperend 0.3s",
+				"animation" : "swiperend 0.2s",
+				"-webkit-animation" : "swiperend 0.2s",
 				"margin-top" : "-107px"
 			});
 			setTimeout(function() {
@@ -117,9 +116,9 @@
 			$(".share-maim li").on("tap", function() {
 				H.$toast($.trim($(this).find("p").text()));
 			});
-//			$(".share-space").on("tap", function() {
-//				closeShareFrame();
-//			});
+			//			$(".share-space").on("tap", function() {
+			//				closeShareFrame();
+			//			});
 		});
 	</script>
 </html>
