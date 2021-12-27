@@ -12,6 +12,11 @@
 			html, body {
 				background: rgba(0,0,0,0);
 			}
+			body {
+				background: #fff url(../../image/slide_bg.png) no-repeat right bottom;
+				background-size: 100% auto;
+				-webkit-background-size: 100% auto;
+			}
 			.aui-list-view {
 				background: rgba(0,0,0,0);
 				color: #909193;
@@ -66,18 +71,18 @@
 				margin-top: 5px;
 				font-size: 13px;
 			}
-			.settings,.themb {
+			.settings, .themb {
 				left: 15px;
 				bottom: 10px;
 				z-index: 100;
 				height: 32px;
 				color: #b9b9ba;
 			}
-			.themb{
-				left:auto;
-				right:15px;
+			.themb {
+				left: auto;
+				right: 15px;
 			}
-			.settings span,.themb span {
+			.settings span, .themb span {
 				font-size: 19px;
 				color: #ccc;
 				margin-right: 8px;
@@ -100,7 +105,7 @@
 			}
 		</style>
 	</head>
-	<body class="winu-flex-box-vertical">
+	<body class="winu-flex-box-vertical" id="bdy">
 		<div class="user-info">
 			<img src="../../image/pic.jpg" />
 			<div class="user-account">
@@ -170,6 +175,10 @@
 					H.$openWin('login_head', '../login/login_head.html');
 				}, 1000);
 			});
+		});
+		H.ready(function() {
+			H.$fixStatusBar(function(offset) {
+			}, 'bdy');
 		});
 	</script>
 </html>

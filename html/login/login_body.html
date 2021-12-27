@@ -216,19 +216,9 @@
 		Zepto(function($) {
 			var bodyH = $("body").height();
 			$(".top-area").css("height", (bodyH - 150) + "px");
-			$("#login-btn").on("click", function() {
-				H.closeWin({
-					name : "launch"
-				});
+			$("#login-btn").on("tap", function() {
 				H.$setPrefs(function(ret, err) {
-					H.$openSlidLayout(function(ret, err) {
-					}, {
-						name : 'silde',
-						url : '../slide/slide_head.html'
-					}, {
-						name : 'index',
-						url : '../index_head.html'
-					});
+					H.$closeCurrentToWin("index");
 				}, 'user_info', {
 					name : '点点多',
 					id : 1

@@ -21,9 +21,9 @@
 
 ## 安装包信息
 
- * [0.1.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/534d22dfe9fa27dee949c018ec54aee9.ipa)
+ * [0.1.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ffe70b25d36c3d8d5ae783397f6324a8.ipa)
 
- * [0.1.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/e95c5d88bac3b37fde0c0ccba3c63b94_d)
+ * [0.1.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/99cd8339982eb0bb11fb124ace6db607_d)
 
  * 
 
@@ -85,6 +85,7 @@
 
   ### 2016年01月28日 0.1.8 Alpha 版本
 
+* [更新] 重写启动画，注册，登录代码，提高流畅度
 * [更新] 重写首页代码，优化动画，提高流畅度
 * [更新] 优化发布说说UI，重写分享提示框
 * [修复] 部分4.4以下版本手机出现闪退问题

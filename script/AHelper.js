@@ -988,7 +988,7 @@
 		closeWin : {
 			animation : {
 				type : "movein",
-				subType : "from_right",
+				subType : "from_left",
 				duration : 300
 			}
 		},
@@ -996,8 +996,8 @@
 			name : 'root',
 			animation : {
 				type : "movein",
-				subType : "from_right",
-				duration : 300
+				subType : "from_left",
+				duration : 500
 			}
 		},
 		openFrame : {
