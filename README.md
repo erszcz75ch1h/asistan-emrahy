@@ -19,6 +19,11 @@
 
 * 本人使用iPhone系列手机，小米Note，小米4等主流手机测试，均可流畅运行！如有闪退、卡顿问题，请留言并注明页面和手机型号，还有配置。
 
+## App推荐配置
+
+* IOS 8.0以上的版本
+* Android 4.4以上的版本，系统运存大于1G
+
 ## 安装包信息
 
  * [0.1.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fad2ab799dee3e37e2ceb855fbf2e109.ipa)
