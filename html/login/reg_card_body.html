@@ -94,6 +94,7 @@
 		Zepto(function($) {
 			$("#login-btn").on("tap", function() {
 				H.$setPrefs(function(ret, err) {
+					H.$execScript('index','launch','closeFrame();');
 					H.$closeCurrentToWin("index");
 				}, 'user_info', {
 					name : '点点多',

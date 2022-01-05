@@ -26,9 +26,9 @@
 
 ## 安装包信息
 
- * [0.1.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fad2ab799dee3e37e2ceb855fbf2e109.ipa)
+ * [0.1.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/7429b0bacf76a2402878282392396d41.ipa)
 
- * [0.1.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/4cfea11151c6a51f661b98e5f8f62f14_d)
+ * [0.1.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d0fb7a7885dcc564d6afe317c21e9991_d)
 
  * 
 
@@ -90,10 +90,18 @@
 
   ### 2016年01月28日 0.1.8 Alpha 版本
 
-* [更新] 重写启动画，注册，登录代码，提高流畅度
+* [新增] 指点迷津更多菜单
+* [新增] 个人资料页
+* [新增] 项目开源地址
+* [更新] 重写启动画，恢复非常流畅的切换
 * [更新] 重写首页代码，优化动画，提高流畅度
+* [更新] 重写首页代码，优化动画，提高流畅度
+* [更新] 取消IOS侧滑返回
+* [更新] 优化大部分AHelper.js 代码
+* [更新] iconfont 字体图标
 * [更新] 优化发布说说UI，重写分享提示框
 * [修复] 部分4.4以下版本手机出现闪退问题
+* [修复] 打开App会出现闪黑屏情况
  
  **************************
 

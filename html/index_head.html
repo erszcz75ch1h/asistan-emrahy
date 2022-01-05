@@ -95,18 +95,18 @@
 			</div>
 			<nav id="bbs-channel">
 				<p class="active">
+					<span>推荐文章</span>
+				</p>
+				<p>
 					<span>最新回复</span>
 				</p>
 				<p>
-					<span>技术分享</span>
+					<span>最新发帖</span>
 				</p>
 				<p>
-					<span>前端领域</span>
+					<span>我有想法</span>
 				</p>
-				<p>
-					<span>后端开发</span>
-				</p>
-				<div>
+				<div id="showmore">
 					<i class="iconfont icon-gengduo"></i>
 				</div>
 			</nav>
@@ -217,9 +217,37 @@
 					H.$execScript(null, 'push_findShare', 'closeShareFrame();');
 				}
 			});
+			// 点击切换
+			$("#bbs-channel").on("tap", "p", function() {
+				$(this).addClass("active").siblings("p").removeClass("active");
+			});
+			// 指点迷津更多
+			$("#showmore").on("tap", function() {
+				H.$fixStatusBar(function(offset) {
+					H.$openFrame('more_channel', './bbs/more_channel.html', null, {
+						x : 0,
+						y : offset.h
+					});
+				}, 'bbs-header');
+			});
 		});
 		H.ready(function() {
 			showActiveFrame(0);
+			H.$getPrefs(function(ret, err) {
+				if (ret && ret.value) {
+					// 判断是否已登录
+					H.$getPrefs(function(ret, err) {
+						if (!(ret && ret.value)) {
+							H.$openWin('login_head', './login/login_head.html');
+						}
+					}, 'user_info');
+				} else {
+					H.$openFrame('launch', './launch.html', null, {
+						x : 0,
+						y : 0
+					});
+				}
+			}, 'launch');
 			// 双击退出应用，并清除缓存
 			H.$dblclickToCloseApp();
 		});

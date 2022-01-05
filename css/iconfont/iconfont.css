@@ -68,6 +68,7 @@
 .icon-tuichudenglu:before { content: "\e624"; }
 .icon-user_set:before { content: "\e622"; }
 .icon-buju:before { content: "\e606"; }
+.icon-svg06:before { content: "\e65f"; }
 .icon-qiandao:before { content: "\e61e"; }
 .icon-tianjia:before { content: "\e618"; }
 .icon-9zhongdianguanzhu:before { content: "\e625"; }
@@ -83,6 +84,7 @@
 .icon-more-menu:before { content: "\e658"; }
 .icon-mianxingtubiao1guangbiaozuizuo:before { content: "\e64a"; }
 .icon-login:before { content: "\e626"; }
+.icon-chuangyixiangfa:before { content: "\e663"; }
 .icon-chanpinzhuanqu:before { content: "\e61b"; }
 .icon-password:before { content: "\e63c"; }
 .icon-fanhuidingbu:before { content: "\e647"; }
@@ -90,6 +92,7 @@
 .icon-iconfontqingjiaguanli:before { content: "\e637"; }
 .icon-yey2:before { content: "\e652"; }
 .icon-shoucangweishoucang:before { content: "\e60c"; }
+.icon-mp-hangyedaima:before { content: "\e660"; }
 .icon-jingqingqidai:before { content: "\e627"; }
 .icon-qingkong:before { content: "\e64e"; }
 .icon-mokuai:before { content: "\e607"; }
@@ -98,8 +101,10 @@
 .icon-faxian2:before { content: "\e65d"; }
 .icon-faxian:before { content: "\e616"; }
 .icon-anli:before { content: "\e603"; }
+.icon-dianwangjijingzixunleijishu:before { content: "\e661"; }
 .icon-xiangji:before { content: "\e65e"; }
 .icon-xingbie:before { content: "\e653"; }
+.icon-ui:before { content: "\e662"; }
 .icon-liunicheng:before { content: "\e654"; }
 .icon-caidan:before { content: "\e609"; }
 .icon-txiangmu:before { content: "\e608"; }
