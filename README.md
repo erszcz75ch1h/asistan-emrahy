@@ -24,6 +24,11 @@
 * IOS 8.0以上的版本
 * Android 4.4以上的版本，系统运存大于1G
 
+## 尊重劳动者
+
+* 如果点点例能够帮到您，能让您使用APICloud开发能有事半功倍的效果，或者能够支持我的辛勤劳动成果，可以捐赠我们：
+
+
 ## 安装包信息
 
  * [0.1.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/7429b0bacf76a2402878282392396d41.ipa)
