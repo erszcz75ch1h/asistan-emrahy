@@ -997,7 +997,7 @@
 			animation : {
 				type : "movein",
 				subType : "from_left",
-				duration : 500
+				duration : 300
 			}
 		},
 		openFrame : {

@@ -31,6 +31,12 @@
 
 ## 安装包信息
 
+ * [0.1.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fa428688c26002ad3c6157422b85fc44.ipa)
+
+ * [0.1.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/1b6debe5a7ff80a71d6545441294d41b_d)
+
+ * 
+
  * [0.1.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/7429b0bacf76a2402878282392396d41.ipa)
 
  * [0.1.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d0fb7a7885dcc564d6afe317c21e9991_d)
@@ -90,6 +96,14 @@
 * [新增] 常用示例：常用示例：多按钮滑动切屏，类似淘宝
 * [新增] 常用示例：常用示例：高度自定义日历插件
 * [新增] 方寸之席：消息总览列表
+ 
+ **************************
+
+ ### 2016年01月29日 0.1.9 Alpha 版本
+
+* [更新] 方寸之席点击高亮问题
+* [更新] 指点迷津页面更多菜单问题
+* [修复] 修复侧滑页面宽度显示不全问题
  
  **************************
 

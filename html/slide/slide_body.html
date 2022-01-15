@@ -16,6 +16,7 @@
 				background: #fff url(../../image/slide_bg.png) no-repeat right bottom;
 				background-size: 100% auto;
 				-webkit-background-size: 100% auto;
+				position: relative;
 			}
 			.aui-list-view {
 				background: rgba(0,0,0,0);
@@ -153,10 +154,10 @@
 			</ul>
 		</div>
 		<div class="btn-bar"></div>
-		<div class="settings winu-position-fixed" >
+		<div class="settings winu-position-absolute" >
 			<span class="aui-iconfont iconfont icon-exit-door"></span> 退出
 		</div>
-		<div class="themb winu-position-fixed" onclick="H.$toast('预计下一版本可以自由切换主题！');">
+		<div class="themb winu-position-absolute" onclick="H.$toast('预计下一版本可以自由切换主题！');">
 			<span class="aui-iconfont iconfont icon-zhutisolid"></span> 主题
 		</div>
 	</body>
@@ -178,6 +179,7 @@
 		});
 		H.ready(function() {
 			H.$fixStatusBar(function(offset) {
+				$("body").css("width", api.winWidth - 80);
 			}, 'bdy');
 		});
 	</script>
