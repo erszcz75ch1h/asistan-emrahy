@@ -6,65 +6,100 @@
 		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
 		<style type="text/css">
 			.aui-switch:checked {
 				background: #4385f6 !important;
 				border-color: #4385f6 !important;
 				box-shadow: #4385f6 0 0 0 26px inset !important;
 			}
+			.aui-list-view-cell:after {
+				border-bottom: 1px solid #d7d7d7;
+				margin-left: 55px;
+			}
+			.aui-list-view-cell:last-child:after {
+				border-bottom: 1px solid #d7d7d7;
+				margin-left: 0;
+			}
 			.aui-list-view-cell {
 				color: #767677;
 			}
-			.aui-list-view-cell:after {
-				border-bottom: 1px solid #d7d7d7;
+			.icon-bg-70a1cd {
+				color: #70a1cd !important;
 			}
-			.aui-list-view:after {
-				border-bottom: 1px solid #d7d7d7;
+			.icon-bg-84c9a5 {
+				color: #84c9a5 !important;
+			}
+			.icon-bg-eac14d {
+				color: #eac14d !important;
+			}
+			.icon-bg-7658f8 {
+				color: #7658f8 !important;
+			}
+			.icon-bg-e6567a {
+				color: #e6567a !important;
+			}
+			.icon-bg-0b5743 {
+				color: #0b5743 !important;
+			}
+			.icon-bg-919adf {
+				color: #919adf !important;
+			}
+			.aui-badge {
+				margin-right: 20px;
+				margin-top: 4px;
+			}
+			li.aui-list-view-cell:active {
+				background: #f4f4f4;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="aui-content">
 			<ul class="aui-list-view">
-				<li class="aui-list-view-cell aui-switch-body" tapmode >
-					<div class="aui-switch-title">
-						声音提醒
-					</div>
-					<input type="checkbox" class="aui-switch aui-pull-right" checked>
+				<li class="aui-list-view-cell" tapmode data-funcName="myProfile_head">
+					<i class="aui-iconfont iconfont icon-dingwei icon-bg-70a1cd"></i>允许定位
+					<input type="checkbox" class="aui-switch aui-pull-right" checked="">
 				</li>
-				<li class="aui-list-view-cell aui-switch-body" tapmode >
-					<div class="aui-switch-title" >
-						移动网络加载图片
-					</div>
+				<li class="aui-list-view-cell" tapmode data-funcName="myQuestion_head">
+					<i class="aui-iconfont iconfont icon-yidongwangluo01 icon-bg-84c9a5"></i>移动网络加载图片
 					<input type="checkbox" class="aui-switch aui-pull-right">
 				</li>
-				<li class="aui-list-view-cell" tapmode>
-					<a>检查更新</a>
+				<li class="aui-list-view-cell" tapmode  data-funcName="myMood_head">
+					<div class="aui-arrow-right">
+						<i class="aui-iconfont iconfont icon-jianchagengxin icon-bg-eac14d"></i>检查更新
+					</div>
 				</li>
-				<li class="aui-list-view-cell" tapmode  onclick="H.openApp(null, {iosUrl : 'http://git.oschina.net/winu.net/DotDot',uri : 'http://git.oschina.net/winu.net/DotDot'});">
-					<a class="aui-arrow-right">开源地址</a>
+				<li class="aui-list-view-cell" tapmode  data-funcName="myMood_head" onclick="H.openApp(null, {iosUrl : 'http://git.oschina.net/winu.net/DotDot',uri : 'http://git.oschina.net/winu.net/DotDot'});">
+					<div class="aui-arrow-right">
+						<i class="aui-iconfont iconfont icon-gongnengyejiarukaiyuanxiangmu icon-bg-eac14d"></i>开源地址
+					</div>
 				</li>
-				<li class="aui-list-view-cell" tapmode  onclick="H.$openWin('update_log_head','update_log_head.html');">
-					<a class="aui-arrow-right">版本历程<span class="aui-badge aui-badge-success">有更新</span> </a>
+				<li class="aui-list-view-cell" tapmode  data-funcName="myMessage_head" onclick="H.$openWin('update_log_head','update_log_head.html');">
+					<div class="aui-arrow-right">
+						<i class="aui-iconfont iconfont icon-jilu icon-bg-7658f8"></i>版本历程 <span class="aui-badge aui-badge-info aui-pull-right">有更新</span>
+					</div>
 				</li>
-				<li class="aui-list-view-cell" tapmode id="clear-cache">
-					<a> 清除缓存 <span class="aui-badge aui-badge-danger" id="cache-size">0M</span> </a>
+				<li class="aui-list-view-cell" tapmode  data-funcName="myMessage_head" id="clear-cache">
+					<div class="aui-arrow-right">
+						<i class="aui-iconfont iconfont icon-qinglihuancun icon-bg-e6567a"></i>清除缓存 <span class="aui-badge aui-badge-success aui-pull-right">0 M</span>
+					</div>
 				</li>
-			</ul>
-		</div>
-		<div class="aui-content">
-			<ul class="aui-list-view">
-				<li class="aui-list-view-cell" tapmode >
-					<a class="aui-arrow-right">意见反馈</a>
+				<li class="aui-list-view-cell" tapmode  data-funcName="myMood_head">
+					<div class="aui-arrow-right">
+						<i class="aui-iconfont iconfont icon-yijian icon-bg-0b5743"></i>意见反馈
+					</div>
 				</li>
-				<li class="aui-list-view-cell" tapmode >
-					<a class="aui-arrow-right">关于我们</a>
+				<li class="aui-list-view-cell" tapmode  data-funcName="LBSPeople_head">
+					<div class="aui-arrow-right">
+						<i class="aui-iconfont iconfont icon-guanyuwomen icon-bg-919adf"></i>关于我们
+					</div>
 				</li>
 			</ul>
 		</div>
 		<div class="aui-content">
 			<p style="padding: 0 10px">
-				<button class="aui-btn aui-btn-danger aui-btn-block" id="login-out">
+				<button class="aui-btn aui-btn-success aui-btn-block" id="login-out">
 					退出登录
 				</button>
 			</p>
@@ -93,9 +128,9 @@
 		H.ready(function() {
 			api.getCacheSize(function(ret, err) {
 				if (ret) {
-					$("#cache-size").text((ret.size / 1000 / 1000).toFixed(2) + "M");
+					$("#cache-size").text((ret.size / 1000 / 1000).toFixed(2) + " M");
 				} else {
-					$("#cache-size").text("0M");
+					$("#cache-size").text("0 M");
 				}
 			});
 		});

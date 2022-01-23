@@ -72,13 +72,10 @@
 				box-pack: center;
 				box-align: center;
 				z-index: 10000000;
-				background: #fff;
-				border-radius: 50%;
-				-webkit-border-radius: 50%;
 			}
 			#loginApp i {
-				font-size: 22px;
-				color: #1d9dd5;
+				font-size: 25px;
+				color: #fff;
 				line-height: normal;
 			}
 		</style>
@@ -90,7 +87,7 @@
 				<div class="swiper-slide"></div>
 				<div class="swiper-slide">
 					<p id="loginApp">
-						<i class="iconfont icon-login"></i>
+						<i class="iconfont icon-zhengque"></i>
 					</p>
 				</div>
 			</div>
@@ -117,6 +114,8 @@
 					H.$getPrefs(function(ret, err) {
 						if (!(ret && ret.value)) {
 							H.$openWin('login_head', './login/login_head.html');
+						} else {
+							H.$execScript('index', 'launch', 'closeFrame();');
 						}
 					}, 'user_info');
 				}, 'launch', 'yes');

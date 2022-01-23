@@ -16,9 +16,8 @@
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5" id='aui-header'>
 			<a class="aui-pull-left" onclick="H.$closeCurrentWin();"> <span class="aui-iconfont aui-icon-left"></span>返回 </a>
 			<div class="aui-title">
-				发布帖子
+				我的问答
 			</div>
-			<a class="aui-pull-right" onclick="H.$execScript(null,'push_bbs_body','saveMD();');"> 保存 </a>
 		</header>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
@@ -27,8 +26,8 @@
 		H.ready(function() {
 			// 快速打开窗口
 			H.$openFrameWithNav('aui-header', {
-				url : 'push_bbs_body.html',
-				name : 'push_bbs_body'
+				url : 'myQuestion_body.html',
+				name : 'myQuestion_body'
 			});
 		});
 	</script>

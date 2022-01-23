@@ -158,27 +158,27 @@
 		</div>
 		<div class="aui-content">
 			<ul class="aui-list-view">
-				<li class="aui-list-view-cell" tapmode >
+				<li class="aui-list-view-cell" tapmode data-funcName="myProfile_head">
 					<div class="aui-arrow-right">
 						<i class="aui-iconfont iconfont icon-gerenxinxi icon-bg-70a1cd"></i>个人资料
 					</div>
 				</li>
-				<li class="aui-list-view-cell" tapmode >
+				<li class="aui-list-view-cell" tapmode data-funcName="myQuestion_head">
 					<div class="aui-arrow-right">
 						<i class="aui-iconfont iconfont icon-wendaji icon-bg-84c9a5"></i>我的问答
 					</div>
 				</li>
-				<li class="aui-list-view-cell" tapmode >
+				<li class="aui-list-view-cell" tapmode  data-funcName="myMood_head">
 					<div class="aui-arrow-right">
 						<i class="aui-iconfont iconfont icon-faxian2 icon-bg-eac14d"></i>我的见闻
 					</div>
 				</li>
-				<li class="aui-list-view-cell" tapmode >
+				<li class="aui-list-view-cell" tapmode  data-funcName="myMessage_head">
 					<div class="aui-arrow-right">
 						<i class="aui-iconfont iconfont icon-xiaoxi icon-bg-7658f8"></i>我的消息 <span class="aui-badge aui-badge-info aui-pull-right">12</span>
 					</div>
 				</li>
-				<li class="aui-list-view-cell" tapmode >
+				<li class="aui-list-view-cell" tapmode  data-funcName="LBSPeople_head">
 					<div class="aui-arrow-right">
 						<i class="aui-iconfont iconfont icon-fujin icon-bg-e6567a"></i>附近的人
 					</div>
@@ -190,7 +190,7 @@
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript">
 		Zepto(function($) {
-			$(".aui-list-view").on("click", "li", function() {
+			$(".aui-list-view").on("tap", "li", function() {
 				var funcName = $(this).attr("data-funcName");
 				if (funcName) {
 					H.$openWin(funcName, funcName + '.html');

@@ -51,6 +51,13 @@
 				background: rgba(0,0,0,0);
 				border-bottom: 1px solid #e7e2e2;
 			}
+			.img-container {
+				margin-right: 10px;
+				width: 50px;
+				height: 50px;
+				overflow: visible;
+				position: relative;
+			}
 			.user-info img {
 				width: 50px;
 				height: 50px;
@@ -58,7 +65,29 @@
 				-webkit-border-radius: 50%;
 				vertical-align: middle;
 				vertical-align: middle;
-				margin-right: 10px;
+			}
+			.img-container .gender {
+				display: block;
+				height: 15px;
+				width: 15px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				color: #fff;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				text-align: center;
+			}
+			.img-container .gender i {
+				font-size: 10px;
+				position: relative;
+				top: -6px;
+			}
+			.img-container .gender.man {
+				background: #1d9dd5;
+			}
+			.img-container .gender.max {
+				background: #f54171;
 			}
 			.user-account {
 				text-align: left;
@@ -108,7 +137,10 @@
 	</head>
 	<body class="winu-flex-box-vertical" id="bdy">
 		<div class="user-info">
-			<img src="../../image/pic.jpg" />
+			<div class="img-container">
+				<img src="../../image/pic.jpg" />
+				<span class="gender man"><i class="iconfont icon-nan"></i></span>
+			</div>
 			<div class="user-account">
 				<span>点点例<label class="level">官方人员</label></span>
 				<span>这家伙很懒，什么都没留下...</span>

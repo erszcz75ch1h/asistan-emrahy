@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<!-- 日期必备样式 开始 -->
+		<link href="../../css/mobiscroll/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/mobiscroll/mobiscroll.frame.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/mobiscroll/mobiscroll.frame.android-holo.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/mobiscroll/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/mobiscroll/mobiscroll.scroller.android-holo.css" rel="stylesheet" type="text/css" />
+		<link href="../../css/mobiscroll/mobiscroll.android-holo-light.css" rel="stylesheet" type="text/css" />
+		<!-- 日期必备样式 结束 -->
+		<style type="text/css">
+			.mbsc-android-holo .dwv {
+				padding: 5px
+			}
+			.mbsc-android-holo .dwb {
+				height: 2.8em;
+				line-height: 2.8em;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="aui-form">
+			<div class="aui-input-row">
+				<label class="aui-input-addon">选择日期</label>
+				<input type="text" class="aui-input" placeholder="" id="demo_date"/>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<!-- 日期必备脚本 开始 -->
+	<script  type="text/javascript" src="../../script/mobiscroll/mobiscroll.zepto.js"></script>
+	<script  type="text/javascript" src="../../script/mobiscroll/mobiscroll.core.js"></script>
+	<script  type="text/javascript" src="../../script/mobiscroll/mobiscroll.frame.js"></script>
+	<script  type="text/javascript" src="../../script/mobiscroll/mobiscroll.scroller.js"></script>
+	<script  type="text/javascript" src="../../script/mobiscroll/mobiscroll.util.datetime.js"></script>
+	<script  type="text/javascript" src="../../script/mobiscroll/mobiscroll.datetimebase.js"></script>
+	<script  type="text/javascript" src="../../script/mobiscroll/mobiscroll.datetime.js"></script>
+	<script  type="text/javascript" src="../../script/mobiscroll/mobiscroll.android-holo-light.js"></script>
+	<script  type="text/javascript" src="../../script/mobiscroll/mobiscroll.i18n.zh.js"></script>
+	<!-- 日期必备脚本 结束 -->
+	<script type="text/javascript" type="text/javascript">
+		Zepto(function($) {
+			$('#demo_date').mobiscroll().date({
+				theme : "android-holo-light",
+				mode : "scroller",
+				display : "bottom",
+				lang : "zh",
+				dateFormat : "yy-mm-dd",
+				endYear : 2020
+			});
+		});
+	</script>
+</html>
