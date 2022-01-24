@@ -24,7 +24,7 @@
 * IOS 8.0以上的版本
 * Android 4.4以上的版本，系统运存大于1G
 
-## 尊重劳动者
+## 友情捐赠
 
 * 如果点点例能够帮到您，能让您使用APICloud开发能有事半功倍的效果，或者能够支持我的辛勤劳动成果，可以捐赠我们：
 
@@ -33,9 +33,9 @@
 
 ## 安装包信息
 
- * [0.1.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d463e08fe490bd091a6426acde6a6828.ipa)
+ * [0.1.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/a1d74b6ece4ea54d926f862ac786d889.ipa)
 
- * [0.1.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/cafbe4a99cbe6b6b1e8e2f2c1dc0c30b_d)
+ * [0.1.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d43abfed1ec826a7af3432643044c4e7_d)
 
  * 
 
@@ -103,6 +103,7 @@
 * [更新] iconfont 字体图标
 * [修复] 修复侧滑页面宽度显示不全问题
 * [修复] 启动画点击不能关闭问题
+* [修复] 其他脚本错误问题
  
  **************************
 

@@ -80,9 +80,9 @@
 						<i class="aui-iconfont iconfont icon-jilu icon-bg-7658f8"></i>版本历程 <span class="aui-badge aui-badge-info aui-pull-right">有更新</span>
 					</div>
 				</li>
-				<li class="aui-list-view-cell" tapmode  data-funcName="myMessage_head" id="clear-cache">
+				<li class="aui-list-view-cell" tapmode  data-funcName="myMessage_head">
 					<div class="aui-arrow-right">
-						<i class="aui-iconfont iconfont icon-qinglihuancun icon-bg-e6567a"></i>清除缓存 <span class="aui-badge aui-badge-success aui-pull-right">0 M</span>
+						<i class="aui-iconfont iconfont icon-qinglihuancun icon-bg-e6567a"></i>清除缓存 <span class="aui-badge aui-badge-success aui-pull-right" id="clear-cache">0 M</span>
 					</div>
 				</li>
 				<li class="aui-list-view-cell" tapmode  data-funcName="myMood_head">
@@ -113,7 +113,7 @@
 			$("#clear-cache").on("tap", function() {
 				api.clearCache(function(ret, err) {
 					H.$removePrefs(null, 'launch');
-					$("#cache-size").text("0M");
+					$("#cache-size").text("0 M");
 					H.$toast("清除成功");
 				});
 			});
