@@ -70,12 +70,49 @@
 			.aui-user-view-cell:after {
 				border-bottom: 1px solid #d7d7d7;
 			}
+			.img-cont {
+				display: inline-block;
+				width: 48px;
+				height: 48px;
+				float: left;
+				margin-right: 15px;
+				overflow: visible;
+				position: relative;
+			}
+			.img-cont img {
+				margin-right: 0 !important;
+			}
+			.img-cont .gender {
+				display: block;
+				height: 15px;
+				width: 15px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				color: #fff;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				text-align: center;
+			}
+			.img-cont .gender i {
+				font-size: 10px;
+				position: relative;
+				top: -6px;
+			}
+			.img-cont .gender.man {
+				background: #1d9dd5;
+			}
+			.img-cont .gender.max {
+				background: #f54171;
+			}
 		</style>
 		<script id="tpl" type="text/html">
 			[: for (var i=0;i<5;i++) { :]
 			<li class="aui-list-view" tapmode >
 			<div class="aui-user-view-cell aui-img">
-			<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+			<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+			<span class="gender man"><i class="iconfont icon-nan"></i></span>
+			</div>
 			<div class="aui-img-body" tapmode >
 			<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 			<p class='aui-ellipsis-1'>
@@ -130,7 +167,9 @@
 			</li>
 			<li class="aui-list-view">
 			<div class="aui-user-view-cell aui-img">
-			<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+			<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+			<span class="gender man"><i class="iconfont icon-nan"></i></span>
+			</div>
 			<div class="aui-img-body" tapmode >
 			<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 			<p class='aui-ellipsis-1'>
@@ -182,7 +221,9 @@
 			<ul id="find-list">
 				<li class="aui-list-view" tapmode >
 					<div class="aui-user-view-cell aui-img">
-						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
 						<div class="aui-img-body" tapmode >
 							<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 							<p class='aui-ellipsis-1'>
@@ -237,7 +278,9 @@
 				</li>
 				<li class="aui-list-view" tapmode >
 					<div class="aui-user-view-cell aui-img">
-						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
 						<div class="aui-img-body" tapmode >
 							<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 							<p class='aui-ellipsis-1'>
@@ -272,7 +315,9 @@
 				</li>
 				<li class="aui-list-view">
 					<div class="aui-user-view-cell aui-img">
-						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
 						<div class="aui-img-body" tapmode >
 							<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 							<p class='aui-ellipsis-1'>
@@ -318,7 +363,9 @@
 				</li>
 				<li class="aui-list-view" tapmode >
 					<div class="aui-user-view-cell aui-img">
-						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
 						<div class="aui-img-body" tapmode >
 							<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 							<p class='aui-ellipsis-1'>
@@ -373,7 +420,9 @@
 				</li>
 				<li class="aui-list-view">
 					<div class="aui-user-view-cell aui-img">
-						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
 						<div class="aui-img-body" tapmode >
 							<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 							<p class='aui-ellipsis-1'>
@@ -419,7 +468,9 @@
 				</li>
 				<li class="aui-list-view" tapmode >
 					<div class="aui-user-view-cell aui-img">
-						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
 						<div class="aui-img-body" tapmode >
 							<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 							<p class='aui-ellipsis-1'>
@@ -474,7 +525,9 @@
 				</li>
 				<li class="aui-list-view">
 					<div class="aui-user-view-cell aui-img">
-						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
 						<div class="aui-img-body" tapmode >
 							<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 							<p class='aui-ellipsis-1'>
@@ -520,7 +573,9 @@
 				</li>
 				<li class="aui-list-view" tapmode >
 					<div class="aui-user-view-cell aui-img">
-						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
 						<div class="aui-img-body" tapmode >
 							<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 							<p class='aui-ellipsis-1'>
@@ -575,7 +630,9 @@
 				</li>
 				<li class="aui-list-view">
 					<div class="aui-user-view-cell aui-img">
-						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
 						<div class="aui-img-body" tapmode >
 							<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 							<p class='aui-ellipsis-1'>
@@ -621,7 +678,9 @@
 				</li>
 				<li class="aui-list-view" tapmode >
 					<div class="aui-user-view-cell aui-img">
-						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
 						<div class="aui-img-body" tapmode >
 							<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 							<p class='aui-ellipsis-1'>
@@ -676,7 +735,9 @@
 				</li>
 				<li class="aui-list-view">
 					<div class="aui-user-view-cell aui-img">
-						<img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
 						<div class="aui-img-body" tapmode >
 							<span>点点例<label class="level">官方人员</label><em>15分钟前</em></span>
 							<p class='aui-ellipsis-1'>

@@ -33,9 +33,9 @@
 
 ## 安装包信息
 
- * [0.1.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/3351b26043696128453d421175bb5381.ipa)
+ * [0.1.9 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/55ac35aa21da7d2691aef1ac54dbbdd3.ipa)
 
- * [0.1.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/bafa435bbba687e4492da4f037258058_d)
+ * [0.1.9 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2c37662302ab135354c433a46411e575_d)
 
  * 
 
@@ -94,8 +94,9 @@
  ### 2016年01月29日 0.1.9 Alpha 版本
 
 * [新增] 底部滑出日期选择
+* [新增] 忘记密码页面
 * [新增] 指点迷津发布帖子
-* [新增] 侧滑菜单头像添加性别图标
+* [新增] 侧滑菜单头像，流连忘返头像  性别图标 
 * [更新] 重写系统设置页面
 * [更新] 方寸之席点击高亮问题
 * [更新] 指点迷津页面更多菜单问题
@@ -103,7 +104,7 @@
 * [更新] iconfont 字体图标
 * [修复] 修复侧滑页面宽度显示不全问题
 * [修复] 启动画点击不能关闭问题
-* [修复] 其他脚本错误问题
+* [修复] 清除缓存BUG
  
  **************************
 

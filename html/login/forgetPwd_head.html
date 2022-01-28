@@ -8,14 +8,22 @@
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui-win.css" />
 		<style type="text/css">
 			body {
-				background: #fff url(../../image/slide_bg.png) no-repeat right bottom;
-				background-size: 100% auto;
-				-webkit-background-size: 100% auto;
+				background: url(../../image/login_bg.png) no-repeat left top;
+				background-size: cover;
+				-webkit-background-size: cover;
+			}
+			#aui-header,.aui-bar,.aui-bar-nav {
+				background: rgba(0,0,0,0)!important;
 			}
 		</style>
 	</head>
 	<body>
-		<header id='aui-header'></header>
+		<header class="aui-bar aui-bar-nav" id='aui-header'>
+			<a class="aui-pull-left" onclick="H.$closeCurrentWin();"> <span class="aui-iconfont aui-icon-left"></span>返回 </a>
+			<div class="aui-title">
+				修改密码
+			</div>
+		</header>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
@@ -23,11 +31,8 @@
 		H.ready(function() {
 			// 快速打开窗口
 			H.$openFrameWithNav('aui-header', {
-				url : 'slide_body.html',
-				name : 'slide_body',
-				rect : {
-					w : api.winWidth - 80
-				}
+				url : 'forgetPwd_body.html',
+				name : 'forgetPwd_body'
 			});
 		});
 	</script>
