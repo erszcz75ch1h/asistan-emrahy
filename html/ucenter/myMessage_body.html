@@ -6,16 +6,48 @@
 		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
 		<style type="text/css">
+			.aui-badge {
+				margin-right: 15px;
+				margin-top: 3px;
+			}
+			.aui-list-view-cell:active {
+				background: #f4f4f4;
+			}
 		</style>
 	</head>
 	<body>
-		<p class="aui-padded-10">
-			苦逼程序猿，正在疯狂加班中……
-		</p>
-		<div class="aui-content"></div>
+		<div class="aui-content">
+			<ul class="aui-list-view aui-in">
+				<li class="aui-list-view-cell" data-funcName="official_head">
+					<div class="aui-arrow-right">
+						<i class="aui-iconfont iconfont icon-dianyinguanfang aui-bg-info"></i>官方消息 <span class="aui-badge aui-badge-info aui-pull-right">12 </span>
+					</div>
+				</li>
+				<li class="aui-list-view-cell" data-funcName="answerMe_head">
+					<div class="aui-arrow-right">
+						<i class="aui-iconfont iconfont icon-huifu aui-bg-success"></i>回复我的 <span class="aui-badge aui-badge-info aui-pull-right">8</span>
+					</div>
+				</li>
+				<li class="aui-list-view-cell" data-funcName="agreeMe_head">
+					<div class="aui-arrow-right">
+						<i class="aui-iconfont iconfont icon-dianzan aui-bg-danger"></i>点赞我的
+					</div>
+				</li>
+			</ul>
+		</div>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
-	<script type="text/javascript"></script>
+	<script type="text/javascript">
+		Zepto(function() {
+			$(".aui-list-view").on("tap", "li", function() {
+				var funcName = $(this).attr("data-funcName");
+				if (funcName) {
+					H.$openWin(funcName, funcName + '.html');
+				}
+			});
+		});
+	</script>
 </html>

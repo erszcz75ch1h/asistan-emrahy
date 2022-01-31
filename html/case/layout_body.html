@@ -119,7 +119,9 @@
 		Zepto(function() {
 			$(".aui-list-view").on("tap", "li", function() {
 				var funcName = $(this).attr("data-funcName");
+				if(funcName){
 				H.$openWin(funcName, funcName + '.html');
+				}
 			});
 		});
 	</script>

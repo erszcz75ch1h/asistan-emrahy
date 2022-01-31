@@ -45,7 +45,7 @@
 			#bbs-list ul li {
 				clear: both;
 				position: relative;
-				border-bottom: 1px solid #d7d7d7;
+				
 				background: #fff;
 				padding: 10px 8px 10px 8px;
 				min-height: 0;
@@ -86,25 +86,6 @@
 				font-size: 9px;
 				color: #999;
 			}
-			.ims-img {
-				width: 100px;
-				height: 100px;
-				margin-left: 8px;
-				position: relative;
-			}
-			.ims-img span {
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				background: rgba(0,0,0,0.5);
-				color: #fff;
-				display: block;
-				width: 30px;
-				font-size: 10px;
-				text-align: center;
-				height: 15px;
-				line-height: 15px;
-			}
 			.article-img {
 				width: 100px;
 				height: 100px;
@@ -128,30 +109,48 @@
 				font-size: 16px;
 			}
 			.bbs-des {
-				padding-top: 10px;
-				font-size: 12px;
-				color: #999999;
-				height: 51px;
-				line-height: 22px;
+				margin-top: 15px;
+				border: 1px solid #d7d7d7;
+				font-size: 16px;
+				padding: 15px 10px 15px 10px !important;
+				border-radius: 3px;
+				-webkit-border-radius: 3px;
+				position: relative;
+				overflow: visible;
+				color:#444;
 			}
-			.ico-s {
-				width: 100%;
+			.bbs-des .sjx {
+				display: block;
+				height: 0px;
+				width: 0px;
+				border-width: 9px;
+				border-style: solid;
+				border-color: transparent transparent #d7d7d7 transparent;
+				position: absolute;
+				top: -25px;
+				left: 15px;
+				z-index: 10;
 			}
-			.ico-s label {
-				margin-right: 8px;
+			.bbs-des .sjx2 {
+				display: block;
+				height: 0px;
+				width: 0px;
+				border-width: 7px;
+				border-style: solid;
+				border-color: transparent transparent #fff transparent;
+				position: absolute;
+				top: -21px;
+				left: 17px;
+				z-index: 12;
 			}
-			.ico-s label i {
-				vertical-align: bottom;
-			}
-			.ico-s  font {
-				float: right;
+			.bbs-des label {
 				display: inline-block;
-				padding: 2px 3px 2px 3px;
-				border: 1px solid #ccc;
-				border-radius: 2px;
-				-webkit-border-radius: 2px;
-				line-height: normal;
-				margin-top: 2px;
+				padding: 0 5px;
+				color: #999999;
+			}
+			.bbs-des .review {
+				float: right;
+				color: #4385f6;
 			}
 			#bbs-list li:active {
 				background: #f4f4f4;
@@ -167,7 +166,7 @@
 			.user-area .q-time {
 				color: #999999;
 				float: right;
-				margin-right:0;
+				margin-right: 0;
 			}
 		</style>
 	</head>
@@ -176,113 +175,154 @@
 			<ul>
 				<li>
 					<div class="user-area">
-						<span class="q-sort">第 120 问</span><span class="q-time">2016-01-29</span>
+						<span class="q-sort">第 9 次解答</span><span class="q-time">2016-01-29</span>
 					</div>
 					<div class="article-area">
 						<div class="article-info">
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des aui-ellipsis-2">
-								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							<div class="bbs-des aui-ellipsis-1">
+								<span class="sjx"></span>
+								<span class="sjx2"></span>
+								我回复<label>点点例</label>的详情... <a class="review">更多</a>
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>技术分享</font></span>
-						</div>
-						<div class="ims-img">
-							<span>9 图</span>
-							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
 						</div>
 					</div>
 				</li>
 				<li>
 					<div class="user-area">
-						<span class="q-sort">第 119 问</span><span class="q-time">2016-01-29</span>
-					</div>
-					<div class="article-area">
-						<div class="article-info">
-							<p class="aui-ellipsis-1 bbs-title">
-								<label class="ico-zhan hot">热门</label>如何快速设计UI原型图？
-							</p>
-							<div class="bbs-des aui-ellipsis-2">
-								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
-							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端领域</font></span>
-						</div>
-						<div class="ims-img">
-							<span>9 图</span>
-							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="user-area">
-						<span class="q-sort">第 118 问</span><span class="q-time">2016-01-29</span>
+						<span class="q-sort">第 8 次解答</span><span class="q-time">2016-01-29</span>
 					</div>
 					<div class="article-area">
 						<div class="article-info">
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des aui-ellipsis-2">
-								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							<div class="bbs-des aui-ellipsis-1">
+								<span class="sjx"></span>
+								<span class="sjx2"></span>
+								我回复<label>点点例</label>的详情... <a class="review">更多</a>
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>后端开发</font></span>
 						</div>
 					</div>
 				</li>
 				<li>
 					<div class="user-area">
-						<span class="q-sort">第 117 问</span><span class="q-time">2016-01-29</span>
+						<span class="q-sort">第 7 次解答</span><span class="q-time">2016-01-29</span>
 					</div>
 					<div class="article-area">
 						<div class="article-info">
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des aui-ellipsis-2">
-								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							<div class="bbs-des aui-ellipsis-1">
+								<span class="sjx"></span>
+								<span class="sjx2"></span>
+								我回复<label>点点例</label>的详情... <a class="review">更多</a>
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>技术分享</font></span>
-						</div>
-						<div class="ims-img">
-							<span>9 图</span>
-							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
 						</div>
 					</div>
 				</li>
 				<li>
 					<div class="user-area">
-						<span class="q-sort">第 116 问</span><span class="q-time">2016-01-29</span>
-					</div>
-					<div class="article-area">
-						<div class="article-info">
-							<p class="aui-ellipsis-1 bbs-title">
-								<label class="ico-zhan hot">热门</label>如何快速设计UI原型图？
-							</p>
-							<div class="bbs-des aui-ellipsis-2">
-								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
-							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端</font></span>
-						</div>
-						<div class="ims-img">
-							<span>9 图</span>
-							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="user-area">
-						<span class="q-sort">第 115 问</span><span class="q-time">2016-01-29</span>
+						<span class="q-sort">第 6 次解答</span><span class="q-time">2016-01-29</span>
 					</div>
 					<div class="article-area">
 						<div class="article-info">
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des aui-ellipsis-2">
-								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							<div class="bbs-des aui-ellipsis-1">
+								<span class="sjx"></span>
+								<span class="sjx2"></span>
+								我回复<label>点点例</label>的详情... <a class="review">更多</a>
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端</font></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<span class="q-sort">第 5 次解答</span><span class="q-time">2016-01-29</span>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-1">
+								<span class="sjx"></span>
+								<span class="sjx2"></span>
+								我回复<label>点点例</label>的详情... <a class="review">更多</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<span class="q-sort">第 4 次解答</span><span class="q-time">2016-01-29</span>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-1">
+								<span class="sjx"></span>
+								<span class="sjx2"></span>
+								我回复<label>点点例</label>的详情... <a class="review">更多</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<span class="q-sort">第 3 次解答</span><span class="q-time">2016-01-29</span>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-1">
+								<span class="sjx"></span>
+								<span class="sjx2"></span>
+								我回复<label>点点例</label>的详情... <a class="review">更多</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<span class="q-sort">第 2 次解答</span><span class="q-time">2016-01-29</span>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-1">
+								<span class="sjx"></span>
+								<span class="sjx2"></span>
+								我回复<label>点点例</label>的详情... <a class="review">更多</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<span class="q-sort">第 1 次解答</span><span class="q-time">2016-01-29</span>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-1">
+								<span class="sjx"></span>
+								<span class="sjx2"></span>
+								我回复<label>点点例</label>的详情... <a class="review">更多</a>
+							</div>
 						</div>
 					</div>
 				</li>
@@ -294,8 +334,17 @@
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
-	
+	<script type="text/javascript" src="../../script/echo.min.js"></script>
+	<script type="text/javascript" src="../../script/date.js"></script>
+	<script type="text/javascript" src="../../script/app.js"></script>
 	<script type="text/javascript">
+		echo.init({
+			offset : 100,
+			throttle : 250,
+			unload : false,
+			callback : function(element, op) {
+			}
+		});
 		Zepto(function($) {
 			$("#bbs-list").on("tap", "*", function() {
 				if ($(this).is("font,font *")) {

@@ -6,16 +6,278 @@
 		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/winu-ui.css" />
 		<style type="text/css">
+			body {
+				background: #efeff4;
+			}
+			.aui-user-view-cell:after {
+				left: 0;
+			}
+			.content {
+				font-size: 12px;
+				color: #999999;
+				line-height: 22px;
+			}
+			.otherinfo p {
+				font-size: 12px;
+				margin-bottom: 5px;
+			}
+			.proinfo {
+				padding: 10px 0;
+			}
+			.proinfo p {
+				border-right: 1px solid #c8c7cc;
+			}
+			.proinfo p:last-child {
+				border: none;
+			}
+			.aui-list-view:active {
+				background: #f4f4f4;
+			}
+			.content {
+				color: #666;
+			}
+			.level {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 9px;
+				color: #fff;
+				background: #96d2f7;
+				height: 15px;
+				line-height: 16px;
+				padding: 0 4px;
+				border-radius: 2px;
+				-webkit-border-radius: 2px;
+				margin-left: 10px;
+			}
+			.aui-list-view {
+				margin-bottom: 0;
+				min-height: 0;
+				height: auto;
+				overflow: hidden;
+			}
+			.aui-line-x:after {
+				border-bottom: 1px solid #d7d7d7;
+			}
+			.aui-list-view:after {
+				border-top: 0;
+			}
+			#find-list > .aui-list-view {
+			}
+			.aui-user-view-cell:after {
+				border-bottom: 1px solid #d7d7d7;
+			}
+			.img-cont {
+				display: inline-block;
+				width: 48px;
+				height: 48px;
+				float: left;
+				margin-right: 15px;
+				overflow: visible;
+				position: relative;
+			}
+			.img-cont img {
+				margin-right: 0 !important;
+			}
+			.img-cont .gender {
+				display: block;
+				height: 15px;
+				width: 15px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				color: #fff;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				text-align: center;
+			}
+			.img-cont .gender i {
+				font-size: 10px;
+				position: relative;
+				top: -6px;
+			}
+			.img-cont .gender.man {
+				background: #1d9dd5;
+			}
+			.img-cont .gender.max {
+				background: #f54171;
+			}
+			.aui-user-view-cell {
+				padding: 10px;
+			}
 		</style>
 	</head>
 	<body>
-		<p class="aui-padded-10">
-			苦逼程序猿，正在疯狂加班中……
-		</p>
-		<div class="aui-content"></div>
+		<div class="aui-content">
+			<ul id="find-list">
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="aui-img-body" tapmode >
+							<span>点点例<label class="level">官方人员</label><em>100M 内</em></span>
+							<p class='aui-ellipsis-1'>
+								15分钟前
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="aui-img-body" tapmode >
+							<span>点点例<label class="level">官方人员</label><em>100M 内</em></span>
+							<p class='aui-ellipsis-1'>
+								15分钟前
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="aui-img-body" tapmode >
+							<span>点点例<label class="level">官方人员</label><em>100M 内</em></span>
+							<p class='aui-ellipsis-1'>
+								15分钟前
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="aui-img-body" tapmode >
+							<span>点点例<label class="level">官方人员</label><em>100M 内</em></span>
+							<p class='aui-ellipsis-1'>
+								15分钟前
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="aui-img-body" tapmode >
+							<span>点点例<label class="level">官方人员</label><em>100M 内</em></span>
+							<p class='aui-ellipsis-1'>
+								15分钟前
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="aui-img-body" tapmode >
+							<span>点点例<label class="level">官方人员</label><em>100M 内</em></span>
+							<p class='aui-ellipsis-1'>
+								15分钟前
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="aui-img-body" tapmode >
+							<span>点点例<label class="level">官方人员</label><em>100M 内</em></span>
+							<p class='aui-ellipsis-1'>
+								15分钟前
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="aui-img-body" tapmode >
+							<span>点点例<label class="level">官方人员</label><em>100M 内</em></span>
+							<p class='aui-ellipsis-1'>
+								15分钟前
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="aui-img-body" tapmode >
+							<span>点点例<label class="level">官方人员</label><em>100M 内</em></span>
+							<p class='aui-ellipsis-1'>
+								15分钟前
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="aui-img-body" tapmode >
+							<span>点点例<label class="level">官方人员</label><em>100M 内</em></span>
+							<p class='aui-ellipsis-1'>
+								15分钟前
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="aui-list-view" tapmode >
+					<div class="aui-user-view-cell aui-img">
+						<div class="img-cont"><img class="aui-img-object aui-pull-left" src="../../image/gray.jpg" data-echo="../../image/pic.jpg" tapmode >
+							<span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="aui-img-body" tapmode >
+							<span>点点例<label class="level">官方人员</label><em>100M 内</em></span>
+							<p class='aui-ellipsis-1'>
+								15分钟前
+							</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
-	<script type="text/javascript"></script>
+	<script type="text/javascript" src="../../script/echo.min.js"></script>
+	<script type="text/javascript">
+		echo.init({
+			offset : 100,
+			throttle : 250,
+			unload : false,
+			callback : function(element, op) {
+			}
+		});
+		Zepto(function($) {
+		});
+		H.ready(function() {
+			H.$dropdownToRefresh(function(ret, err) {
+				setTimeout(function() {
+					// 加载完毕后，恢复下拉
+					H.$recoverDropdownToNormal();
+				}, 2000);
+			});
+		});
+	</script>
 </html>
