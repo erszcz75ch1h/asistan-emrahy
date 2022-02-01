@@ -23,7 +23,6 @@
 				z-index: 10000;
 			}
 			.refresh-fixed {
-				
 			}
 			.winu-center-all {
 				display: -webkit-box;
@@ -167,7 +166,7 @@
 			.user-area .q-time {
 				color: #999999;
 				float: right;
-				margin-right:0;
+				margin-right: 0;
 			}
 		</style>
 	</head>
@@ -294,17 +293,18 @@
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
-	
+	<script type="text/javascript" src="../../script/echo.min.js"></script>
+	<script type="text/javascript" src="../../script/date.js"></script>
+	<script type="text/javascript" src="../../script/app.js"></script>
 	<script type="text/javascript">
+		echo.init({
+			offset : 100,
+			throttle : 250,
+			unload : false,
+			callback : function(element, op) {
+			}
+		});
 		Zepto(function($) {
-			$("#bbs-list").on("tap", "*", function() {
-				if ($(this).is("font,font *")) {
-					H.$alert("苦逼程序猿，正在疯狂加班中……");
-				} else {
-					// 打开带参数的窗口
-					H.$openWin('bbs_view_head', 'bbs_view_head.html');
-				}
-			});
 		});
 		H.ready(function() {
 			H.$dropdownToRefresh(function(ret, err) {
