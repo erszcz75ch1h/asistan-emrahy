@@ -8,7 +8,7 @@
 * Q群描述 ：这里有一群IT技术爱好者，里面都是热爱App开发，软件开发，游戏开发，前端开发，网页设计，UI设计，软件测试，需求分析，算法分析，人工智能的小伙伴，欢迎你加入一起改变中国IT教育这个大家庭!
 * 开发理念：一切从简，只为了更懒！
 * 技术支持：[中山赢友网络科技有限公司](http://www.winu.net/)
-* 讨论社区：[一起改变中国IT教育](http://bbs.winu.net/)
+* 讨论社区：[APICloud在线社区](http://community.apicloud.com/bbs/forum.php?mod=viewthread&tid=22922&page=1&extra=)
 * 平台描述：[APICloud](http://www.apicloud.com/)是一个非常棒的一个Hybrid App开发平台！
 
 ## 项目状态
@@ -33,9 +33,9 @@
 
 ## 安装包信息
 
- * [0.2.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/90aa422154a2426cc3970ca630816ce6.ipa)
+ * [0.2.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2d86aaaf0b26225246cee3234e2c85bd.ipa)
 
- * [0.2.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/f22bec8445668ab1a1591fb968b6345e_d)
+ * [0.2.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/445dc461ee99b6f005c74b11db9765a7_d)
 
  * 
 
