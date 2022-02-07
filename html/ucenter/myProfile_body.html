@@ -6,16 +6,227 @@
 		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
 		<style type="text/css">
+			body {
+				background: #efeff4;
+			}
+			.user-allinfo {
+				padding: 15px 15px 30px 15px;
+				background: #4385f6;
+				position: relative;
+				overflow: visible;
+				text-align: center;
+			}
+			.img-container {
+				width: 85px;
+				height: 85px;
+				position: relative;
+				margin: 0 auto;
+				font-size: 0;
+				overflow: visible;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				margin-bottom: 10px;
+			}
+			.img-container p {
+				position: absolute;
+				z-index: 100;
+				width: 24px;
+				height: 24px;
+				text-align: center;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border: 2px solid #5b95f7;
+				background: rgba(255,255,255,0.8);
+			}
+			.img-container p  span {
+				color: #4385f6;
+				font-size: 14px;
+				padding: 0 !important;
+			}
+			.img-container p.ico-xji {
+				left: 0;
+				top: 0;
+			}
+			.img-container p.ico-gender {
+				right: 0;
+				bottom: 0;
+			}
+			.user-allinfo img {
+				width: 85px;
+				height: 85px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				border: 2px solid #7facf9;
+				margin: 0 auto 0 auto;
+			}
+			.profile {
+				margin-bottom: 5px;
+			}
+			.profile li {
+				background: #fff;
+			}
+			.li-container {
+				position: relative;
+				padding: 15px 10px 0 10px;
+			}
+			.des {
+				color: #999999;
+				font-size: 14px;
+			}
+			.value {
+				font-size: 16px;
+				color: #666;
+				padding: 5px 27px 10px 0;
+			}
+			.profile li:last-child {
+			}
 		</style>
 	</head>
 	<body>
-		<p class="aui-padded-10">
-			苦逼程序猿，正在疯狂加班中……
-		</p>
-		<div class="aui-content"></div>
+		<div class="user-allinfo">
+			<div class="img-container">
+				<p class="ico-xji">
+					<span class="iconfont icon-xiangji"></span>
+				</p>
+				<img src="../../image/pic.jpg" />
+			</div>
+		</div>
+		<div class="aui-content">
+			<ul class="profile">
+				<li>
+					<div class="li-container aui-arrow-right">
+						<div class="des">
+							个人昵称
+						</div>
+						<div class="value">
+							点点例
+						</div>
+						<div class="aui-line-x"></div>
+					</div>
+				</li>
+				<li>
+					<div class="li-container aui-arrow-right">
+						<div class="des">
+							移动手机
+						</div>
+						<div class="value">
+							18676265646
+						</div>
+						<div class="aui-line-x"></div>
+					</div>
+				</li>
+				<li>
+					<div class="li-container aui-arrow-right">
+						<div class="des">
+							电子邮箱
+						</div>
+						<div class="value">
+							winu@winu.net
+						</div>
+						<div class="aui-line-x"></div>
+					</div>
+				</li>
+				<li>
+					<div class="li-container aui-arrow-right">
+						<div class="des">
+							出生日期
+						</div>
+						<div class="value">
+							1993-05-27
+						</div>
+						<div class="aui-line-x"></div>
+					</div>
+				</li>
+				<li>
+					<div class="li-container aui-arrow-right">
+						<div class="des">
+							所在城市
+						</div>
+						<div class="value">
+							广东省中山市中山二路48号怡中大厦5楼515
+						</div>
+					</div>
+					<div class="aui-line-x"></div>
+				</li>
+			</ul>
+			<ul class="profile">
+				<li>
+					<div class="li-container aui-arrow-right">
+						<div class="des">
+							用户性别
+						</div>
+						<div class="value">
+							男性
+						</div>
+						<div class="aui-line-x"></div>
+					</div>
+				</li>
+				<li>
+					<div class="li-container aui-arrow-right">
+						<div class="des">
+							用户身份
+						</div>
+						<div class="value">
+							程序猿
+						</div>
+						<div class="aui-line-x"></div>
+					</div>
+				</li>
+				<li>
+					<div class="li-container aui-arrow-right">
+						<div class="des">
+							个性签名
+						</div>
+						<div class="value">
+							这家伙很懒，什么都没留下...
+						</div>
+					</div>
+					<div class="aui-line-x"></div>
+				</li>
+			</ul>
+			<ul class="profile">
+				<li>
+					<div class="li-container aui-arrow-right">
+						<div class="des">
+							腾讯QQ
+						</div>
+						<div class="value">
+							8020292
+						</div>
+						<div class="aui-line-x"></div>
+					</div>
+				</li>
+				<li>
+					<div class="li-container aui-arrow-right">
+						<div class="des">
+							新浪微博
+						</div>
+						<div class="value">
+							wln3344@sina.cn
+						</div>
+						<div class="aui-line-x"></div>
+					</div>
+				</li>
+				<li>
+					<div class="li-container aui-arrow-right">
+						<div class="des">
+							腾讯微信
+						</div>
+						<div class="value">
+							HelloNewWorld
+						</div>
+					</div>
+					<div class="aui-line-x"></div>
+				</li>
+			</ul>
+		</div>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
-	<script type="text/javascript"></script>
+	<script type="text/javascript">
+		H.ready(function() {
+		});
+	</script>
 </html>
