@@ -21,6 +21,9 @@
 			.aui-bar-1d9dd5 {
 				background: #4385f6;
 			}
+			.aui-bar-fff {
+				background: #fff;
+			}
 			#aui-footer li.active-1d9dd5, #aui-footer li.active-1d9dd5 span.iconfont {
 				color: #4385f6 !important;
 			}
@@ -79,14 +82,40 @@
 				color: #4385f6;
 				font-size: 20px;
 			}
+			#case-header {
+				color: #555;
+			}
+			#case-header span {
+				color: #666;
+			}
+			#case-header .aui-line-x {
+				margin-top: 46px;
+				width: 100%;
+				position: relative;
+				height: 1px;
+			}
+			#case-header  .aui-line-x:after {
+				border-bottom: 1px solid #f3f1f1;
+				display: block;
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				-webkit-transform-origin: 0 0;
+				-webkit-transform: scale(1);
+				pointer-events: none;
+			}
 		</style>
 	</head>
 	<body>
-		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header" id='case-header'>
+		<header class="aui-bar aui-bar-nav aui-bar-fff header" id='case-header'>
 			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
 			<div class="aui-title">
 				葵花宝典
 			</div>
+			<div class="aui-line-x"></div>
 		</header>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='bbs-header'>
 			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>

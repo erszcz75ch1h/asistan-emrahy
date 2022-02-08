@@ -7,7 +7,6 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
 		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
-		<link rel="stylesheet" type="text/css" href="../../css/swiper/swiper.min.css" />
 		<style type="text/css">
 			.active-area.aui-content {
 				margin-bottom: 0;
@@ -54,6 +53,52 @@
 			}
 			.aui-color-bbb {
 				color: #bbb !important;
+			}
+			.func-menu {
+				height: 170px;
+				background: #fff;
+				margin-bottom: 5px;
+			}
+			.item-func {
+				float: left;
+				width: 25%;
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+				padding: 10px 0 10px 0;
+			}
+			.item-func p {
+				height: 42px;
+				width: 42px;
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				margin: 0 auto;
+			}
+			.item-func p i {
+				color: #fff;
+				font-size: 20px;
+			}
+			.item-func span {
+				display: block;
+				padding: 5px 0 0 0;
+				font-size: 12px;
+				color: #666;
+			}
+			.item-func:active {
+				background: #f4f4f4;
 			}
 			#nice-articles li {
 				margin: 5px 0 0 0;
@@ -105,191 +150,72 @@
 			#nice-articles li:active, li.aui-list-view:active {
 				background: #f4f4f4;
 			}
-			/* 幻灯片 */
-			.banner-container {
-				width: 100%;
-				height: 150px;
-			}
-			.banner-container .swiper-slide {
-				background-position: center;
-				background-size: cover;
-			}
-			.banner-container .swiper-pagination {
-				bottom: 0;
-			}
-			/* 幻灯片 结束 */
-			.demo-list {
-				padding: 15px 0;
-				background: #fff;
-				min-height: 0;
-				height: auto;
-				overflow: hidden;
-				margin-bottom: 5px;
-			}
-			.demo-list ul li {
-				width: 20%;
-				float: left;
-				display: -webkit-box;
-				-webkit-box-orient: horizontal;
-				-webkit-box-pack: center;
-				-webkit-box-align: center;
-				display: box;
-				box-orient: horizontal;
-				box-pack: center;
-				box-align: center;
-			}
-			.demo-list ul li:active {
-				background: #f4f4f4;
-			}
-			.content-area {
-				width: 100%;
-			}
-			.content-area p {
-				width: 42px;
-				height: 42px;
-				display: -webkit-box;
-				-webkit-box-orient: horizontal;
-				-webkit-box-pack: center;
-				-webkit-box-align: center;
-				display: box;
-				box-orient: horizontal;
-				box-pack: center;
-				box-align: center;
-				border-radius: 15px;
-				-webkit-border-radius: 15px;
-				margin: 0 auto;
-			}
-			.content-area p i {
-				color: #fff;
-				font-size: 24px;
-			}
-			.content-area span {
-				display: block;
-				padding: 5px 0 0 0;
-				font-size: 13px;
-				color: #666;
-				text-align: center;
-			}
-			.o2o {
-				display: -webkit-box;
-				display: -webkit-flex;
-				display: flex;
-				-webkit-box-orient: horizontal;
-				-webkit-flex-flow: row;
-				flex-flow: row;
-				width: 100%;
-				background: #ffff;
-				margin-bottom: 5px;
-			}
-			.o2o-item {
-				-webkit-box-flex: 1;
-				-webkit-flex: 1;
-				flex: 1;
-				height: 150px;
-				text-align: center;
-				line-height: 150px;
-				color: #fff;
-				font-size: 20px;
-			}
-			.o2o-item:nth-child(1) {
-				margin-right: 3px;
-			}
-			.o2o-item:nth-child(2) {
-				margin-left: 2px
-			}
-			.item-item {
-				height: 73px;
-				width: 100%;
-				text-align: center;
-				color: #fff;
-				font-size: 20px;
-				line-height: 73px;
-			}
-			.item-item:nth-child(1) {
-				margin-bottom: 4px;
-				height: 72px;
-				line-height: 72px;
-			}
-			.aui-bg-fd6e90 {
-				background: #fd6e90;
-			}
-			.aui-bg-b789fd {
-				background: #b789fd;
-			}
-			.aui-bg-67d2f8 {
-				background: #67d2f8;
-			}
-			.aui-bg-96e462 {
-				background: #96e462;
-			}
-			.aui-bg-ffc74e {
-				background: #ffc74e;
-			}
 		</style>
 	</head>
 	<body>
-		<div class="banner-container">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide" style="background-image:url(../../image/banner.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(../../image/banner.jpg)"></div>
-				<div class="swiper-slide" style="background-image:url(../../image/banner.jpg)"></div>
-			</div>
-			<div class="swiper-pagination"></div>
-		</div>
-		<div class="demo-list">
-			<ul>
-				<li data-funcName="layout_head">
-					<div class="content-area">
-						<p class="aui-bg-fd6e90">
-							<i class="aui-iconfont iconfont icon-buju"></i>
-						</p>
-						<span>布局</span>
-					</div>
-				</li>
-				<li data-funcName="device_head">
-					<div class="content-area">
-						<p class="aui-bg-b789fd">
-							<i class="aui-iconfont iconfont icon-shebeiguanli"></i>
-						</p>
-						<span>设备</span>
-					</div>
-				</li>
-				<li  data-funcName="event_head">
-					<div class="content-area">
-						<p class="aui-bg-67d2f8">
-							<i class="aui-iconfont iconfont icon-shijian"></i>
-						</p>
-						<span>事件</span>
-					</div>
-				</li>
-				<li  data-funcName="module_head">
-					<div class="content-area">
-						<p class="aui-bg-96e462">
-							<i class="aui-iconfont iconfont icon-mokuai"></i>
-						</p>
-						<span>模块</span>
-					</div>
-				</li>
-				<li  data-funcName="front_nice_head">
-					<div class="content-area">
-						<p class="aui-bg-ffc74e">
-							<i class="aui-iconfont iconfont icon-txiangmu"></i>
-						</p>
-						<span>框架</span>
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="o2o">
-			<div class="o2o-item" style="background: #ffc5e2;" onclick="H.$alert('苦逼程序猿，正在疯狂加班中……');">
-				精彩活动
-			</div>
-			<div class="o2o-item">
-				<div class="item-item" style="background: #76d6f9;" onclick="H.$alert('苦逼程序猿，正在疯狂加班中……');">
-					极客教程
+		<div class="func-menu">
+			<div class="item-func" data-funcName="layout_head" tapmode>
+				<div class="content-area">
+					<p class="aui-bg-info">
+						<i class="aui-iconfont iconfont icon-buju"></i>
+					</p>
+					<span>常用布局</span>
 				</div>
-				<div class="item-item" style="background: #ffcb2c;" onclick="H.$alert('苦逼程序猿，正在疯狂加班中……');">
-					跳蚤市场
+			</div>
+			<div class="item-func"  data-funcName="device_head" tapmode >
+				<div class="content-area">
+					<p class="aui-bg-success">
+						<i class="aui-iconfont iconfont icon-shebeiguanli"></i>
+					</p>
+					<span>设备获取</span>
+				</div>
+			</div>
+			<div class="item-func"  data-funcName="event_head" tapmode >
+				<div class="content-area">
+					<p class="aui-bg-danger">
+						<i class="aui-iconfont iconfont icon-shijian"></i>
+					</p>
+					<span>事件监听</span>
+				</div>
+			</div>
+			<div class="item-func"  data-funcName="module_head" tapmode >
+				<div class="content-area">
+					<p class="aui-bg-warning">
+						<i class="aui-iconfont iconfont icon-mokuai"></i>
+					</p>
+					<span>模块使用</span>
+				</div>
+			</div>
+			<div class="item-func"  data-funcName="project_head" tapmode >
+				<div class="content-area">
+					<p class="aui-bg-success">
+						<i class="aui-iconfont iconfont icon-txiangmu"></i>
+					</p>
+					<span>项目实战</span>
+				</div>
+			</div>
+			<div class="item-func"  data-funcName="front_nice_head" tapmode >
+				<div class="content-area">
+					<p class="aui-bg-1f518b">
+						<i class="aui-iconfont iconfont icon-html5"></i>
+					</p>
+					<span>前端推荐</span>
+				</div>
+			</div>
+			<div class="item-func"  data-funcName="winu_product_head" tapmode >
+				<div class="content-area">
+					<p class="aui-bg-b5292a">
+						<i class="aui-iconfont iconfont icon-chanpinzhuanqu"></i>
+					</p>
+					<span>赢友产品</span>
+				</div>
+			</div>
+			<div class="item-func"  data-funcName="dir_des_head" tapmode >
+				<div class="content-area">
+					<p class="aui-bg-0b5743">
+						<i class="aui-iconfont iconfont icon-wenjian"></i>
+					</p>
+					<span>目录描述</span>
 				</div>
 			</div>
 		</div>
@@ -416,19 +342,7 @@
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript" src="../../script/echo.min.js"></script>
-	<script type="text/javascript" src="../../script/swiper/swiper.min.js"></script>
 	<script type="text/javascript">
-		var swiper = new Swiper('.banner-container', {
-			pagination : '.swiper-pagination',
-			effect : 'cube',
-			grabCursor : true,
-			cube : {
-				shadow : false
-			},
-			autoplay : 4000,
-			autoplayDisableOnInteraction : false,
-			loop : true
-		});
 		echo.init({
 			offset : 100,
 			throttle : 250,
@@ -437,7 +351,7 @@
 			}
 		});
 		Zepto(function() {
-			$(".demo-list").on("tap", "li", function() {
+			$(".func-menu").on("tap", ".item-func", function() {
 				var funcName = $(this).attr("data-funcName");
 				if (funcName) {
 					H.$openWin(funcName, funcName + '.html');

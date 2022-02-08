@@ -33,6 +33,12 @@
 
 ## 安装包信息
 
+ * [0.2.1 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/8907359ae6d6bd6ad9f905e4a2ad9c5f.ipa)
+
+ * [0.2.1 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/bf9c47563d21506c1c01455df0ad5a3f_d)
+
+ * 
+
  * [0.2.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/98ddd42531c39d8baa61131af6c465e1.ipa)
 
  * [0.2.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/50b6a6c2c83a3e96c6d514ff11beda43_d)
@@ -90,6 +96,16 @@
 ## 更新记录
 
 ```
+ ### 2016年01月31日 0.2.1 Alpha 版本
+
+* [新增] 首页3D幻灯片
+* [新增] 首页互动专区
+* [新增] 首页极客教程
+* [新增] 首页跳蚤市场
+* [更新] 初步重构首页
+* [更新] iconfont 字体图标
+ 
+ **************************
 
  ### 2016年01月30日 0.2.0 Alpha 版本
 
