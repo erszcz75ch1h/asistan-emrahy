@@ -93,6 +93,7 @@
 			<div class="aui-title">
 				指点迷津
 			</div>
+			<a class="aui-pull-right" tapmode id="search-bbs"> <span class="aui-iconfont iconfont icon-sousuo"></span> </a>
 			<nav id="bbs-channel">
 				<p class="active">
 					<span>推荐文章</span>
@@ -225,6 +226,16 @@
 			$("#showmore").on("tap", function() {
 				H.$fixStatusBar(function(offset) {
 					H.$openFrame('more_channel', './bbs/more_channel.html', null, {
+						x : 0,
+						y : offset.h
+					});
+				}, 'bbs-header');
+			});
+			// 搜索
+			$("#search-bbs").on("tap", function() {
+				// 快速打开窗口
+				H.$fixStatusBar(function(offset) {
+					H.$openFrame('search_bbs_body', './bbs/search_bbs_body.html', null, {
 						x : 0,
 						y : offset.h
 					});

@@ -33,9 +33,9 @@
 
 ## 安装包信息
 
- * [0.2.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/50f35943169d90b9f40db40e6e28d4fa.ipa)
+ * [0.2.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/98ddd42531c39d8baa61131af6c465e1.ipa)
 
- * [0.2.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/ffe005eafd4f9e79a40db0550c713ccd_d)
+ * [0.2.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/50b6a6c2c83a3e96c6d514ff11beda43_d)
 
  * 
 
@@ -102,6 +102,7 @@
 * [新增] 官方消息列表
 * [新增] 点赞我的列表
 * [新增] 回复我的列表
+* [新增] 指点迷津搜索按钮
 * [更新] iconfont 字体图标
 * [修复] 文本框不能上下滚动问题
  
