@@ -188,12 +188,15 @@
 				flex: 1;
 				height: 150px;
 				text-align: center;
-				line-height: 150px;
+				line-height: 0;
 				color: #fff;
 				font-size: 20px;
 			}
 			.o2o-item:nth-child(1) {
 				margin-right: 3px;
+				background: url(../../image/hd.png) no-repeat left top;
+				background-size: cover;
+				-webkit-background-size: cover;
 			}
 			.o2o-item:nth-child(2) {
 				margin-left: 2px
@@ -204,12 +207,19 @@
 				text-align: center;
 				color: #fff;
 				font-size: 20px;
-				line-height: 73px;
+				line-height: 0;
 			}
 			.item-item:nth-child(1) {
 				margin-bottom: 5px;
 				height: 72px;
-				line-height: 72px;
+				background: url(../../image/jc.png) no-repeat left top;
+				background-size: cover;
+				-webkit-background-size: cover;
+			}
+			.item-item:nth-child(2) {
+				background: url(../../image/sc.png) no-repeat left top;
+				background-size: cover;
+				-webkit-background-size: cover;
 			}
 			.aui-bg-fd6e90 {
 				background: #fd6e90;
@@ -282,16 +292,10 @@
 			</ul>
 		</div>
 		<div class="o2o">
-			<div class="o2o-item" style="background: #ffc5e2;" onclick="H.$alert('苦逼程序猿，正在疯狂加班中……');">
-				精彩活动
-			</div>
+			<div class="o2o-item"  onclick="H.$alert('苦逼程序猿，正在疯狂加班中……');"></div>
 			<div class="o2o-item">
-				<div class="item-item" style="background: #76d6f9;" onclick="H.$alert('苦逼程序猿，正在疯狂加班中……');">
-					极客教程
-				</div>
-				<div class="item-item" style="background: #ffcb2c;" onclick="H.$alert('苦逼程序猿，正在疯狂加班中……');">
-					跳蚤市场
-				</div>
+				<div class="item-item" onclick="H.$alert('苦逼程序猿，正在疯狂加班中……');"></div>
+				<div class="item-item" onclick="H.$alert('苦逼程序猿，正在疯狂加班中……');"></div>
 			</div>
 		</div>
 		<div class="aui-content active-area">

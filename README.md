@@ -33,9 +33,9 @@
 
 ## 安装包信息
 
- * [0.2.1 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/82f19d7eadecc822ccd09aad1c214f0b.ipa)
+ * [0.2.1 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/13fbeb4ae50189afa7fea6c00d51ad55.ipa)
 
- * [0.2.1 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/3d14d764e4fb78217d83a10660847584_d)
+ * [0.2.1 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/f8d1f44b06e35edd3e30b643b3c9e6fc_d)
 
  * 
 
@@ -104,6 +104,7 @@
 * [新增] 首页跳蚤市场
 * [更新] 初步重构首页
 * [更新] iconfont 字体图标
+* [更新] 更新精彩活动，极客教程，跳蚤市场页面
  
  **************************
 
