@@ -1,6 +1,6 @@
 ![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215145_c8cabc17_526496.png "在这里输入图片标题")
 
-> # `点点例`是基于[APICloud](http://www.apicloud.com/)平台开发集工具及社交类的移动应用！
+> # `点点例`是基于[APICloud](http://www.apicloud.com/)平台开发集工具、社交、电商一体的移动应用！
 
 * 开发作者：`新生帝`
 * 作者QQ ：`8020292`
@@ -8,7 +8,7 @@
 * Q群描述 ：这里有一群IT技术爱好者，里面都是热爱App开发，软件开发，游戏开发，前端开发，网页设计，UI设计，软件测试，需求分析，算法分析，人工智能的小伙伴，欢迎你加入一起改变中国IT教育这个大家庭!
 * 开发理念：一切从简，只为了更懒！
 * 技术支持：[中山赢友网络科技有限公司](http://www.winu.net/)
-* 讨论社区：[APICloud在线社区](http://community.apicloud.com/bbs/forum.php?mod=viewthread&tid=22922&page=1&extra=)
+* 讨论社区：[APICloud讨论社区](http://community.apicloud.com/bbs/forum.php?mod=viewthread&tid=22922&page=1&extra=)
 * 平台描述：[APICloud](http://www.apicloud.com/)是一个非常棒的一个Hybrid App开发平台！
 
 ## 项目状态
