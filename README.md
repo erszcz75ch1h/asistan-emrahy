@@ -8,8 +8,6 @@
 * Q群描述 ：这里有一群IT技术爱好者，里面都是热爱App开发，软件开发，游戏开发，前端开发，网页设计，UI设计，软件测试，需求分析，算法分析，人工智能的小伙伴，欢迎你加入一起改变中国IT教育这个大家庭!
 * 开发理念：一切从简，只为了更懒！
 * 技术支持：[中山赢友网络科技有限公司](http://www.winu.net/)
-* 讨论社区：[APICloud讨论社区](http://community.apicloud.com/bbs/forum.php?mod=viewthread&tid=22922&page=1&extra=)
-* 平台描述：[APICloud](http://www.apicloud.com/)是一个非常棒的一个Hybrid App开发平台！
 
 ## 项目状态
 
@@ -33,9 +31,9 @@
 
 ## 安装包信息
 
- * [0.2.1 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/76cd1d11391ac0f99e6b811b9400b5ce.ipa)
+ * [0.2.2 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/9b84dc740c4c3675444243b08e902c9a.ipa)
 
- * [0.2.1 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/832ed3cf128e921232acc544e62d7e34_d)
+ * [0.2.2 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/5293865ef25e874d38204845a221c354_d)
 
  * 
 
@@ -96,6 +94,15 @@
 ## 更新记录
 
 ```
+
+ ### 2016年02月01日 0.2.2 Alpha 版本
+
+* [更新] iconfont 字体图标
+* [更新] 优化App所有图片，减少体积大小
+* [修复] AUI错误代码
+ 
+ **************************
+
  ### 2016年01月31日 0.2.1 Alpha 版本
 
 * [新增] 首页3D幻灯片
@@ -383,40 +390,3 @@
  **************************
  
  ```
-
-## App截图（0.0.4 Alpha版本 ）
-
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0123/162408_8b308f95_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0120/015308_fed94bcb_526496.jpeg "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0120/015256_5c3c084d_526496.jpeg "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0120/183731_69eca232_526496.jpeg "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0121/174108_1f90108f_526496.jpeg "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0121/174116_11c77255_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0121/174123_b1015463_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0121/174131_e4eb12de_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0121/174140_c90ace27_526496.jpeg "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0121/174148_2f0c4d4f_526496.jpeg "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0119/172429_176d7a96_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0119/172441_f71ae423_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0119/172449_b827f395_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215340_a55b3593_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215357_69ec2e65_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215409_607bc830_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215419_387035c5_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215429_3802585e_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215440_fe50c016_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215451_23325a6c_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215501_7a9ccd01_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215510_f9d17dd3_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215522_44602faf_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215530_f2c3cb48_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215538_07594a94_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215550_bc183794_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215559_483829b6_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215618_beb8563c_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215630_a09d8380_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215639_d0da354b_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215646_5449c87c_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215655_7a7b73f6_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215704_f0f17358_526496.png "在这里输入图片标题")
-![输入图片说明](http://git.oschina.net/uploads/images/2016/0114/215754_95a18672_526496.png "在这里输入图片标题")
