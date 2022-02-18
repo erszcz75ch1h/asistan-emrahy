@@ -1725,12 +1725,22 @@
 			api.setFrameGroupAttr(o);
 		},
 		// 设置窗口组显示隐藏状态
+		// @groupName：窗口组名
 		// @isHidden：是否隐藏
-		setFrameGroupStatus : function(isHidden) {
-			isHidden = ( typeof arguments[0] != 'boolean') ? false : arguments[0];
+		// @isHidden：是否隐藏
+		setFrameGroupStatus : function(groupName, isHidden) {
+			isHidden = ( typeof arguments[1] != 'boolean') ? false : arguments[1];
 			$$apicloud.setFrameGroupAttr({
-				hidden : isHidden
+				hidden : isHidden,
+				name : groupName
 			});
+		},
+		// 快速设置窗口组显示隐藏状态
+		// @groupName：窗口组名
+		// @isHidden：是否隐藏
+		// @isHidden：是否隐藏
+		$setFrameGroupStatus : function(groupName, isHidden) {
+			$$apicloud.setFrameGroupStatus(groupName,isHidden);
 		},
 		// 设置窗口组的显示索引
 		// @options：配置对象或者显示索引

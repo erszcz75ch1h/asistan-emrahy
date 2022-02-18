@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<style type="text/css">
+			html, body {
+				background: #f4f5f9;
+			}
+			.push-fixed, .refresh-fixed {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				background: rgba(67,133,246,0.8);
+				position: fixed;
+				bottom: 10px;
+				right: 10px;
+				z-index: 10000;
+			}
+			.refresh-fixed {
+				bottom: 60px;
+			}
+			.winu-center-all {
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+			}
+			.push-fixed i.iconfont, .refresh-fixed i.iconfont {
+				color: #fff;
+				font-size: 20px;
+			}
+			#bbs-list {
+			}
+			#bbs-list ul li {
+				clear: both;
+				position: relative;
+				border-bottom: 1px solid #d7d7d7;
+				background: #fff;
+				padding: 10px 8px 10px 8px;
+				min-height: 0;
+				height: auto;
+				overflow: hidden;
+				margin-bottom: 5px;
+			}
+			.user-area img {
+				height: 40px;
+				width: 40px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+			}
+			.left-img {
+				display: inline-block;
+				height: 40px;
+				width: 40px;
+				position: relative;
+				vertical-align: middle;
+			}
+			.left-img .gender {
+				display: block;
+				height: 15px;
+				width: 15px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				color: #fff;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				text-align: center;
+			}
+			.left-img .gender i {
+				font-size: 10px;
+				position: relative;
+				top: -6px;
+			}
+			.left-img .gender.man {
+				background: #1d9dd5;
+			}
+			.left-img .gender.max {
+				background: #f54171;
+			}
+			.diplay-inline-block {
+				display: inline-block;
+				height: 40px;
+				vertical-align: middle;
+				line-height: 40px;
+				margin-left: 8px;
+			}
+			.user-name {
+				font-size: 15px;
+			}
+			.bbs-time {
+				height: 40px;
+				vertical-align: middle;
+			}
+			.bbs-time span {
+				color: #999999;
+				line-height: 50px;
+				font-size: 12px;
+			}
+			.level {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 9px;
+				color: #fff;
+				background: #1D9DD5;
+				height: 15px;
+				line-height: 16px;
+				padding: 0 4px;
+				border-radius: 2px;
+				-webkit-border-radius: 2px;
+				margin-left: 10px;
+			}
+			.article-area {
+				margin-top: 10px;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-flex-flow: row;
+				flex-flow: row;
+				width: 100%;
+			}
+			.article-info {
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+				position: relative;
+			}
+			.article-info p {
+				color: #333;
+				font-size: 15px;
+			}
+			.article-info  span {
+				padding-top: 7px;
+				display: block;
+				font-size: 9px;
+				color: #999;
+			}
+			.ims-img {
+				width: 100px;
+				height: 100px;
+				margin-left: 8px;
+				position: relative;
+			}
+			.ims-img span {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				background: rgba(0,0,0,0.5);
+				color: #fff;
+				display: block;
+				width: 30px;
+				font-size: 10px;
+				text-align: center;
+				height: 15px;
+				line-height: 15px;
+			}
+			.article-img {
+				width: 100px;
+				height: 100px;
+			}
+			.ico-zhan {
+				display: inline-block;
+				font-size: 10px;
+				color: #fff;
+				background: #999;
+				padding: 1px 3px;
+				vertical-align: middle;
+				margin-right: 8px;
+			}
+			.ico-zhan.hot {
+				background: #fdba7d;
+			}
+			.aui-ellipsis-1, .aui-ellipsis-2 {
+				padding-right: 0 !important;
+			}
+			.bbs-title {
+				font-size: 16px;
+			}
+			.bbs-des {
+				padding-top: 10px;
+				font-size: 12px;
+				color: #999999;
+				height: 51px;
+				line-height: 22px;
+			}
+			.ico-s {
+				width: 100%;
+			}
+			.ico-s label {
+				margin-right: 8px;
+			}
+			.ico-s label i {
+				vertical-align: bottom;
+			}
+			.ico-s  font {
+				float: right;
+				display: inline-block;
+				padding: 2px 3px 2px 3px;
+				border: 1px solid #ccc;
+				border-radius: 2px;
+				-webkit-border-radius: 2px;
+				line-height: normal;
+				margin-top: 2px;
+			}
+			#bbs-list li:active {
+				background: #f4f4f4;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="bbs-list">
+			<ul>
+				<li>
+					<div class="user-area">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block">
+							点点例<label class="level" style="background: #d48edc">官方人员</label>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>技术分享</font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender max"><i class="iconfont icon-nan "></i></span>
+						</div>
+						<div class="user-name diplay-inline-block">
+							点点例<label class="level" style="background: #90c57f">官方人员</label>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan hot">热门</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端领域</font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block">
+							点点例<label class="level" style="background: #d48edc">官方人员</label>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>后端开发</font></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block">
+							点点例<label class="level" style="background: #d48edc">官方人员</label>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>技术分享</font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender max"><i class="iconfont icon-nan "></i></span>
+						</div>
+						<div class="user-name diplay-inline-block">
+							点点例<label class="level" style="background: #90c57f">官方人员</label>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan hot">热门</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端</font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block">
+							点点例<label class="level" style="background: #d48edc">官方人员</label>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端</font></span>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="push-fixed winu-center-all" tapmode onclick="H.$openWin('push_bbs_head', 'push_bbs_head.html');">
+			<i class="iconfont icon-luyinbi"></i>
+		</div>
+		<div class="refresh-fixed winu-center-all"  tapmode  onclick="H.$setAutoDropdownToRefresh();">
+			<i class="iconfont icon-shuaxin"></i>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript" src="../../script/echo.min.js"></script>
+	<script type="text/javascript" src="../../script/date.js"></script>
+	<script type="text/javascript" src="../../script/app.js"></script>
+	<script type="text/javascript">
+		echo.init({
+			offset : 100,
+			throttle : 250,
+			unload : false,
+			callback : function(element, op) {
+			}
+		});
+		Zepto(function($) {
+			$("#bbs-list").on("tap", "*", function() {
+				if ($(this).is("font,font *")) {
+					H.$alert("苦逼程序猿，正在疯狂加班中……");
+				} else {
+					// 打开带参数的窗口
+					H.$openWin('bbs_view_head', 'bbs_view_head.html');
+				}
+			});
+		});
+		H.ready(function() {
+			H.$dropdownToRefresh(function(ret, err) {
+				setTimeout(function() {
+					H.$recoverDropdownToNormal();
+				}, 1000);
+			});
+		});
+	</script>
+</html>

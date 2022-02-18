@@ -31,6 +31,12 @@
 
 ## 安装包信息
 
+ * [0.2.3 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/69d6c43ff1ca8a9fbbaa413e63946700.ipa)
+
+ * [0.2.3 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/4864ba0115e7adba97b600efac09f3e1_d)
+
+ * 
+
  * [0.2.2 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/9c70a1c21ae1f5832383703300ed01a.ipa)
 
  * [0.2.2 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/f259269872db5b98ee9403e7fdff4b49_d)
@@ -95,11 +101,29 @@
 
 ```
 
+ ### 2016年02月03日 0.2.3 Alpha 版本
+
+* [新增] 意见反馈
+* [新增] 关于我们
+* [新增] 新增首页点点例版本弹窗提示
+* [新增] 点击弹窗版本标题可以查看版本记录
+* [新增] 指点迷津窗口组，支持侧滑切换对应栏目
+* [新增] 检查更新提示
+* [新增] 首页幻灯图片
+* [更新] 重构首页架构，将指点迷津设置为窗口组
+* [更新] 编写动态生成指点迷津页面分类栏目，根据分类生成对应的frameGroup的frame数组
+* [更新] 删除首页点点例描述，放在版本弹窗中提示即可
+* [更新] iconfont 字体图标
+* [修复] Markdown编辑器Android列表提示表不存在的问题
+ 
+ **************************
+
  ### 2016年02月01日 0.2.2 Alpha 版本
 
 * [更新] iconfont 字体图标
 * [更新] 优化App所有图片，减少体积大小
 * [修复] AUI错误代码
+* [修复] 左边滑出菜单问题
  
  **************************
 

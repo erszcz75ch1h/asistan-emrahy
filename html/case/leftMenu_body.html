@@ -286,6 +286,10 @@
 			});
 			// 开始拖动
 			hammertime.on("panstart", function(e) {
+				obj.css({
+					"transition" : "margin-left 0s",
+					"-webkit-transition" : "margin-left 0s",
+				});
 				marginLeft = parseInt(obj.css("margin-left"), 10);
 				obj.parent().siblings().each(function() {
 					$(this).children(".drop-div").css({

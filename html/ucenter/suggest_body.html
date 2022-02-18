@@ -1,0 +1,342 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<style type="text/css">
+			body {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-flex-flow: column;
+				flex-flow: column;
+				height: 100%;
+			}
+			.aui-form {
+			}
+			.aui-form, .aui-input-row {
+				width: 100%;
+			}
+			.aui-input-row {
+				padding: 0;
+			}
+			.aui-input-row .aui-input {
+				font-size: 16px;
+			}
+			#textarea {
+				margin: 0;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+				border: 1px solid #e6e7ea;
+				border-radius: 0;
+				-webkit-border-radius: 0;
+				margin: 0;
+				border-left: 0;
+				border-right: 0;
+				overflow-y: scroll;
+			}
+			.markdown-bar {
+				min-height: 0;
+				height: auto;
+				overflow: hidden;
+				background: #fff;
+				padding: 0 0 3px 0;
+				border-bottom: 0;
+			}
+			.markdown-bar li {
+				float: left;
+				margin: 3px 0 0 3px;
+				width: 32px;
+				height: 32px;
+				line-height: 32px;
+				border: 1px solid #e6e7ea;
+				text-align: center;
+				color: #7581a0;
+			}
+			.markdown-bar li.color444 {
+				color: #444;
+			}
+			.markdown-bar li.view {
+				color: #fff;
+				background: rgba(67,133,246,0.8);
+				border: 1px solid rgba(67,133,246,0.8);
+			}
+			.aui-input-row:last-child:after {
+				border: 1px solid #e6e7ea;
+				border-left: 0;
+				border-right: 0;
+			}
+			.push-fixed {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				background: rgba(67,133,246,0.8);
+				position: fixed;
+				bottom: 10px;
+				right: 10px;
+				z-index: 10000;
+			}
+			.winu-center-all {
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+			}
+			.push-fixed i.iconfont {
+				color: #fff;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="markdown-bar">
+			<li data-code="\n# 标题\n" data-curpo="-1">
+				H1
+			</li>
+			<li data-code="\n## 标题\n" data-curpo="-1">
+				H2
+			</li>
+			<li data-code="\n### 标题\n" data-curpo="-1">
+				H3
+			</li>
+			<li data-code="\n#### 标题\n" data-curpo="-1">
+				H4
+			</li>
+			<li data-code="\n##### 标题\n" data-curpo="-1">
+				H5
+			</li>
+			<li data-code="\n###### 标题\n" data-curpo="-1">
+				H6
+			</li>
+			<li data-code="**文本**" data-curpo="-2">
+				<strong>B</strong>
+			</li>
+			<li data-code="*文本*" data-curpo="-1">
+				<strong><i>I</i></strong>
+			</li>
+			<li data-code="~~文本~~" data-curpo="-2">
+				<strong><s>S</s></strong>
+			</li>
+			<li data-code="> 文本" data-curpo="0">
+				<i class="iconfont icon-yinyong1disc"></i>
+			</li>
+			<li data-code="* 文本" data-curpo="0">
+				<i class="iconfont icon-liebiao"></i>
+			</li>
+			<li data-code="`代码`" data-curpo="-1">
+				<i class="iconfont icon-daima"></i>
+			</li>
+			<li data-code="\n```\n代码\n```\n" data-curpo="-5">
+				<i class="iconfont icon-daima2"></i>
+			</li>
+			<li data-code="\n***\n" data-curpo="0">
+				<strong>—</strong>
+			</li>
+			<li data-code="[文本](http://)" data-curpo="-1">
+				<i class="iconfont icon-lianjie"></i>
+			</li>
+			<li data-code="![文本](http://)" data-curpo="-1">
+				<i class="iconfont icon-19"></i>
+			</li>
+			<li data-code="\n|   |   |   |\n| ------------ | ------------ | ------------ |\n|   |   |   |\n|   |   |   |\n" data-curpo="-87">
+				<i class="iconfont icon-iconbiaoge"></i>
+			</li>
+			<li data-code="├─" data-curpo="0">
+				<strong>├─</strong>
+			</li>
+			<li data-code="│  " data-curpo="0">
+				<strong>│</strong>
+			</li>
+			<li data-code="'+getNowTime()+'" data-curpo="0">
+				<i class="iconfont icon-shijian2"></i>
+			</li>
+			<li data-code="'+getWeek()+'" data-curpo="0">
+				<i class="iconfont icon-week"></i>
+			</li>
+			<li data-code="\n" data-curpo="0">
+				<i class="iconfont icon-line"></i>
+			</li>
+			<li data-code="　　" data-curpo="0">
+				<i class="iconfont icon-yousuojin"></i>
+			</li>
+			<li data-code="'+setCaretPosition(textarea, 0)+'" data-curpo="0">
+				<i class="iconfont icon-fanhuidingbu"></i>
+			</li>
+			<li data-code="'+setCaretPosition(textarea, textarea.value.length)+'" data-curpo="0">
+				<i class="iconfont icon-zuoqianfang"></i>
+			</li>
+			<li data-code="'+setCaretPosition(textarea, getCursortPosition(textarea) - 10);+'" data-curpo="0">
+				<i class="iconfont icon-mianxingtubiao1guangbiaozuizuo"></i>
+			</li>
+			<li data-code="'+setCaretPosition(textarea, getCursortPosition(textarea) + 10);+'" data-curpo="0">
+				<i class="iconfont icon-mianxingtubiao1guangbiaozuiyou"></i>
+			</li>
+			<li data-code="'+clearData();+'" data-curpo="0">
+				<i class="iconfont icon-qingkong"></i>
+			</li>
+			<li data-code="'+setCaretPosition(textarea, getCursortPosition(textarea));+'" data-curpo="0">
+				<i class="iconfont icon-jianpan"></i>
+			</li>
+			<li  class="view" data-code="'+openView()+'" data-curpo="0">
+				<i class="iconfont icon-yulan"></i>
+			</li>
+		</ul>
+		<textarea id="textarea"  placeholder="请编写Markdown语法后预览"></textarea>
+		<div class="push-fixed winu-center-all" tapmode>
+			<i class="iconfont icon-jianpan"></i>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript">
+		// 获取光标的位置
+		function getCursortPosition(ctrl) {
+			var CaretPos = 0;
+			// IE Support
+			if (document.selection) {
+				ctrl.focus();
+				var Sel = document.selection.createRange();
+				Sel.moveStart('character', -ctrl.value.length);
+				CaretPos = Sel.text.length;
+			}
+			// Firefox support
+			else if (ctrl.selectionStart || ctrl.selectionStart == '0') {
+				CaretPos = ctrl.selectionStart;
+			}
+			return (CaretPos);
+		}
+
+		// 设置光标位置
+		function setCaretPosition(ctrl, pos) {
+			if (ctrl.setSelectionRange) {
+				ctrl.focus();
+				ctrl.setSelectionRange(pos, pos);
+			} else if (ctrl.createTextRange) {
+				var range = ctrl.createTextRange();
+				range.collapse(true);
+				range.moveEnd('character', pos);
+				range.moveStart('character', pos);
+				range.select();
+			}
+		}
+
+		// 在光标处插入内容
+		function insertAtCursor(myField, myValue) {
+			if (document.selection) {
+				myField.focus();
+				sel = document.selection.createRange();
+				sel.text = myValue;
+				sel.select();
+			} else if (myField.selectionStart || myField.selectionStart == '0') {
+				var startPos = myField.selectionStart;
+				var endPos = myField.selectionEnd;
+				var restoreTop = myField.scrollTop;
+				myField.value = myField.value.substring(0, startPos) + myValue + myField.value.substring(endPos, myField.value.length);
+				if (restoreTop > 0) {
+					myField.scrollTop = restoreTop;
+				}
+				myField.focus();
+				myField.selectionStart = startPos + myValue.length;
+				myField.selectionEnd = startPos + myValue.length;
+			} else {
+				myField.value += myValue;
+				myField.focus();
+			}
+		}
+
+		// 获取当前时间
+		function getNowTime() {
+			var now = new Date();
+			var year = now.getFullYear();
+			var month = now.getMonth() + 1;
+			var date = now.getDate();
+			var hours = now.getHours();
+			var minutes = now.getMinutes();
+			var seconds = now.getSeconds();
+			if (month >= 1 && month <= 9) {
+				month = "0" + month;
+			}
+			if (date >= 0 && date <= 9) {
+				date = "0" + date;
+			}
+			var _date = year + "-" + month + "-" + date;
+			var _time = hours + ":" + minutes + ":" + seconds;
+			return _date + " " + _time;
+		}
+
+		// 获取星期
+		function getWeek() {
+			var d = new Date()
+			var day = new Array(7)
+			day[0] = "星期日"
+			day[1] = "星期一"
+			day[2] = "星期二"
+			day[3] = "星期三"
+			day[4] = "星期四"
+			day[5] = "星期五"
+			day[6] = "星期六"
+			return day[d.getDay()];
+		}
+
+		// 清空数据
+		function clearData() {
+			document.getElementById('textarea').value = "";
+		}
+
+		// 预览
+		function openView() {
+			var markdown = $("#textarea").val();
+			H.$setPrefs(function(ret, err) {
+				H.$openWin('markdown_preview_head', 'widget://html/case/markdown_preview_head.html');
+			}, 'markdown', markdown);
+		}
+
+		// 保存
+		function saveMD() {
+			H.$toast("敬请期待！");
+		}
+
+		Zepto(function($) {
+			var textarea = document.getElementById('textarea');
+			$(".markdown-bar").on("click", "li", function() {
+				// 获取自定义属性代码片段
+				var _code = $(this).attr("data-code");
+				if (_code) {
+					_code = eval("'" + _code + "'");
+					if (_code && _code != "undefined") {
+						// 获取需要调整光标的位置
+						var curpo = $(this).attr("data-curpo");
+						insertAtCursor(textarea, _code);
+						// 当前光标位置
+						var currentPos = getCursortPosition(textarea);
+						// 设置对应的光标
+						setCaretPosition(textarea, currentPos + parseInt(curpo));
+					}
+				}
+			});
+			$(".push-fixed").on("click", function() {
+				if ($(".markdown-bar").is(":visible")) {
+					$(".markdown-bar").hide();
+				} else {
+					$(".markdown-bar").show();
+				}
+			});
+		});
+		// ##########################################################################
+		H.ready(function() {
+		});
+	</script>
+</html>

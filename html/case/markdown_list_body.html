@@ -58,8 +58,8 @@
 			// 创建表（先判断是否存在）
 			var createTableSql = 'create table if not exists ' + tbname + '(guid nvarchar(100), title varchar(200),content text, writetime datetime);';
 			db_executeSql(dbname, createTableSql, function() {
+				loadData();
 			});
-			loadData();
 		});
 	</script>
 </html>
