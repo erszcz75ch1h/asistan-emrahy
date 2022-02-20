@@ -31,9 +31,9 @@
 
 ## 安装包信息
 
- * [0.2.3 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/69d6c43ff1ca8a9fbbaa413e63946700.ipa)
+ * [0.2.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/b21a4f80533632df3c80847e247ed18a.ipa)
 
- * [0.2.3 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/4864ba0115e7adba97b600efac09f3e1_d)
+ * [0.2.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/723a47127895db3b8b67ac7b3920a1d_d)
 
  * 
 
@@ -101,7 +101,13 @@
 
 ```
 
- ### 2016年02月03日 0.2.3 Alpha 版本
+ ### 2016年02月03日 0.2.4 Alpha 版本
+
+* [更新] 全面优化1px像素问题，使1px像素更加纤细，更加好看
+ 
+ **************************
+
+ ### 2016年02月02日 0.2.3 Alpha 版本
 
 * [新增] 意见反馈
 * [新增] 关于我们

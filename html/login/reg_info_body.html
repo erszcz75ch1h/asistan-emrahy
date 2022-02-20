@@ -52,7 +52,17 @@
 				flex-flow: row;
 				width: 100%;
 				padding: 15px;
+				position: relative;
+			}
+			.form-row:after {
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
 				border-bottom: 1px solid #3e8dce;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
 			}
 			.form-row span {
 				display: block;

@@ -31,6 +31,7 @@
 				line-height: normal;
 				height: 50px;
 				background: #fff;
+				position: relative;
 				display: -webkit-box;
 				display: -webkit-flex;
 				display: flex;
@@ -38,7 +39,16 @@
 				-webkit-flex-flow: row;
 				flex-flow: row;
 				width: 100%;
+			}
+			#bbs-channel:after {
 				border-bottom: 1px solid #d9d9d9;
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
 			}
 			#bbs-channel p {
 				-webkit-box-flex: 1;

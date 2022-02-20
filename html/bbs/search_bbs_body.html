@@ -41,9 +41,52 @@
 				padding: 20px 10px 10px 10px;
 			}
 			.input-row {
-				border: 1px solid #d7d7d7;
 				border-radius: 3px;
 				-webkit-border-radius: 3px;
+				position: relative;
+			}
+			.parent-area {
+				position: relative;
+			}
+			.parent-area:before {
+				border-left: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -1px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.parent-area:after {
+				border-right: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.input-row:before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				border-top: 1px solid #d7d7d7;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.input-row:after {
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				border-bottom: 1px solid #d7d7d7;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
 			}
 			.input-row span {
 				width: 30px;
@@ -63,9 +106,11 @@
 		<div class="share-container winu-flex-box-vertical">
 			<div class="share-maim">
 				<div class="search-area">
-					<div class="input-row winu-flex-box-horizontal">
-						<input class="winu-flex-item" type="text" placeholder="请输入关键字搜索" />
-						<span class="iconfont icon-sousuo"></span>
+					<div class="parent-area">
+						<div class="input-row winu-flex-box-horizontal">
+							<input class="winu-flex-item" type="text" placeholder="请输入关键字搜索" />
+							<span class="iconfont icon-sousuo"></span>
+						</div>
 					</div>
 				</div>
 			</div>
