@@ -112,25 +112,27 @@
 			// 清除缓存
 			$("#clear-cache").on("tap", function() {
 				api.clearCache(function(ret, err) {
-					H.$removePrefs(null, 'launch');
-					$("#cache-size span.aui-badge").text("0 M");
-					H.$toast("清除成功");
+					H.$removePrefs(function() {
+						$("#cache-size span.aui-badge").text("0 M");
+						H.$toast("清除成功");
+					}, 'launch');
 				});
 			});
 			$("#login-out").on("tap", function() {
-				H.$removePrefs(null, 'user_info');
-				H.$toast("退出成功");
-				setTimeout(function() {
-					H.$openWin('login_head', '../login/login_head.html');
-				}, 1000);
+				H.$removePrefs(function() {
+					H.$toast("退出成功");
+					setTimeout(function() {
+						H.$openWin('login_head', '../login/login_head.html');
+					}, 1000);
+				}, 'user_info');
 			});
 		});
 		H.ready(function() {
 			api.getCacheSize(function(ret, err) {
 				if (ret) {
-					$("#cache-size span.aui-badge").text((ret.size / 1000 / 1000).toFixed(2) + " M");
+					$("#cache-size span").text((ret.size / 1000 / 1000).toFixed(2) + " M");
 				} else {
-					$("#cache-size span.aui-badge").text("0 M");
+					$("#cache-size span").text("0 M");
 				}
 			});
 		});

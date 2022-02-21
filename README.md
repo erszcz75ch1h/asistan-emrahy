@@ -31,9 +31,9 @@
 
 ## 安装包信息
 
- * [0.2.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/b21a4f80533632df3c80847e247ed18a.ipa)
+ * [0.2.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/a89cc9206605027455f15be31f889210.ipa)
 
- * [0.2.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/723a47127895db3b8b67ac7b3920a1d_d)
+ * [0.2.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/49d6953783b2970021c9d1111ffbee_d)
 
  * 
 
@@ -103,7 +103,10 @@
 
  ### 2016年02月03日 0.2.4 Alpha 版本
 
+* [新增] WinUI，商圈，逗逗，书堆，游戏主要板块，点点例将打造全新的互联网技术、娱乐、交易平台
+* [更新] iconfont 字体图标
 * [更新] 全面优化1px像素问题，使1px像素更加纤细，更加好看
+* [修复] 退出登录之后，退出App依然默认登陆问题
  
  **************************
 
@@ -111,7 +114,7 @@
 
 * [新增] 意见反馈
 * [新增] 关于我们
-* [新增] 新增首页点点例版本弹窗提示
+* [新增] 首页点点例版本弹窗提示
 * [新增] 点击弹窗版本标题可以查看版本记录
 * [新增] 指点迷津窗口组，支持侧滑切换对应栏目
 * [新增] 检查更新提示
