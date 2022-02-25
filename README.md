@@ -32,9 +32,9 @@
 
 ## 安装包信息
 
- * [0.2.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/a89cc9206605027455f15be31f889210.ipa)
+ * [0.2.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/23f1ec8c5e598ee0ec2ee769a68745e5.ipa)
 
- * [0.2.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/49d6953783b2970021c9d1111ffbee_d)
+ * [0.2.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/f9130dcc9bdadf0be8116ea585576280_d)
 
  * 
 
@@ -105,6 +105,7 @@
  ### 2016年02月03日 0.2.4 Alpha 版本
 
 * [新增] WinUI，商圈，逗逗，书堆，游戏主要板块，点点例将打造全新的互联网技术、娱乐、交易平台
+* [更新] 重构Markdown编辑器，支持更多语法，渲染更加快速
 * [更新] iconfont 字体图标
 * [更新] 全面优化1px像素问题，使1px像素更加纤细，更加好看
 * [修复] 退出登录之后，退出App依然默认登陆问题
