@@ -26,8 +26,9 @@
 				url : 'login_body.html',
 				name : 'login_body'
 			});
-			// 双击退出应用，并清除缓存
-			H.$dblclickToCloseApp();
+			H.$dblclickToCloseApp(function() {
+				H.$toast("祝您开心每一天");
+			});
 		});
 	</script>
 </html>

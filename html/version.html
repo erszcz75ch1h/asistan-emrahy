@@ -62,31 +62,46 @@
 				font-size: 14px;
 			}
 			.alert-btn {
-				text-align: right;
-				padding: 0 10px 12px;
-				pointer-events: auto;
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-flex-flow: row;
+				flex-flow: row;
+				width: 100%;
+				position: relative;
+			}
+			.alert-btn:before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				border-top: 1px solid #d7d7d7;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
 			}
 			.alert-btn a {
-				height: 28px;
-				line-height: 28px;
-				margin: 0 6px;
-				padding: 0 15px;
-				border: 1px #dedede solid;
-				background-color: #f1f1f1;
-				color: #333;
-				border-radius: 2px;
-				font-weight: 400;
-				cursor: pointer;
-				text-decoration: none;
-				display: inline-block;
-				vertical-align: top;
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+				padding: 10px 0;
+				text-align: center;
+				position: relative;
+				font-size:16px;
 			}
-			.alert-btn .btn0 {
-				border-color: #4898d5;
-				background-color: #2e8ded;
-				color: #fff;
+			.alert-btn a.btn0 {
+				color: #666;
 			}
-			.alert-btn .btn1 {
+			.alert-btn a.btn1:before {
+				border-left: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -1px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
 			}
 		</style>
 	</head>
@@ -94,7 +109,7 @@
 		<div class="space winu-flex-item" tapmode onclick="H.$closeCurrentFrame();"></div>
 		<div class="alert-container">
 			<div class="alert-title"  tapmode onclick="H.$openWin('update_log_head','./ucenter/update_log_head.html');">
-				点点例 V0.2.4 Alpha
+				点点例 V0.2.5 Alpha
 			</div>
 			<div class="alert-content">
 				<p style="color:#444">
@@ -107,10 +122,8 @@
 				</p>
 			</div>
 			<div class="alert-btn">
-				<div class="layui-layer-btn">
-					<a class="btn0" tapmode onclick="H.$toast('谢谢你一路对点点例的支持！');H.$closeCurrentFrame();">点赞</a>
-					<a class="btn1" tapmode onclick="H.$toast('点点例会继续努力的！！');H.$closeCurrentFrame();">无视</a>
-				</div>
+				<a class="btn0" tapmode onclick="H.$toast('点点例会继续努力的！');H.$closeCurrentFrame();">无视</a>
+				<a class="btn1" tapmode onclick="H.$toast('谢谢你一路对点点例的支持！');H.$closeCurrentFrame();">点赞</a>
 			</div>
 		</div>
 		<div class="space winu-flex-item" tapmode onclick="H.$closeCurrentFrame();"></div>

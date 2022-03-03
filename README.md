@@ -32,6 +32,12 @@
 
 ## 安装包信息
 
+ * [0.2.5 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d7d626eab592428c1bac32789585838d.ipa)
+
+ * [0.2.5 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2b4852fad193f21f5578c4684eb8d1c4_d)
+
+ * 
+
  * [0.2.4 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2236720068d970143cc75e452ed790d4.ipa)
 
  * [0.2.4 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/fe1fb8b859e382249a2bb2d20088ce1e_d)
@@ -102,6 +108,16 @@
 
 ```
 
+ ### 2016年02月04日 0.2.5 Alpha 版本
+
+* [更新] 弹窗版本美化
+* [更新] AHelper.js V1.1.1版本，双击退出App自动获取应用名称
+* [更新] 首页文章列表时间显示问题
+* [修复] 侧滑菜单个人签名文字过多问题
+* [修复] Android系统首页状态栏白色问题 
+ 
+ **************************
+
  ### 2016年02月03日 0.2.4 Alpha 版本
 
 * [新增] WinUI，商圈，逗逗，书堆，游戏主要板块，点点例将打造全新的互联网技术、娱乐、交易平台
@@ -121,6 +137,7 @@
 * [新增] 指点迷津窗口组，支持侧滑切换对应栏目
 * [新增] 检查更新提示
 * [新增] 首页幻灯图片
+* [更新] AHelper.js V1.1.0版本
 * [更新] 重构首页架构，将指点迷津设置为窗口组
 * [更新] 编写动态生成指点迷津页面分类栏目，根据分类生成对应的frameGroup的frame数组
 * [更新] 删除首页点点例描述，放在版本弹窗中提示即可

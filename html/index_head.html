@@ -205,6 +205,8 @@
 	<script type="text/javascript" src="../script/AHelper.js"></script>
 	<script type="text/javascript" src="../script/zepto.min.js"></script>
 	<script type="text/javascript">
+		// 当前显示的frame名称
+		var currentFrameName = "case";
 		// name数字表示分类id
 		var bbs_Frams = [{
 			url : "./bbs/bbs_main_body.html",
@@ -268,6 +270,20 @@
 			// 对应的dom头部
 			var headerDOM = headerId + "-header";
 			that.addClass("active-1d9dd5").siblings().removeClass("active-1d9dd5");
+			// 设置当前显示的frame名称
+			currentFrameName = headerId;
+			// 设置状态栏白色沉浸问题
+			if (api.systemType == "android") {
+				if (headerId == "case") {
+					api.setStatusBarStyle({
+						color : 'rgba(0,0,0,0.1)'
+					});
+				} else {
+					api.setStatusBarStyle({
+						color : 'rgba(0,0,0,0)'
+					});
+				}
+			}
 			$("#" + headerDOM).removeClass("display-none").siblings(".header").addClass("display-none");
 			if (indexFrames.indexOf(headerId) == -1) {
 				// 是否是指点迷津，指点迷津是frameGroup
@@ -368,7 +384,23 @@
 				}
 			}, 'launch');
 			// 双击退出应用，并清除缓存
-			H.$dblclickToCloseApp();
+			H.$dblclickToCloseApp(function() {
+				H.$toast("祝您开心每一天");
+			});
+			if (api.systemType == "android") {
+				H.$viewappear(function(ret, err) {
+					if (currentFrameName == "case") {
+						api.setStatusBarStyle({
+							color : 'rgba(0,0,0,0.1)'
+						});
+					}
+				});
+				H.$viewdisappear(function(ret, err) {
+					api.setStatusBarStyle({
+						color : 'rgba(0,0,0,0)'
+					});
+				});
+			}
 		});
 	</script>
 </html>

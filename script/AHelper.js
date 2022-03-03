@@ -2096,7 +2096,7 @@
 					mkeyTime = new Date().getTime();
 					$$apicloud.toast(function() {
 					}, {
-						msg : '再按一次退出程序',
+						msg : '再按一次退出'+api.appName,
 						duration : 2000
 					});
 				} else {
@@ -2108,7 +2108,7 @@
 						api.closeWidget({
 							silent : true
 						});
-					}, 500);
+					}, 1000);
 				}
 			}, 'keyback');
 		},
@@ -2886,7 +2886,7 @@
 	win.H.$com = $$com;
 	win.H.$api = $$api;
 	win.H.$tppl = $$tppl;
-	win.H.$v = '1.1.0';
+	win.H.$v = '1.1.1';
 	win.H.$module = modules;
 
 }(window);
