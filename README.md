@@ -32,9 +32,9 @@
 
 ## 安装包信息
 
- * [0.2.5 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d7d626eab592428c1bac32789585838d.ipa)
+ * [0.2.5 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/a85648d5bb6ba0089f18b1711196048c.ipa)
 
- * [0.2.5 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/2b4852fad193f21f5578c4684eb8d1c4_d)
+ * [0.2.5 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/b0a3808f9f15731bff55ec276799435b_d)
 
  * 
 
@@ -110,6 +110,9 @@
 
  ### 2016年02月04日 0.2.5 Alpha 版本
 
+* [新增] 卿卿我我模块，也就是即时通讯
+* [更新] 首页底部导航布局
+* [更新] iconfont 字体图标
 * [更新] 弹窗版本美化
 * [更新] AHelper.js V1.1.1版本，双击退出App自动获取应用名称
 * [更新] 首页文章列表时间显示问题

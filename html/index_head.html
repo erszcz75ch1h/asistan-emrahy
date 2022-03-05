@@ -36,6 +36,9 @@
 			#aui-footer li.active-1d9dd5, #aui-footer li.active-1d9dd5 span.iconfont {
 				color: #4385f6 !important;
 			}
+			.aui-nav .aui-bar-tab p {
+				font-size: 10px;
+			}
 			#bbs-channel {
 				line-height: normal;
 				height: 50px;
@@ -126,6 +129,24 @@
 				-webkit-transform: scale(1);
 				pointer-events: none;
 			}
+			.chat {
+				background: #8f8f94;
+				width: 45px;
+				height: 45px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				line-height: 45px;
+				margin: 5px auto 0 auto;
+				text-align: center;
+			}
+			.chat i.aui-iconfont {
+				color: #fff !important;
+				line-height: 45px !important;
+				padding-top: 0 !important;
+			}
+			#aui-footer li.active-1d9dd5 .chat {
+				background: #4385f6;
+			}
 		</style>
 	</head>
 	<body>
@@ -161,6 +182,12 @@
 				</div>
 			</nav>
 		</header>
+		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='chat-header'>
+			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
+			<div class="aui-title">
+				卿卿我我
+			</div>
+		</header>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='shareFind-header'>
 			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
 			<div class="aui-title">
@@ -186,6 +213,11 @@
 					<p>
 						指点迷津
 					</p>
+				</li>
+				<li data-header="chat" tapmode >
+					<div class="chat">
+						<i class="aui-iconfont iconfont icon-hilogook" style="color:#fff;"></i>
+					</div>
 				</li>
 				<li data-header="shareFind" tapmode >
 					<span class="aui-iconfont iconfont icon-faxian"></span>
