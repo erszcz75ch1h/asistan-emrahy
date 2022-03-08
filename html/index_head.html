@@ -147,6 +147,32 @@
 			#aui-footer li.active-1d9dd5 .chat {
 				background: #4385f6;
 			}
+			.switch-bar {
+				position: relative;
+				display: inline-block;
+			}
+			.switch-bar span {
+				display: inline-block;
+				font-size: 13px;
+				border: 1px solid #fff;
+				width: 70px;
+				height: 25px;
+				line-height: 27px;
+				margin: 0;
+			}
+			.switch-bar span:first-child {
+				border-right: 0;
+				border-radius: 4px 0 0 4px;
+				-webkit-border-radius: 4px 0 0 4px;
+			}
+			.switch-bar span:last-child {
+				border-radius: 0 4px 4px 0;
+				-webkit-border-radius: 0 4px 4px 0;
+			}
+			.switch-bar span.active {
+				background: #fff;
+				color: #4385f6;
+			}
 		</style>
 	</head>
 	<body>
@@ -184,9 +210,10 @@
 		</header>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='chat-header'>
 			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
-			<div class="aui-title">
-				卿卿我我
+			<div class="switch-bar">
+				<span class="active">消息</span><span>联系人</span>
 			</div>
+			<a class="aui-pull-right" tapmode > <span class="aui-iconfont iconfont icon-tianjia2"></span> </a>
 		</header>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='shareFind-header'>
 			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
@@ -277,14 +304,14 @@
 			$("#aui-footer li").each(function() {
 				var headerId = $(this).attr("data-header");
 				if (frameName != headerId) {
-					if (headerId != "bbs") {
+					if (headerId != "bbs" && headerId != "chat") {
 						// 设置所有的frame先隐藏起来
 						H.$setFrameStatus(headerId, true);
 					} else {
 						H.$setFrameGroupStatus(headerId, true);
 					}
 				} else {
-					if (headerId != "bbs") {
+					if (headerId != "bbs" && headerId != "chat") {
 						// 直接显示出来
 						H.$setFrameStatus(headerId, false);
 					} else {
@@ -319,19 +346,37 @@
 			$("#" + headerDOM).removeClass("display-none").siblings(".header").addClass("display-none");
 			if (indexFrames.indexOf(headerId) == -1) {
 				// 是否是指点迷津，指点迷津是frameGroup
-				if (headerId != "bbs") {
+				if (headerId != "bbs" && headerId != "chat") {
 					// 打开新的frame
 					H.$openFrameWithNav(headerDOM, {
 						url : "./" + headerId + "/" + headerId + "_body.html",
 						name : headerId
 					}, 'aui-footer');
 				} else {
-					H.$openFrameGroupWithNav(function(ret, err) {
-						setBBSChannelChecked(ret.index);
-					}, headerDOM, {
-						name : headerId,
-						frames : bbs_Frams
-					}, 'aui-footer');
+					// 指点迷津framegroup
+					if (headerId == "bbs") {
+						H.$openFrameGroupWithNav(function(ret, err) {
+							setBBSChannelChecked(ret.index);
+						}, headerDOM, {
+							name : headerId,
+							frames : bbs_Frams
+						}, 'aui-footer');
+					}
+					// 即时通讯frameGroup
+					else if (headerId == "chat") {
+						H.$openFrameGroupWithNav(function(ret, err) {
+						}, headerDOM, {
+							name : headerId,
+							frames : [{
+								url : './chat/chat_body.html',
+								name : headerId
+							}, {
+								url : './chat/chat_contact_body.html',
+								name : "chat_contact_body"
+							}],
+							scrollEnabled : false
+						}, 'aui-footer');
+					}
 				}
 				// 添加到数组中，标识这个frame已经打开，下次直接显示出来，无需在打开
 				indexFrames.push(headerId);
@@ -396,6 +441,12 @@
 					x : 0,
 					y : 0
 				});
+			});
+			$(".switch-bar").on("tap", "span", function() {
+				var index = $(this).index();
+				$(this).addClass('active').siblings("span").removeClass("active");
+				// 设置索引
+				H.$setFrameGroupIndex('chat', index);
 			});
 		});
 		H.ready(function() {

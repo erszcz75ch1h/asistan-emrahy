@@ -40,7 +40,7 @@
 			.aui-list-view:active {
 				background: #f4f4f4;
 			}
-			.aui-content{
+			.aui-content {
 				position: relative;
 			}
 			.content {
@@ -76,7 +76,18 @@
 				border-top: 0;
 			}
 			#find-list > .aui-list-view {
+				position: relative;
+			}
+			#find-list > .aui-list-view:after {
+				top:auto;
 				border-bottom: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				-webkit-transform: scaleY(0.5);
+				-webkit-transform-origin: 0 0;
 			}
 			.aui-user-view-cell:after {
 				border-bottom: 0;
@@ -120,7 +131,8 @@
 				padding-bottom: 0;
 			}
 			#find-list:before {
-				content: '';
+				content: ''
+				;
 				position: absolute;
 				top: 0px;
 				bottom: 0;
@@ -129,25 +141,33 @@
 				left: 15px;
 				margin: 0;
 				border-radius: 2px;
-			}
-			.aui-list-view.aui-grid-view {
-				background: #fff;
-				margin-bottom:0;
-				padding-bottom:5px;
-			}
-			.push-time{
-				padding:13px 10px 8px 7px;
-				color:#666;
-			}
-			.push-time span{
-				display:inline-block;
-				width:18px;
-				height:18px;
-				border-radius:50%;
-				-webkit-border-radius:50%;
-				border:3px solid #4385f6;
-				background: #fff;
-			}
+				}
+				.aui-list-view.aui-grid-view {
+					background: #fff;
+					margin-bottom: 0;
+					padding-bottom: 5px;
+				}
+				.push-time {
+					padding: 13px 10px 8px 7px;
+					color: #666;
+				}
+				.push-time span {
+					display: inline-block;
+					width: 18px;
+					height: 18px;
+					border-radius: 50%;
+					-webkit-border-radius: 50%;
+					border: 3px solid #4385f6;
+					background: #fff;
+					line-height: normal;
+					margin-right:5px;
+				}
+				.push-time label {
+					display: inline-block;
+					vertical-align: center;
+					position: relative;
+					top:-3px;
+				}
 		</style>
 	</head>
 	<body>
@@ -155,7 +175,7 @@
 			<ul id="find-list">
 				<li class="aui-list-view" tapmode >
 					<div class="push-time">
-						<span></span> 15分钟前
+						<span></span><label>15分钟前</label>
 					</div>
 					<div class="aui-padded-10 content">
 						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
@@ -191,7 +211,7 @@
 				</li>
 				<li class="aui-list-view" tapmode >
 					<div class="push-time">
-						<span></span> 15分钟前
+						<span></span><label>15分钟前</label>
 					</div>
 					<div class="aui-padded-10 content">
 						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
@@ -227,7 +247,7 @@
 				</li>
 				<li class="aui-list-view" tapmode >
 					<div class="push-time">
-						<span></span> 15分钟前
+						<span></span><label>15分钟前</label>
 					</div>
 					<div class="aui-padded-10 content">
 						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
@@ -263,7 +283,7 @@
 				</li>
 				<li class="aui-list-view" tapmode >
 					<div class="push-time">
-						<span></span> 15分钟前
+						<span></span><label>15分钟前</label>
 					</div>
 					<div class="aui-padded-10 content">
 						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
@@ -299,7 +319,7 @@
 				</li>
 				<li class="aui-list-view" tapmode >
 					<div class="push-time">
-						<span></span> 15分钟前
+						<span></span><label>15分钟前</label>
 					</div>
 					<div class="aui-padded-10 content">
 						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
@@ -335,7 +355,7 @@
 				</li>
 				<li class="aui-list-view" tapmode >
 					<div class="push-time">
-						<span></span> 15分钟前
+						<span></span><label>15分钟前</label>
 					</div>
 					<div class="aui-padded-10 content">
 						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
@@ -371,43 +391,7 @@
 				</li>
 				<li class="aui-list-view" tapmode >
 					<div class="push-time">
-						<span></span> 15分钟前
-					</div>
-					<div class="aui-padded-10 content">
-						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！
-					</div>
-					<ul class="aui-list-view aui-grid-view">
-						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
-							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
-						</li>
-						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
-							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
-						</li>
-						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
-							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
-						</li>
-						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
-							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
-						</li>
-						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
-							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
-						</li>
-						<li class="aui-list-view-cell aui-img aui-col-xs-4" tapmode >
-							<img class="aui-img-object" src="../../image/gray.jpg" data-echo="../../image/pic.jpg">
-						</li>
-					</ul>
-					<div class="aui-col-xs-12 aui-padded-10 otherinfo">
-						<p>
-							<span class="aui-iconfont aui-icon-phone"></span> XIAOMI NOTE PRO
-						</p>
-						<p>
-							<span class="aui-iconfont aui-icon-location"></span> 广东省中山市中山二路48号怡中大厦5楼515
-						</p>
-					</div>
-				</li>
-				<li class="aui-list-view" tapmode >
-					<div class="push-time">
-						<span></span> 15分钟前
+						<span></span><label>15分钟前</label>
 					</div>
 					<div class="aui-padded-10 content">
 						点点例是由中山赢友网络科技有限公司专门为APICloud开发者提供的示例应用，帮助开发者快速学习，快速查阅！

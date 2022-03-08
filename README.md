@@ -32,9 +32,9 @@
 
 ## 安装包信息
 
- * [0.2.5 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/259aa6db41e1ef50442362ea48e73f8d.ipa)
+ * [0.2.5 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/622a08c73c4010af9bf204a362cdfd4e.ipa)
 
- * [0.2.5 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d46a2139ffcd1967f81f112746932c4a_d)
+ * [0.2.5 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/bc0b0e6d3ffcc669f87483c83552559_d)
 
  * 
 
@@ -110,15 +110,19 @@
 
  ### 2016年02月04日 0.2.5 Alpha 版本
 
-* [新增] 卿卿我我模块，也就是即时通讯
+* [新增] 嗨模块，也就是即时通讯
+* [新增] 会话列表
+* [新增] 联系人（未完成）
 * [更新] 首页底部导航布局
 * [更新] 首页逗逗模块修改为找乐
+* [更新] WinUI左边滑出侧滑1px问题，优化操作，提高滑动性能
+* [更新] 我的见闻1px问题，时间对齐问题
 * [更新] iconfont 字体图标
 * [更新] 弹窗版本美化
 * [更新] AHelper.js V1.1.1版本，双击退出App自动获取应用名称
 * [更新] 首页文章列表时间显示问题
 * [修复] 侧滑菜单个人签名文字过多问题
-* [修复] Android系统首页状态栏白色问题 
+* [修复] Android系统首页状态栏白色问题 ，只支持Android 5.0+ 
  
  **************************
 
