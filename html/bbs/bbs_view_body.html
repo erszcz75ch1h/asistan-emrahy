@@ -21,7 +21,7 @@
 				display: block;
 				font-size: 14px;
 				color: #fff;
-				padding-top:10px;
+				padding-top: 20px;
 			}
 			.content {
 				padding: 15px;
@@ -32,14 +32,60 @@
 			.display-none {
 				display: none;
 			}
-			.title-area font {
+			.title-area  font {
 				display: inline-block;
-				padding: 2px 3px 2px 3px;
-				border: 1px solid #ccc;
-				border-radius: 2px;
-				-webkit-border-radius: 2px;
-				line-height: normal;
-				margin-top: 2px;
+				position: relative;
+				float: right;
+			}
+			.title-area  font:before {
+				border-left: 1px solid #bbb;
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -1px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.title-area  font:after {
+				border-right: 1px solid #bbb;
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.title-area font i {
+				display: inline-block;
+				font-style: normal;
+				position: relative;
+				padding: 3px 3px 3px 3px;
+				line-height: 15px;
+				color: #fff;
+				font-size: 12px;
+				margin-top: -3px;
+			}
+			.title-area font i:before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				border-top: 1px solid #bbb;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.title-area font i:after {
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				border-bottom: 1px solid #bbb;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
 			}
 		</style>
 	</head>
@@ -49,7 +95,7 @@
 				<p>
 					如何快速设计UI原型图？
 				</p>
-				<span><font>技术分享</font>&nbsp;&nbsp;&nbsp;点点例&nbsp;&nbsp;&nbsp;15分钟前</span>
+				<span>点点例&nbsp;&nbsp;&nbsp;15分钟前<font><i>技术分享</i></font></span>
 			</div>
 			<div class="content">
 				如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。

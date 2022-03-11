@@ -38,19 +38,25 @@
 				color: #fff;
 				font-size: 20px;
 			}
-			#bbs-list {
-				margin-top: 5px;
-			}
 			#bbs-list ul li {
 				clear: both;
 				position: relative;
-				border-bottom: 1px solid #d7d7d7;
 				background: #fff;
 				padding: 10px 8px 10px 8px;
 				min-height: 0;
 				height: auto;
 				overflow: hidden;
 				margin-bottom: 5px;
+			}
+			#bbs-list ul li:after {
+				border-bottom: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
 			}
 			.diplay-inline-block {
 				display: inline-block;
@@ -145,12 +151,57 @@
 			.ico-s  font {
 				float: right;
 				display: inline-block;
-				padding: 2px 3px 2px 3px;
-				border: 1px solid #ccc;
-				border-radius: 2px;
-				-webkit-border-radius: 2px;
 				line-height: normal;
-				margin-top: 2px;
+				margin-top: 4px;
+				position: relative;
+			}
+			.ico-s  font:before {
+				border-left: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -1px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.ico-s  font:after {
+				border-right: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.ico-s font i {
+				display: inline-block;
+				font-style: normal;
+				position: relative;
+				padding: 2px 3px 2px 3px;
+				line-height: normal;
+				color:#666;
+			}
+			.ico-s font i:before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				border-top: 1px solid #d7d7d7;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.ico-s font i:after {
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				border-bottom: 1px solid #d7d7d7;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
 			}
 			#bbs-list li:active {
 				background: #f4f4f4;
@@ -185,7 +236,7 @@
 							<div class="bbs-des aui-ellipsis-2">
 								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>技术分享</font></span>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
 						</div>
 						<div class="ims-img">
 							<span>9 图</span>
@@ -195,27 +246,7 @@
 				</li>
 				<li>
 					<div class="user-area">
-						<span class="q-sort">第 119 问</span><span class="q-time">2016-01-29</span>
-					</div>
-					<div class="article-area">
-						<div class="article-info">
-							<p class="aui-ellipsis-1 bbs-title">
-								<label class="ico-zhan hot">热门</label>如何快速设计UI原型图？
-							</p>
-							<div class="bbs-des aui-ellipsis-2">
-								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
-							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端领域</font></span>
-						</div>
-						<div class="ims-img">
-							<span>9 图</span>
-							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="user-area">
-						<span class="q-sort">第 118 问</span><span class="q-time">2016-01-29</span>
+						<span class="q-sort">第 120 问</span><span class="q-time">2016-01-29</span>
 					</div>
 					<div class="article-area">
 						<div class="article-info">
@@ -225,23 +256,7 @@
 							<div class="bbs-des aui-ellipsis-2">
 								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>后端开发</font></span>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="user-area">
-						<span class="q-sort">第 117 问</span><span class="q-time">2016-01-29</span>
-					</div>
-					<div class="article-area">
-						<div class="article-info">
-							<p class="aui-ellipsis-1 bbs-title">
-								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
-							</p>
-							<div class="bbs-des aui-ellipsis-2">
-								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
-							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>技术分享</font></span>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
 						</div>
 						<div class="ims-img">
 							<span>9 图</span>
@@ -251,27 +266,7 @@
 				</li>
 				<li>
 					<div class="user-area">
-						<span class="q-sort">第 116 问</span><span class="q-time">2016-01-29</span>
-					</div>
-					<div class="article-area">
-						<div class="article-info">
-							<p class="aui-ellipsis-1 bbs-title">
-								<label class="ico-zhan hot">热门</label>如何快速设计UI原型图？
-							</p>
-							<div class="bbs-des aui-ellipsis-2">
-								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
-							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端</font></span>
-						</div>
-						<div class="ims-img">
-							<span>9 图</span>
-							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="user-area">
-						<span class="q-sort">第 115 问</span><span class="q-time">2016-01-29</span>
+						<span class="q-sort">第 120 问</span><span class="q-time">2016-01-29</span>
 					</div>
 					<div class="article-area">
 						<div class="article-info">
@@ -281,7 +276,131 @@
 							<div class="bbs-des aui-ellipsis-2">
 								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端</font></span>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<span class="q-sort">第 120 问</span><span class="q-time">2016-01-29</span>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<span class="q-sort">第 120 问</span><span class="q-time">2016-01-29</span>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<span class="q-sort">第 120 问</span><span class="q-time">2016-01-29</span>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<span class="q-sort">第 120 问</span><span class="q-time">2016-01-29</span>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<span class="q-sort">第 120 问</span><span class="q-time">2016-01-29</span>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<span class="q-sort">第 120 问</span><span class="q-time">2016-01-29</span>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
 						</div>
 					</div>
 				</li>

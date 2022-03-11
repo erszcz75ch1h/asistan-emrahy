@@ -10,76 +10,59 @@
 			.aui-bar-1d9dd5 {
 				background: #4385f6;
 			}
-			#question-channel {
-				line-height: normal;
-				height: 41px;
+			.switch-bar {
+				position: relative;
+				display: inline-block;
+			}
+			.switch-bar span {
+				display: inline-block;
+				font-size: 13px;
+				border: 1px solid #fff;
+				width: 70px;
+				height: 25px;
+				line-height: 27px;
+				margin: 0;
+			}
+			.switch-bar span:first-child {
+				border-right: 0;
+				border-radius: 4px 0 0 4px;
+				-webkit-border-radius: 4px 0 0 4px;
+			}
+			.switch-bar span:last-child {
+				border-radius: 0 4px 4px 0;
+				-webkit-border-radius: 0 4px 4px 0;
+			}
+			.switch-bar span.active {
 				background: #fff;
-				width: 100%;
-				margin-top: 45px;
-				padding-top: 9px;
-			}
-			#question-channel .tab {
-				width: 208px;
-				height: 32px;
-				margin: 0 auto;
-			}
-			#question-channel .tab p {
 				color: #4385f6;
-				float: left;
-				font-size: 16px;
-				height: 28px;
-				line-height: 28px;
-				width: 100px;
-				border: 2px solid #4385f6;
-			}
-			#question-channel .tab p:nth-child(1) {
-				border-radius: 5px 0 0 5px;
-				-webkit-border-radius: 5px 0 0 5px;
-				border-width: 2px 1px 2px 2px;
-			}
-			#question-channel .tab p:nth-child(2) {
-				border-radius: 0 5px 5px 0;
-				-webkit-border-radius: 0 5px 5px 0;
-				border-width: 2px 2px 2px 1px;
-			}
-			#question-channel .tab p.active {
-				background: #4385f6;
-				color: #fff;
 			}
 		</style>
 	</head>
 	<body>
-		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5" id='aui-header'>
+		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='aui-header'>
 			<a class="aui-pull-left" onclick="H.$closeCurrentWin();"> <span class="aui-iconfont aui-icon-left"></span>返回 </a>
 			<div class="aui-title">
-				我的问答
-			</div>
-			<nav id="question-channel">
-				<div class="tab">
-					<p class="active">
-						我提问的
-					</p>
-					<p>
-						我解答的
-					</p>
+				<div class="switch-bar">
+					<span class="active">我提问的</span><span>我解答的</span>
 				</div>
-			</nav>
+			</div>
+			<a class="aui-pull-right" tapmode > <span class="aui-iconfont iconfont icon-tianjia2"></span> </a>
 		</header>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript">
 		function setStyle(index) {
-			var that = $(".tab p").eq(index);
-			that.addClass("active").siblings("p").removeClass("active");
+			var that = $(".switch-bar span").eq(index);
+			that.addClass('active').siblings("span").removeClass("active");
 		}
 
 		Zepto(function($) {
-			$(".tab p").on("tap", function() {
+			$(".switch-bar").on("tap", "span", function() {
 				var index = $(this).index();
 				setStyle(index);
 				// 设置索引
-				H.$setFrameGroupIndex('groups', index, true);
+				H.$setFrameGroupIndex('groups', index);
 			});
 		});
 		H.ready(function() {

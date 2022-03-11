@@ -32,9 +32,9 @@
 
 ## 安装包信息
 
- * [0.2.5 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/52d17491aba3fce728db69d8d0dc0d41.ipa)
+ * [0.2.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/4805427c70ba548c007ea2b83d4cd4c4.ipa)
 
- * [0.2.5 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/b1e4c16f6394206268ddfe80affc874d_d)
+ * [0.2.6 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/1bb172ea9b814c67976336b74691eb7f_d)
 
  * 
 
@@ -107,6 +107,18 @@
 ## 更新记录
 
 ```
+
+ ### 2016年02月05日 0.2.6 Alpha 版本
+
+* [新增] 联系人通讯录列表
+* [更新] 重构指点迷津页面代码，新增个性签名
+* [更新] iconfont 字体图标
+* [更新] 我的问答布局重新调整
+* [更新] 指点迷津布局小调整和颜色调整
+* [更新] 优化大量1px像素问题
+* [更新] 其他小更新
+ 
+ **************************
 
  ### 2016年02月04日 0.2.5 Alpha 版本
 

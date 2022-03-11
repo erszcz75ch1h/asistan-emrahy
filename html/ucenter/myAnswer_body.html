@@ -38,9 +38,6 @@
 				color: #fff;
 				font-size: 20px;
 			}
-			#bbs-list {
-				margin-top: 5px;
-			}
 			#bbs-list ul li {
 				clear: both;
 				position: relative;
@@ -106,9 +103,31 @@
 			.bbs-title {
 				font-size: 16px;
 			}
+			.des-parent {
+				position: relative;
+			}
+			.des-parent:before {
+				border-left: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -1px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.des-parent:after {
+				border-right: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
+			}
 			.bbs-des {
 				margin-top: 15px;
-				border: 1px solid #d7d7d7;
 				font-size: 16px;
 				padding: 15px 10px 15px 10px !important;
 				border-radius: 3px;
@@ -116,6 +135,27 @@
 				position: relative;
 				overflow: visible;
 				color: #444;
+				position: relative;
+			}
+			.bbs-des:before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				border-top: 1px solid #d7d7d7;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.bbs-des:after {
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				border-bottom: 1px solid #d7d7d7;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
 			}
 			.bbs-des .sjx {
 				display: block;
@@ -125,7 +165,7 @@
 				border-style: solid;
 				border-color: transparent transparent #d7d7d7 transparent;
 				position: absolute;
-				top: -25px;
+				top: -24px;
 				left: 15px;
 				z-index: 10;
 			}
@@ -133,12 +173,12 @@
 				display: block;
 				height: 0px;
 				width: 0px;
-				border-width: 7px;
+				border-width: 9px;
 				border-style: solid;
 				border-color: transparent transparent #fff transparent;
 				position: absolute;
-				top: -21px;
-				left: 17px;
+				top: -23px;
+				left: 15px;
 				z-index: 12;
 			}
 			.bbs-des label {
@@ -146,8 +186,8 @@
 				padding: 0 5px;
 				color: #999999;
 			}
-			.bbs-des font{
-				color:#4385f6;
+			.bbs-des font {
+				color: #4385f6;
 			}
 			.bbs-des .review {
 				color: #4385f6;
@@ -184,10 +224,14 @@
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des">
-								<span class="sjx"></span>
-								<span class="sjx2"></span>
-								<p><font>回复：</font>有些人是一直是向前的，你就是其中一个！</p>
+							<div class="des-parent">
+								<div class="bbs-des">
+									<span class="sjx"></span>
+									<span class="sjx2"></span>
+									<p>
+										<font>回复：</font>有些人是一直是向前的，你就是其中一个！
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -201,10 +245,14 @@
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des">
-								<span class="sjx"></span>
-								<span class="sjx2"></span>
-								<p><font>回复：</font>有些人是一直是向前的，你就是其中一个！</p>
+							<div class="des-parent">
+								<div class="bbs-des">
+									<span class="sjx"></span>
+									<span class="sjx2"></span>
+									<p>
+										<font>回复：</font>有些人是一直是向前的，你就是其中一个！
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -218,10 +266,14 @@
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des">
-								<span class="sjx"></span>
-								<span class="sjx2"></span>
-								<p><font>回复：</font>有些人是一直是向前的，你就是其中一个！</p>
+							<div class="des-parent">
+								<div class="bbs-des">
+									<span class="sjx"></span>
+									<span class="sjx2"></span>
+									<p>
+										<font>回复：</font>有些人是一直是向前的，你就是其中一个！
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -235,10 +287,14 @@
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des">
-								<span class="sjx"></span>
-								<span class="sjx2"></span>
-								<p><font>回复：</font>有些人是一直是向前的，你就是其中一个！</p>
+							<div class="des-parent">
+								<div class="bbs-des">
+									<span class="sjx"></span>
+									<span class="sjx2"></span>
+									<p>
+										<font>回复：</font>有些人是一直是向前的，你就是其中一个！
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -252,10 +308,14 @@
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des">
-								<span class="sjx"></span>
-								<span class="sjx2"></span>
-								<p><font>回复：</font>有些人是一直是向前的，你就是其中一个！</p>
+							<div class="des-parent">
+								<div class="bbs-des">
+									<span class="sjx"></span>
+									<span class="sjx2"></span>
+									<p>
+										<font>回复：</font>有些人是一直是向前的，你就是其中一个！
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -269,10 +329,14 @@
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des">
-								<span class="sjx"></span>
-								<span class="sjx2"></span>
-								<p><font>回复：</font>有些人是一直是向前的，你就是其中一个！</p>
+							<div class="des-parent">
+								<div class="bbs-des">
+									<span class="sjx"></span>
+									<span class="sjx2"></span>
+									<p>
+										<font>回复：</font>有些人是一直是向前的，你就是其中一个！
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -286,10 +350,14 @@
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des">
-								<span class="sjx"></span>
-								<span class="sjx2"></span>
-								<p><font>回复：</font>有些人是一直是向前的，你就是其中一个！</p>
+							<div class="des-parent">
+								<div class="bbs-des">
+									<span class="sjx"></span>
+									<span class="sjx2"></span>
+									<p>
+										<font>回复：</font>有些人是一直是向前的，你就是其中一个！
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -303,10 +371,14 @@
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des">
-								<span class="sjx"></span>
-								<span class="sjx2"></span>
-								<p><font>回复：</font>有些人是一直是向前的，你就是其中一个！</p>
+							<div class="des-parent">
+								<div class="bbs-des">
+									<span class="sjx"></span>
+									<span class="sjx2"></span>
+									<p>
+										<font>回复：</font>有些人是一直是向前的，你就是其中一个！
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -320,10 +392,35 @@
 							<p class="aui-ellipsis-1 bbs-title">
 								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
 							</p>
-							<div class="bbs-des">
-								<span class="sjx"></span>
-								<span class="sjx2"></span>
-								<p><font>回复：</font>有些人是一直是向前的，你就是其中一个！</p>
+							<div class="des-parent">
+								<div class="bbs-des">
+									<span class="sjx"></span>
+									<span class="sjx2"></span>
+									<p>
+										<font>回复：</font>有些人是一直是向前的，你就是其中一个！
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area">
+						<span class="q-sort">第 9 次解答</span><span class="q-time">2016-01-29</span>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="des-parent">
+								<div class="bbs-des">
+									<span class="sjx"></span>
+									<span class="sjx2"></span>
+									<p>
+										<font>回复：</font>有些人是一直是向前的，你就是其中一个！
+									</p>
+								</div>
 							</div>
 						</div>
 					</div>

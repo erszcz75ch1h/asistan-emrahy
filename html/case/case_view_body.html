@@ -21,7 +21,7 @@
 				display: block;
 				font-size: 14px;
 				color: #fff;
-				padding-top: 10px;
+				padding-top: 20px;
 			}
 			.content {
 				padding: 15px;
@@ -32,14 +32,60 @@
 			.display-none {
 				display: none;
 			}
-			.title-area font {
+			.title-area  font {
 				display: inline-block;
-				padding: 2px 3px 2px 3px;
-				border: 1px solid #ccc;
-				border-radius: 2px;
-				-webkit-border-radius: 2px;
-				line-height: normal;
-				margin-top: 2px;
+				position: relative;
+				float: right;
+			}
+			.title-area  font:before {
+				border-left: 1px solid #bbb;
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -1px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.title-area  font:after {
+				border-right: 1px solid #bbb;
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.title-area font i {
+				display: inline-block;
+				font-style: normal;
+				position: relative;
+				padding: 3px 3px 3px 3px;
+				line-height: 15px;
+				color: #fff;
+				font-size: 12px;
+				margin-top: -3px;
+			}
+			.title-area font i:before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				border-top: 1px solid #bbb;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.title-area font i:after {
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				border-bottom: 1px solid #bbb;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
 			}
 		</style>
 	</head>
@@ -47,16 +93,16 @@
 		<div id="bbs-container">
 			<div class="title-area">
 				<p>
-					中山赢友网络科技有限公司
+					如何快速设计UI原型图？
 				</p>
-				<span><font>推荐文章</font>&nbsp;&nbsp;&nbsp;新生帝&nbsp;&nbsp;&nbsp;15分钟前</span>
+				<span>点点例&nbsp;&nbsp;&nbsp;15分钟前<font><i>技术分享</i></font></span>
 			</div>
 			<div class="content">
-				中山赢友网络科技有限公司 是一家提供高品质网络品牌产品推广服务的精英团队，专注于互联网领域解决方案的发展与创新， 我们已为全国多家知名企业提供了相应的技术解决方案，并树立了良好的口碑，积累了丰富的经验和成功案例。
+				如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 				<br />
-				我们来自于国内知名的4A广告公司， 软件开发公司，网络游戏研发公司，网络品牌营销公司，我们凭借不同的专业技能，及良好的售后服务质量，亦赢得客户的广泛认可，持续帮助企业实现卓越的业务成果。 移动互联网是当下互联网发展的大趋势，创新网站建设和手机应用成为众多企业关注的热点。
+				如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 				<br />
-				赢友通过将设计创新、产品研发与已有的传统标准流程相结合的方式， 成功帮助客户部署了网络品牌解决方案并在市场拓展、品牌传播方面取得了巨大成效。
+				如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 			</div>
 		</div>
 	</body>

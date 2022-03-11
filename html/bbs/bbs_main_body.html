@@ -11,6 +11,20 @@
 			html, body {
 				background: #f4f5f9;
 			}
+			.winu-flex-box-horizontal {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-flex-flow: row;
+				flex-flow: row;
+				width: 100%;
+			}
+			.winu-flex-item {
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+			}
 			.push-fixed, .refresh-fixed {
 				width: 40px;
 				height: 40px;
@@ -73,6 +87,7 @@
 				width: 40px;
 				position: relative;
 				vertical-align: middle;
+				margin-right: 10px;
 			}
 			.left-img .gender {
 				display: block;
@@ -97,23 +112,22 @@
 			.left-img .gender.max {
 				background: #f54171;
 			}
-			.diplay-inline-block {
-				display: inline-block;
-				height: 40px;
-				vertical-align: middle;
-				line-height: 40px;
-				margin-left: 8px;
-			}
 			.user-name {
-				font-size: 15px;
+				line-height: normal;
+			}
+			.user-name b {
+				font-size: 14px;
+				font-weight: normal;
+			}
+			.user-name p {
+				font-size: 12px;
+				padding: 4px 0 0 0;
 			}
 			.bbs-time {
-				height: 40px;
-				vertical-align: middle;
+				white-space: nowrap;
 			}
 			.bbs-time span {
 				color: #999999;
-				line-height: 50px;
 				font-size: 12px;
 			}
 			.level {
@@ -215,12 +229,57 @@
 			.ico-s  font {
 				float: right;
 				display: inline-block;
-				padding: 2px 3px 2px 3px;
-				border: 1px solid #ccc;
-				border-radius: 2px;
-				-webkit-border-radius: 2px;
 				line-height: normal;
-				margin-top: 2px;
+				margin-top: 4px;
+				position: relative;
+			}
+			.ico-s  font:before {
+				border-left: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				top: 0;
+				left: -1px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.ico-s  font:after {
+				border-right: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0px;
+				bottom: 0;
+				-webkit-transform: scaleX(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.ico-s font i {
+				display: inline-block;
+				font-style: normal;
+				position: relative;
+				padding: 2px 3px 2px 3px;
+				line-height: normal;
+				color: #666;
+			}
+			.ico-s font i:before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				border-top: 1px solid #d7d7d7;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.ico-s font i:after {
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				border-bottom: 1px solid #d7d7d7;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
 			}
 			#bbs-list li:active {
 				background: #f4f4f4;
@@ -231,11 +290,14 @@
 		<div id="bbs-list">
 			<ul>
 				<li>
-					<div class="user-area">
+					<div class="user-area winu-flex-box-horizontal">
 						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
 						</div>
-						<div class="user-name diplay-inline-block">
-							点点例<label class="level" style="background: #d48edc">官方人员</label>
+						<div class="user-name diplay-inline-block winu-flex-item">
+							<b>点点例</b><label class="level" style="background: #d48edc">官方人员</label>
+							<p class="aui-ellipsis-1">
+								修技之道，皆为点点起，积少便成多！
+							</p>
 						</div>
 						<div class="bbs-time aui-pull-right">
 							<span class="">15分钟前</span>
@@ -249,7 +311,7 @@
 							<div class="bbs-des aui-ellipsis-2">
 								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>技术分享</font></span>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
 						</div>
 						<div class="ims-img">
 							<span>9 图</span>
@@ -258,38 +320,14 @@
 					</div>
 				</li>
 				<li>
-					<div class="user-area">
-						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender max"><i class="iconfont icon-nan "></i></span>
-						</div>
-						<div class="user-name diplay-inline-block">
-							点点例<label class="level" style="background: #90c57f">官方人员</label>
-						</div>
-						<div class="bbs-time aui-pull-right">
-							<span class="">15分钟前</span>
-						</div>
-					</div>
-					<div class="article-area">
-						<div class="article-info">
-							<p class="aui-ellipsis-1 bbs-title">
-								<label class="ico-zhan hot">热门</label>如何快速设计UI原型图？
-							</p>
-							<div class="bbs-des aui-ellipsis-2">
-								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
-							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端领域</font></span>
-						</div>
-						<div class="ims-img">
-							<span>9 图</span>
-							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="user-area">
+					<div class="user-area winu-flex-box-horizontal">
 						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
 						</div>
-						<div class="user-name diplay-inline-block">
-							点点例<label class="level" style="background: #d48edc">官方人员</label>
+						<div class="user-name diplay-inline-block winu-flex-item">
+							<b>点点例</b><label class="level" style="background: #d48edc">官方人员</label>
+							<p class="aui-ellipsis-1">
+								修技之道，皆为点点起，积少便成多！
+							</p>
 						</div>
 						<div class="bbs-time aui-pull-right">
 							<span class="">15分钟前</span>
@@ -303,16 +341,23 @@
 							<div class="bbs-des aui-ellipsis-2">
 								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>后端开发</font></span>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
 						</div>
 					</div>
 				</li>
 				<li>
-					<div class="user-area">
+					<div class="user-area winu-flex-box-horizontal">
 						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
 						</div>
-						<div class="user-name diplay-inline-block">
-							点点例<label class="level" style="background: #d48edc">官方人员</label>
+						<div class="user-name diplay-inline-block winu-flex-item">
+							<b>点点例</b><label class="level" style="background: #d48edc">官方人员</label>
+							<p class="aui-ellipsis-1">
+								修技之道，皆为点点起，积少便成多！
+							</p>
 						</div>
 						<div class="bbs-time aui-pull-right">
 							<span class="">15分钟前</span>
@@ -326,47 +371,19 @@
 							<div class="bbs-des aui-ellipsis-2">
 								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>技术分享</font></span>
-						</div>
-						<div class="ims-img">
-							<span>9 图</span>
-							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
 						</div>
 					</div>
 				</li>
 				<li>
-					<div class="user-area">
-						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender max"><i class="iconfont icon-nan "></i></span>
-						</div>
-						<div class="user-name diplay-inline-block">
-							点点例<label class="level" style="background: #90c57f">官方人员</label>
-						</div>
-						<div class="bbs-time aui-pull-right">
-							<span class="">15分钟前</span>
-						</div>
-					</div>
-					<div class="article-area">
-						<div class="article-info">
-							<p class="aui-ellipsis-1 bbs-title">
-								<label class="ico-zhan hot">热门</label>如何快速设计UI原型图？
-							</p>
-							<div class="bbs-des aui-ellipsis-2">
-								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
-							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端</font></span>
-						</div>
-						<div class="ims-img">
-							<span>9 图</span>
-							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="user-area">
+					<div class="user-area winu-flex-box-horizontal">
 						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
 						</div>
-						<div class="user-name diplay-inline-block">
-							点点例<label class="level" style="background: #d48edc">官方人员</label>
+						<div class="user-name diplay-inline-block winu-flex-item">
+							<b>点点例</b><label class="level" style="background: #d48edc">官方人员</label>
+							<p class="aui-ellipsis-1">
+								修技之道，皆为点点起，积少便成多！
+							</p>
 						</div>
 						<div class="bbs-time aui-pull-right">
 							<span class="">15分钟前</span>
@@ -380,7 +397,247 @@
 							<div class="bbs-des aui-ellipsis-2">
 								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 							</div>
-							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font>前端</font></span>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area winu-flex-box-horizontal">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block winu-flex-item">
+							<b>点点例</b><label class="level" style="background: #d48edc">官方人员</label>
+							<p class="aui-ellipsis-1">
+								修技之道，皆为点点起，积少便成多！
+							</p>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area winu-flex-box-horizontal">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block winu-flex-item">
+							<b>点点例</b><label class="level" style="background: #d48edc">官方人员</label>
+							<p class="aui-ellipsis-1">
+								修技之道，皆为点点起，积少便成多！
+							</p>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area winu-flex-box-horizontal">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block winu-flex-item">
+							<b>点点例</b><label class="level" style="background: #d48edc">官方人员</label>
+							<p class="aui-ellipsis-1">
+								修技之道，皆为点点起，积少便成多！
+							</p>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area winu-flex-box-horizontal">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block winu-flex-item">
+							<b>点点例</b><label class="level" style="background: #d48edc">官方人员</label>
+							<p class="aui-ellipsis-1">
+								修技之道，皆为点点起，积少便成多！
+							</p>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area winu-flex-box-horizontal">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block winu-flex-item">
+							<b>点点例</b><label class="level" style="background: #d48edc">官方人员</label>
+							<p class="aui-ellipsis-1">
+								修技之道，皆为点点起，积少便成多！
+							</p>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area winu-flex-box-horizontal">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block winu-flex-item">
+							<b>点点例</b><label class="level" style="background: #d48edc">官方人员</label>
+							<p class="aui-ellipsis-1">
+								修技之道，皆为点点起，积少便成多！
+							</p>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area winu-flex-box-horizontal">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block winu-flex-item">
+							<b>点点例</b><label class="level" style="background: #d48edc">官方人员</label>
+							<p class="aui-ellipsis-1">
+								修技之道，皆为点点起，积少便成多！
+							</p>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="user-area winu-flex-box-horizontal">
+						<div class="left-img"><img src="../../image/pic.png" data-echo="../../image/pic.jpg" /><span class="gender man"><i class="iconfont icon-nan"></i></span>
+						</div>
+						<div class="user-name diplay-inline-block winu-flex-item">
+							<b>点点例</b><label class="level" style="background: #d48edc">官方人员</label>
+							<p class="aui-ellipsis-1">
+								修技之道，皆为点点起，积少便成多！
+							</p>
+						</div>
+						<div class="bbs-time aui-pull-right">
+							<span class="">15分钟前</span>
+						</div>
+					</div>
+					<div class="article-area">
+						<div class="article-info">
+							<p class="aui-ellipsis-1 bbs-title">
+								<label class="ico-zhan">推荐</label>如何快速设计UI原型图？
+							</p>
+							<div class="bbs-des aui-ellipsis-2">
+								如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
+							</div>
+							<span class="ico-s"><label tapmode  id="review-list"><i class="iconfont icon-shoucangweishoucang"></i> （13）</label><label tapmode  id="review-list"><i class="iconfont icon-pinglun"></i> （12）</label><font><i>技术分享</i></font></span>
+						</div>
+						<div class="ims-img">
+							<span>9 图</span>
+							<img src="../../image/pic.png" data-echo="../../image/rec_l.jpg" alt="" title="" class="article-img" />
 						</div>
 					</div>
 				</li>

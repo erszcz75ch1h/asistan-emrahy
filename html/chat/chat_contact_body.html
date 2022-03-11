@@ -6,16 +6,376 @@
 		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
 		<style type="text/css">
+			.winu-flex-box-horizontal {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-flex-flow: row;
+				flex-flow: row;
+				width: 100%;
+			}
+			.winu-flex-item {
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+			}
+			.search-area {
+				padding: 10px 10px 5px 10px;
+				background: #fff;
+			}
+			.input-row {
+				border-radius: 3px;
+				-webkit-border-radius: 3px;
+				position: relative;
+			}
+			.parent-area {
+				position: relative;
+			}
+			.input-row span {
+				width: 30px;
+				height: 30px;
+				display: block;
+				line-height: 30px;
+				color: #4385f6;
+				background: #f3f3f3;
+				border-radius: 0 4px 4px 0;
+				-webkit-border-radius: 0 4px 4px 0;
+			}
+			.input-row input {
+				vertical-align: middle;
+				border: none;
+				margin: 0;
+				background: #f3f3f3;
+				padding: 4px 15px;
+				border-radius: 4px 0 0 4px;
+				-webkit-border-radius: 4px 0 0 4px;
+				font-size: 13px;
+			}
+			.clear-both {
+				clear: both;
+			}
+			.menu {
+				background: #fff;
+				padding: 5px 0 10px 0;
+			}
+			.menu p {
+				text-align: center;
+				line-height: normal;
+				padding: 3px;
+				margin: 0 5px;
+			}
+			.menu p:active {
+				background: #f4f4f4;
+			}
+			.menu p span {
+				text-align: center;
+				display: block;
+				height: 38px;
+			}
+			.menu p span i {
+				font-size: 30px;
+				line-height: normal;
+				color: #0cb9f7;
+			}
+			.menu p label {
+				text-align: center;
+				display: block;
+				font-size: 12px;
+				color: #000;
+			}
+			.channel {
+				margin: 10px 0 0 0;
+				background: #fff;
+			}
+			.channel li {
+				position: relative;
+			}
+			.channel li:after {
+				border-bottom: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.channel li .group-info {
+				height: 42px;
+				line-height: 42px;
+			}
+			.channel li .dire {
+				padding: 0 10px;
+			}
+			.channel li .dire i {
+				color: #b3b3b3;
+				font-size: 12px;
+			}
+			.channel li .dire i.colspan {
+				transform: rotate(90deg) !important;
+				-webkit-transform: rotate(90deg) !important;
+			}
+			.channel li .count {
+				color: #808080;
+				font-size: 12px;
+				padding: 0 10px;
+			}
+			.channel li .group-name {
+				color: #000;
+				font-weight:500;
+			}
+			.group-list {
+				line-height: 0;
+			}
+			.group-list dd {
+				position: relative;
+				padding: 8px 10px;
+				line-height: normal;
+			}
+			.group-list dd:active {
+				background: #f4f4f4;
+			}
+			.group-list dd:before {
+				content: "";
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				border-top: 1px solid #d7d7d7;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.group-list dd img {
+				width: 38px;
+				height: 38px;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				line-height: 0;
+				margin: 0 10px 0 0;
+				font-size: 0;
+				padding: 0;
+				vertical-align: middle;
+			}
+			.group-list dd span {
+				color: #ccc;
+				font-size: 12px;
+			}
+			.group-list dd div strong {
+				font-weight: normal;
+				color: #000;
+				font-size: 14px;
+			}
+			.group-list dd div p {
+				color: #808080;
+				font-size: 12px;
+				padding: 3px 0 0 0;
+			}
+			.group-list.display-none {
+				display: none;
+			}
 		</style>
 	</head>
 	<body>
-		<p class="aui-padded-10">
-			苦逼程序猿，正在疯狂加班中……
-		</p>
-		<div class="aui-content"></div>
+		<div class="search-area">
+			<div class="parent-area">
+				<div class="input-row winu-flex-box-horizontal">
+					<input class="winu-flex-item" type="text" placeholder="请输入关键字搜索" />
+					<span class="iconfont icon-sousuo"></span>
+				</div>
+			</div>
+		</div>
+		<div class="menu winu-flex-box-horizontal">
+			<p class="winu-flex-item">
+				<span><i class="iconfont icon-iconfonticonfontkaohechengji"></i></span>
+				<label>新朋友</label>
+			</p>
+			<p class="winu-flex-item">
+				<span><i class="iconfont icon-yonghu"></i></span>
+				<label>特别关心</label>
+			</p>
+			<p class="winu-flex-item">
+				<span><i class="iconfont icon-iconfontcolor18"></i></span>
+				<label>群组</label>
+			</p>
+			<p class="winu-flex-item">
+				<span><i class="iconfont icon-kefu"></i></span>
+				<label>客服</label>
+			</p>
+		</div>
+		<div class="channel">
+			<ul>
+				<li>
+					<div class="group-info winu-flex-box-horizontal">
+						<span class="dire"><i class="iconfont icon-yousanjiao"></i></span>
+						<p class="winu-flex-item group-name aui-ellipsis-1">
+							我的好友
+						</p>
+						<label class="count">2/4</label>
+					</div>
+					<dl class="group-list display-none">
+						<dd class="winu-flex-box-horizontal">
+							<img src="../../image/pic.jpg" />
+							<div class="winu-flex-item">
+								<strong>点点例</strong>
+								<p class="aui-ellipsis-1">
+									修技之道，皆为点点起，积少便成多！
+								</p>
+							</div>
+							<span>Wifi</span>
+						</dd>
+						<dd class="winu-flex-box-horizontal">
+							<img src="../../image/pic.jpg" />
+							<div class="winu-flex-item">
+								<strong>点点例</strong>
+								<p class="aui-ellipsis-1">
+									修技之道，皆为点点起，积少便成多！
+								</p>
+							</div>
+							<span>Wifi</span>
+						</dd>
+						<dd class="winu-flex-box-horizontal">
+							<img src="../../image/pic.jpg" />
+							<div class="winu-flex-item">
+								<strong>点点例</strong>
+								<p class="aui-ellipsis-1">
+									修技之道，皆为点点起，积少便成多！
+								</p>
+							</div>
+							<span>Wifi</span>
+						</dd>
+						<dd class="winu-flex-box-horizontal">
+							<img src="../../image/pic.jpg" />
+							<div class="winu-flex-item">
+								<strong>点点例</strong>
+								<p class="aui-ellipsis-1">
+									修技之道，皆为点点起，积少便成多！
+								</p>
+							</div>
+							<span>Wifi</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<div class="group-info winu-flex-box-horizontal">
+						<span class="dire"><i class="iconfont icon-yousanjiao"></i></span>
+						<p class="winu-flex-item group-name aui-ellipsis-1">
+							我的家人
+						</p>
+						<label class="count">2/4</label>
+					</div>
+					<dl class="group-list display-none">
+						<dd class="winu-flex-box-horizontal">
+							<img src="../../image/pic.jpg" />
+							<div class="winu-flex-item">
+								<strong>点点例</strong>
+								<p class="aui-ellipsis-1">
+									修技之道，皆为点点起，积少便成多！
+								</p>
+							</div>
+							<span>Wifi</span>
+						</dd>
+						<dd class="winu-flex-box-horizontal">
+							<img src="../../image/pic.jpg" />
+							<div class="winu-flex-item">
+								<strong>点点例</strong>
+								<p class="aui-ellipsis-1">
+									修技之道，皆为点点起，积少便成多！
+								</p>
+							</div>
+							<span>Wifi</span>
+						</dd>
+						<dd class="winu-flex-box-horizontal">
+							<img src="../../image/pic.jpg" />
+							<div class="winu-flex-item">
+								<strong>点点例</strong>
+								<p class="aui-ellipsis-1">
+									修技之道，皆为点点起，积少便成多！
+								</p>
+							</div>
+							<span>Wifi</span>
+						</dd>
+						<dd class="winu-flex-box-horizontal">
+							<img src="../../image/pic.jpg" />
+							<div class="winu-flex-item">
+								<strong>点点例</strong>
+								<p class="aui-ellipsis-1">
+									修技之道，皆为点点起，积少便成多！
+								</p>
+							</div>
+							<span>Wifi</span>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<div class="group-info winu-flex-box-horizontal">
+						<span class="dire"><i class="iconfont icon-yousanjiao"></i></span>
+						<p class="winu-flex-item group-name aui-ellipsis-1">
+							赢友网络
+						</p>
+						<label class="count">2/4</label>
+					</div>
+					<dl class="group-list display-none">
+						<dd class="winu-flex-box-horizontal">
+							<img src="../../image/pic.jpg" />
+							<div class="winu-flex-item">
+								<strong>点点例</strong>
+								<p class="aui-ellipsis-1">
+									修技之道，皆为点点起，积少便成多！
+								</p>
+							</div>
+							<span>Wifi</span>
+						</dd>
+						<dd class="winu-flex-box-horizontal">
+							<img src="../../image/pic.jpg" />
+							<div class="winu-flex-item">
+								<strong>点点例</strong>
+								<p class="aui-ellipsis-1">
+									修技之道，皆为点点起，积少便成多！
+								</p>
+							</div>
+							<span>Wifi</span>
+						</dd>
+						<dd class="winu-flex-box-horizontal">
+							<img src="../../image/pic.jpg" />
+							<div class="winu-flex-item">
+								<strong>点点例</strong>
+								<p class="aui-ellipsis-1">
+									修技之道，皆为点点起，积少便成多！
+								</p>
+							</div>
+							<span>Wifi</span>
+						</dd>
+						<dd class="winu-flex-box-horizontal">
+							<img src="../../image/pic.jpg" />
+							<div class="winu-flex-item">
+								<strong>点点例</strong>
+								<p class="aui-ellipsis-1">
+									修技之道，皆为点点起，积少便成多！
+								</p>
+							</div>
+							<span>Wifi</span>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
-	<script type="text/javascript"></script>
+	<script type="text/javascript">
+		Zepto(function($) {
+			$(".channel").on("tap", ".group-info", function() {
+				if ($(this).siblings(".group-list").hasClass("display-none")) {
+					$(this).children(".dire").children("i").attr("class", "iconfont icon-sanjiao");
+					$(this).siblings(".group-list").removeClass("display-none");
+				} else {
+					$(this).children(".dire").children("i").attr("class", "iconfont icon-yousanjiao");
+					$(this).siblings(".group-list").addClass("display-none");
+				}
+			});
+		});
+	</script>
 </html>
