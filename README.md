@@ -32,6 +32,12 @@
 
 ## 安装包信息
 
+ * [0.2.7 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/8ee3d820aaa03d2df860ce1d7e477b0c.ipa)
+
+ * [0.2.7 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/8b802541f87abad66e67a6a060d93d6a_d)
+
+ * 
+
  * [0.2.6 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/4805427c70ba548c007ea2b83d4cd4c4.ipa)
 
  * [0.2.6 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/1bb172ea9b814c67976336b74691eb7f_d)
@@ -107,6 +113,20 @@
 ## 更新记录
 
 ```
+
+ ### 2016年02月06日 0.2.7 Alpha 版本
+
+* [新增] UIChatbox模块，构建聊天组件
+* [新增] 聊天表情
+* [新增] 嗨模块更多按钮菜单
+* [新增] 长按嗨按钮有更多惊喜
+* [新增] 聊天会话页面
+* [更新] iconfont 字体图标
+* [更新] 调整指点迷津页面布局
+* [更新] 其他小更新
+* [修复] 部分手机第一次安装App打开出现闪屏问题
+ 
+ **************************
 
  ### 2016年02月05日 0.2.6 Alpha 版本
 

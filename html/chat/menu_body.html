@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<style type="text/css">
+			html, body {
+				background: rgba(0,0,0,0.1);
+				position: relative;
+			}
+			.menu-area {
+				position: absolute;
+				top: 0;
+				right: 4px;
+				z-index: 100;
+				-webkit-animation: scalebig 0.2s linear;
+				-webkit-transform-origin: 125px 0;
+			}
+			.list {
+				width: 125px;
+				background: #fff;
+				margin-top: 9px;
+				border-radius: 5px;
+				-webkit-border-radius: 5px;
+				padding: 5px 0;
+			}
+			.list  ul li {
+				height: 40px;
+				line-height: 40px;
+				padding: 0 10px;
+				font-size: 14px;
+			}
+			.list  ul li:active {
+				background: #f4f4f4;
+			}
+			.list  ul li span {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+			.list  ul li span i {
+				font-size: 20px;
+			}
+			.jt {
+				display: block;
+				height: 0px;
+				width: 0px;
+				border-width: 9px;
+				border-style: solid;
+				border-color: transparent transparent #fff transparent;
+				position: absolute;
+				top: -9px;
+				right: 6px;
+				z-index: 12;
+			}
+			/*变大*/
+			@keyframes scalebig{
+			from {
+				opacity: 0 transform : scale(0);
+				-webkit-transform: scale(0);
+			}
+			to {
+				opacity: 1;
+				transform: scale(1);
+				-webkit-transform: scale(1);
+			}
+			}
+			@-webkit-keyframes
+			scalebig {from {
+				opacity: 0;
+				transform: scale(0);
+				-webkit-transform: scale(0);
+			}
+			to {
+				opacity: 1;
+				transform: scale(1);
+				-webkit-transform: scale(1);
+			}
+			}
+			/*变小*/
+			@keyframes
+			scalesmall {from {
+				opacity: 1;
+				transform: scale(1);
+				-webkit-transform: scale(1);
+			}
+			to {
+				opacity: 0;
+				transform: scale(0);
+				-webkit-transform: scale(0);
+			}
+			}
+			@-webkit-keyframes
+			scalesmall {from {
+				opacity: 1;
+				transform: scale(1);
+				-webkit-transform: scale(1);
+			}
+			to {
+				opacity: 0;
+				transform: scale(0);
+				-webkit-transform: scale(0);
+			}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="menu-area">
+			<div class="jt"></div>
+			<div class="list">
+				<ul>
+					<li>
+						<span><i class="iconfont icon-saoyisao" style="color:#00a5e0;"></i></span><label>扫一扫</label>
+					</li>
+					<li>
+						<span><i class="iconfont icon-add" style="color:#fda960;"></i></span><label>加好友</label>
+					</li>
+					<li>
+						<span><i class="iconfont icon-taolun" style="color:#529fff;"></i></span><label>创建讨论组</label>
+					</li>
+					<li>
+						<span><i class="iconfont icon-svg17" style="color:#fc747a;"></i></span><label>帮助与反馈</label>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript">
+		// 关闭
+		function closeFrames() {
+			$(".menu-area").css({
+				"-webkit-animation" : "scalesmall 0.2s linear"
+			});
+			setTimeout(function() {
+				H.closeFrame("menu_body");
+			}, 200);
+		}
+
+		Zepto(function($) {
+			$("html").on("click", "*", function() {
+				if ($(this).is(".menu-area,.menu-area *")) {
+				} else {
+					closeFrames();
+				}
+			});
+		});
+	</script>
+</html>

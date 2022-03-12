@@ -215,7 +215,7 @@
 					<span class="active">消息</span><span>联系人</span>
 				</div>
 			</div>
-			<a class="aui-pull-right" tapmode > <span class="aui-iconfont iconfont icon-tianjia2"></span> </a>
+			<a class="aui-pull-right" tapmode id="menu-more"> <span class="aui-iconfont iconfont icon-tianjia2"></span> </a>
 		</header>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='shareFind-header'>
 			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
@@ -265,6 +265,7 @@
 	</body>
 	<script type="text/javascript" src="../script/AHelper.js"></script>
 	<script type="text/javascript" src="../script/zepto.min.js"></script>
+	<script type="text/javascript" src="../script/hammer.min.js"></script>
 	<script type="text/javascript">
 		// 当前显示的frame名称
 		var currentFrameName = "case";
@@ -299,6 +300,18 @@
 		// 设置指点迷津对应分类选中
 		function setBBSChannelChecked(index) {
 			$("#bbs-channel p").eq(index).addClass("active").siblings("p").removeClass("active");
+		}
+
+		// 添加长按方法
+		function addPress(obj, callback) {
+			// 获取目前长按的对象
+			var hammertime = new Hammer(obj[0]);
+			// 绑定长按对象
+			hammertime.on("press", function(e) {
+				if ( typeof callback == "function") {
+					callback();
+				}
+			});
 		}
 
 		// 隐藏所有的frame
@@ -444,11 +457,34 @@
 					y : 0
 				});
 			});
+			// 切换嗨模块
 			$(".switch-bar").on("tap", "span", function() {
 				var index = $(this).index();
 				$(this).addClass('active').siblings("span").removeClass("active");
 				// 设置索引
 				H.$setFrameGroupIndex('chat', index);
+			});
+			// 嗨模块更多
+			$("#menu-more").on("tap", function() {
+				var isClose = $(this).attr("data-isclose");
+				if (!isClose) {
+					$(this).attr("data-isclose", "yes")
+					// 快速打开窗口
+					H.$fixStatusBar(function(offset) {
+						H.$openFrame('menu_body', './chat/menu_body.html', null, {
+							x : 0,
+							y : offset.h
+						});
+					}, 'chat-header');
+				} else {
+					$(this).removeAttr("data-isclose");
+					H.$execScript(null, 'menu_body', 'closeFrames();');
+				}
+			});
+			// 嗨按钮添加长按事件
+			addPress($(".chat"), function() {
+				H.$shock();
+				H.$toast("长按会有更多惊喜，敬请期待");
 			});
 		});
 		H.ready(function() {
