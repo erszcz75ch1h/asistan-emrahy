@@ -32,9 +32,9 @@
 
 ## 安装包信息
 
- * [0.2.7 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/8ee3d820aaa03d2df860ce1d7e477b0c.ipa)
+ * [0.2.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/570b18a4a75d68a3015b0b25a774b505.ipa)
 
- * [0.2.7 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/8b802541f87abad66e67a6a060d93d6a_d)
+ * [0.2.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c537606e3af577930b8099ce95874e72_d)
 
  * 
 
@@ -113,6 +113,25 @@
 ## 更新记录
 
 ```
+
+ ### 2016年02月07日 0.2.8 Alpha 版本
+
+* [新增] 嗨模块动态，后续版本会取消流连忘返，换成其他内容
+* [新增] 消息下拉刷新
+* [新增] 联系人下拉刷新
+* [新增] 检查更新显示当前版本号
+* [新增] 联系人分组点击高亮问题
+* [更新] iconfont 字体图标
+* [更新] 联系人修改为人脉
+* [更新] 切换表单位置
+* [更新] Markdown编辑器预览字体问题
+* [更新] AHelper.js V1.1.2版本，将所有弹窗提示标题改为点点例，加载采用zoom缩放特效
+* [修复] 聊天会话接受信息语音图片错误
+* [修复] 聊天会话右上角图标点击错误问题
+* [修复] 嗨模块点击+按钮弹窗之后，点击空白关闭弹窗之后需点两次才能重新显示
+* [修复] 系统设置清除缓存BUG
+ 
+ **************************
 
  ### 2016年02月06日 0.2.7 Alpha 版本
 
