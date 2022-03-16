@@ -901,17 +901,17 @@
 	// APICloud 默认配置对象
 	var defaultsOption = {
 		alert : {
-			title : '温馨提示：',
+			title : '点点例：',
 			msg : '',
 			buttons : ['确定']
 		},
 		confirm : {
-			title : '温馨提示',
+			title : '点点例',
 			msg : '选择您要的操作类型',
 			buttons : ['确定', '取消']
 		},
 		prompt : {
-			title : '温馨提示：',
+			title : '点点例：',
 			msg : '请输入内容后点击确定按钮',
 			text : '',
 			type : 'text',
@@ -933,13 +933,13 @@
 		},
 		showProgress : {
 			style : 'default',
-			animationType : 'fade',
+			animationType : 'zoom',
 			title : '努力加载中...',
 			text : '先喝杯茶...',
 			modal : true
 		},
 		toast : {
-			msg : '温馨提示',
+			msg : '点点例',
 			duration : 4000,
 			location : 'bottom'
 		},
@@ -2886,7 +2886,7 @@
 	win.H.$com = $$com;
 	win.H.$api = $$api;
 	win.H.$tppl = $$tppl;
-	win.H.$v = '1.1.1';
+	win.H.$v = '1.1.2';
 	win.H.$module = modules;
 
 }(window);

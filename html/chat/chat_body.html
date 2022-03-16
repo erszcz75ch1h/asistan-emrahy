@@ -429,5 +429,12 @@
 				H.$openWin("chat_msg_head", 'chat_msg_head.html');
 			});
 		});
+		H.ready(function() {
+			H.$dropdownToRefresh(function(ret, err) {
+				setTimeout(function() {
+					H.$recoverDropdownToNormal();
+				}, 1000);
+			});
+		});
 	</script>
 </html>

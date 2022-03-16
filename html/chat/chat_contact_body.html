@@ -175,6 +175,9 @@
 			.group-list.display-none {
 				display: none;
 			}
+			.group-info:active {
+				background: #f4f4f4;
+			}
 		</style>
 	</head>
 	<body>
@@ -374,6 +377,13 @@
 					$(this).children(".dire").children("i").attr("class", "iconfont icon-yousanjiao");
 					$(this).siblings(".group-list").addClass("display-none");
 				}
+			});
+		});
+		H.ready(function() {
+			H.$dropdownToRefresh(function(ret, err) {
+				setTimeout(function() {
+					H.$recoverDropdownToNormal();
+				}, 1000);
 			});
 		});
 	</script>

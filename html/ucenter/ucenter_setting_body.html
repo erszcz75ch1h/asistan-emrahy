@@ -52,6 +52,9 @@
 			li.aui-list-view-cell:active {
 				background: #f4f4f4;
 			}
+			.aui-switch {
+				margin-right: 0;
+			}
 		</style>
 	</head>
 	<body>
@@ -66,9 +69,7 @@
 					<input type="checkbox" class="aui-switch aui-pull-right">
 				</li>
 				<li class="aui-list-view-cell" tapmode onclick="H.$toast('Alpha版本暂不支持检查更新！');">
-					<div class="aui-arrow-right">
-						<i class="aui-iconfont iconfont icon-jianchagengxin icon-bg-eac14d"></i>检查更新
-					</div>
+					<i class="aui-iconfont iconfont icon-jianchagengxin icon-bg-eac14d"></i>检查更新<span style="float: right;">V0.2.8</span>
 				</li>
 				<li class="aui-list-view-cell" tapmode onclick="H.openApp(null, {iosUrl : 'http://git.oschina.net/winu.net/DotDot',uri : 'http://git.oschina.net/winu.net/DotDot'});">
 					<div class="aui-arrow-right">
@@ -113,7 +114,7 @@
 			$("#clear-cache").on("tap", function() {
 				api.clearCache(function(ret, err) {
 					H.$removePrefs(function() {
-						$("#cache-size span.aui-badge").text("0 M");
+						$("#clear-cache span.aui-badge").text("0 M");
 						H.$toast("清除成功");
 					}, 'launch');
 				});
@@ -130,9 +131,9 @@
 		H.ready(function() {
 			api.getCacheSize(function(ret, err) {
 				if (ret) {
-					$("#cache-size span").text((ret.size / 1000 / 1000).toFixed(2) + " M");
+					$("#clear-cache span.aui-badge").text((ret.size / 1000 / 1000).toFixed(2) + " M");
 				} else {
-					$("#cache-size span").text("0 M");
+					$("#clear-cache span.aui-badge").text("0 M");
 				}
 			});
 		});

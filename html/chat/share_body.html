@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/winu-ui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<style type="text/css">
+			html, body {
+				background: rgba(0,0,0,0.2);
+			}
+			.share-maim {
+				background: #fff;
+				animation: swiper 0.3s;
+				-webkit-animation: swiper 0.3s;
+				height: 160px;
+				overflow: hidden;
+			}
+			@-webkit-keyframes swiper
+			{
+			from {
+				height: 0;
+			}
+			to {
+				height: 160px;
+			}
+			}
+			@-webkit-keyframes
+			swiperend {from {
+				height: 160px;
+			}
+			to {
+				height: 0;
+			}
+			}
+			.share-maim ul {
+				
+			}
+			.share-maim ul li {
+				text-align: center;
+			}
+			.share-maim ul li span {
+				height: 3em;
+				width: 3em;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				background: #009944;
+				margin: 16px auto 15px auto;
+			}
+			.share-maim ul li span i {
+				color: #fff;
+				font-size: 24px;
+			}
+			.share-maim ul li p {
+				color: #a4a4a8;
+			}
+			.cancel-share {
+				margin: 16px auto 0 auto;
+				background: #e5e5e5;
+				height: 45px;
+				color: #444;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="share-container winu-flex-box-vertical">
+			<div class="share-space winu-flex-item"></div>
+			<div class="share-maim">
+				<ul class="winu-flex-box-horizontal">
+					<li class="winu-flex-item" tapmode >
+						<span class="winu-display-inline-block winu-center-all"><i class="iconfont icon-qq"></i></span>
+						<p>
+							QQ好友
+						</p>
+					</li>
+					<li class="winu-flex-item" tapmode >
+						<span class="winu-display-inline-block winu-center-all" style="background:#7ebf6f;"><i class="iconfont icon-weixin"></i></span>
+						<p>
+							微信好友
+						</p>
+					</li>
+					<li class="winu-flex-item" tapmode >
+						<span class="winu-display-inline-block winu-center-all" style="background:#ec7d34"><i class="iconfont icon-friends"></i></span>
+						<p>
+							朋友圈
+						</p>
+					</li>
+					<li class="winu-flex-item" tapmode >
+						<span class="winu-display-inline-block winu-center-all" style="background:#437dc7"><i class="iconfont icon-weibo"></i></span>
+						<p>
+							新浪微博
+						</p>
+					</li>
+				</ul>
+				<div class="cancel-share winu-center-all" tapmode  onclick="closeShareFrame();">
+					取消分享
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript">
+		function closeShareFrame() {
+			$(".share-maim").css({
+				"animation" : "swiperend 0.3s",
+				"-webkit-animation" : "swiperend 0.3s",
+				"height" : "0"
+			});
+			setTimeout(function() {
+				H.$closeCurrentFrame();
+			}, 300);
+		}
+
+		Zepto(function() {
+			$(".share-space").tap(function() {
+				closeShareFrame();
+			});
+			$(".share-maim li").on("tap", function() {
+				H.$toast($.trim($(this).find("p").text()));
+			});
+		});
+	</script>
+</html>

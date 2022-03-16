@@ -155,10 +155,13 @@
 				display: inline-block;
 				font-size: 13px;
 				border: 1px solid #fff;
-				width: 70px;
+				width: 55px;
 				height: 25px;
 				line-height: 27px;
 				margin: 0;
+			}
+			.switch-bar span {
+				border-right: 0;
 			}
 			.switch-bar span:first-child {
 				border-right: 0;
@@ -168,6 +171,7 @@
 			.switch-bar span:last-child {
 				border-radius: 0 4px 4px 0;
 				-webkit-border-radius: 0 4px 4px 0;
+				border-right: 1px solid #fff;
 			}
 			.switch-bar span.active {
 				background: #fff;
@@ -212,7 +216,7 @@
 			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
 			<div class="aui-title">
 				<div class="switch-bar">
-					<span class="active">消息</span><span>联系人</span>
+					<span class="active">消息</span><span>人脉</span><span>动态</span>
 				</div>
 			</div>
 			<a class="aui-pull-right" tapmode id="menu-more"> <span class="aui-iconfont iconfont icon-tianjia2"></span> </a>
@@ -388,6 +392,9 @@
 							}, {
 								url : './chat/chat_contact_body.html',
 								name : "chat_contact_body"
+							}, {
+								url : './chat/chat_qzone_body.html',
+								name : "chat_qzone_body"
 							}],
 							scrollEnabled : false
 						}, 'aui-footer');
