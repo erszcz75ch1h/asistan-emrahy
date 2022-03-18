@@ -138,13 +138,13 @@
 				"-webkit-animation" : "scalesmall 0.2s linear"
 			});
 			setTimeout(function() {
-				H.$execScript('index',null,'$("#menu-more").removeAttr("data-isclose");');
+				H.$execScript('index', null, '$("#menu-more").removeAttr("data-isclose");');
 				H.closeFrame("menu_body");
 			}, 200);
 		}
 
 		Zepto(function($) {
-			$("html").on("click", "*", function() {
+			$("html").on("tap", "*", function() {
 				if ($(this).is(".menu-area,.menu-area *")) {
 				} else {
 					closeFrames();
