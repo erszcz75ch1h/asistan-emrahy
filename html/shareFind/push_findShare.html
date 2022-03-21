@@ -108,6 +108,7 @@
 				"margin-top" : "-107px"
 			});
 			setTimeout(function() {
+				H.$execScript('index', null, '$("#push-findShare").children("span").attr("class", "aui-iconfont iconfont icon-tianjia");$("#push-findShare").attr("data-isopen", "false");');
 				H.$closeCurrentFrame();
 			}, 300);
 		}
@@ -116,9 +117,9 @@
 			$(".share-maim li").on("tap", function() {
 				H.$toast($.trim($(this).find("p").text()));
 			});
-			//			$(".share-space").on("tap", function() {
-			//				closeShareFrame();
-			//			});
+			$(".share-space").on("tap", function() {
+				closeShareFrame();
+			});
 		});
 	</script>
 </html>

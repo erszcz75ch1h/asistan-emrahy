@@ -901,7 +901,7 @@
 	// APICloud 默认配置对象
 	var defaultsOption = {
 		alert : {
-			title : '点点例：',
+			title : '点点例',
 			msg : '',
 			buttons : ['确定']
 		},
@@ -911,7 +911,7 @@
 			buttons : ['确定', '取消']
 		},
 		prompt : {
-			title : '点点例：',
+			title : '点点例',
 			msg : '请输入内容后点击确定按钮',
 			text : '',
 			type : 'text',

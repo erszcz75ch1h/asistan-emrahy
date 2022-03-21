@@ -45,6 +45,9 @@
 			.icon-bg-919adf {
 				color: #919adf !important;
 			}
+			.icon-bg-b5292a {
+				color: #b5292a !important;
+			}
 			.aui-badge {
 				margin-right: 20px;
 				margin-top: 4px;
@@ -69,7 +72,7 @@
 					<input type="checkbox" class="aui-switch aui-pull-right">
 				</li>
 				<li class="aui-list-view-cell" tapmode onclick="H.$toast('Alpha版本暂不支持检查更新！');">
-					<i class="aui-iconfont iconfont icon-jianchagengxin icon-bg-eac14d"></i>检查更新<span style="float: right;">V0.2.8</span>
+					<i class="aui-iconfont iconfont icon-jianchagengxin icon-bg-eac14d"></i>检查更新<span style="float: right;font-size:14px;color:#666;margin-top:3px;">V0.2.8</span>
 				</li>
 				<li class="aui-list-view-cell" tapmode onclick="H.openApp(null, {iosUrl : 'http://git.oschina.net/winu.net/DotDot',uri : 'http://git.oschina.net/winu.net/DotDot'});">
 					<div class="aui-arrow-right">
@@ -85,6 +88,9 @@
 					<div class="aui-arrow-right">
 						<i class="aui-iconfont iconfont icon-qinglihuancun icon-bg-e6567a"></i>清除缓存 <span class="aui-badge aui-badge-success aui-pull-right">0 M</span>
 					</div>
+				</li>
+				<li class="aui-list-view-cell" tapmode id="resetall">
+					<i class="aui-iconfont iconfont icon-zhongzhi icon-bg-b5292a"></i>清空所有配置
 				</li>
 				<li class="aui-list-view-cell" tapmode onclick="H.$openWin('suggest_head','suggest_head.html')">
 					<div class="aui-arrow-right">
@@ -113,11 +119,20 @@
 			// 清除缓存
 			$("#clear-cache").on("tap", function() {
 				api.clearCache(function(ret, err) {
-					H.$removePrefs(function() {
-						$("#clear-cache span.aui-badge").text("0 M");
-						H.$toast("清除成功");
-					}, 'launch');
+					$("#clear-cache span.aui-badge").text("0 M");
+					H.$toast("清除成功");
 				});
+			});
+			$("#resetall").on("tap", function() {
+				H.$confirm(function() {
+					H.$showProgress();
+					H.$removePrefs(function() {
+						H.$toast("清除成功");
+						H.$hideProgress();
+					}, 'launch');
+				}, function() {
+					H.$toast("你已取消操作");
+				}, "你确定要清空所有配置吗？");
 			});
 			$("#login-out").on("tap", function() {
 				H.$removePrefs(function() {

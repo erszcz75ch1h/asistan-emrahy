@@ -32,9 +32,9 @@
 
 ## 安装包信息
 
- * [0.2.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/c3a7c15ca1d4f38e11a4840e03494300.ipa)
+ * [0.2.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/e9bc398d94bfe3d982061317f64de884.ipa)
 
- * [0.2.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/d292b8d01d8197610fb7a7f3614bb293_d)
+ * [0.2.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/f9a44830288017f3afb7564c1cb24fd9_d)
 
  * 
 
@@ -121,8 +121,11 @@
 * [新增] 联系人下拉刷新
 * [新增] 检查更新显示当前版本号
 * [新增] 联系人分组点击高亮问题
+* [新增] 清空所有配置
+* [新增] 指点迷津点击阴影关闭
 * [更新] iconfont 字体图标
 * [更新] 联系人修改为人脉
+* [更新] 检查更新版本调整
 * [更新] 切换表单位置
 * [更新] Markdown编辑器预览字体问题
 * [更新] AHelper.js V1.1.2版本，将所有弹窗提示标题改为点点例，加载采用zoom缩放特效
