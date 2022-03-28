@@ -10,6 +10,9 @@
 		<link rel="stylesheet" type="text/css" href="../../script/strapdown/strapdown.css" />
 		<link rel="stylesheet" type="text/css" href="../../script/strapdown/themes/bootstrap-responsive.min.css" />
 		<style type="text/css">
+			html, body {
+				background: #fff;
+			}
 			body {
 				padding: 0 !important;
 			}
@@ -114,8 +117,6 @@
 		var dbname = "markdownDB";
 		var tbname = "md_dataList";
 		var param = {};
-		
-
 		function loadData(guid) {
 			var selectSql = "select * from " + tbname + " where guid='" + guid + "'";
 			db_selectSql(dbname, selectSql, function(data) {

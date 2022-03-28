@@ -32,6 +32,12 @@
 
 ## 安装包信息
 
+ * [0.3.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/292ba5f00733f34aba0e35306b83b42c.ipa)
+
+ * [0.3.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/73d602f561e2448b1e85fa4598a90b6c_d)
+
+ * 
+
  * [0.2.8 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/e9bc398d94bfe3d982061317f64de884.ipa)
 
  * [0.2.8 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/f9a44830288017f3afb7564c1cb24fd9_d)
@@ -110,9 +116,34 @@
 
 *****
 
-## 更新记录
+## 更新记录 
 
 ```
+
+ ### 2016年02月09日 0.3.0 Alpha 版本
+
+* [新增] 前端推荐框架iScroll 5
+* [更新] 重构指点迷津页面导航条
+* [更新] iconfont 字体图标
+* [更新] 首页代码
+* [更新] 取消指点迷津搜索动画
+ 
+ **************************
+
+ ### 2016年02月08日 0.2.9 Alpha 版本
+
+* [新增] 天马行空
+* [新增] 思维导图，部分功能未完善
+* [新增] 消息列表等级标识
+* [新增] 人脉用户列表等级标识
+* [新增] 加载动画
+* [更新] 删除流连忘返
+* [更新] iconfont 字体图标
+* [更新] 客服为工作台
+* [更新] 低分辨率问题
+* [更新] 指点迷津侧滑冲突问题
+ 
+ **************************
 
  ### 2016年02月07日 0.2.8 Alpha 版本
 

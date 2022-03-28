@@ -151,9 +151,49 @@
 				bottom: 0;
 				z-index: 100;
 			}
+			.level {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 9px;
+				color: #fff;
+				background: #1D9DD5;
+				height: 15px;
+				line-height: 16px;
+				padding: 0 4px;
+				border-radius: 2px;
+				-webkit-border-radius: 2px;
+				margin-left: 10px;
+				font-style: normal;
+			}
+			#loading-fixed {
+				position: fixed;
+				top: 0;
+				background: #fff;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 199204;
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+				display: none;
+			}
+			#loading-fixed img {
+				width: 200px;
+			}
 		</style>
 	</head>
 	<body>
+		<div id="loading-fixed">
+			<img src="../../image/load.gif" />
+		</div>
 		<div class="search-area">
 			<div class="parent-area">
 				<div class="input-row winu-flex-box-horizontal">
@@ -168,7 +208,7 @@
 					<div class="aui-user-view-cell aui-img drop-div" tapmode >
 						<img class="aui-img-object aui-pull-left" src="../../image/pic.jpg">
 						<div class="aui-img-body">
-							<span>点点例</span><label>19:30</label>
+							<span>点点例</span><i class="level" style="background: #d48edc">官方人员</i><label>19:30</label>
 							<p class='aui-ellipsis-1 clear-both'>
 								修技之道，皆为点点起，积少便成多！
 							</p>
@@ -188,7 +228,7 @@
 					<div class="aui-user-view-cell aui-img drop-div" tapmode >
 						<img class="aui-img-object aui-pull-left" src="../../image/pic.jpg">
 						<div class="aui-img-body">
-							<span>点点例</span><label>19:30</label>
+							<span>点点例</span><i class="level" style="background: #d48edc">官方人员</i><label>19:30</label>
 							<p class='aui-ellipsis-1 clear-both'>
 								修技之道，皆为点点起，积少便成多！
 							</p>
@@ -207,7 +247,7 @@
 					<div class="aui-user-view-cell aui-img drop-div" tapmode >
 						<img class="aui-img-object aui-pull-left" src="../../image/pic.jpg">
 						<div class="aui-img-body">
-							<span>点点例</span><label>19:30</label>
+							<span>点点例</span><i class="level" style="background: #d48edc">官方人员</i><label>19:30</label>
 							<p class='aui-ellipsis-1 clear-both'>
 								中山赢友网络科技有限公司
 							</p>
@@ -227,7 +267,7 @@
 					<div class="aui-user-view-cell aui-img drop-div" tapmode >
 						<img class="aui-img-object aui-pull-left" src="../../image/pic.jpg">
 						<div class="aui-img-body">
-							<span>点点例</span><label>19:30</label>
+							<span>点点例</span><i class="level" style="background: #d48edc">官方人员</i><label>19:30</label>
 							<p class='aui-ellipsis-1 clear-both'>
 								中山赢友网络科技有限公司
 							</p>
@@ -246,7 +286,7 @@
 					<div class="aui-user-view-cell aui-img drop-div" tapmode >
 						<img class="aui-img-object aui-pull-left" src="../../image/pic.jpg">
 						<div class="aui-img-body">
-							<span>点点例</span><label>19:30</label>
+							<span>点点例</span><i class="level" style="background: #d48edc">官方人员</i><label>19:30</label>
 							<p class='aui-ellipsis-1 clear-both'>
 								一起改变中国IT教育！
 							</p>
@@ -265,7 +305,7 @@
 					<div class="aui-user-view-cell aui-img drop-div" tapmode >
 						<img class="aui-img-object aui-pull-left" src="../../image/pic.jpg">
 						<div class="aui-img-body">
-							<span>点点例</span><label>19:30</label>
+							<span>点点例</span><i class="level" style="background: #d48edc">官方人员</i><label>19:30</label>
 							<p class='aui-ellipsis-1 clear-both'>
 								中山赢友网络科技有限公司
 							</p>
@@ -284,7 +324,7 @@
 					<div class="aui-user-view-cell aui-img drop-div" tapmode >
 						<img class="aui-img-object aui-pull-left" src="../../image/pic.jpg">
 						<div class="aui-img-body">
-							<span>点点例</span><label>19:30</label>
+							<span>点点例</span><i class="level" style="background: #d48edc">官方人员</i><label>19:30</label>
 							<p class='aui-ellipsis-1 clear-both'>
 								修技之道，皆为点点起，积少便成多！
 							</p>
@@ -303,7 +343,7 @@
 					<div class="aui-user-view-cell aui-img drop-div" tapmode >
 						<img class="aui-img-object aui-pull-left" src="../../image/pic.jpg">
 						<div class="aui-img-body">
-							<span>点点例</span><label>19:30</label>
+							<span>点点例</span><i class="level" style="background: #d48edc">官方人员</i><label>19:30</label>
 							<p class='aui-ellipsis-1 clear-both'>
 								修技之道，皆为点点起，积少便成多！
 							</p>
@@ -322,7 +362,7 @@
 					<div class="aui-user-view-cell aui-img drop-div" tapmode >
 						<img class="aui-img-object aui-pull-left" src="../../image/pic.jpg">
 						<div class="aui-img-body">
-							<span>点点例</span><label>19:30</label>
+							<span>点点例</span><i class="level" style="background: #d48edc">官方人员</i><label>19:30</label>
 							<p class='aui-ellipsis-1 clear-both'>
 								中山赢友网络科技有限公司
 							</p>

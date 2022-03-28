@@ -39,21 +39,18 @@
 			.aui-nav .aui-bar-tab p {
 				font-size: 10px;
 			}
-			#bbs-channel {
-				line-height: normal;
-				height: 50px;
-				background: #fff;
+			/* 滚动区域 */
+			.bbs-wrapper {
 				position: relative;
-				display: -webkit-box;
-				display: -webkit-flex;
-				display: flex;
-				-webkit-box-orient: horizontal;
-				-webkit-flex-flow: row;
-				flex-flow: row;
+				z-index: 1;
+				height: 45px;
 				width: 100%;
+				background: #fff;
+				overflow: hidden;
+				-ms-touch-action: none;
 			}
-			#bbs-channel:after {
-				border-bottom: 1px solid #d9d9d9;
+			.bbs-wrapper:after {
+				border-bottom: 1px solid #d7d7d7;
 				content: "";
 				position: absolute;
 				bottom: 0px;
@@ -62,12 +59,29 @@
 				-webkit-transform: scaleY(.5);
 				-webkit-transform-origin: 0 0;
 			}
-			#bbs-channel p {
-				-webkit-box-flex: 1;
-				-webkit-flex: 1;
-				flex: 1;
-				color: #999999;
-				font-size: 13px;
+			#scroller {
+				position: absolute;
+				z-index: 1;
+				height: 45px;
+			}
+			#scroller ul {
+				width: 100%;
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				position: relative;
+			}
+			#scroller li {
+				width: 80px;
+				height: 45px;
+				line-height: normal;
+				font-size: 14px;
+				overflow: hidden;
+				text-align: center;
+				color: #000;
+				box-sizing: border-box;
+				-webkit-box-sizing: border-box;
 				display: -webkit-box;
 				-webkit-box-orient: horizontal;
 				-webkit-box-pack: center;
@@ -77,33 +91,22 @@
 				box-pack: center;
 				box-align: center;
 			}
-			#bbs-channel p span {
+			#scroller li p {
+				color: #999999;
+				font-size: 13px;
+			}
+			#scroller li p span {
 				display: inline-block;
 				padding: 5px 5px;
 				background: #fff;
 				border-radius: 3px;
 				-webkit-border-radius: 3px;
 			}
-			#bbs-channel p.active span {
+			#scroller li p.active span {
 				background: #4385f6;
 				color: #fff;
 			}
-			#bbs-channel div {
-				width: 40px;
-				font-size: 14px;
-				display: -webkit-box;
-				-webkit-box-orient: horizontal;
-				-webkit-box-pack: center;
-				-webkit-box-align: center;
-				display: box;
-				box-orient: horizontal;
-				box-pack: center;
-				box-align: center;
-			}
-			#bbs-channel div i {
-				color: #4385f6;
-				font-size: 20px;
-			}
+			/* 滚动区域结束*/
 			#case-header {
 				color: #555;
 			}
@@ -177,6 +180,10 @@
 				background: #fff;
 				color: #4385f6;
 			}
+			.aui-bar .aui-title {
+				left: 70px;
+				right: 70px;
+			}
 		</style>
 	</head>
 	<body>
@@ -194,23 +201,42 @@
 				指点迷津
 			</div>
 			<a class="aui-pull-right" tapmode id="search-bbs"> <span class="aui-iconfont iconfont icon-sousuo"></span> </a>
-			<nav id="bbs-channel">
-				<p class="active">
-					<span>推荐文章</span>
-				</p>
-				<p>
-					<span>最新回复</span>
-				</p>
-				<p>
-					<span>最新发帖</span>
-				</p>
-				<p>
-					<span>我有想法</span>
-				</p>
-				<div id="showmore">
-					<i class="iconfont icon-gengduo"></i>
+			<div class="bbs-wrapper">
+				<div id="scroller">
+					<ul>
+						<li>
+							<p class="active">
+								<span>推荐文章</span>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>最新发帖</span>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>最新回复</span>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>后端开发</span>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>前端开发</span>
+							</p>
+						</li>
+						<li>
+							<p>
+								<span>UI设计</span>
+							</p>
+						</li>
+					</ul>
 				</div>
-			</nav>
+			</div>
 		</header>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='chat-header'>
 			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
@@ -221,12 +247,11 @@
 			</div>
 			<a class="aui-pull-right" tapmode id="menu-more"> <span class="aui-iconfont iconfont icon-tianjia2"></span> </a>
 		</header>
-		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='shareFind-header'>
+		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='mind-header'>
 			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
 			<div class="aui-title">
-				流连忘返
+				天马行空
 			</div>
-			<a class="aui-pull-right" tapmode id="push-findShare" data-isopen="false"> <span class="aui-iconfont iconfont icon-tianjia"></span> </a>
 		</header>
 		<header class="aui-bar aui-bar-nav aui-bar-1d9dd5 header display-none" id='ucenter-header'>
 			<a class="aui-pull-left" tapmode onclick="H.openSlidPane();"> <span class="aui-iconfont iconfont icon-more-menu"></span> </a>
@@ -252,10 +277,10 @@
 						<i class="aui-iconfont iconfont icon-hilogook" style="color:#fff;"></i>
 					</div>
 				</li>
-				<li data-header="shareFind" tapmode >
-					<span class="aui-iconfont iconfont icon-faxian"></span>
+				<li data-header="mind" tapmode >
+					<span class="aui-iconfont iconfont icon-chuangyi"></span>
 					<p>
-						流连忘返
+						天马行空
 					</p>
 				</li>
 				<li data-header="ucenter" tapmode >
@@ -269,8 +294,10 @@
 	</body>
 	<script type="text/javascript" src="../script/AHelper.js"></script>
 	<script type="text/javascript" src="../script/zepto.min.js"></script>
+	<script type="text/javascript" src="../script/iScroll5/iscroll.js"></script>
 	<script type="text/javascript" src="../script/hammer.min.js"></script>
 	<script type="text/javascript">
+		var myScroll = null;
 		// 当前显示的frame名称
 		var currentFrameName = "case";
 		// name数字表示分类id
@@ -298,12 +325,26 @@
 			pageParam : {
 				cid : 4
 			}
+		}, {
+			url : "./bbs/bbs_main_body.html",
+			name : "bbs_main_body" + 5,
+			pageParam : {
+				cid : 5
+			}
+		}, {
+			url : "./bbs/bbs_main_body.html",
+			name : "bbs_main_body" + 6,
+			pageParam : {
+				cid : 6
+			}
 		}];
 		// 首页frame组
 		var indexFrames = [];
 		// 设置指点迷津对应分类选中
 		function setBBSChannelChecked(index) {
-			$("#bbs-channel p").eq(index).addClass("active").siblings("p").removeClass("active");
+			var that = $("#scroller li").eq(index);
+			that.children("p").addClass("active").parent("li").siblings("li").children("p").removeClass("active");
+			myScroll.scrollToElement(that[0], 800);
 		}
 
 		// 添加长按方法
@@ -374,6 +415,15 @@
 				} else {
 					// 指点迷津framegroup
 					if (headerId == "bbs") {
+						if (myScroll == null) {
+							// 滚动区域
+							myScroll = new IScroll('.bbs-wrapper', {
+								eventPassthrough : false,
+								scrollX : true,
+								scrollY : false,
+								preventDefault : true
+							});
+						}
 						H.$openFrameGroupWithNav(function(ret, err) {
 							setBBSChannelChecked(ret.index);
 						}, headerDOM, {
@@ -412,40 +462,12 @@
 				// 调用
 				showActiveFrame($(this).index());
 			});
-			// 发布所见所闻
-			$("#push-findShare").on("tap", function() {
-				var isopen = $(this).attr("data-isopen");
-				if (isopen == "false") {
-					$(this).children("span").attr("class", "aui-iconfont iconfont icon-guanbi");
-					$(this).attr("data-isopen", "true")
-					// 快速打开窗口
-					H.$fixStatusBar(function(offset) {
-						H.$openFrame('push_findShare', './shareFind/push_findShare.html', null, {
-							x : 0,
-							y : offset.h
-						});
-					}, 'shareFind-header');
-				} else {
-					$(this).children("span").attr("class", "aui-iconfont iconfont icon-tianjia");
-					$(this).attr("data-isopen", "false");
-					H.$execScript(null, 'push_findShare', 'closeShareFrame();');
-				}
-			});
 			// 点击切换
-			$("#bbs-channel").on("tap", "p", function() {
+			$("#scroller").on("tap", "li", function() {
 				var index = $(this).index();
-				$(this).addClass("active").siblings("p").removeClass("active");
+				setBBSChannelChecked(index);
 				// 设置索引
 				H.$setFrameGroupIndex('bbs', index);
-			});
-			// 指点迷津更多
-			$("#showmore").on("tap", function() {
-				H.$fixStatusBar(function(offset) {
-					H.$openFrame('more_channel', './bbs/more_channel.html', null, {
-						x : 0,
-						y : offset.h
-					});
-				}, 'bbs-header');
 			});
 			// 搜索
 			$("#search-bbs").on("tap", function() {

@@ -8,10 +8,36 @@
 		<link rel="stylesheet" type="text/css" href="../../script/strapdown/strapdown.css" />
 		<link rel="stylesheet" type="text/css" href="../../script/strapdown/themes/bootstrap-responsive.min.css" />
 		<style type="text/css">
+			#loading-fixed {
+				position: fixed;
+				top: 0;
+				background: #fff;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 199204;
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				-webkit-box-pack: center;
+				-webkit-box-align: center;
+				display: box;
+				box-orient: horizontal;
+				box-pack: center;
+				box-align: center;
+			}
+			#loading-fixed img {
+				width: 200px;
+			}
 		</style>
 	</head>
 	<body style="padding-top:10px; font-size:16px;">
-		<xmp style="display:none;">		
+		<div id="loading-fixed">
+			<img src="../../image/load.gif" />
+		</div>
+	<div class="nr">
+<xmp style="display:none;">		
 > #### 监听设备电池电量低事件
 >```
 H.$batterylow(function(ret, err) {
@@ -192,10 +218,20 @@ H.$smartupdatefinish(function(ret, err) {
 
 ***
 		</xmp>
+	</div>
+
 
 	</body>
 	<script type="text/javascript" src="../../script/strapdown/strapdown.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript">
-		createMD();
+		
+		Zepto(function($){
+			createMD($(".nr")[0],function(){
+				setTimeout(function(){
+					$("#loading-fixed").css("display", "none");
+				},1000);
+			});
+		});
 	</script>
 </html>

@@ -162,7 +162,7 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
   }
 
   //////////////////////////////////////////////////////////////////////
- window.createMD=function(parentNode){
+ window.createMD=function(parentNode,callback){
 	  // Hide body until we're done fiddling with the DOM
 	  	if(parentNode==null||parentNode==undefined){
 	    	document.body.style.display = 'none';
@@ -205,6 +205,9 @@ var PR=win['PR']={'createSimpleLexer':createSimpleLexer,'registerLangHandler':re
 	    	parentNode.style.display = '';
 	    }
 		
+		if(typeof callback=="function"){
+			callback();
+		}
  };
   //////////////////////////////////////////////////////////////////////
 })(window, document);

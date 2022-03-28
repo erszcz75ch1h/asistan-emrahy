@@ -14,28 +14,9 @@
 			}
 			.share-maim {
 				background: rgba(255,255,255,255);
-				animation: swiper 0.2s;
-				-webkit-animation: swiper 0.2s;
 				height: 87px;
 				overflow: hidden;
 				position: relative;
-			}
-			@-webkit-keyframes swiper
-			{
-			from {
-				margin-top: -87px;
-			}
-			to {
-				margin-top: 0;
-			}
-			}
-			@-webkit-keyframes
-			swiperend {from {
-				margin-top: 0;
-			}
-			to {
-				margin-top: -107px;
-			}
 			}
 			.search-area {
 				padding: 20px 10px 10px 10px;
@@ -121,14 +102,7 @@
 	<script type="text/javascript" src="../../script/zepto.min.js"></script>
 	<script type="text/javascript">
 		function closeShareFrame() {
-			$(".share-maim").css({
-				"animation" : "swiperend 0.2s",
-				"-webkit-animation" : "swiperend 0.2s",
-				"margin-top" : "-87px"
-			});
-			setTimeout(function() {
-				H.$closeCurrentFrame();
-			}, 300);
+			H.$closeCurrentFrame();
 		}
 
 		Zepto(function() {

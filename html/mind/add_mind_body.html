@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/aui/aui.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="../../script/dotMind/style/dotmind.css" />
+		<style type="text/css">
+			html, body {
+				background: rgba(0,0,0,0);
+			}
+			.winu-block-row-parent {
+				display: -webkit-box;
+				-webkit-box-orient: horizontal;
+				box-sizing: border-box;
+				position: relative;
+			}
+			.winu-block-row-item {
+				-webkit-box-align: center;
+				box-sizing: border-box;
+			}
+			#jsmind_container {
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				height: 100%;
+				padding-bottom: 120px;
+				z-index: 100;
+			}
+			.menu-bar {
+				position: absolute;
+				left: 0;
+				width: 100%;
+				height: 120px;
+				bottom: 0;
+				background: rgba(0,0,0,0.5);
+				z-index: 102;
+			}
+			.menu-bar p {
+				float: left;
+				width: 20%;
+				text-align: center;
+				line-height: normal;
+				padding: 7px 0;
+				color: #ccc;
+			}
+			.menu-bar p span {
+				display: block;
+				height: 30px;
+			}
+			.menu-bar p label {
+				font-size: 10px;
+				white-space: nowrap;
+			}
+			.menu-bar p i {
+				font-size: 20px;
+			}
+			.menu-bar p:active {
+				background: #333;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="menu-bar">
+			<p onclick="add_node();" tapmode>
+				<span><i class="iconfont icon-450xianxingtianjiaxiaji"></i></span>
+				<label>新增子级</label>
+			</p>
+			<p onclick="add_siblings_node();" tapmode>
+				<span><i class="iconfont icon-tianjiatongji"></i></span>
+				<label>新增同级</label>
+			</p>
+			<p onclick="modify_node();" tapmode>
+				<span><i class="iconfont icon-jiedianbianji"></i></span>
+				<label>编辑节点</label>
+			</p>
+			<p tapmode onclick="H.$toast('功能开发中，敬请期待!');">
+				<span><i class="iconfont icon-yidong"></i></span>
+				<label>移动节点</label>
+			</p>
+			<p onclick="remove_node();" tapmode>
+				<span><i class="iconfont icon-shanchu"></i></span>
+				<label>删除子级</label>
+			</p>
+			<p onclick="toggle_node();" tapmode>
+				<span><i class="iconfont icon-qiehuan"></i></span>
+				<label>收展节点</label>
+			</p>
+			<p tapmode  onclick="H.$toast('功能开发中，敬请期待!');">
+				<span><i class="iconfont icon-daoru"></i></span>
+				<label>导入FreeMind</label>
+			</p>
+			<p  onclick="get_shot();" tapmode>
+				<span><i class="iconfont icon-tupiandaochu"></i></span>
+				<label>导出图片</label>
+			</p>
+			<p tapmode onclick="set_theme();" tapmode>
+				<span><i class="iconfont icon-zhutisolid"></i></span>
+				<label>切换主题</label>
+			</p>
+		</div>
+		<div id="jsmind_container"></div>
+	</body>
+	<script type="text/javascript" src="../../script/AHelper.js"></script>
+	<script type="text/javascript" src="../../script/zepto.min.js"></script>
+	<script type="text/javascript" src="../../script/dotMind/js/dotmind.js"></script>
+	<script type="text/javascript" src="../../script/dotMind/js/dotmind.draggable.js"></script>
+	<script type="text/javascript" src="../../script/dotMind/js/dotmind.screenshot.js"></script>
+	<script type="text/javascript" src="../../script/dotMind/features/dotmind.shell.js"></script>
+	<script type="text/javascript">
+		// 生成随机数
+		var rand = {};
+		rand.get = function(begin, end) {
+			return Math.floor(Math.random() * (end - begin)) + begin;
+		}
+		// 思维导图
+		var _jm = null;
+		// 主题
+		var thems = ["default", "primary", "warning", "danger", "success", "info", "greensea", "nephrite", "belizehole", "wisteria", "asphalt", "orange", "pumpkin", "pomegranate", "clouds", "asbestos"];
+		function add_node() {
+			var selected_node = _jm.get_selected_node();
+			// as parent of new node
+			if (!selected_node) {
+				H.$toast("请选择节点后操作");
+				return;
+			}
+			H.$prompt(function(value) {
+				var nodeid = jsMind.util.uuid.newid();
+				var topic = value;
+				var node = _jm.add_node(selected_node, nodeid, topic);
+			}, function() {
+			}, "请输入子节点名称");
+		}
+
+		function add_siblings_node() {
+			var selected_node = _jm.get_selected_node();
+			// as parent of new node
+			if (!selected_node) {
+				H.$toast("请选择节点后操作");
+				return;
+			}
+			H.$prompt(function(value) {
+				var nodeid = jsMind.util.uuid.newid();
+				var topic = value;
+				var node = _jm.add_node(selected_node.parent, nodeid, topic);
+			}, function() {
+			}, "请输入同级节点名称");
+		}
+
+		function remove_node() {
+			var selected_id = _jm.get_selected_node();
+			if (!selected_id) {
+				H.$toast("请选择节点后操作");
+				return;
+			}
+			H.$confirm(function() {
+				_jm.remove_node(selected_id);
+			}, function() {
+			}, '你确定要删除吗？');
+		}
+
+		function get_shot() {
+			H.$showProgress();
+			H.$alert(_jm.screenshot.shootAsDataURL());
+			H.$hideProgress();
+		}
+
+		function modify_node() {
+			var selected_id = _jm.get_selected_node();
+			if (!selected_id) {
+				H.$toast("请选择节点后操作");
+				return;
+			}
+			H.$prompt(function(value) {
+				_jm.update_node(selected_id.id, value);
+			}, function() {
+			});
+			// modify the topic
+			// or modify the topic and summary
+			//_jm.update_node(selected_id, '--- modified ---', 'modify summary at the same time');
+		}
+
+		function move_node() {
+			var selected_id = _jm.get_selected_node();
+			if (!selected_id) {
+				H.$toast("请选择节点后操作");
+				return;
+			}
+			_jm.move_node(selected_id.id, 'sub2', 'root', 'left');
+		}
+
+		function toggle_node() {
+			var selected_id = _jm.get_selected_node();
+			if (!selected_id) {
+				H.$toast("请选择节点后操作");
+				return;
+			}
+			_jm.toggle_node(selected_id.id);
+		}
+
+		function set_theme() {
+			var v = rand.get(1, thems.length);
+			_jm.set_theme(thems[v - 1]);
+		}
+
+		function load_jsmind() {
+			var mind = {
+				"meta" : {
+					"name" : "点点例",
+					"author" : "中山赢友网络科技有限公司",
+					"version" : "0.1",
+				},
+				"format" : "node_array",
+				"data" : [{
+					"id" : "dotdot",
+					"isroot" : true,
+					"topic" : "点点例"
+				}]
+			};
+			var options = {
+				container : 'jsmind_container',
+				editable : true,
+				theme : 'success',
+				mode : 'full',
+				support_html : true,
+				view : {
+					hmargin : 50, // 思维导图距容器外框的最小水平距离
+					vmargin : 50, // 思维导图距容器外框的最小垂直距离
+					line_width : 2, // 思维导图线条的粗细
+					line_color : '#666' // 思维导图线条的颜色
+				},
+				layout : {
+					hspace : 30, // 节点之间的水平间距
+					vspace : 20, // 节点之间的垂直间距
+					pspace : 13 // 节点收缩/展开控制器的尺寸
+				}
+			}
+			_jm = jsMind.show(options, mind);
+		}
+
+		load_jsmind();
+		Zepto(function($) {
+			$("jmnode").on("click", function() {
+			});
+		});
+	</script>
+</html>
