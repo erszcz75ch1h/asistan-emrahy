@@ -32,9 +32,9 @@
 
 ## 安装包信息
 
- * [0.3.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/292ba5f00733f34aba0e35306b83b42c.ipa)
+ * [0.3.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/f6229ff9a20ef4d7dc957ec7a4caf88d.ipa)
 
- * [0.3.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/73d602f561e2448b1e85fa4598a90b6c_d)
+ * [0.3.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/6bc0ace470a2c98470bd195471c4530f_d)
 
  * 
 
@@ -127,6 +127,7 @@
 * [更新] iconfont 字体图标
 * [更新] 首页代码
 * [更新] 取消指点迷津搜索动画
+* [更新] 会话页面图片距离
  
  **************************
 
