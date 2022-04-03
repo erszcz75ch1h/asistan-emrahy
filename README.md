@@ -32,9 +32,9 @@
 
 ## 安装包信息
 
- * [0.3.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/f6229ff9a20ef4d7dc957ec7a4caf88d.ipa)
+ * [0.3.0 Alpha IOS版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/343d017c2671266c914be7e8c24a216a.ipa)
 
- * [0.3.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/6bc0ace470a2c98470bd195471c4530f_d)
+ * [0.3.0 Alpha Android版本下载](http://downloadpkg.apicloud.com/app/download?path=http://7xpxtr.com1.z0.glb.clouddn.com/aeae4d51dd176400bcfa595a9ab36138_d)
 
  * 
 
@@ -119,6 +119,23 @@
 ## 更新记录 
 
 ```
+ ### 2016年02月11日 0.3.0 Alpha 版本
+
+* [新增] 点点例数据库用户表设计和描述
+* [新增] 点点例数据库初始化文件和数据库描述文件
+* [新增] AppSoft2.0.IO 自动生成所有层的代码
+* [新增] AppSoft2.0.IO 自动包含T4模板生成的文件
+* [更新] AppSoft2.0.IO T4模板代码
+* [修复] AppSoft2.0.IO T4模板BUG
+ 
+ **************************
+
+ ### 2016年02月10日 0.3.0 Alpha 版本
+
+* [新增] AppSoft2.0.IO 基本骨架
+* [新增] AppSoft2.0 IO Autofac 依赖注入，控制反转 
+ 
+ **************************
 
  ### 2016年02月09日 0.3.0 Alpha 版本
 

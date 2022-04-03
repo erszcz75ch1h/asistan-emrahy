@@ -11,6 +11,20 @@
 			html, body {
 				background: #fff;
 			}
+			.winu-flex-box-horizontal {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-orient: horizontal;
+				-webkit-flex-flow: row;
+				flex-flow: row;
+				width: 100%;
+			}
+			.winu-flex-item {
+				-webkit-box-flex: 1;
+				-webkit-flex: 1;
+				flex: 1;
+			}
 			.title-area {
 				padding: 10px 15px 25px 15px;
 				background: #4385f6;
@@ -112,6 +126,95 @@
 			#loading-fixed img {
 				width: 200px;
 			}
+			/*评论 */
+			.plun {
+				padding: 25px 0 25px 0;
+			}
+			.all-count {
+				color: #666;
+				position: relative;
+				margin-bottom: 5px;
+			}
+			.all-count:after {
+				border-bottom: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.all-count span {
+				display: inline-block;
+				padding: 5px;
+				margin: 0 10px;
+				font-size: 14px;
+				border-bottom: 1px solid #67CF22;
+			}
+			.plun ul li {
+				padding: 10px 10px 0 10px;
+				position: relative;
+			}
+			.plun ul li:after {
+				border-bottom: 1px solid #d7d7d7;
+				content: "";
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				right: 0px;
+				-webkit-transform: scaleY(.5);
+				-webkit-transform-origin: 0 0;
+			}
+			.plun ul li .info img {
+				width: 42px;
+				height: 42px;
+				margin-right: 10px;
+				vertical-align: middle;
+			}
+			.plun ul li b {
+				font-weight: normal;
+				color: #000;
+			}
+			.plun ul li .info span {
+				font-size: 12px;
+				color: #8f8f94;
+			}
+			.plun ul li .info font {
+				color: #999;
+				font-size: 12px !important;
+			}
+			.nr-content {
+				padding: 10px 10px 10px 52px;
+				font-size: 14px;
+			}
+			.nr-content p {
+				color: #000;
+			}
+			.hf {
+				margin: 10px 0;
+				padding: 10px;
+				background: #f4f5f9;
+				font-size: 14px;
+			}
+			.hf font {
+				color: #83a3da;
+			}
+			/*评论*/
+			.level {
+				font-style: normal;
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 9px;
+				color: #fff;
+				background: #1D9DD5;
+				height: 15px;
+				line-height: 16px;
+				padding: 0 4px;
+				border-radius: 2px;
+				-webkit-border-radius: 2px;
+				margin-left: 10px;
+			}
 		</style>
 	</head>
 	<body>
@@ -132,6 +235,170 @@
 				<br />
 				如果你无法简单地表达你的想法，那只是说明你还是停留在三流圈里。
 			</div>
+		</div>
+		<div class="plun winu-min-height">
+			<div class="all-count">
+				<span>全部评论(<b>20</b>)</span>
+			</div>
+			<ul>
+				<li>
+					<div class="info">
+						<img src="../../image/pic.jpg" class="winu-border-radius-50" align="left" />
+						<p class="winu-float-left">
+							<b>新生帝</b><i class="level">官方人员</i><span class="winu-display-block">修技之道，皆为点点起，积少便成多！</span>
+						</p>
+						<font class="winu-float-right">5分钟前</font>
+					</div>
+					<div class="nr-content winu-clear-both">
+						<p>
+							谢谢支持！
+						</p>
+						<div class="hf">
+							<font>点点例&nbsp;&nbsp;</font>评论：非常赞！
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="info">
+						<img src="../../image/pic.jpg" class="winu-border-radius-50" align="left" />
+						<p class="winu-float-left">
+							<b>点点例</b><i class="level">官方人员</i><span class="winu-display-block">修技之道，皆为点点起，积少便成多！</span>
+						</p>
+						<font class="winu-float-right">5分钟前</font>
+					</div>
+					<div class="nr-content winu-clear-both">
+						<p>
+							非常赞！
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="info">
+						<img src="../../image/pic.jpg" class="winu-border-radius-50" align="left" />
+						<p class="winu-float-left">
+							<b>点点例</b><i class="level">官方人员</i><span class="winu-display-block">修技之道，皆为点点起，积少便成多！</span>
+						</p>
+						<font class="winu-float-right">5分钟前</font>
+					</div>
+					<div class="nr-content winu-clear-both">
+						<p>
+							非常赞！
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="info">
+						<img src="../../image/pic.jpg" class="winu-border-radius-50" align="left" />
+						<p class="winu-float-left">
+							<b>点点例</b><i class="level">官方人员</i><span class="winu-display-block">修技之道，皆为点点起，积少便成多！</span>
+						</p>
+						<font class="winu-float-right">5分钟前</font>
+					</div>
+					<div class="nr-content winu-clear-both">
+						<p>
+							非常赞！
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="info">
+						<img src="../../image/pic.jpg" class="winu-border-radius-50" align="left" />
+						<p class="winu-float-left">
+							<b>点点例</b><i class="level">官方人员</i><span class="winu-display-block">修技之道，皆为点点起，积少便成多！</span>
+						</p>
+						<font class="winu-float-right">5分钟前</font>
+					</div>
+					<div class="nr-content winu-clear-both">
+						<p>
+							非常赞！
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="info">
+						<img src="../../image/pic.jpg" class="winu-border-radius-50" align="left" />
+						<p class="winu-float-left">
+							<b>点点例</b><i class="level">官方人员</i><span class="winu-display-block">修技之道，皆为点点起，积少便成多！</span>
+						</p>
+						<font class="winu-float-right">5分钟前</font>
+					</div>
+					<div class="nr-content winu-clear-both">
+						<p>
+							非常赞！
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="info">
+						<img src="../../image/pic.jpg" class="winu-border-radius-50" align="left" />
+						<p class="winu-float-left">
+							<b>点点例</b><i class="level">官方人员</i><span class="winu-display-block">修技之道，皆为点点起，积少便成多！</span>
+						</p>
+						<font class="winu-float-right">5分钟前</font>
+					</div>
+					<div class="nr-content winu-clear-both">
+						<p>
+							非常赞！
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="info">
+						<img src="../../image/pic.jpg" class="winu-border-radius-50" align="left" />
+						<p class="winu-float-left">
+							<b>点点例</b><i class="level">官方人员</i><span class="winu-display-block">修技之道，皆为点点起，积少便成多！</span>
+						</p>
+						<font class="winu-float-right">5分钟前</font>
+					</div>
+					<div class="nr-content winu-clear-both">
+						<p>
+							非常赞！
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="info">
+						<img src="../../image/pic.jpg" class="winu-border-radius-50" align="left" />
+						<p class="winu-float-left">
+							<b>点点例</b><i class="level">官方人员</i><span class="winu-display-block">修技之道，皆为点点起，积少便成多！</span>
+						</p>
+						<font class="winu-float-right">5分钟前</font>
+					</div>
+					<div class="nr-content winu-clear-both">
+						<p>
+							非常赞！
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="info">
+						<img src="../../image/pic.jpg" class="winu-border-radius-50" align="left" />
+						<p class="winu-float-left">
+							<b>点点例</b><i class="level">官方人员</i><span class="winu-display-block">修技之道，皆为点点起，积少便成多！</span>
+						</p>
+						<font class="winu-float-right">5分钟前</font>
+					</div>
+					<div class="nr-content winu-clear-both">
+						<p>
+							非常赞！
+						</p>
+					</div>
+				</li>
+				<li>
+					<div class="info">
+						<img src="../../image/pic.jpg" class="winu-border-radius-50" align="left" />
+						<p class="winu-float-left">
+							<b>点点例</b><i class="level">官方人员</i><span class="winu-display-block">修技之道，皆为点点起，积少便成多！</span>
+						</p>
+						<font class="winu-float-right">5分钟前</font>
+					</div>
+					<div class="nr-content winu-clear-both">
+						<p>
+							非常赞！
+						</p>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</body>
 	<script type="text/javascript" src="../../script/AHelper.js"></script>
